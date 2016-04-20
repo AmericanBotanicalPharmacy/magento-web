@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Emizen_AdditionalCmsPageLayouts>
+            <codePool>local</codePool>
+            <active>true</active>
+        </Emizen_AdditionalCmsPageLayouts>
+    </modules>
+</config>

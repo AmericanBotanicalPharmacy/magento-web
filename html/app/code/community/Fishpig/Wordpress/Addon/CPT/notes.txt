@@ -1,0 +1,44 @@
+##
+# Custom Post Types / WordPress Integration
+#
+# Author:			    	 FishPig Limited (Ben Tideswell)
+# URL:	 					 fishpig.co.uk/custom-post-types-in-wordpress-integration.html
+##
+
+28/10/2014 - v1.2.7.2
+- Added ability to include '/' character in rewrite slug for custom post types
+
+29/05/2014 - v1.2.7.0
+- Added custom post types to associations system
+
+23/04/2014 - v1.2.6.1
+- Fix for custom templates
+
+14/04/2014 - v1.2.5.0
+- Fix for displaying posts with a custom type on terms
+
+12/04/2014 - v1.2.4.0
+- Small updates to slug
+
+07/10/2013 - v1.2.3.1
+- Removed posts from default post lists (homepage, categories, archives, tags etc)
+
+27/09/2013 - v1.2.3.0
+- If post list template is empty, posts will not be displayed in the usual post lists (homepage, categories, archives etc) and only in their own archive
+
+23/07/2013 - v1.2.2.0
+- Fixed issue when using custom slug
+
+16/07/2013 - v1.2.0.1
+- Improved system.xml comments
+- Fixed issue that stopped custom templates from working.
+
+10/07/2013 - v1.2.0.0
+- Migrated post types to WordPress Magento configuration
+- Added support for WordPress Integration v3.0
+
+23/05/2013 - v1.0.0.7
+- Added fix for single store Magento installations
+
+23/05/2013 - v1.0.0.6
+- Added delete action to Adminhtml controller

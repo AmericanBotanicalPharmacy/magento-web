@@ -1,0 +1,12 @@
+22319,1077703917,0,admin_login,"2015-09-21 21:21:39",login,"a:1:{s:7:""general"";N;}",success,psingh,13,adminhtml_process_list,,64.60.116.237
+22320,1077703917,0,index_management,"2015-09-21 21:21:51",massUpdate,"a:1:{s:7:""general"";s:4:""9, 1"";}",success,psingh,13,adminhtml_process_massReindex,,64.60.116.237
+22321,1077703917,0,catalog_products,"2015-09-21 21:24:17",view,"a:1:{s:7:""general"";s:3:""533"";}",success,psingh,13,adminhtml_catalog_product_edit,,64.60.116.237
+22322,1077703917,0,catalog_products,"2015-09-21 21:24:35",save,"a:1:{s:7:""general"";s:3:""533"";}",success,psingh,13,adminhtml_catalog_product_save,,64.60.116.237
+22323,1077703917,0,catalog_products,"2015-09-21 21:24:56",save,"a:1:{s:7:""general"";s:3:""544"";}",success,psingh,13,adminhtml_catalog_product_save,,64.60.116.237
+22324,1077703917,0,catalog_products,"2015-09-21 21:25:11",save,"a:1:{s:7:""general"";s:3:""545"";}",success,psingh,13,adminhtml_catalog_product_save,,64.60.116.237
+22325,1077703917,0,catalog_products,"2015-09-21 21:25:41",save,"a:1:{s:7:""general"";s:3:""652"";}",success,psingh,13,adminhtml_catalog_product_save,,64.60.116.237
+22326,1077703917,0,catalog_products,"2015-09-21 21:25:57",save,"a:1:{s:7:""general"";s:3:""654"";}",success,psingh,13,adminhtml_catalog_product_save,,64.60.116.237
+22327,1077703917,0,catalog_products,"2015-09-21 21:26:14",save,"a:1:{s:7:""general"";s:3:""655"";}",success,psingh,13,adminhtml_catalog_product_save,,64.60.116.237
+22328,1077703917,0,index_management,"2015-09-21 21:26:34",massUpdate,"a:1:{s:7:""general"";s:4:""9, 1"";}",success,psingh,13,adminhtml_process_massReindex,,64.60.116.237
+22329,1077703917,0,cache_management,"2015-09-21 21:26:43",save,"a:1:{s:7:""general"";s:94:""Cache types: config_api2, config_api, eav, collections, translate, block_html, layout, config "";}",success,psingh,13,adminhtml_cache_massRefresh,,64.60.116.237
+22330,1077703917,0,admin_login,"2015-09-21 23:38:23",login,"a:1:{s:7:""general"";N;}",success,psingh,13,adminhtml_cache_index,,64.60.116.237

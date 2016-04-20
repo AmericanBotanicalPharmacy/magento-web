@@ -1,0 +1,41 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+?>
+<?php $post = $this->getPost(); ?>
+<div class="post-list-item">
+    <div class="blog-desc">
+    
+    	<h2><a href="<?php echo $post->getPermalink() ?>" title="<?php echo $post->getPostTitle() ?>"><?php echo $post->getPostTitle() ?></a></h2>
+    	
+    	<p class="post-meta details"><?php echo $post->getPostDate() . ", " . $post->getPostType(); ?><span class="by-author"> by <?php echo $post->getAuthor()->getDisplayName(); ?></span></p>
+    	
+        <?php $imgnm = explode(';', $post->getMetaValue('mf_post_video')); ?>
+        <?php if ($imgnm[0] != "") { $featuredImage = Mage::getBaseUrl() . "wp/images/video/" . $imgnm[0] . ".jpg"; } else { if($featuredImage11 = $post->getFeaturedImage()){ $featuredImage = $featuredImage11->getAvailableImage(); } } ?>
+        <?php if($featuredImage != ""){ ?>
+            <div class="featured-image">
+                <a href="<?php echo $post->getPermalink() ?>" title="<?php echo $post->getPostTitle() ?>"><img src="<?php echo $featuredImage; ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>" /></a>
+            </div><br>
+        <?php } ?>
+        
+        <?php echo $this->getBeforePostContentHtml() ?>
+        
+        <div class="post-entry entry">
+            <?php if ($post->isViewableForVisitor()): ?>
+                <?php if ($this->displayExcerptInFeed() || $post->hasMoreTag()): ?>
+                    <p><?php echo $post->getPostExcerpt() ?></p>
+                    <?php //echo $post->getPostExcerpt() ?>
+                <?php else: ?>
+                    <p><?php echo substr(strip_tags($post->getPostContent()),0,3000); ?></p>
+                <?php endif; ?>
+            <?php else: ?>
+                <?php echo $this->getPasswordProtectHtml($post) ?>
+            <?php endif; ?>
+        </div>
+        <div class="post_readmore_btn"><a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>">Click To View</a></div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Aydus_SocialMeta>
+            <version>1.0.0</version>
+        </Aydus_SocialMeta>
+    </modules>
+    <global>
+        <blocks>
+            <aydus_socialmeta>
+                <class>Aydus_SocialMeta_Block</class>
+            </aydus_socialmeta>
+        </blocks>
+        <helpers>
+            <aydus_socialmeta>
+                <class>Aydus_SocialMeta_Helper</class>
+            </aydus_socialmeta>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <aydus_socialmeta module="Aydus_SocialMeta">
+                    <file>aydus/socialmeta/socialmeta.xml</file>
+                </aydus_socialmeta>
+            </updates>
+        </layout>
+    </frontend>
+</config>

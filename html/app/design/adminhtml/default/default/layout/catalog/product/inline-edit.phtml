@@ -1,0 +1,13 @@
+<script type="text/javascript">
+
+alert(1);
+
+function updateField(button, fieldId)
+{
+    new Ajax.Request('<?php echo Mage::helper(\'adminhtml\')->getUrl(\'Mage_Adminhtml/controllers/Ajax/updateField\') ?>', {
+        method: 'post',
+        parameters: { id: fieldId, title: $(button).previous('input').getValue() }
+    });
+}
+
+</script>

@@ -1,0 +1,75 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+?>
+<?php $texcats = $this->getTexonomyblog(); ?>
+<?php if (count($texcats) > 0): ?>
+    <div class="block block-blog block-blog-categories">
+        <?php if ($title = $this->getTitle()): ?>
+                <div class="block-title">
+                        <strong><span><?php echo $this->__($title) ?></span></strong>
+                </div>
+        <?php endif; ?>
+        <div class="block-content">
+            <ul class="level0" id="wp-texonomy-list">
+                <?php foreach($texcats as $texcat): ?>
+                    <?php $categories = $this->getCategories($texcat[1]) ?>
+                    <li class="level0 item">
+                        <?php echo $texcat[0]; ?>
+                        <ul class="level1" id="wp-category-list" style="display:none;">
+                            <?php foreach($categories as $category): ?>
+                                <li class="level1 item<?php if ($this->isCurrentCategory($category)): ?> active<?php endif; ?>">
+                                    <a  class="level0" href="<?php echo $category->getUrl() ?>" title="<?php echo $category->getName() ?>">
+                                        <?php echo $category->getName() ?>
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </li>
+                <?php endforeach; ?>
+                <li class="level0 item">Answers
+                <?php  $archives = $this->getAnswers(); ?>
+                    <ul class="level1" id="wp-category-list" style="display:none;">
+                    <?php foreach($archives as $archive): ?>
+                            <li class="item">
+                                    <a href="<?php echo $archive->getUrl() ?>" title="<?php echo $archive->getName() ?>"><?php echo $archive->getName(); ?></a>
+                            </li>
+                    <?php endforeach; ?>
+                    </ul></li>
+                <li class="level0 item">Commentaries
+                <?php  $archives = $this->getCommentaries(); ?>
+                    <ul class="level1" id="wp-category-list" style="display:none;">
+                    <?php foreach($archives as $archive): ?>
+                            <li class="item">
+                                    <a href="<?php echo $archive->getUrl() ?>" title="<?php echo $archive->getName() ?>"><?php echo $archive->getName(); ?></a>
+                            </li>
+                    <?php endforeach; ?>
+                    </ul></li>
+                <li class="level0 item">Videos
+                    <?php  $archives = $this->getVideos(); ?>
+                    <ul class="level1" id="wp-category-list" style="display:none;">
+                    <?php foreach($archives as $archive): ?>
+                            <li class="item">
+                                    <a href="<?php echo $archive->getUrl() ?>" title="<?php echo $archive->getName() ?>"><?php echo $archive->getName(); ?></a>
+                            </li>
+                    <?php endforeach; ?>
+                    </ul>
+                </li>
+                <li class="level0 item">Audio
+                <?php  $archives = $this->getAudio(); ?>
+                    <ul class="level1" id="wp-category-list" style="display:none;">
+                    <?php foreach($archives as $archive): ?>
+                            <li class="item">
+                                    <a href="<?php echo $archive->getUrl() ?>" title="<?php echo $archive->getName() ?>"><?php echo $archive->getName(); ?></a>
+                            </li>
+                    <?php endforeach; ?>
+                    </ul></li>
+            </ul>
+            <script type="text/javascript">decorateList('wp-category-list')</script>
+        </div>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<package>
+    <name>Google_Enhanced_Ecommerce_for_Magento</name>
+    <version>0.5.4</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/gpl-license.php">GNU General Public License (GPL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>The official extension for adding Google Universal Analytics and Enhanced Ecommerce to your Magento store.</summary>
+    <description>In case you've missed their announcements, Google has been making huge strides when it comes to analyzing eCommerce data with its relatively recent Universal Analytics upgrade and most recently with Enhanced Ecommerce.&#xD;
+&#xD;
+By reading the Google posts from the hyperlinks above or any of the numerous articles available online, you should quickly and easily reach the conclusion that if you are in the business of selling merchandise online, you want this.&#xD;
+&#xD;
+However, properly setting your Magento site up to take advantage of these offerings isn't quick or easy, and that's why Blue Acorn has released the beta version for this extension, just as Enhanced Ecommerce is launching out of its beta phase.&#xD;
+&#xD;
+Please note that simply downloading this extension does not automatically generate an account with Google, set up your username and password, and send you your favorite latte via a Google drone (although that would be cool). You'll still need to register with Google.&#xD;
+&#xD;
+If you already have the classic version of Google Analytics (ga.js), you will need to upgrade to Universal Analytics BEFORE downloading this extension in order to have data continuity.&#xD;
+&#xD;
+If you're lucky enough to be building out a clean slate implementation of Magento and you have not yet installed any analytics scripts, just go ahead and install this extension, then smile.&#xD;
+&#xD;
+Please email us with any support questions that you may have at google@blueacorn.com or visit the Github page at http://github.com/BlueAcornInc/UniversalAnalytics</description>
+    <notes>V0.5.4 - 3/19/2014&#xD;
+- Minor bugfixes&#xD;
+- Added a composer file for the module&#xD;
+- Changed private methods in Monitor class to protected&#xD;
+- Fixed some issues with going backwards and forwards in the checkout process&#xD;
+- Added a default listname for collection classes that would otherwise not parse out a listname&#xD;
+- Added this handy readme file&#xD;
+&#xD;
+V0.5.3 - 2/25/2015&#xD;
+- Made a new GitHub repository page at: http://github.com/BlueAcornInc/UniversalAnalytics&#xD;
+- Validate supplied currency code against list supplied by Google (uses USD by default)&#xD;
+- Added additional method documentation in various classes</notes>
+    <authors><author><name>Blue Acorn, Inc.</name><user>blueacorn</user><email>code@blueacorn.com</email></author></authors>
+    <date>2015-03-19</date>
+    <time>22:56:31</time>
+    <contents><target name="magecommunity"><dir name="BlueAcorn"><dir name="UniversalAnalytics"><dir><dir name="Helper"><file name="Data.php" hash="217d8d3fc8f5b108c5bd2566003c75ba"/></dir><dir name="Model"><file name="Js.php" hash="6d8cdf97c1e75ad7e1ba7c23da982325"/><file name="Monitor.php" hash="25726f62682c9e703e616d370ea6246f"/><file name="Observer.php" hash="e392a1aaa54eb22859429e98d72eccbe"/></dir><dir name="etc"><file name="config.xml" hash="8ec17cc7040f2bf26d6e519fe13e0d6b"/><file name="system.xml" hash="acea0dfae811183101c2f9c45b304182"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><dir name="blueacorn"><file name="universalanalytics.xml" hash="b101426cf4c1f7d93e1c28d925937b96"/></dir></dir><dir name="template"><dir name="blueacorn"><dir><dir name="universalanalytics"><file name="onestepcheckout.phtml" hash="ae6208544473f03b6f3315c8bc4f9b25"/><file name="sitewideJs.phtml" hash="9518418195627ce842361a060c3b0789"/><file name="success.phtml" hash="8431bc245f55dde7920f40cc1f3c4831"/></dir></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="BlueAcorn_UniversalAnalytics.xml" hash="83817fd0543f5f1f3bdac9f19afe54a7"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.13</min><max>5.6.6</max></php></required></dependencies>
+</package>

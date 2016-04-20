@@ -1,0 +1,204 @@
+/*----------------------------------------------------------------------------*/
+/* Global Variables
+/*----------------------------------------------------------------------------*/
+
+$pageDesktopMarginSide: 139/$desktopWidth*100%;
+$pageTabletMarginSide: 35px;
+$pageMobileMarginSide: 13px;
+$pageDesktopPaddingTop: 72px;
+$pageTabletPaddingTop: 24px;
+
+/*----------------------------------------------------------------------------*/
+/* Global Mixins
+/*----------------------------------------------------------------------------*/
+
+@mixin font-family($font-family) {
+    font-family: '#{$font-family}', sans-serif;
+}
+
+/*----------------------------------------------------------------------------*/
+/* Global ABP Mixins
+/*----------------------------------------------------------------------------*/
+
+// Specifically for anchor tags. Default to underline and remove on hover.
+@mixin global-underline {
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Specifically for anchor tags. Default to no underline and underline on hover.
+@mixin global-no-underline {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@mixin quote() {
+
+    $padding: 44;
+
+    p {
+        margin: 0 0 0.5em 0;
+        padding: 0 $padding*1px;
+        @include responsive-font-size(24);
+        @include responsive-line-height(36);
+        font-weight: bold;
+        color: #333333;
+
+        &:before {
+            position: relative;
+            top: 10px;
+            float: left;
+            margin-right: 10px;
+            margin-left: -$padding*1px;
+            content: '“';
+            @include responsive-font-size(85);
+        }
+
+        &:after {
+            position: relative;
+            top: 20px;
+            float: right;
+            margin-left: 10px;
+            margin-right: -$padding*1px;
+            content: '”';
+            @include responsive-font-size(85);
+        }
+    }
+
+    span {
+        margin-left: $padding*1px;
+        @include responsive-font-size(18);
+        font-weight: bold;
+        color: #2a5e37;
+
+        &:before {
+            content: '- ';
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Messages
+/*----------------------------------------------------------------------------*/
+
+.messages {
+    margin-bottom: $gap;
+    @include responsive-font-size(14);
+    color: #666666;
+}
+
+.messages li li {
+    position: relative;
+    margin-bottom: 5px;
+    padding: 7px 10px 7px 20px;
+    background-color: transparent;
+}
+
+.messages li li:before {
+    top: 50%;
+    left: 0;
+    margin-top: -6px;
+}
+
+.messages .error-msg li {
+    border-left-style: 5px solid $c-danger;
+}
+
+.messages .error-msg li:before {
+    @include triangle(right, 6px, $c-danger);
+}
+
+.messages .notice-msg li {
+    border-left: 5px solid $c-warn;
+}
+
+.messages .notice-msg li:before {
+    @include triangle(right, 6px, $c-warn);
+}
+
+.messages .success-msg li {
+    border-left-style: none;
+
+    span {
+        padding-left: 5px;
+    }
+}
+
+.messages .success-msg li:before {
+    //@include triangle(right, 6px, $c-success);
+    @include use-sprite('message-success');
+    border-style: none;
+}
+
+.messages .notice-msg li:before {
+    //@include triangle(right, 6px, $c-warn);
+    @include use-sprite('message-notice');
+    border-style: none;
+}
+
+.messages .error-msg li:before {
+    //@include triangle(right, 6px, $c-danger);
+    @include use-sprite('message-error');
+    border-style: none;
+}
+
+/*----------------------------------------------------------------------------*/
+/* Forms, Input, Validation.
+/*----------------------------------------------------------------------------*/
+
+input:focus {
+    outline: none;
+    border-color: auto;
+}
+
+.main {
+
+    .input-text {
+        height: 54px;
+        background-image: none;
+        border: 1px solid #cccccc;
+
+        @include breakpoint(mobile) {
+            width: 100%;
+            @include box-sizing(border-box);
+        }
+    }
+
+    select {
+        height: 54px;
+        line-height: 54px;
+        background-image: none;
+        border: 1px solid #cccccc;
+    }
+
+    textarea {
+        background-image: none;
+        border: 1px solid #cccccc;
+    }
+
+    .form-list label {
+        @include responsive-font-size(14);
+        text-transform: uppercase;
+        color: #666666;
+
+        &:first-child {
+            width: auto; // Prevent wrapping of label text.
+        }
+
+        em {
+            color: #7f1212;
+        }
+    }
+
+    p.required {
+        @include responsive-font-size(12);
+        text-transform: uppercase;
+        color: #7f1212;
+    }
+}

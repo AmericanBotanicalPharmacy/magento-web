@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <wordpress>
+            <groups>
+            	<custom_post_types>
+            		<label>Post Types</label>
+            		<sort_order>19</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_store>1</show_in_store>
+					<show_in_website>1</show_in_website>            		
+            		<fields>
+            			<types>
+		            		<label></label>
+		            		<sort_order>35</sort_order>
+							<frontend_model>wp_addon_cpt/system_config_form_field_postTypes</frontend_model>
+							<backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+							<show_in_default>1</show_in_default>
+							<show_in_store>1</show_in_store>
+							<show_in_website>1</show_in_website>
+            			</types>
+            		</fields>
+            	</custom_post_types>
+            </groups>
+        </wordpress>
+    </sections>
+</config>

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+       <Collinsharper_Paymentech>
+          <version>0.8.7</version>
+       </Collinsharper_Paymentech>
+    </modules>
+ 
+    <global>
+        <models>
+            <chpaymentech>
+                <class>Collinsharper_Paymentech_Model</class>
+            </chpaymentech>
+        </models>
+ 
+ 	    
+		<helpers>
+            <chpaymentech>
+                <class>Collinsharper_Paymentech_Helper</class>
+            </chpaymentech>
+        </helpers>
+
+
+        <blocks>
+            <chpaymentech>
+                <class>Collinsharper_Paymentech_Block</class>
+            </chpaymentech>
+        </blocks>
+		
+		
+        <resources>
+            <chpaymentech_setup>
+                <setup>
+                    <module>Collinsharper_Paymentech</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </chpaymentech_setup>
+            <chpaymentech_write>
+                <connection>
+                  <use>core_write</use>
+                </connection>
+            </chpaymentech_write>
+            <chpaymentech_read>
+               <connection>
+                <use>core_read</use>
+              </connection>
+            </chpaymentech_read>
+        </resources>
+  
+    </global>
+ 
+ 	<frontend>
+		<translate>
+            <modules>
+                <chpaymentech>
+                    <files>
+                        <default>Collinsharper_Paymentechavs.csv</default>
+                        <default>Collinsharper_Paymentechcvv.csv</default>
+                    </files>
+                </chpaymentech>
+            </modules>
+        </translate> 	
+ 	</frontend>
+ 
+    <default>
+        <payment>
+            <chpaymentech>
+                <active>0</active>
+                <model>chpaymentech/paymentMethod</model>
+                <order_status>1</order_status>
+                <title>Credit Card (chpaymentech)</title>
+                <cctypes>AE,VI,MC,DI,JCB</cctypes>
+                <payment_action>authorize</payment_action>
+                <allowspecific>0</allowspecific>
+                <respsuccess>00,08,24,26,27,28,29</respsuccess>
+                <avssuccess>9,H,A,B,C,D,G,I,M,N,P,R,S,T,U,W,X,Y,Z</avssuccess>
+                <cvvsuccess>A,B,C,D,G,I,M,N,P,R,S,T,U,W,X,Y,Z</cvvsuccess>
+                <wsdl>https://wsvar.paymentech.net/PaymentechGateway/wsdl/PaymentechGateway.wsdl</wsdl>
+                <gateway>https://wsvar.paymentech.net/PaymentechGateway</gateway>
+            </chpaymentech>
+         </payment>
+    </default>
+</config>

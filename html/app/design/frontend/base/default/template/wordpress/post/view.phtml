@@ -1,0 +1,120 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+?>
+<?php $post = $this->getPost() ?>
+<?php if ($post): ?>
+<div class="posttype_<?php echo $post->getPostType(); ?>">
+	<?php $helper = $this->helper('wordpress') ?>
+	<?php $author = $post->getAuthor() ?>
+	<?php $post_video = $post->getCustomField('mf_post_video'); ?>
+	<?php if( isset($post_video) ){ 
+		$vid_array = explode(';', $post_video);
+		$html5vid = trim(array_pop( $vid_array));
+		$flashvid = trim(array_pop( $vid_array));
+ ?>
+	
+            
+            <?php
+            if($html5vid){
+          	  $u_agent = $_SERVER['HTTP_USER_AGENT']; 
+		  	  
+		  	  if(preg_match('/Firefox/i',$u_agent)) { ?>
+		    <div class="video-js-box" style="max-width:100%;  margin-bottom: 20px; position:relative;" id="vidcontent-inline"></div>
+		  	  <script type="text/javascript">
+		  	  	var flashVid = '<?php echo $flashvid ?>';
+		  	  	
+		  	  	var wd = "475";
+		  	  	var ht = "267";
+	
+		  	  	var plurl = "http://h.zeitbyte.com/o1/zb3.1/american_botanical/playlists/playlists/" + flashVid + ".xml";
+                var movie = "http://h.zeitbyte.com/o1/zb3.1/american_botanical/flash/player/zplayer.swf?configUrl=http://h.zeitbyte.com/o1/zb3.1/american_botanical/flash/player/player_config.xml&videoWidth=" 
+                		+ wd + "&videoHeight=" + ht + "&stageWidth=" + wd + "&stageHeight=" + ht + "&playlistUrl=" + plurl + "&autoPlay=true";
+
+				document.getElementById('vidcontent-inline').innerHTML =
+					"<object classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000'"
+						+ "codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0'"
+						+ "width='" + wd + "' height='" + ht + "'"
+						+ "id='zplayer' align='middle'>"
+						+ "<param name='allowScriptAccess' value='always' />"
+						+ "<param name='allowFullScreen' value='true' />"
+						+ "<param name='quality' value='high' />"
+						+ "<param name='movie' value='" + movie + "' />"
+						+ "<param name='bgcolor' value='#000000' />"
+						+ "<embed src='" + movie + "'"
+						+    "quality='high' bgcolor='#000000'"
+						+    "width='" + wd + "' height='" + ht + "'"
+						+    "name='zplayer' align='middle'"
+						+    "allowscriptaccess='always'"
+						+    "allowfullscreen='true'"
+						+    "type='application/x-shockwave-flash'"
+						+    "pluginspage='http://www.adobe.com/go/getflashplayer' />"
+						+ "</object>";
+		  	  </script>
+      
+    <?php 	} else { ?>
+    
+	<div class="video-js-box fv" style="max-width:100%;  margin-bottom: 20px; position:relative;">
+        <video id="video_1" class="video-js vjs-default-skin" autoplay="autoplay" controls="controls" preload="auto" style="width:100%;">
+			<source src="http://h.zeitbyte.com/o1/zb3.1/american_botanical/hosted-videos/html5-videos/<?php echo $html5vid ?>.mp4" type="video/mp4" />
+		</video>
+	</div>
+    <?php }
+	    } 
+    } 
+	?>
+	<div class="page-title post-title">
+		<span itemprop="headline"><h1><?php echo $post->getPostTitle() ?></h1></span>
+		<?php
+			if($post->getPostType() == 'question'){
+				$post_question = $post->getCustomField('mf_post_question');
+				if( isset( $post_question ) ) {
+					echo('<blockquote>'.$post_question.'</blockquote><br/>&mdash;&nbsp;'.$post->getCustomField('mf_post_q_from'));
+				}
+			}
+		?>
+	</div>
+	<div class="post-view">
+		<p class="post-date when" itemprop="datePublished"><?php echo stripslashes($this->__('%s<span class=\"by-author\" itemprop=\"author\"> by %s</span>.', $post->getPostDate(), $post->getAuthor()->getDisplayName())) ?></p>
+		<div class="social_media" style="display:inline-flex;display:-webkit-inline-flex;display:-ms-inline-flexbox;">
+							<!-- Facebook -->
+							<a style="padding-left:4px;" href="javascript:popWin('https://www.facebook.com/sharer/sharer.php?u=<?php echo $post->getPermalink() ?>&t=<?php echo $this->escapeHtml($post->getPostTitle()) ?>', 'facebook', 'width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes');" title="<?php echo $this->__('Share on Facebook') ?>"><img width="61" height="28" src="/wp/wp-content/uploads/2015/02/fb.jpg" /></a>
+							<!-- Twitter -->
+							<a style="padding-left:4px;" href="javascript:popWin('http://twitter.com/home/?status=<?php echo $post->getPermalink() ?>', 'twitter', 'width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes');" title="<?php echo $this->__('Tweet') ?>"><img width="67" height="30" src="/wp/wp-content/uploads/2015/02/tw.jpg" /></a>
+							<!-- Google Plus -->
+							<a style="padding-left:4px;" href="javascript:popWin('https://plus.google.com/share?url=<?php echo $post->getPermalink() ?>', 'google', 'width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes');" title="<?php echo $this->__('Share on Google Plus') ?>"><img width="43" height="30" src="/wp/wp-content/uploads/2015/02/gp.jpg" /></a>
+							<!-- Pinterest -->
+							<a style="padding-left:4px;" href="javascript:popWin('https://pinterest.com/pin/create/button/?url=<?php echo $post->getPermalink() ?>&media=<?php echo $post->getFeaturedImage(); ?>&description=<?php echo $this->escapeHtml($post->getPostTitle()) ?>', 'pinterest', 'width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes');" title="<?php echo $this->__('Pin it') ?>"><img width="51" height="30" src="/wp/wp-content/uploads/2015/02/pi.jpg" /></a>
+							<!-- Mailto -->
+							<a style="padding-left:4px;" onclick="javascript:window.location='mailto:?subject=Dr. Schulze\'s Online Store&amp;body=Dear, %0D%0DI wanted to share this great product from Dr. Schulze with you, please click the link below.%0D%0D ' + window.location;" href="#" title="<?php echo $this->__('Mail it') ?>"><img width="65" height="30" src="/wp/wp-content/uploads/2015/02/ml.jpg" /></a>
+		</div>
+		<?php echo $this->getBeforePostContentHtml() ?>
+		<div class="post-entry entry std<?php if ($post->getFeaturedImage()): ?> post-entry-with-image<?php endif; ?>">
+			<?php if ($post->isViewableForVisitor()): ?>
+				<?php if ($featuredImage = $post->getFeaturedImage()): ?>
+					<div class="featured-image left"><img itemprop="image" src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></div>
+				<?php endif; ?>
+				<?php echo $post->getPostContent() ?>
+			<?php else: ?>
+				<?php echo $this->getPasswordProtectHtml() ?>
+			<?php endif; ?>
+		</div>
+        <?php if($post->getMetaValue('pdfname')){ ?>
+            <div class="pdf-post"><embed src='<?php echo $imgname = Mage::getBaseUrl()."wp/pdfs/".$post->getMetaValue('pdfname'); ?>' /></div>
+        <?php } ?>
+		<?php echo $this->getAfterPostContentHtml() ?>
+		<?php echo $this->getCommentsHtml() ?>
+		<!--
+<div class="send-to-friend">
+			<p><a onclick="javascript:window.location='mailto:?subject=Dr. Schulze\'s BLOG post&amp;body=Dear, %0D%0DI wanted to share this great new BLOG post from Dr. Schulze with you, please click the link below.%0D%0D ' + window.location;" href="#" title="Email a friend" class="email">Send to a Friend</a><br/>&nbsp;</p>
+		</div>
+-->
+		<div class="disclaimer">
+			<p>DISCLAIMER: This BLOG's purpose is to promote the sharing of information about healthy living and dietary supplements. The views and opinions of Dr.Schulze and those of his companies and BLOG administrators are offered for your information and are not intended to constitute medical advice. If you are sick, injured or pregnant, consult a licensed medical professional.</p>
+		</div>
+	</div>	</div>
+<?php endif; ?>

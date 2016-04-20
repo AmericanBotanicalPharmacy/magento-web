@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Aydus_FeaturedProducts>
+            <version>0.0.2</version>
+        </Aydus_FeaturedProducts>
+    </modules>
+    <global>
+        <blocks>
+            <aydus_featuredproducts>
+                <class>Aydus_FeaturedProducts_Block</class>
+            </aydus_featuredproducts>
+        </blocks>
+        <helpers>
+            <aydus_featuredproducts>
+                <class>Aydus_FeaturedProducts_Helper</class>
+            </aydus_featuredproducts>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <aydus_featuredproducts module="Aydus_FeaturedProducts">
+                    <file>aydus/addtocart/featuredproducts.xml</file>
+                </aydus_featuredproducts>
+            </updates>
+        </layout>
+        <routers>
+            <aydus_featuredproducts>
+                <use>standard</use>
+                <args>
+                    <module>Aydus_FeaturedProducts</module>
+                    <frontName>featuredproducts</frontName>
+                </args>
+            </aydus_featuredproducts>
+        </routers>
+    </frontend>
+</config>

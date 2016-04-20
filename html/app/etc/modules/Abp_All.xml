@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Herbdoc modules
+ * 
+ * @category    Abp
+ * @author		Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+	<modules>
+		<Abp_Init>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Abp_Init>
+		<Abp_Cwserenade>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Abp_Cwserenade>
+		<Abp_Oscommerce>
+			<active>false</active>
+			<codePool>local</codePool>
+		</Abp_Oscommerce>
+		<Abp_Coreoverrides>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Abp_Coreoverrides>
+	</modules>
+</config>

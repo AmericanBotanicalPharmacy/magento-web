@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Aydus_Swatch>
+            <version>0.1.0</version>
+        </Aydus_Swatch>
+    </modules>
+    <global>
+        <helpers>
+            <aydus_swatch>
+                <class>Aydus_Swatch_Helper</class>
+            </aydus_swatch>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <aydus_swatch module="Aydus_Swatch">
+                    <file>aydus/swatch/swatch.xml</file>
+                </aydus_swatch>
+            </updates>
+        </layout>
+    </frontend>
+</config>

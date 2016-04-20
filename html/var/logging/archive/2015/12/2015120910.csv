@@ -1,0 +1,103 @@
+23180,1077703917,0,admin_login,"2015-10-07 16:10:00",login,"a:1:{s:7:""general"";N;}",success,vaughn,14,adminhtml_index_index,,64.60.116.237
+23181,1077703917,0,customer,"2015-10-07 16:10:28",view,"a:1:{s:7:""general"";s:6:""184177"";}",success,vaughn,14,adminhtml_customer_edit,,64.60.116.237
+23182,1077703917,0,admin_login,"2015-10-07 16:37:59",login,"a:1:{s:7:""general"";N;}",success,psingh,13,adminhtml_process_list,,64.60.116.237
+23183,1077703917,0,index_management,"2015-10-07 16:38:20",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,13,adminhtml_process_massReindex,,64.60.116.237
+23184,1077703917,0,cms_blocks,"2015-10-07 16:38:27",view,"a:1:{s:7:""general"";s:1:""7"";}",success,psingh,13,adminhtml_cms_block_edit,,64.60.116.237
+23185,1077703917,0,cms_blocks,"2015-10-07 16:38:48",save,"a:1:{s:7:""general"";s:1:""7"";}",success,psingh,13,adminhtml_cms_block_save,,64.60.116.237
+23186,1077703917,0,cms_blocks,"2015-10-07 16:38:49",view,"a:1:{s:7:""general"";s:1:""7"";}",success,psingh,13,adminhtml_cms_block_edit,,64.60.116.237
+23187,1077703917,0,admin_login,"2015-10-07 19:08:22",login,"a:1:{s:7:""general"";N;}",failure,psingh,13,adminhtml_cms_block_edit,,64.60.116.237
+23188,1077703917,0,admin_login,"2015-10-07 19:08:28",login,"a:1:{s:7:""general"";N;}",failure,psingh,13,adminhtml_cms_block_edit,,64.60.116.237
+23189,1077703917,0,admin_login,"2015-10-07 19:08:36",login,"a:1:{s:7:""general"";N;}",success,psingh,13,adminhtml_cms_block_edit,,64.60.116.237
+23190,1077703917,0,enterprise_banner,"2015-10-07 19:09:13",view,"a:1:{s:7:""general"";s:2:""11"";}",success,psingh,13,adminhtml_banner_edit,,64.60.116.237
+23191,1077703917,0,enterprise_banner,"2015-10-07 19:11:23",view,"a:1:{s:7:""general"";s:1:""5"";}",success,psingh,13,adminhtml_banner_edit,,64.60.116.237
+23192,1077703917,0,enterprise_banner,"2015-10-07 19:13:41",save,"a:1:{s:7:""general"";s:2:""11"";}",success,psingh,13,adminhtml_banner_save,,64.60.116.237
+23193,1077703917,0,index_management,"2015-10-07 19:15:29",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,13,adminhtml_process_massReindex,,64.60.116.237
+23194,1077703917,0,enterprise_banner,"2015-10-07 19:20:05",save,"a:1:{s:7:""general"";s:2:""11"";}",success,psingh,13,adminhtml_banner_save,,64.60.116.237
+23195,1077703917,0,index_management,"2015-10-07 19:22:27",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,13,adminhtml_process_massReindex,,64.60.116.237
+23196,1077703917,0,admin_login,"2015-10-07 19:26:01",login,"a:1:{s:7:""general"";N;}",success,vaughn,14,adminhtml_customer_edit,,64.60.116.237
+23197,1077703917,0,enterprise_banner,"2015-10-07 19:26:23",view,"a:1:{s:7:""general"";s:2:""12"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23198,1077703917,0,enterprise_banner,"2015-10-07 19:28:15",view,"a:1:{s:7:""general"";s:2:""12"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23199,1077703917,0,enterprise_banner,"2015-10-07 19:28:50",view,"a:1:{s:7:""general"";s:1:""2"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23200,1077703917,0,enterprise_banner,"2015-10-07 19:29:14",view,"a:1:{s:7:""general"";s:1:""5"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23201,1077703917,0,enterprise_banner,"2015-10-07 19:30:16",view,"a:1:{s:7:""general"";s:2:""11"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23202,1077703917,0,index_management,"2015-10-07 19:31:47",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,13,adminhtml_process_massReindex,,64.60.116.237
+23203,1077703917,0,cache_management,"2015-10-07 19:31:56",save,"a:1:{s:7:""general"";s:105:""Cache types: config, layout, block_html, translate, collections, eav, config_api, config_api2, full_page "";}",success,psingh,13,adminhtml_cache_massRefresh,,64.60.116.237
+23204,1077703917,0,enterprise_banner,"2015-10-07 19:33:53",save,"a:1:{s:7:""general"";s:2:""11"";}",success,vaughn,14,adminhtml_banner_save,,64.60.116.237
+23205,1077703917,0,enterprise_banner,"2015-10-07 19:34:52",save,"a:1:{s:7:""general"";s:2:""11"";}",success,vaughn,14,adminhtml_banner_save,,64.60.116.237
+23206,1077703917,0,enterprise_banner,"2015-10-07 19:36:00",save,"a:1:{s:7:""general"";s:2:""11"";}",success,vaughn,14,adminhtml_banner_save,,64.60.116.237
+23207,1077703917,0,enterprise_banner,"2015-10-07 19:37:23",view,"a:1:{s:7:""general"";s:1:""8"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23208,1077703917,0,enterprise_banner,"2015-10-07 19:38:09",view,"a:1:{s:7:""general"";s:1:""2"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23209,1077703917,0,enterprise_banner,"2015-10-07 19:41:41",view,"a:1:{s:7:""general"";s:2:""11"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23210,1077703917,0,enterprise_banner,"2015-10-07 19:41:53",save,"a:1:{s:7:""general"";s:2:""11"";}",success,vaughn,14,adminhtml_banner_save,,64.60.116.237
+23211,1077703917,0,enterprise_banner,"2015-10-07 19:44:20",view,"a:1:{s:7:""general"";s:2:""12"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23212,1077703917,0,enterprise_banner,"2015-10-07 19:47:39",save,"a:1:{s:7:""general"";s:2:""12"";}",success,vaughn,14,adminhtml_banner_save,,64.60.116.237
+23213,1077703917,0,enterprise_banner,"2015-10-07 19:50:54",save,"a:1:{s:7:""general"";s:2:""12"";}",success,vaughn,14,adminhtml_banner_save,,64.60.116.237
+23214,1077703917,0,enterprise_banner,"2015-10-07 19:51:59",view,"a:1:{s:7:""general"";s:1:""1"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23215,1077703917,0,enterprise_banner,"2015-10-07 19:52:24",view,"a:1:{s:7:""general"";s:1:""5"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23216,1077703917,0,enterprise_banner,"2015-10-07 19:52:50",view,"a:1:{s:7:""general"";s:1:""7"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23217,1077703917,0,enterprise_banner,"2015-10-07 19:53:40",view,"a:1:{s:7:""general"";s:2:""11"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23218,1077703917,0,enterprise_banner,"2015-10-07 19:54:18",view,"a:1:{s:7:""general"";s:2:""12"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23219,1077703917,0,enterprise_banner,"2015-10-07 19:54:47",view,"a:1:{s:7:""general"";s:1:""2"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23220,1077703917,0,enterprise_banner,"2015-10-07 19:57:16",view,"a:1:{s:7:""general"";s:1:""5"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23221,1077703917,0,enterprise_banner,"2015-10-07 19:57:42",view,"a:1:{s:7:""general"";s:1:""7"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23222,1077703917,0,enterprise_banner,"2015-10-07 19:58:14",view,"a:1:{s:7:""general"";s:1:""8"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23223,1077703917,0,enterprise_banner,"2015-10-07 19:58:40",view,"a:1:{s:7:""general"";s:1:""9"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23224,1077703917,0,enterprise_banner,"2015-10-07 19:59:21",view,"a:1:{s:7:""general"";s:2:""11"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23225,1077703917,0,enterprise_banner,"2015-10-07 19:59:51",view,"a:1:{s:7:""general"";s:2:""12"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23226,1077703917,0,admin_login,"2015-10-07 20:00:07",login,"a:1:{s:7:""general"";N;}",success,psingh,13,adminhtml_banner_index,,64.60.116.237
+23227,1077703917,0,enterprise_banner,"2015-10-07 20:00:11",view,"a:1:{s:7:""general"";s:2:""11"";}",success,psingh,13,adminhtml_banner_edit,,64.60.116.237
+23228,1077703917,0,enterprise_banner,"2015-10-07 20:00:23",save,"a:1:{s:7:""general"";s:2:""11"";}",success,psingh,13,adminhtml_banner_save,,64.60.116.237
+23229,1077703917,0,index_management,"2015-10-07 20:00:47",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,13,adminhtml_process_massReindex,,64.60.116.237
+23230,1077703917,0,enterprise_banner,"2015-10-07 20:01:51",view,"a:1:{s:7:""general"";s:1:""1"";}",success,psingh,13,adminhtml_banner_edit,,64.60.116.237
+23231,1077703917,0,enterprise_banner,"2015-10-07 20:02:03",view,"a:1:{s:7:""general"";s:1:""1"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23232,1077703917,0,enterprise_banner,"2015-10-07 20:02:44",view,"a:1:{s:7:""general"";s:1:""2"";}",success,psingh,13,adminhtml_banner_edit,,64.60.116.237
+23233,1077703917,0,enterprise_banner,"2015-10-07 20:02:56",view,"a:1:{s:7:""general"";s:1:""8"";}",success,psingh,13,adminhtml_banner_edit,,64.60.116.237
+23234,1077703917,0,enterprise_banner,"2015-10-07 20:03:27",view,"a:1:{s:7:""general"";s:1:""4"";}",success,vaughn,14,adminhtml_banner_edit,,64.60.116.237
+23235,1077703917,0,index_management,"2015-10-07 20:04:51",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,13,adminhtml_process_massReindex,,64.60.116.237
+23236,1077703917,0,cache_management,"2015-10-07 20:04:59",save,"a:1:{s:7:""general"";s:105:""Cache types: config, layout, block_html, translate, collections, eav, config_api, config_api2, full_page "";}",success,psingh,13,adminhtml_cache_massRefresh,,64.60.116.237
+23237,1077703917,0,enterprise_banner,"2015-10-07 20:14:20",save,"a:1:{s:7:""general"";s:2:""11"";}",success,psingh,13,adminhtml_banner_save,,64.60.116.237
+23238,1077703917,0,enterprise_banner,"2015-10-07 20:14:50",save,"a:1:{s:7:""general"";s:2:""11"";}",success,psingh,13,adminhtml_banner_save,,64.60.116.237
+23239,1077703917,0,enterprise_banner,"2015-10-07 20:15:52",view,"a:1:{s:7:""general"";s:2:""12"";}",success,psingh,13,adminhtml_banner_edit,,64.60.116.237
+23240,1077703917,0,enterprise_banner,"2015-10-07 20:16:23",save,"a:1:{s:7:""general"";s:2:""12"";}",success,psingh,13,adminhtml_banner_save,,64.60.116.237
+23241,1077703917,0,enterprise_banner,"2015-10-07 20:16:40",save,"a:1:{s:7:""general"";s:2:""12"";}",success,psingh,13,adminhtml_banner_save,,64.60.116.237
+23242,1077703917,0,index_management,"2015-10-07 20:17:11",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,13,adminhtml_process_massReindex,,64.60.116.237
+23243,1077703917,0,admin_login,"2015-10-07 21:33:36",login,"a:1:{s:7:""general"";N;}",success,psingh,13,adminhtml_banner_index,,64.60.116.237
+23244,1077703917,0,sales_orders,"2015-10-07 21:33:48",view,"a:2:{s:7:""general"";s:6:""118724"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:118724;a:1:{s:12:""increment_id"";s:9:""100106369"";}}}}",success,psingh,13,adminhtml_sales_order_view,,64.60.116.237
+23245,1077703917,0,sales_orders,"2015-10-07 21:33:50",view,"a:2:{s:7:""general"";s:6:""118724"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:118724;a:1:{s:12:""increment_id"";s:9:""100106369"";}}}}",success,psingh,13,adminhtml_sales_order_view,,64.60.116.237
+23246,1077703917,0,index_management,"2015-10-07 21:35:39",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,13,adminhtml_process_massReindex,,64.60.116.237
+23247,1077703917,0,admin_login,"2015-10-07 23:21:13",login,"a:1:{s:7:""general"";N;}",success,vaughn,14,adminhtml_cms_block_index,,64.60.116.237
+23248,1077703917,0,cms_blocks,"2015-10-07 23:21:34",view,"a:1:{s:7:""general"";s:2:""21"";}",success,vaughn,14,adminhtml_cms_block_edit,,64.60.116.237
+23249,1077703917,0,admin_login,"2015-10-07 23:21:57",login,"a:1:{s:7:""general"";N;}",success,psingh,13,adminhtml_banner_index,,64.60.116.237
+23250,1077703917,0,index_management,"2015-10-07 23:22:17",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,13,adminhtml_process_massReindex,,64.60.116.237
+23251,1077703917,0,enterprise_banner,"2015-10-07 23:23:52",view,"a:1:{s:7:""general"";s:2:""11"";}",success,psingh,13,adminhtml_banner_edit,,64.60.116.237
+23252,1077703917,0,cms_blocks,"2015-10-07 23:24:01",view,"a:1:{s:7:""general"";s:2:""31"";}",success,vaughn,14,adminhtml_cms_block_edit,,64.60.116.237
+23253,1077703917,0,enterprise_banner,"2015-10-07 23:24:13",save,"a:1:{s:7:""general"";s:2:""11"";}",success,psingh,13,adminhtml_banner_save,,64.60.116.237
+23254,1077703917,0,cms_blocks,"2015-10-07 23:24:42",view,"a:1:{s:7:""general"";s:2:""31"";}",success,vaughn,14,adminhtml_cms_block_edit,,64.60.116.237
+23255,1077703917,0,cms_blocks,"2015-10-07 23:25:25",view,"a:1:{s:7:""general"";s:2:""31"";}",success,psingh,13,adminhtml_cms_block_edit,,64.60.116.237
+23256,1077703917,0,cms_blocks,"2015-10-07 23:26:05",save,"a:1:{s:7:""general"";s:2:""31"";}",success,psingh,13,adminhtml_cms_block_save,,64.60.116.237
+23257,1077703917,0,cms_blocks,"2015-10-07 23:26:06",view,"a:1:{s:7:""general"";s:2:""31"";}",success,psingh,13,adminhtml_cms_block_edit,,64.60.116.237
+23258,1077703917,0,cms_blocks,"2015-10-07 23:26:59",save,"a:1:{s:7:""general"";s:2:""31"";}",success,psingh,13,adminhtml_cms_block_save,,64.60.116.237
+23259,1077703917,0,cms_blocks,"2015-10-07 23:26:59",view,"a:1:{s:7:""general"";s:2:""31"";}",success,psingh,13,adminhtml_cms_block_edit,,64.60.116.237
+23260,1077703917,0,cms_blocks,"2015-10-07 23:27:49",save,"a:1:{s:7:""general"";s:2:""31"";}",success,psingh,13,adminhtml_cms_block_save,,64.60.116.237
+23261,1077703917,0,cms_blocks,"2015-10-07 23:28:13",save,"a:1:{s:7:""general"";s:2:""41"";}",success,psingh,13,adminhtml_cms_block_save,,64.60.116.237
+23262,1077703917,0,cms_blocks,"2015-10-07 23:28:13",view,"a:1:{s:7:""general"";s:2:""41"";}",success,psingh,13,adminhtml_cms_block_edit,,64.60.116.237
+23263,1077703917,0,index_management,"2015-10-07 23:30:49",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,13,adminhtml_process_massReindex,,64.60.116.237
+23264,1077703917,0,admin_login,"2015-10-08 16:16:48",login,"a:1:{s:7:""general"";N;}",success,vaughn,14,adminhtml_index_index,,64.60.116.237
+23265,1077703917,0,catalog_categories,"2015-10-08 16:17:45",view,"a:1:{s:7:""general"";s:2:""91"";}",success,vaughn,14,adminhtml_catalog_category_edit,,64.60.116.237
+23266,1077703917,0,sales_orders,"2015-10-08 16:18:48",view,"a:2:{s:7:""general"";s:6:""119391"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:119391;a:1:{s:12:""increment_id"";s:9:""100107016"";}}}}",success,vaughn,14,adminhtml_sales_order_view,,64.60.116.237
+23267,1077703917,0,sales_orders,"2015-10-08 16:18:52",view,"a:2:{s:7:""general"";s:6:""118585"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:118585;a:1:{s:12:""increment_id"";s:9:""100106235"";}}}}",success,vaughn,14,adminhtml_sales_order_view,,64.60.116.237
+23268,1077703917,0,catalog_products,"2015-10-08 16:57:26",view,"a:1:{s:7:""general"";s:3:""545"";}",success,vaughn,14,adminhtml_catalog_product_edit,,64.60.116.237
+23269,1077703917,0,admin_login,"2015-10-08 17:57:27",login,"a:1:{s:7:""general"";N;}",success,psingh,13,adminhtml_process_list,,64.60.116.237
+23270,1077703917,0,enterprise_banner,"2015-10-08 17:59:37",view,"a:1:{s:7:""general"";s:1:""7"";}",success,psingh,13,adminhtml_banner_edit,,64.60.116.237
+23271,1077703917,0,enterprise_banner,"2015-10-08 17:59:46",save,"a:1:{s:7:""general"";s:1:""7"";}",success,psingh,13,adminhtml_banner_save,,64.60.116.237
+23272,1077703917,0,cms_blocks,"2015-10-08 18:10:25",save,"a:1:{s:7:""general"";s:2:""42"";}",success,psingh,13,adminhtml_cms_block_save,,64.60.116.237
+23273,1077703917,0,cms_blocks,"2015-10-08 18:10:25",view,"a:1:{s:7:""general"";s:2:""42"";}",success,psingh,13,adminhtml_cms_block_edit,,64.60.116.237
+23274,1077703917,0,index_management,"2015-10-08 18:12:04",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,13,adminhtml_process_massReindex,,64.60.116.237
+23275,1077703917,0,admin_login,"2015-10-08 21:27:53",login,"a:1:{s:7:""general"";N;}",success,psingh,13,adminhtml_process_list,,64.60.116.237
+23276,1077703917,0,catalog_products,"2015-10-08 21:28:17",view,"a:1:{s:7:""general"";s:3:""551"";}",success,psingh,13,adminhtml_catalog_product_edit,,64.60.116.237
+23277,1077703917,0,catalog_products,"2015-10-08 21:28:32",view,"a:1:{s:7:""general"";s:3:""647"";}",success,psingh,13,adminhtml_catalog_product_edit,,64.60.116.237
+23278,1077703917,0,catalog_products,"2015-10-08 21:28:54",save,"a:1:{s:7:""general"";s:3:""647"";}",success,psingh,13,adminhtml_catalog_product_save,,64.60.116.237
+23279,1077703917,0,catalog_products,"2015-10-08 21:29:35",save,"a:1:{s:7:""general"";s:3:""647"";}",success,psingh,13,adminhtml_catalog_product_save,,64.60.116.237
+23280,1077703917,0,index_management,"2015-10-08 21:31:06",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,13,adminhtml_process_massReindex,,64.60.116.237
+23281,1077703917,0,cache_management,"2015-10-08 21:31:15",save,"a:1:{s:7:""general"";s:105:""Cache types: config, layout, block_html, translate, collections, eav, config_api, config_api2, full_page "";}",success,psingh,13,adminhtml_cache_massRefresh,,64.60.116.237
+23282,1077703917,0,sales_orders,"2015-10-08 21:35:24",view,"a:2:{s:7:""general"";s:6:""119421"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:119421;a:1:{s:12:""increment_id"";s:9:""100107045"";}}}}",success,psingh,13,adminhtml_sales_order_view,,64.60.116.237

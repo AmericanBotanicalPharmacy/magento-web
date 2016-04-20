@@ -1,0 +1,89 @@
+<div id="megamenu-container">
+    <ul>
+        <li class="sub menu1 expanded">
+            <h3 class="expanded"><a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'store/'; ?>">Shop</a></h3>
+            <div class="sub1">
+	            <div class="promotion shop">
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('megamenu_promo')->toHtml() ?>
+                </div>
+                <ul>
+	                <h2 class="shop-by">SHOP BY CATEGORY</h2>
+                    <li class="expanded">
+                        <h4 class="expanded"><a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'nutrition.html'; ?>">Nutrition</a></h4>
+                        <div class="sub2">
+<!--                             <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('megamenu-1-1')->toHtml() ?> -->
+                        </div>
+                    </li>
+                    <li class="expanded">
+                        <h4 class="expanded"><a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'eliminate.html'; ?>">Eliminate</a></h4>
+                        <div class="sub2">
+<!--                             <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('megamenu-1-1')->toHtml() ?> -->
+                        </div>
+                    </li>
+                    <li class="expanded">
+                        <h4 class="expanded"><a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'detox.html'; ?>">Detox</a></h4>
+                        <div class="sub2">
+<!--                             <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('megamenu-1-1')->toHtml() ?> -->
+                        </div>
+                    </li>
+                    <li class="expanded">
+                        <h4 class="expanded"><a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'immune.html'; ?>">Immune</a></h4>
+                        <div class="sub2">
+<!--                             <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('megamenu-1-1')->toHtml() ?> -->
+                        </div>
+                    </li>
+                    <li class="expanded">
+                        <a id="slideToggle" href="#"><h4 class="expanded parent active expand_heading">Specifics</h4></a>
+<!--                         <a class="view-all parent active expand_heading" id="slideToggle" href="#">View All &raquo;</a> -->
+                    </li>
+                     <li>
+                     	<div class="sub2">
+                            <div class="slideTogglebox"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('megamenu-1-3')->toHtml() ?></div>
+                        </div>
+                    </li>
+                     <li class="expanded">
+                        <h4 class="expanded lower"><a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'view-all.html'; ?>">View All</a></h4>
+<!--                         <a class="view-all parent active expand_heading" id="slideToggle" href="#">View All &raquo;</a> -->
+                    </li>
+                </ul>
+                
+            </div>
+        </li>
+        <li class="sub menu2">
+            <h3><a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'learn'; ?>">Learn</a></h3>
+            <div class="sub1">
+                <ul>
+                    <li class="expanded">
+                        <h4><a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'learn'; ?>">Learn</a></h4>
+                        <div class="sub2">
+                            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('megamenu-2-1')->toHtml() ?>
+                        </div>
+                    </li>
+                </ul>
+                <?php /*
+                <div class="promotion learn">
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('megamenu_promo')->toHtml() ?>
+                </div>
+                */ ?>
+            </div>
+        </li>
+        <li class="sub menu3">
+            <h3><a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'dr-schulze'; ?>">Dr. Schulze</a></h3>
+            <div class="sub1">
+                <ul>
+                    <li class="expanded">
+                        <h4><a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'dr-schulze'; ?>">Dr. Schulze</a></h4>
+                        <div class="sub2">
+                            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('megamenu-3-1')->toHtml() ?>
+                        </div>
+                    </li>
+                </ul>
+                <?php /*
+                <div class="promotion schulze">
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('megamenu_promo')->toHtml() ?>
+                </div>
+                */ ?>
+            </div>
+        </li>
+    </ul>
+</div>

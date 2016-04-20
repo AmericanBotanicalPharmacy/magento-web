@@ -1,0 +1,578 @@
+<?php
+/*
+ * Author: Aydus
+ * Description:
+ *  - Make short description long description.
+ *  - Add custom attribute links/tabs. i.e. product cms.
+ *  - Remove collateral section.
+ *  - Change product name on mobile to have h1 tag.  Consider duplicate h1 tags on page (desktop/mobile).
+ *  - Move extra-info which was causing space after product name.
+ *  - Move related, upsell blocks.
+ */
+?>
+
+<?php
+/**
+ * Magento Enterprise Edition
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Magento Enterprise Edition License
+ * that is bundled with this package in the file LICENSE_EE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.magentocommerce.com/license/enterprise-edition
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://www.magentocommerce.com/license/enterprise-edition
+ */
+
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php $_product = $this->getProduct(); ?>
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<div class="product-view">
+
+    <div class="product-essential">
+        <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+            <?php echo $this->getBlockHtml('formkey') ?>
+            <div class="no-display">
+                <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+                <input type="hidden" name="related_product" id="related-products-field" value="" />
+            </div>
+
+            <div class="product-img-box">
+                <div class="product-name">
+                    <h1><?php echo $_helper->productAttribute($_product, $_product->getName(false), 'name') ?> <?php if ($_product->getAttributeText('type')): ?><span class="product-type">(<?php echo $_product->getAttributeText('type') ?>)</span><?php endif;?></h1>
+                </div>
+                <?php echo $this->getChildHtml('media') ?>
+            </div>
+
+            <div class="product-shop">
+                <div class="product-name">
+                    <h1><?php echo $_helper->productAttribute($_product, $_product->getName(false), 'name') ?> <?php if ($_product->getAttributeText('type')): ?><span class="product-type">(<?php echo $_product->getAttributeText('type') ?>)</span><?php endif;?></h1>
+                </div>
+
+                <?php echo $this->getChildHtml('alert_urls') ?>
+
+                <?php if ($_product->getDescription()):?>
+                    <div class="description">
+                        <div class="std"><?php echo $_helper->productAttribute($_product, $_product->getDescription(), 'description') ?></div>
+                    </div>
+                <?php endif;?>
+
+                <div class="extra-info">
+                    <?php echo $this->getReviewsSummaryHtml($_product, 'default', false)?>
+                    <?php echo $this->getChildHtml('product_type_availability'); ?>
+                </div>
+
+                <div class="product-size"><?php echo $_product->getData('size') ?></div>
+                <div class="price-info">
+                    <?php echo $this->getPriceHtml($_product); ?>
+                    <?php echo $this->getChildHtml('bundle_prices') ?>
+                    <?php echo $this->getTierPriceHtml() ?>
+                </div>
+
+                <?php echo $this->getChildHtml('other');?>
+
+                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                    <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+                <?php endif;?>
+
+            </div>
+
+            <div class="add-to-cart-wrapper">
+                <?php echo $this->getChildHtml('product_type_data') ?>
+                <?php echo $this->getChildHtml('extrahint') ?>
+
+                <?php if (!$this->hasOptions()):?>
+                    <div class="add-to-box">
+                        <?php if($_product->isSaleable()): ?>
+                            <?php echo $this->getChildHtml('addtocart') ?>
+                            <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                                <span class="or"><?php echo $this->__('OR') ?></span>
+                            <?php endif; ?>
+                        <?php endif; ?>
+                        <?php echo $this->getChildHtml('addto') ?>
+                        <?php echo $this->getChildHtml('sharing') ?>
+                    </div>
+                    <?php echo $this->getChildHtml('extra_buttons') ?>
+                <?php elseif (!$_product->isSaleable()): ?>
+                    <div class="add-to-box">
+                        <?php echo $this->getChildHtml('addto') ?>
+                        <?php echo $this->getChildHtml('sharing') ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+
+           <!--  <?php echo $this->getChildHtml('upsell_products') ?> -->
+            <?php echo $this->getChildHtml('related_products') ?>
+
+            <div class="clearer"></div>
+            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+            <?php endif;?>
+        </form>
+        <script type="text/javascript">
+        //<![CDATA[
+            var productAddToCartForm = new VarienForm('product_addtocart_form');
+            productAddToCartForm.submit = function(button, url) {
+                if (this.validator.validate()) {
+                    var form = this.form;
+                    var oldUrl = form.action;
+
+                    if (url) {
+                       form.action = url;
+                    }
+                    var e = null;
+                    try {
+                        this.form.submit();
+                    } catch (e) {
+                    }
+                    this.form.action = oldUrl;
+                    if (e) {
+                        throw e;
+                    }
+
+                    if (button && button != 'undefined') {
+                        button.disabled = true;
+                    }
+                }
+            }.bind(productAddToCartForm);
+
+            productAddToCartForm.submitLight = function(button, url){
+                if(this.validator) {
+                    var nv = Validation.methods;
+                    delete Validation.methods['required-entry'];
+                    delete Validation.methods['validate-one-required'];
+                    delete Validation.methods['validate-one-required-by-name'];
+                    // Remove custom datetime validators
+                    for (var methodName in Validation.methods) {
+                        if (methodName.match(/^validate-datetime-.*/i)) {
+                            delete Validation.methods[methodName];
+                        }
+                    }
+
+                    if (this.validator.validate()) {
+                        if (url) {
+                            this.form.action = url;
+                        }
+                        this.form.submit();
+                    }
+                    Object.extend(Validation.methods, nv);
+                }
+            }.bind(productAddToCartForm);
+        //]]>
+        </script>
+    </div>
+
+    <?php /*
+    <div class="product-collateral toggle-content tabs">
+        <?php if ($detailedInfoGroup = $this->getChildGroup('detailed_info', 'getChildHtml')):?>
+            <dl id="collateral-tabs" class="collateral-tabs">
+                <?php foreach ($detailedInfoGroup as $alias => $html):?>
+                    <dt class="tab"><span><?php echo $this->escapeHtml($this->getChildData($alias, 'title')) ?></span></dt>
+                    <dd class="tab-container">
+                        <div class="tab-content"><?php echo $html ?></div>
+                    </dd>
+                <?php endforeach;?>
+            </dl>
+        <?php endif; ?>
+    </div>
+    */ ?>
+
+    <div class="product-cms-container">
+
+        <div class="product-menu-cms">
+            <?php if ($_product->getIngredients()):?>
+                <a class="product-ingredients" href="#product-ingredients" onClick="activateItem(this)"><?php echo $this->__('Ingredients') ?></a>
+            <?php endif;?>
+            <?php if ($_product->getHowItWorks()):?>
+                <span class="separator">|</span>
+                <a  class="product-how-it-works" href="#product-how-it-works" onClick="activateItem(this)"><?php echo $this->__('How It Works') ?></a>
+            <?php endif;?>
+            <?php if ($_product->getWhyYouNeedIt()):?>
+                <span class="separator">|</span>
+                <a  class="product-why-you-need-it" href="#product-why-you-need-it" onClick="activateItem(this)"><?php echo $this->__('Why You Need It') ?></a>
+            <?php endif;?>
+            <?php if ($_product->getTestimonials()):?>
+                <span class="separator">|</span>
+                <a  class="product-testimonials" href="#product-testimonials" onClick="activateItem(this)"><?php echo $this->__('Testimonials') ?></a>
+            <?php endif;?>
+        </div>
+
+        <?php if ($_product->getIngredients()):?>
+            <h2><?php echo $this->__('Ingredients') ?></h2>
+            <div id="product-ingredients" class="product-cms product-ingredients">
+                <div class="std"><?php echo $_product->getIngredients() ?></div>
+            </div>
+        <?php endif;?>
+
+        <?php /*
+        <h2><?php echo $this->__('Ingredients') ?></h2>
+        <div id="product-ingredients" class="product-cms product-ingredients">
+            <div class="std">
+
+                <div class="template1">
+                    <div class="table1">
+                        <div class="column-left-container">
+                            <div class="column left">
+                                <h3>Heading Left</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <ul>
+                                    <li>
+                                        <img src="http://placehold.it/90x90" alt="" />
+                                        <h4>Ingredient Name</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    </li>
+                                    <li>
+                                        <img src="http://placehold.it/90x90" alt="" />
+                                        <h4>Ingredient Name</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    </li>
+                                    <li>
+                                        <img src="http://placehold.it/90x90" alt="" />
+                                        <h4>Ingredient Name</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column right">
+                            <h3>Heading Right</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <ul>
+                                <li>
+                                    <img src="http://placehold.it/90x90" alt="" />
+                                    <h4>Ingredient Name</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                </li>
+                                <li>
+                                    <img src="http://placehold.it/90x90" alt="" />
+                                    <h4>Ingredient Name</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                </li>
+                                <li class="quote">
+                                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+
+                <div class="template2">
+                    <div class="table1">
+                        <div class="column-left-container">
+                            <div class="column left">
+                                <h3>Heading Left</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <div class="column right">
+                            <h3>Heading Right</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        */?>
+
+        <?php if ($_product->getHowItWorks()):?>
+            <h2><?php echo $this->__('How It Works') ?></h2>
+            <div id="product-how-it-works" class="product-cms product-how-it-works">
+                <div class="std"><?php echo $_product->getHowItWorks() ?></div>
+            </div>
+        <?php endif;?>
+
+        <?php /*
+        <h2><?php echo $this->__('How It Works') ?></h2>
+        <div id="product-how-it-works" class="product-cms product-how-it-works">
+            <div class="std">
+
+                <div class="template1">
+                    <div class="table1">
+                        <div class="column-left-container">
+                            <div class="column left">
+                                <div class="testimonial">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <span>Name</span>
+                                </div>
+                                <img src="http://placehold.it/600x300" alt="" />
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <div class="column right">
+                            <img src="http://placehold.it/500x800" alt="" />
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+
+                <div class="template2">
+                    <div class="table1">
+                        <div class="column-left-container">
+                            <div class="column left">
+                                <div class="testimonial">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                    <span>Name</span>
+                                </div>
+                                <img src="http://placehold.it/600x300" alt="" />
+                            </div>
+                        </div>
+                        <div class="column right">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        */?>
+
+        <?php if ($_product->getWhyYouNeedIt()):?>
+            <h2><?php echo $this->__('Why You Need It') ?></h2>
+            <div id="product-why-you-need-it" class="product-cms product-why-you-need-it">
+                <div class="std"><?php echo $_product->getWhyYouNeedIt() ?></div>
+            </div>
+        <?php endif;?>
+
+        <?php /*
+        <h2><?php echo $this->__('Why You Need It') ?></h2>
+        <div id="product-why-you-need-it" class="product-cms product-why-you-need-it">
+            <div class="std">
+
+                <div class="template1">
+                    <div class="table1">
+                        <div class="column-left-container">
+                            <div class="column left">
+                                <h3>Heading</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <div class="column right">
+                            <div class="table2">
+                                <div class="column-left-container">
+                                    <div class="column left">
+                                        <ul>
+                                            <li>
+                                                <h5>List Heading</h5>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </li>
+                                            <li>
+                                                <h5>List Heading</h5>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </li>
+                                            <li>
+                                                <h5>List Heading</h5>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </li>
+                                            <li>
+                                                <h5>List Heading Long Long Long Long</h5>
+                                            </li>
+                                            <li>
+                                                <h5>List Heading</h5>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </li>
+                                            <li>
+                                                <h5>List Heading</h5>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="column right">
+                                    <h4>List Heading</h4>
+                                    <ul>
+                                        <li>
+                                            <h5>List Heading</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </li>
+                                        <li>
+                                            <h5>List Heading</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </li>
+                                        <li>
+                                            <h5>List Heading</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </li>
+                                        <li>
+                                            <h5>List Heading</h5>
+                                        </li>
+                                    </ul>
+                                    <div class="separator"></div>
+                                    <h4>List Heading</h4>
+                                    <ul>
+                                        <li>
+                                            <h6>List Sub Heading Long Long Long Long</h6>
+                                        </li>
+                                        <li>
+                                            <h6>List Sub Heading</h6>
+                                        </li>
+                                        <li>
+                                            <h6>List Sub Heading</h6>
+                                        </li>
+                                        <li>
+                                            <h6>List Sub Heading</h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="template2">
+                    <div class="table1">
+                        <div class="column-left-container">
+                            <div class="column left">
+                                <h3>Heading</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <img src="http://placehold.it/500x370" alt="" />
+                            </div>
+                        </div>
+                        <div class="column right">
+                            <ul>
+                                <li>
+                                    <h5>List Heading</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </li>
+                                <li>
+                                    <h5>List Heading</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </li>
+                                <li>
+                                    <h5>List Heading</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        */?>
+
+        <?php if ($_product->getVitamins()):?>
+            <h2><?php echo $this->__('Vitamins') ?></h2>
+            <div id="product-vitamins" class="product-cms product-vitamins">
+                <div class="std clearfix"><?php echo $_product->getVitamins() ?></div>
+            </div>
+        <?php endif;?>
+
+        <?php /*
+        <h2><?php echo $this->__('Vitamins') ?></h2>
+        <div id="product-vitamins" class="product-cms product-vitamins">
+            <div class="std clearfix">
+
+                <div class="template1">
+                    <h3>The vitamins in just one jar give you</h3>
+                    <ul>
+                        <li>
+                            <img src="http://placehold.it/130x130" alt="" />
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/130x130" alt="" />
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/130x130" alt="" />
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/130x130" alt="" />
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        */?>
+
+        <?php if ($_product->getTestimonials()):?>
+            <h2><?php echo $this->__('Testimonials') ?></h2>
+            <div id="product-testimonials" class="product-cms product-testimonials">
+                <div class="std"><?php echo $_product->getTestimonials() ?></div>
+            </div>
+        <?php endif;?>
+
+        <?php /*
+        <h2><?php echo $this->__('Our Customers Say...') ?></h2>
+        <div id="product-testimonials" class="product-cms product-testimonials">
+            <div class="std">
+
+                <div class="template1">
+                    <div class="table1">
+                        <div class="column-left-container">
+                            <div class="column left">
+                                <div class="testimonial">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <span>Name</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column right">
+                            <div class="testimonial">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <span>Name</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="template2">
+                    <div class="testimonial">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <span>Name</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <span>Name</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        */?>
+
+    </div>
+
+    <?php echo $this->getChildHtml('product_additional_data') ?>
+	<?php echo $this->getChildHtml('upsell_products') ?>
+    <?php echo $this->getChildHtml('related_products') ?>
+</div>
+<div id="back-to-top"><div></div></div>

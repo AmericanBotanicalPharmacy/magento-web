@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<widgets>
+    <featuredproducts_featured type="aydus_featuredproducts/featured" translate="name description" module="aydus_featuredproducts">
+        <name>Featured Products</name>
+        <description type="desc">Display featured products.</description>
+        <parameters>
+            <template>
+                <visible>1</visible>
+                <required>0</required>
+                <type>select</type>
+                <label>Display template</label>
+                <value>catalog/product/list.phtml</value>
+                <values>
+                    <one translate="label">
+                        <value>catalog/product/list.phtml</value>
+                        <label>Category List</label>
+                    </one>
+                </values>
+            </template>
+            <mode>
+                <visible>1</visible>
+                <required>0</required>
+                <type>select</type>
+                <label>Layout mode</label>
+                <value>grid</value>
+                <values>
+                    <one translate="label">
+                        <value>grid</value>
+                        <label>Grid</label>
+                    </one>
+                    <two translate="label">
+                        <value>list</value>
+                        <label>List</label>
+                    </two>
+                </values>
+            </mode>
+            <category_name>
+                <visible>1</visible>
+                <required>1</required>
+                <type>text</type>
+                <label>Featured products category name.</label>
+            </category_name>
+            <column_count>
+                <visible>1</visible>
+                <required>0</required>
+                <type>text</type>
+                <label>Number of columns to display.</label>
+            </column_count>
+        </parameters>
+    </featuredproducts_featured>
+</widgets>

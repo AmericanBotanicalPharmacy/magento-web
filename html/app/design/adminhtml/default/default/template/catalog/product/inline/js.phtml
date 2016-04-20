@@ -1,0 +1,12 @@
+<script type="text/javascript">
+
+function updateField(button, fieldId)
+{
+alert(1);
+    new Ajax.Request('<?php echo Mage::helper(\'catalog\')->getUrl(\'*/*/updateField\') ?>', {
+        method: 'post',
+        parameters: { id: fieldId, title: $(button).previous('input').getValue() }
+    });
+}
+
+</script>

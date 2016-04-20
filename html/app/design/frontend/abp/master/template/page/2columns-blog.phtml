@@ -1,0 +1,235 @@
+<?php
+/**
+ * Magento Enterprise Edition
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Magento Enterprise Edition License
+ * that is bundled with this package in the file LICENSE_EE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.magentocommerce.com/license/enterprise-edition
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://www.magentocommerce.com/license/enterprise-edition
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html lang="en" id="top" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" id="top" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" id="top" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" id="top" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" id="top" class="no-js" itemscope itemtype="http://schema.org/WebPage"> <!--<![endif]-->
+
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<?php echo $this->getChildHtml('after_body_start') ?>
+<div class="wrapper">
+    <?php echo $this->getChildHtml('global_notices') ?>
+    <div class="page">
+        <?php echo $this->getChildHtml('header') ?>
+       <?php $bookIds = array(); if(Mage::app()->getRequest()->getControllerName() == "post" && Mage::app()->getRequest()->getActionName() == "view" &&  Mage::app()->getRequest()->getRouteName() == "wordpress")
+                                {
+                                    $collection = Mage::getResourceModel('wordpress/post_collection')->setOrderByPostDate("DESC");
+
+                                    if (Mage::getSingleton('customer/session')->isLoggedIn() && Mage::helper('wordpress')->isAddonInstalled('CS')) {
+                                            $collection->addStatusFilter(array('publish', 'private'));
+                                    }
+                                    else {
+                                            $collection->addStatusFilter('publish');
+                                    }
+	
+
+                                $tag = "Books";
+				$collection->addTermFilter($tag, 'bookcategory', 'name');
+
+                                
+
+                            $collection->addPostTypeFilter('book');
+                            
+                                foreach($collection->getData() as $dataIds)
+                                {
+                                    
+                                    $bookIds[] = $dataIds['ID'] ;
+                                }
+			
+                                    
+                                }
+                 if(count($bookIds) > 0){   
+                     
+                     $id = Mage::app()->getRequest()->getParam('id');
+                                    if(in_array($id,$bookIds))
+                                    { ?>
+        
+        <div class="main-container col1-layout">
+                      <div class="banner-container-wpblog">
+	                       <div id="header-text">
+				<div id="quotes">
+         <div class="textItem"><h4>&#8220;Tomorrow is what you<br /><u>BELIEVE</u> and <u>DO</u> Today!&#8221;</h4>
+         </div>
+
+         <div class="textItem"><h3>&#8220;You can heal yourself of ANYTHING, any illness or dis-ease.<br />
+Just <u>STOP</u> doing what made you sick,<br />
+and <u>START</u> doing what will Create Powerful Health.&#8221;</h3>
+         </div>
+
+         <div class="textItem"><h3>&#8220;Your <u>FOCUS</u> determines your <u>FUTURE</u>.&#8221;</h3>
+         </div>
+
+         <div class="textItem"><h3>&#8220;There are NO incurable diseases, NONE. Take <u>RESPONSIBILITY</u>, and
+be willing to <u>CHANGE</u>, and you can heal yourself of anything.</h3>
+         </div>
+         
+         <div class="textItem"><h3>&#8220;<u>BLOCKAGE</u>&#151;Physical, Emotional and Spiritual&#151;<br />
+is the cause of ALL DIS-EASE.&#8221;</h3>
+         </div>
+     </div>
+    			</div>
+                      </div>  <div class="main">
+                   <?php //echo $this->getChildHtml('banner') ?>
+                  <?php echo $this->getChildHtml('breadcrumbs') ?>
+                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('blog_links_list')->toHtml(); ?>
+                <?php // Add custom structural block: banner. ?>
+             
+                <?php //echo $this->getChildHtml('breadcrumbs') ?>
+                <div class="col-main" itemscope itemtype="http://schema.org/BlogPosting">
+                    <?php echo $this->getChildHtml('global_messages') ?>
+                    <?php echo $this->getChildHtml('content') ?>
+                </div>
+            </div>
+            <?php echo $this->getChildHtml('footer_before') ?>
+            <?php echo $this->getChildHtml('footer') ?>
+            <?php echo $this->getChildHtml('global_cookie_notice') ?>
+            <?php echo $this->getChildHtml('before_body_end') ?>
+        </div>
+        <?php
+                                        
+                                    }else{
+                                        ?>
+        
+         <div class="main-container col3-layout blog_page">
+            <div class="banner-container-wpblog">
+	             <div id="header-text">
+				<div id="quotes">
+         <div class="textItem"><h4>&#8220;Tomorrow is what you<br /><u>BELIEVE</u> and <u>DO</u> Today!&#8221;</h4>
+         </div>
+
+         <div class="textItem"><h3>&#8220;You can heal yourself of ANYTHING, any illness or dis-ease.<br />
+Just <u>STOP</u> doing what made you sick,<br />
+and <u>START</u> doing what will Create Powerful Health.&#8221;</h3>
+         </div>
+
+         <div class="textItem"><h3>&#8220;Your <u>FOCUS</u> determines your <u>FUTURE</u>.&#8221;</h3>
+         </div>
+
+         <div class="textItem"><h3>&#8220;There are NO incurable diseases, NONE. Take <u>RESPONSIBILITY</u>, and
+be willing to <u>CHANGE</u>, and you can heal yourself of anything.</h3>
+         </div>
+         
+         <div class="textItem"><h3>&#8220;<u>BLOCKAGE</u>&#151;Physical, Emotional and Spiritual&#151;<br />
+is the cause of ALL DIS-EASE.&#8221;</h3>
+         </div>
+     </div>
+    			</div>
+            </div>
+            <div class="main">
+                <?php echo strip_tags('<br />',$this->getChildHtml('breadcrumbs')) ?>
+                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('blog_links_list')->toHtml(); ?>
+                <div class="col-wrapper">
+                    <?php // This left_first block will display above the main content on smaller viewports ?>
+                    <?php if ($_leftContent = $this->getChildHtml('left_first')): ?>
+                        <div class="col-left sidebar col-left-first"><?php echo $_leftContent;   ?></div>
+                    <?php endif; ?>
+                    <div class="col-main" itemscope itemtype="http://schema.org/BlogPosting">
+                        <?php echo $this->getChildHtml('global_messages') ?>
+                        <?php echo $this->getChildHtml('content') ?>
+                    </div>
+                        <div class="col-left sidebar"><?php echo $this->getChildHtml('left') ?></div>
+                </div>
+                <div class="col-right sidebar"><?php echo $this->getChildHtml('right') ?></div>
+            </div>
+        <?php echo $this->getChildHtml('footer_before') ?>
+        <?php echo $this->getChildHtml('footer') ?>
+<?php echo $this->getChildHtml('global_cookie_notice') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+
+        </div>
+        <?php
+                                    }
+                 }else{     
+                 ?>
+        <div class="main-container col3-layout blog_page">
+            <div class="banner-container-wpblog">
+	            <div id="header-text">
+				<div id="quotes">
+         <div class="textItem"><h4>&#8220;Tomorrow is what you<br /><u>BELIEVE</u> and <u>DO</u> Today!&#8221;</h4>
+         </div>
+
+         <div class="textItem"><h3>&#8220;You can heal yourself of ANYTHING, any illness or dis-ease.<br />
+Just <u>STOP</u> doing what made you sick,<br />
+and <u>START</u> doing what will Create Powerful Health.&#8221;</h3>
+         </div>
+
+         <div class="textItem"><h3>&#8220;Your <u>FOCUS</u> determines your <u>FUTURE</u>.&#8221;</h3>
+         </div>
+
+         <div class="textItem"><h3>&#8220;There are NO incurable diseases, NONE. Take <u>RESPONSIBILITY</u>, and
+be willing to <u>CHANGE</u>, and you can heal yourself of anything.</h3>
+         </div>
+         
+         <div class="textItem"><h3>&#8220;<u>BLOCKAGE</u>&#151;Physical, Emotional and Spiritual&#151;<br />
+is the cause of ALL DIS-EASE.&#8221;</h3>
+         </div>
+     </div>
+    			</div>
+    		</div>
+            <div class="main">
+                <?php echo $this->getChildHtml('breadcrumbs') ?>
+                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('blog_links_list')->toHtml(); ?>
+                <div class="col-wrapper">
+                    <?php // This left_first block will display above the main content on smaller viewports ?>
+                    <?php if ($_leftContent = $this->getChildHtml('left_first')): ?>
+                        <div class="col-left sidebar col-left-first"><?php echo $_leftContent;   ?></div>
+                    <?php endif; ?>
+                    <div class="col-main" itemscope itemtype="http://schema.org/BlogPosting">
+                        <?php echo $this->getChildHtml('global_messages') ?>
+                        <?php echo $this->getChildHtml('content') ?>
+                    </div>
+                        <div class="col-left sidebar"><?php echo $this->getChildHtml('left') ?></div>
+                </div>
+                <div class="col-right sidebar"><?php echo $this->getChildHtml('right') ?></div>
+            </div>
+        <?php echo $this->getChildHtml('footer_before') ?>
+        <?php echo $this->getChildHtml('footer') ?>
+<?php echo $this->getChildHtml('global_cookie_notice') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+
+        </div>
+        
+                 <?php } ?>
+        
+    </div>
+</div>
+<div id="back-to-top"><div></div></div>
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>

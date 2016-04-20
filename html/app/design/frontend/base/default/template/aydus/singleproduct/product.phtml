@@ -1,0 +1,11 @@
+<?php
+	$_product = $this->getProduct();
+?>
+
+<div class="single-product-container">
+	<!--
+    <div><?php echo $_product->getName(); ?></div>
+    <div><?php echo $_product->getPrice(); ?></div>
+	-->
+    <div class="action"><button type="button" class="button btn-cart" onclick="scAddToCart();setLocation('<?php echo $this->getAddToCartUrl($_product, array("_secure" => true))?>');">Add To Cart</button></div>
+</div>

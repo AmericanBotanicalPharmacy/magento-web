@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <aydus_socialmeta>
+                                        <aydus_socialmeta translate="title" module="aydus_socialmeta">
+                                            <title>Social Meta Section</title>
+                                            <sort_order>250</sort_order>
+                                        </aydus_socialmeta>
+                                    </aydus_socialmeta>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

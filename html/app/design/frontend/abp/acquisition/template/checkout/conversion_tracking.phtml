@@ -1,0 +1,65 @@
+<script type="text/javascript">
+<?php 
+//-------------------------------------------
+// START ADWORDS CONVERSION VALUE TRACKING CODE
+//-------------------------------------------
+$order_details = Mage::getModel('sales/order')->loadByIncrementId(Mage::getSingleton('checkout/session')->getLastRealOrderId());
+$orderItems = $order_details->getAllItems();
+$purchasedSkus = array();
+foreach($orderItems as $orderItem) {
+    $purchasedSkus[] = $orderItem->getSku();
+}
+$saleAmount = $order_details->subtotal;
+$orderId = Mage::getSingleton('checkout/session')->getLastRealOrderId();
+?>
+//template/checkout
+/* <![CDATA[ */
+var google_conversion_id = 1071329565;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "DKFuCLmukwIQneLs_gM";
+var google_conversion_value = <?php echo $saleAmount; ?>;
+var google_conversion_currency = "USD";
+var google_remarketing_only = false;
+/* ]]> */
+
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
+
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1071329565/?value=<?php echo $saleAmount; ?>&amp;currency_code=USD&amp;label=DKFuCLmukwIQneLs_gM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+
+<script type="text/javascript"> 
+adroll_conversion_value_in_dollars =<?php echo $saleAmountt; ?>; 
+adroll_custom_data = {"ORDER_ID": <?php echo $orderId; ?>}
+</script>
+
+<script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.msn.com/mstag/site/90a74c24-550d-4ddf-b637-13d62d361ff0/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"1189478",type:"1",revenue:"<?php echo $saleAmount; ?>",actionid:"44501"})</script> <noscript> <iframe src="//flex.msn.com/mstag/tag/90a74c24-550d-4ddf-b637-13d62d361ff0/analytics.html?dedup=1&domainId=1189478&type=1&revenue=<?php echo $saleAmount; ?>&actionid=44501" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe> </noscript>
+
+<script language="JavaScript" type="text/javascript"><!--
+/* omni_purchase - log the final purchase here - log from the confimation page at the end of the sale. */
+	s.pageName="Receipt";
+	s.channel="E-Commerce";
+	s.prop1="";
+	s.prop2="";
+	s.prop3="E-Commerce";
+	s.linkTrackVars="products,events,eVar7";
+	s.linkTrackEvents="purchase";
+	s.events="purchase";
+	s.eVar7="<?php echo $saleAmount; ?>";
+	s.products="<?php echo $orderItem; ?>";  
+	s.purchaseID="<?php echo $orderId; ?>";
+
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://herbdoc.112.2o7.net/b/ss/herbdoccomdev/1/H.23.3--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.23.3. -->

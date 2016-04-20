@@ -1,0 +1,216 @@
+<?php
+/*
+ * Author: Aydus
+ * Description:
+ *  - Remove h1.
+ *  - Change h2 to h1.
+ *  - Change 'your order # is' to h2.
+ *  - Make 'click here to print' a button and change text (locale translate did not work).
+ *  - Move getChildHtml() to bottom.
+ *  - Add col-set, col-1, col-2 wrappers.
+ */
+?>
+
+<?php
+/**
+ * Magento Enterprise Edition
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Magento Enterprise Edition License
+ * that is bundled with this package in the file LICENSE_EE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.magentocommerce.com/license/enterprise-edition
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://www.magentocommerce.com/license/enterprise-edition
+ */
+?>
+<div class="col-set">
+    <div class="col-1">
+        <div class="page-title">
+            <h1><?php echo $this->__('Thank you for your purchase!') ?></h1>
+        </div>
+        <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+
+        <?php if ($this->getOrderId()):?>
+        <?php if ($this->getCanViewOrder()) :?>
+            <h2><?php echo $this->__('Your order # is: %s.', sprintf('<a href="%s">%s</a>', $this->escapeHtml($this->getViewOrderUrl()), $this->escapeHtml($this->getOrderId()))) ?></h2>
+        <?php  else :?>
+            <h2><?php echo $this->__('Your order # is: %s.', $this->escapeHtml($this->getOrderId())) ?></h2>
+        <?php endif;?>
+            <p><?php echo $this->__('You will receive an order confirmation email with details of your order and a link to track its progress.') ?></p>
+        <?php endif;?>
+
+        <?php if ($this->getAgreementRefId()): ?>
+            <p><?php echo $this->__('Your billing agreement # is: %s.', sprintf('<a href="%s">%s</a>', $this->escapeHtml($this->getAgreementUrl()), $this->escapeHtml($this->getAgreementRefId())))?></p>
+        <?php endif;?>
+
+        <?php if ($profiles = $this->getRecurringProfiles()):?>
+        <p><?php echo $this->__('Your recurring payment profiles:'); ?></p>
+        <ul class="disc">
+        <?php foreach($profiles as $profile):?>
+        <?php $profileIdHtml = ($this->getCanViewProfiles() ? sprintf('<a href="%s">%s</a>', $this->escapeHtml($this->getProfileUrl($profile)), $this->escapeHtml($this->getObjectData($profile, 'reference_id'))) : $this->escapeHtml($this->getObjectData($profile, 'reference_id')));?>
+            <li><?php echo $this->__('Payment profile # %s: "%s".', $profileIdHtml, $this->escapeHtml($this->getObjectData($profile, 'schedule_description')))?></li>
+        <?php endforeach;?>
+        </ul>
+        <?php endif;?>
+
+        <div class="buttons-set">
+            <button type="button" class="button" title="<?php echo $this->__('Continue Shopping') ?>" onclick="window.location='<?php echo $this->getUrl() ?>'"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
+            <?php echo $this->__('<a href="%s" onclick="this.target=\'_blank\'">Print Invoice</a>', $this->getPrintUrl()) ?>
+        </div>
+    </div>
+
+    <div class="col-2">
+        <?php if ($this->getCanViewOrder() && $this->getCanPrintOrder()) :?>
+            <?php echo $this->getChildHtml() ?>
+        <?php endif;?>
+    </div>
+</div>
+
+<?php 
+//-------------------------------------------
+// START CONVERSION VALUE TRACKING CODE
+//-------------------------------------------
+$order_details = Mage::getModel('sales/order')->loadByIncrementId(Mage::getSingleton('checkout/session')->getLastRealOrderId());
+$orderItems = $order_details->getAllItems();
+
+$purchasedSkus = array();
+foreach($orderItems as $orderItem) {
+    $qty = $orderItem->getQtyOrdered();
+    for($i=1;$i<=$qty;$i++) {
+        $purchasedSkus[] = $orderItem->getSku(); 
+    }
+}
+
+
+//items
+$items = $order_details->getAllItems();
+//Mage::log($items, null, 'tmp.log');
+$itemsAr = array();
+foreach ($items as $item){
+		$itemsAr[] .= ";".$item->getSku().";".(int)$item->getQtyOrdered().";".$item->getPrice()* (int)$item->getQtyOrdered();
+	}
+		$omni_items = implode(",",$itemsAr);
+
+
+$orderId = Mage::getSingleton('checkout/session')->getLastRealOrderId();
+$order = Mage::getSingleton('sales/order')->loadByIncrementId($orderId);
+
+
+
+$order_subtotal = $order->getSubtotal();
+$shipping = $order->getShippingAmount();
+$discount = $order->getDiscountAmount();
+$tax = $order->getTaxAmount();
+$grand_total = $order->getGrandTotal();
+$saleAmount = $grand_total;
+?>
+
+<!-- Google Conversion Tracking -->
+<script type="text/javascript">
+ga('require', 'ecommerce');
+ga('ecommerce:addTransaction', {
+  'id': '<?php echo $orderId ?>',                       // Transaction ID. Required.
+  'affiliation': 'American Botanical Pharmacy',   		// Affiliation or store name.
+  'revenue': '<?php echo $saleAmount; ?>',              // Grand Total.
+  'shipping': '<?php echo $shipping; ?>',               // Shipping.
+  'tax': '<?php echo $tax; ?>'                          // Tax.
+});
+
+	<?php foreach ($items as $item){ ?>
+			
+		
+  ga('ecommerce:addItem', {
+  'id': '<?php echo $orderId ?>',                       // Transaction ID. Required.
+  'name': '<?php echo $item->getSku() ?>',        			// Product name. Required.
+  'sku': '<?php echo $item->getSku() ?>',        			// SKU/code.
+  'category': '',                                       // Category or variation.
+  'price': '<?php echo $item->getPrice() ?>',      			// Unit price.
+  'quantity': '<?php echo (int)$item->getQtyOrdered() ?>' 	// Quantity.
+});
+
+	<?php } ?>
+
+ga('ecommerce:send');
+</script>
+
+<!-- Google Ad Conversion -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1071329565;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "DKFuCLmukwIQneLs_gM";
+var google_conversion_value = <?php echo $saleAmount; ?>;
+var google_conversion_currency = "USD";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
+
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1071329565/?value=<?php echo $saleAmount; ?>&amp;currency_code=USD&amp;label=DKFuCLmukwIQneLs_gM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- AdRoll Conversion Tracking -->
+<script type="text/javascript"> 
+adroll_conversion_value_in_dollars =<?php echo $saleAmount; ?>; 
+adroll_custom_data = {"ORDER_ID": <?php echo $orderId; ?>}
+</script>
+
+<!-- Bing -->
+<script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.msn.com/mstag/site/90a74c24-550d-4ddf-b637-13d62d361ff0/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"1189478",type:"1",revenue:"<?php echo $saleAmount; ?>",actionid:"44501"})</script> <noscript> <iframe src="//flex.msn.com/mstag/tag/90a74c24-550d-4ddf-b637-13d62d361ff0/analytics.html?dedup=1&domainId=1189478&type=1&revenue=<?php echo $saleAmount; ?>&actionid=44501" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe> </noscript>
+
+<!-- Omniture Conversion Tracking -->
+<script type="text/javascript"> 
+<?php 
+	    if (isset($orderId,$omni_items)) {
+	    	
+	    	echo 's.pageName="Order Confirmation";';
+			echo 's.channel="E-Commerce";';
+			echo 's.prop1="";';
+			echo 's.prop2="";';
+			echo 's.prop3="E-Commerce";';
+			echo 's.linkTrackVars="products,events,eVar7";';
+			echo 's.linkTrackEvents="purchase";';
+			echo 's.events="purchase";';
+			echo 's.eVar7="'. $orderId. '";';
+			echo 's.products="'. $omni_items .'";'; 
+			echo 's.purchaseID="'. $orderId .'";';
+	    }
+?>
+</script>
+
+
+<!--SteelHouse Conversion Pixel-->
+<!-- Install ONLY on conversion page/event-->
+<script type="text/javascript">
+(function(){var x=null,p,q,m,
+o="10841",
+l="<?php echo $orderId; ?>",
+i="<?php echo $saleAmount; ?>",
+c="",
+k="",
+g="",
+j="",
+u="",
+shadditional="";
+try{p=top.document.referer!==""?encodeURIComponent(top.document.referrer.substring(0,512)):""}catch(n){p=document.referrer!==null?document.referrer.toString().substring(0,512):""}try{q=window&&window.top&&document.location&&window.top.location===document.location?document.location:window&&window.top&&window.top.location&&""!==window.top.location?window.top.location:document.location}catch(b){q=document.location}try{m=parent.location.href!==""?encodeURIComponent(parent.location.href.toString().substring(0,512)):""}catch(z){try{m=q!==null?encodeURIComponent(q.toString().substring(0,512)):""}catch(h){m=""}}var A,y=document.createElement("script"),w=null,v=document.getElementsByTagName("script"),t=Number(v.length)-1,r=document.getElementsByTagName("script")[t];if(typeof A==="undefined"){A=Math.floor(Math.random()*100000000000000000)}w="dx.steelhousemedia.com/spx?conv=1&shaid="+o+"&tdr="+p+"&plh="+m+"&cb="+A+"&shoid="+l+"&shoamt="+i+"&shocur="+c+"&shopid="+k+"&shoq="+g+"&shoup="+j+"&shpil="+u+shadditional;y.type="text/javascript";y.src=("https:"===document.location.protocol?"https://":"http://")+w;r.parentNode.insertBefore(y,r)}());
+</script>

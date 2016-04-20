@@ -1,0 +1,201 @@
+/*----------------------------------------------------------------------------*/
+/* Product Carousel
+/*----------------------------------------------------------------------------*/
+
+@mixin carousel() {
+
+    .block-title h2,
+    .box-title h2 {
+        margin: 0;
+        padding: 60px 0 60px 0;
+        @include responsive-font-size(30);
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #333333;
+
+        @include breakpoint(tablet) {
+            margin: 45px 0 40px 0;
+        }
+    }
+
+    ol,
+    ul {
+        width: auto;
+        margin: 0 auto;
+        padding: 0;
+        @include box-sizing(border-box);
+
+        @include breakpoint(tablet) {
+            width: 90%;
+        }
+
+        @include breakpoint(mobile) {
+            width: 80%;
+        }
+
+        @include breakpoint(phone) {
+            width: 75%;
+        }
+
+        li {
+            margin: 0;
+            padding: 0 15px;
+            text-align: center;
+            @include box-sizing(border-box);
+
+            .checkbox {
+                display: none;
+            }
+
+            .product {
+                position: static;
+                margin: 0;
+                padding: 9px;
+                border: 1px solid #edecea;
+
+                .product-image {
+                    margin: 0 0 30px 0;
+                    float: none;
+                    min-width: auto;
+                    border: none;
+
+                    img {
+                        margin: 0 auto;
+                        @include responsive-img();
+                    }
+                }
+
+                .product-details,
+                .product-info {
+                    min-height: auto;
+                    margin: 0;
+                    padding: 0;
+
+                    .product-name {
+                        height: 3.25em;
+                        margin: 0;
+                        padding: 0;
+                        @include responsive-font-size(14);
+                        font-weight: normal;
+                        text-transform: none;
+                        color: #302d26;
+
+                        a {
+                            text-transform: none;
+                        }
+                    }
+
+                    .price-box {
+                        margin: 0;
+                        padding: 0;
+
+                        span {
+                            float: none;
+                        }
+                    }
+
+                    .actions {
+                        position: static;
+                        min-height: initial;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    .btn-cart {
+                        margin: 20px 0 0 0;
+                        @include button-b1(100%);
+                    }
+                }
+            }
+        }
+
+        .owl-controls {
+
+            .navigation {
+                position: absolute;
+                z-index: 102;
+                top: 25%;
+                width: 47px;
+                height: 108px;
+                cursor: pointer;
+            }
+
+            .owl-next {
+                @extend .navigation;
+                right: -7%;
+                @include use-sprite('carousel-next');
+
+                @include breakpoint(mobile) {
+                    right: -15%;
+                }
+
+                @include breakpoint(phone) {
+                    right: -16%;
+                }
+
+                &:hover {
+                    @include use-sprite('carousel-next-hover');
+                }
+            }
+
+            .owl-prev {
+                @extend .navigation;
+                left: -7%;
+                @include use-sprite('carousel-prev');
+
+                @include breakpoint(mobile) {
+                    left: -15%;
+                }
+
+                @include breakpoint(phone) {
+                    left: -16%;
+                }
+
+                &:hover {
+                    @include use-sprite('carousel-prev-hover');
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Text Carousel
+/*----------------------------------------------------------------------------*/
+
+@mixin text-carousel() {
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+    @include box-sizing(border-box);
+
+    li {
+        margin: 0;
+        @include box-sizing(border-box);
+    }
+
+    .owl-controls {
+
+        .navigation {
+            position: absolute;
+            z-index: 102;
+            top: 30%;
+            width: 28px;
+            height: 43px;
+            cursor: pointer;
+        }
+
+        .owl-next {
+            @extend .navigation;
+            right: -15%;
+            @include use-sprite('text-carousel-next');
+        }
+
+        .owl-prev {
+            @extend .navigation;
+            left: -15%;
+            @include use-sprite('text-carousel-prev');
+        }
+    }
+}

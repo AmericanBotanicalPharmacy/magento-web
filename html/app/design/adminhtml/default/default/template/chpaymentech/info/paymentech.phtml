@@ -1,0 +1,7 @@
+<?php if($_info = $this->getInfo()): ?>
+    <?php echo $this->__('Credit Card Type: %s',        $this->htmlEscape($this->getCcTypeName())); ?><br />
+    <?php echo $this->__('Credit Card Number: xxxx-%s', $this->htmlEscape($_info->getCcLast4())); ?><br />
+    <?php echo $this->__('Expiration Date: %s/%s',      $this->htmlEscape($_info->getCcExpMonth()), $this->htmlEscape($_info->getCcExpYear())); ?><br />
+    <?php echo $this->__('CVV Status: %s',            $this->htmlEscape($this->getCvvStatusMessage())); ?><br />
+    <?php echo $this->__('AVS Status: %s',            $this->htmlEscape($this->getAvsStatusMessage())); ?><br />
+<?php endif; ?>

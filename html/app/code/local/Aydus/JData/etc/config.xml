@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Aydus_JData>
+            <version>0.0.2</version>
+        </Aydus_JData>
+    </modules>
+    <global>
+        <helpers>
+            <aydus_jdata>
+                <class>Aydus_JData_Helper</class>
+            </aydus_jdata>
+        </helpers>
+        <blocks>
+             <aydus_jdata>
+                <class>Aydus_JData_Block</class>
+             </aydus_jdata>
+        </blocks>
+    </global>
+</config>

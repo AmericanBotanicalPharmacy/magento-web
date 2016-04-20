@@ -1,0 +1,45 @@
+/*----------------------------------------------------------------------------*/
+/* Product: Configurable
+/*----------------------------------------------------------------------------*/
+
+body.catalog-product-view .product-view {
+
+    .swatch-wrapper {
+        @include clearfix();
+        margin: -5px 0 10px 0;
+
+        .swatch {
+            float: left;
+            margin: 10px 9px 0 0;
+            padding: 11px 36px;
+            text-align: center;
+            border: 3px solid #cccccc;
+            cursor: pointer;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.active {
+                border-color: #063f21;
+            }
+
+            span {
+                text-transform: uppercase;
+                color: #333333;
+
+                span {
+                    display: block;
+                    text-transform: none;
+                    color: #666666;
+                }
+            }
+        }
+    }
+
+    .swatch-caption-container {
+        margin-top: -50px;
+        text-align: center;
+    }
+}
+

@@ -1,0 +1,51 @@
+"---Category---",""
+"Recently Viewed Products", "Your recently viewed items"
+"View as", "View"
+
+"---Product---",""
+"You may also be interested in the following product(s)", "Customers Also Bought"
+
+"---Minicart---",""
+"Mage_Checkout::Cart Subtotal:", "Subtotal:"
+
+"---Login---",""
+"Mage_Customer::Login or Create an Account", "Sign In Or Create An Account"
+"Mage_Customer::Already registered?", "Sign In"
+"Mage_Customer::New Here?", "Create An Account"
+"Mage_Customer::Forgot Your Password?", "Forgot Password? <span>Please Click Here</span>"
+"Mage_Customer::If you have an account with us, please log in.", "Sign in below with your login information."
+"Mage_Customer::Registration is free and easy!", "By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more."
+"Mage_Customer::Login", "Sign In"
+
+"---Forgot Password---",""
+"Mage_Customer::Please enter your email address below. You will receive a link to reset your password.", "Please enter your email address below. You will receive an email with a link to reset your password."
+
+"---Register---",""
+"Mage_Customer::Register", "Continue"
+
+"---Shopping Cart---",""
+"Grand Total", "Subtotal"
+"Discount Codes", "One code per order"
+
+"---Checkout---",""
+"Mage_Checkout::Checkout Method", "Sign In"
+"Mage_Checkout::Returning Customers", "Sign In"
+"Mage_Checkout::Checkout as a Guest or Register", "Create An Account"
+"Mage_Checkout::Checkout as Guest", "Checkout as a Guest"
+"Mage_Checkout::Register and Checkout", "Create An Account"
+"Mage_Checkout::Forgot your password?", "Forgot Password? <span>Please Click Here</span>"
+"Mage_Checkout::Login", "Sign In"
+"Credit Card (Authorize.net)","Credit Card"
+
+"---Checkout Summary---",""
+"Mage_Checkout::Edit Your Cart","Edit Cart"
+
+"---Customer Account---",""
+"Mage_Customer::Account Dashboard", "My Summary"
+"Mage_Customer::My Dashboard", "My Summary"
+"Mage_Customer::My Dashboard", "My Summary"
+"Mage_Customer::Account Information", "My Profile"
+"From your My Account Dashboard you have the ability to view a snapshot of your recent account activity and update your account information. Select a link below to view or edit information.","From your My Account Summary you have the ability to view a snapshot of your recent account activity and update your account information. Select a link below to view or edit information."
+
+"---Newsletter Signup---",""
+"Thank you for your subscription.", "Thank you for your submission."

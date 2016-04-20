@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * CWSerenade integration
+ * 
+ * @category    Abp
+ * @package     Abp_Cwserenade
+ * @author		Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+    <modules>
+        <Abp_Cwserenade>
+            <version>1.0.0</version>
+        </Abp_Cwserenade>
+    </modules>
+    <crontab>
+        <jobs>
+            <abp_cwserenade_push>
+                <schedule>
+                    <cron_expr>*/20 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>abp_cwserenade/resource_cwserenade::pushStagedOrders</model>
+                </run>
+            </abp_cwserenade_push>
+        </jobs>
+    </crontab>
+    <global>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <cwserenade_orderplaced_observer>
+                        <class>abp_cwserenade/observer</class>
+                        <method>stageOrderForPush</method>
+                    </cwserenade_orderplaced_observer>
+                </observers>
+            </sales_order_place_after>
+        </events>    
+		<helpers>
+			<abp_cwserenade>
+				<class>Abp_Cwserenade_Helper</class>
+			</abp_cwserenade>
+		</helpers>   
+        <models>
+            <abp_cwserenade>
+                <class>Abp_Cwserenade_Model</class>
+                <resourceModel>abp_cwserenade_resource</resourceModel>
+            </abp_cwserenade>
+            <abp_cwserenade_resource>
+                <class>Abp_Cwserenade_Model_Resource</class>
+                <entities>
+                    <order>
+                        <table>abp_cwserenade_orders</table>
+                    </order>
+                </entities>
+            </abp_cwserenade_resource>            
+        </models>
+        <resources>
+            <abp_cwserenade_setup>
+                <setup>
+                    <module>Abp_Cwserenade</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </abp_cwserenade_setup>        
+        </resources>        
+    </global>
+    <default>
+        <abp_cwserenade>
+            <configuration>
+	            <cworderin_url><![CDATA[http://192.168.11.6:8080/CWDirectCPService/services/CWOrderIn?WSDL]]></cworderin_url>
+	            <cwmessagein_url><![CDATA[http://192.168.11.6:8080/CWDirectCPService/services/CWMessageIn?WSDL]]></cwmessagein_url>
+	            <retries>1</retries>
+	            <reschedule_after>180</reschedule_after>
+	            <maintenance_window_from><![CDATA[4:09 AM]]></maintenance_window_from>
+				<maintenance_window_to><![CDATA[5:41 AM]]></maintenance_window_to>
+            </configuration>
+        </abp_cwserenade>
+    </default>	     
+</config>

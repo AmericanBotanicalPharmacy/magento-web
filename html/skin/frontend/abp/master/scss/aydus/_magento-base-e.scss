@@ -1,0 +1,2227 @@
+/*----------------------------------------------------------------------------*/
+/* Magento Base Enterprise
+/*----------------------------------------------------------------------------*/
+
+/*
+Shopping Cart
+Checkout
+Order Confirmation
+Login / Logout
+Register
+Forgot Password
+Reset Password
+404 Error
+Paypal Review Order
+Customer Account: Dashboard
+Customer Account: Manage Addresses
+Customer Account: Add New Address
+Customer Account: Edit Account Info
+Customer Account: Order History
+Customer Account: Order Detail
+Customer Account: Order Invoice
+Customer Account: Order Shipment
+Customer Account: Credit Memo
+Customer Account: Wishlist
+Customer Account: Share Wishlist
+Customer Account: Newsletter Subscriptions
+Customer Account: Shipping Tracking Popup
+*/
+
+/*
+// To linearize (or collapse) table for mobile.
+@include breakpoint(mobile) {
+    @include linearize-table;
+}
+*/
+
+/*----------------------------------------------------------------------------*/
+/* Variables
+/*----------------------------------------------------------------------------*/
+
+$baseHeadingBackgroundColor: #edecea;
+$baseHeadingColorH1: #333333;
+$baseHeadingColorH2: #154020;
+$baseHeadingFontSizeH2: 16;
+$baseHeadingColorH3: #154020;
+$baseHeadingFontSizeH3: 16;
+
+/*----------------------------------------------------------------------------*/
+/* Page Styles Mixin. Try to keep all major page styles here. Change for each project.
+/*----------------------------------------------------------------------------*/
+
+@mixin magento-e-base-page {
+    padding-top: $pageDesktopPaddingTop;
+
+    @include breakpoint(mobile) {
+        padding-top: $pageTabletPaddingTop;
+    }
+
+    .page-title {
+        @include base-page-title();
+    }
+}
+
+// Includes h1 underline/spacing.
+@mixin magento-e-base-page2 {
+    @include magento-e-base-page();
+
+    .page-title {
+        margin-bottom: 23px;
+        padding-bottom: 19px;
+        border-bottom: 1px solid #cccccc;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Base Mixins. Change for each project.
+/*----------------------------------------------------------------------------*/
+
+@mixin base-page-title {
+    margin: 0 0 28px 0;
+    padding: 0;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        @include responsive-font-size(30);
+        font-weight: bold;
+        text-align: left;
+        text-transform: uppercase;
+        color: $baseHeadingColorH1;
+        border-style: none;
+    }
+}
+
+@mixin base-h2 {
+    padding: 17px 15px;
+    @include responsive-font-size($baseHeadingFontSizeH2);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $baseHeadingColorH2;
+    background-color: $baseHeadingBackgroundColor;
+}
+
+@mixin base-required-fields {
+    &:after {
+        @include responsive-font-size(12);
+        text-transform: uppercase;
+        color: #7f1212;
+        content: '*Required Fields';
+        float: none !important;
+        margin-bottom: 0 !important;
+        padding-top: 5px;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Shopping Cart
+/*----------------------------------------------------------------------------*/
+
+body.checkout-cart-index {
+
+    .col-main {
+        @include magento-e-base-page();
+    }
+
+    // ABP Customizations.
+    .col-main {
+
+        @include breakpoint(mobile) {
+            padding-top: 1px; // Fix unknown bug with header where 0 results in block of grey.
+        }
+
+        .cart-empty {
+
+            a {
+                @include global-underline();
+            }
+        }
+
+        .cart {
+
+            .page-title {
+                border-bottom-style: none;
+
+                .checkout-types {
+                    display: none;
+                }
+            }
+
+            .cart-table {
+                float: none;
+                width: 100%;
+                border-top: 1px solid #cccccc;
+
+                thead {
+
+                    @include breakpoint(mobile) {
+                        display: none;
+                    }
+
+                    tr.first {
+                        background-color: #154020;
+
+                        th {
+                            @include responsive-font-size(14);
+                            color: #ffffff;
+
+                            &:first-child {
+                                padding-left: 17px;
+                            }
+                        }
+                    }
+                }
+
+                tbody {
+
+                    td {
+                        padding-top: 18px;
+                        padding-bottom: 17px;
+                        vertical-align: middle;
+
+                        @include breakpoint(mobile) {
+                            padding-bottom: 0;
+                        }
+                    }
+
+                    td.product-cart-image {
+                        width: 5%;
+
+                        a.product-image {
+                            border-style: none;
+
+                            img {
+                                width: auto !important;
+                                @include responsive-img();
+
+                                @include breakpoint(mobile) {
+                                    max-width: none;
+                                }
+                            }
+                        }
+                    }
+
+                    .product-cart-info {
+
+                        > .btn-remove2 {
+                             display: none;
+
+                            @include breakpoint(max, 599) {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .product-name a {
+                        @include responsive-font-size(14);
+                        color: #666666;
+                    }
+
+                    .product-cart-sku {
+                        @include responsive-font-size(12);
+                        font-style: normal;
+                        color: #999999;
+                    }
+
+                    .product-cart-price {
+                        padding-top: 0;
+                        padding-bottom: 0;
+
+                        .cart-price {
+                            @include responsive-font-size(14);
+                            color: #666666;
+                        }
+                    }
+
+                    .product-cart-actions {
+
+                        .qty {
+                            width: 3.5em;
+                            height: 52px;
+                            border: 1px solid #cccccc;
+                        }
+
+                        .btn-update {
+                            margin-bottom: 10px;
+                            @include button-b3(auto, 44px);
+                        }
+
+                        .cart-links {
+
+                            a {
+                                @include responsive-font-size(12);
+                                color: #999999;
+                            }
+                        }
+                    }
+
+                    .product-cart-total {
+                        @include responsive-font-size(14);
+                        color: #666666;
+                    }
+
+                    .btn-remove2 {
+
+                        &:after {
+                            content: '';
+                            @include use-sprite('cart-delete');
+
+                            &:hover {
+                                @include use-sprite('cart-delete-hover');
+                            }
+                        }
+                    }
+                }
+
+                tfoot {
+                    display: none; // Hide cart update links.
+                }
+            }
+
+            .cart-forms {
+                clear: both;
+                float: none;
+                width: auto;
+            }
+
+            .cart-totals-wrapper {
+                width: 50%;
+
+                @include breakpoint(mobile) {
+                    float: none;
+                    width: auto;
+                }
+
+                .cart-totals {
+                    margin: 0 0 11px 0;
+                    padding: 0 0 9px 0;
+                    background-color: transparent;
+                    border-style: none;
+                    border-bottom: 1px solid #cccccc;
+
+                    @include breakpoint(mobile) {
+                        padding-bottom: 15px;
+                    }
+
+                    #shopping-cart-totals-table {
+                        margin: 0 0 0 0;
+                        padding: 0 0 0 0;
+
+                        td {
+                            padding-right: 0;
+
+                            &:first-child {
+                                padding-right: 40px;
+                            }
+                        }
+
+                        tbody {
+                            display: none;
+                        }
+
+                        tfoot {
+                            border-top-style: none;
+                            border-bottom-style: none;
+                            @include responsive-font-size(24);
+                            color: #154020;
+
+                            td {
+                                padding-top: 0;
+                                padding-bottom: 5px;
+                            }
+
+                            strong {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .shipping-message-container {
+                float: left;
+                width: 45%;
+                margin: 60px 0 0 0;
+
+                @include breakpoint(max, 1200) {
+                    margin-top: 0;
+                }
+
+                @include breakpoint(mobile) {
+                    float: none;
+                    width: auto;
+                    margin-top: 0;
+                    margin-bottom: 0.5em;
+                }
+
+                h3 {
+                    margin: 0.5em 0 1em 0;
+                    padding: 0;
+                    @include responsive-font-size(16);
+                    color: #154020;
+
+                    @include breakpoint(mobile) {
+                        margin-bottom: 0.5em;
+                    }
+                }
+
+                p {
+                    margin: 0 0 0.5em 0;
+                    @include responsive-font-size(14);
+                    color: #666666;
+                }
+            }
+
+            .checkout-types {
+                float: right;
+
+                @include breakpoint(mobile) {
+                    float: none;
+                    margin: 1.5em 0 1em 0;
+                    text-align: center;
+                }
+
+                li {
+                    margin: 0;
+
+                    .btn-continue {
+                        @include button-b2(260px);
+                        margin: 0 0 10px 0;
+                        vertical-align: top;
+
+                        @include breakpoint(mobile) {
+                            display: block;
+                            margin-right: auto;
+                            margin-left: auto;
+                        }
+
+                        span {
+                            @include global-no-underline();
+                        }
+                    }
+
+                    .btn-proceed-checkout {
+                        @include button-b1(260px);
+                        margin: 0 0 10px 9px;
+                        vertical-align: top;
+
+                        @include breakpoint(mobile) {
+                            display: block;
+                            margin-right: auto;
+                            margin-left: auto;
+                        }
+                    }
+                }
+            }
+
+            .checkout-buttons-set {
+                clear: both;
+            }
+
+            .discount-container {
+                clear: both;
+                float: right;
+                margin: 5px 0 120px 0;
+
+                @include breakpoint(mobile) {
+                    float: none;
+                    margin-bottom: 85px;
+                    text-align: center;
+                }
+
+                #cart-discount-expander {
+                    @include responsive-font-size(14);
+                    text-align: right;
+                    color: #666666;
+                    cursor: pointer;
+
+                    @include breakpoint(mobile) {
+                        text-align: center;
+                    }
+
+                    &:after {
+                        content: '';
+                        @include use-sprite('cart-arrow-down');
+                        display: inline-block;
+                        margin-left: 10px;
+                    }
+
+                    &.active:after {
+                        @include use-sprite('cart-arrow-up');
+                        display: inline-block;
+                    }
+                }
+
+                .discount {
+                    display: none;
+                    margin-top: 10px;
+
+                    #coupon_code {
+                        vertical-align: middle;
+                    }
+
+                    .button-wrapper {
+                        vertical-align: middle !important;
+
+                        @include breakpoint(mobile) {
+                            margin-top: 10px;
+                        }
+
+                        button {
+                            @include button-b1(120px, 36px);
+                        }
+
+                        button.cancel-coupon {
+                            margin-left: 9px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Checkout
+/*----------------------------------------------------------------------------*/
+
+body.checkout-onepage-index {
+
+    .col-main {
+        float: left;
+        width: 56%;
+        @include magento-e-base-page();
+
+        @include breakpoint(max, $tabletWidthLandscape - 1) {
+            float: none;
+            width: auto;
+        }
+
+        @include breakpoint(mobile) {
+            width: auto;
+            margin-right: $pageTabletMarginSide;
+        }
+
+        .opc {
+
+            .section {
+
+                .step-title {
+                    margin-bottom: 18px;
+                    padding: 0 15px;
+                    background-color: $baseHeadingBackgroundColor;
+                    border-top-style: none;
+                    border-bottom-style: none;
+
+                    h2 {
+                        margin: 7px 0;
+                        padding: 0;
+                        @include responsive-font-size($baseHeadingFontSizeH2);
+                        text-transform: uppercase;
+                        white-space: nowrap;
+                        color: #999999;
+                    }
+
+                    a {
+                        padding: 7px 0;
+                        @include responsive-font-size(12);
+                        color: #999999;
+                    }
+
+                    .number {
+                        display: none !important;
+                    }
+                }
+
+                &.active {
+
+                    .step-title {
+
+                        h2 {
+                            color: $baseHeadingColorH2;
+                        }
+                    }
+                }
+
+                p.required {
+                    display: none;
+                }
+
+                .back-link {
+                    display: none;
+                }
+
+                /*----------------------------------------------------------------------------*/
+                /* Step: Login
+                /*----------------------------------------------------------------------------*/
+
+                #checkout-step-login {
+
+                    h3 {
+                        @include responsive-font-size($baseHeadingFontSizeH3);
+                        text-transform: uppercase;
+                        color: $baseHeadingColorH3;
+                    }
+
+                    .description {
+                        margin: 0 0 1.5em 0;
+                        @include responsive-font-size(14);
+                        font-style: normal;
+                        color: #666666;
+                    }
+
+                    .col-2 {
+                        margin-top: 20px;
+                        padding-top: 0;
+                        border-left: 1px solid #cccccc;
+
+                        .button {
+                            @include button-blink1(180px);
+                        }
+
+                        .form-list {
+
+                            .control {
+                                margin-top: 0;
+                                margin-bottom: 0;
+
+                                label {
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+
+                    .col-1 {
+
+                        .form-list {
+
+                            a.f-left {
+                                @include responsive-font-size(11);
+                                font-weight: normal;
+                                @include global-underline();
+                                text-transform: uppercase;
+                                color: #999999;
+                            }
+                        }
+
+                        button {
+                            @include button-b1(180px);
+                        }
+                    }
+                }
+
+                // ABP Customizations.
+                .col2-set {
+
+                    .col-2 {
+
+                        @include breakpoint(mobile) {
+                            float: none;
+                            width: auto;
+                            padding-left: 0;
+                            border-left-style: none !important;
+                        }
+                    }
+
+                    .col-1 {
+
+                        .description {
+                            display: block !important;
+                        }
+
+                        ul.form-list {
+
+                            .input-box {
+                                padding-right: 0;
+                            }
+                        }
+
+                        @include breakpoint(mobile) {
+                            float: none;
+                            width: auto;
+                        }
+                    }
+                }
+
+                /*----------------------------------------------------------------------------*/
+                /* Step: Billing/Shipping
+                /*----------------------------------------------------------------------------*/
+
+                #checkout-step-billing,
+                #checkout-step-shipping {
+                    padding-right: 0;
+                    padding-left: 0;
+
+                    #billing-address-select,
+                    #shipping-address-select {
+                        width: auto;
+                    }
+
+                    // Hide fields: fax, company.
+                    input#billing\:fax,
+                    label[for=billing\:fax],
+                    input#billing\:company,
+                    label[for=billing\:company],
+                    input#shipping\:fax,
+                    label[for=shipping\:fax],
+                    input#shipping\:company,
+                    label[for=shipping\:company] {
+                        display: none;
+                    }
+
+                    .control {
+                        margin-top: 0;
+                        margin-bottom: 0;
+
+                        label {
+                            background-color: transparent;
+                        }
+                    }
+
+                    .buttons-set {
+                        margin-bottom: 30px;
+                        @include base-required-fields();
+                        border-top-style: none;
+
+                        button {
+                            @include button-b1(180px);
+                        }
+                    }
+                }
+
+                /*----------------------------------------------------------------------------*/
+                /* Step: Shipping Methods
+                /*----------------------------------------------------------------------------*/
+
+                #checkout-step-shipping_method {
+                    padding: 0;
+
+                    .sp-methods {
+
+                        dt {
+                            @include responsive-font-size(14);
+                            color: #666666;
+                        }
+
+                        label {
+                            padding-left: 40px;
+                            background-color: transparent;
+                        }
+                    }
+
+                    .add-gift-message {
+                        display: none;
+                    }
+
+                    .buttons-set {
+                        margin-bottom: 30px;
+                        border-top-style: none;
+
+                        button {
+                            @include button-b1(180px);
+                        }
+                    }
+                }
+
+                /*----------------------------------------------------------------------------*/
+                /* Step: Payment Methods
+                /*----------------------------------------------------------------------------*/
+
+                #checkout-step-payment {
+                    padding: 0;
+
+                    dt {
+
+                        label {
+                            background-color: transparent;
+                        }
+                    }
+
+                    .cvv-what-is-this {
+                        line-height: 52px;
+                    }
+
+                    .checkout-onepage-payment-additional-giftcardaccount {
+                        display: none;
+                    }
+
+                    .buttons-set {
+                        margin-bottom: 30px;
+                        @include base-required-fields();
+                        border-top-style: none;
+
+                        button {
+                            @include button-b1(180px);
+                        }
+                    }
+                }
+
+                /*----------------------------------------------------------------------------*/
+                /* Step: Order Review
+                /*----------------------------------------------------------------------------*/
+
+                #checkout-step-review {
+                    padding: 0;
+                    padding-left: 0;
+                    padding-right: 0;
+
+                    #checkout-review-table {
+
+                        // IMPORTANT: Linearize (or collapse) table for mobile.
+                        @include breakpoint(mobile) {
+                            @include linearize-table;
+                        }
+
+                        thead {
+
+                            th {
+                                @include responsive-font-size(14);
+                                color: #999999;
+                                border-bottom-color: #cccccc;
+                                background-color: transparent;
+                            }
+                        }
+
+                        tbody {
+
+                            h3 {
+                                @include breakpoint(mobile) {
+                                    @include responsive-font-size(14);
+                                    color: #666666;
+                                }
+                            }
+
+                            // ABP Customization. Product image.
+                            .product-name img {
+                                display: inline !important;
+                                vertical-align: middle;
+                            }
+
+                            td[data-rwd-label] {
+
+                                @include breakpoint(mobile) {
+                                    @include responsive-font-size(14);
+                                    color: #999999;
+                                }
+                            }
+                        }
+
+                        tfoot {
+
+                            tr {
+                                background-color: transparent;
+
+                                td {
+                                    @include responsive-font-size(14);
+                                    color: #666666;
+                                    padding-top: 4px;
+                                    padding-bottom: 4px;
+
+                                    &:first-child {
+                                        text-transform: uppercase;
+                                    }
+
+                                    &:first-child {
+
+                                        @include breakpoint(mobile) {
+                                        }
+                                    }
+
+                                    &:nth-child(even) {
+
+                                        @include breakpoint(mobile) {
+                                            text-align: right;
+                                        }
+                                    }
+                                }
+                            }
+
+                            tr.first {
+
+                                td {
+                                    padding-top: 15px;
+                                }
+                            }
+
+                            tr.last {
+                                border-top: 1px solid #cccccc;
+                                border-bottom: 1px solid #cccccc;
+
+                                td {
+                                    padding-top: 15px;
+                                    padding-bottom: 15px;
+                                    @include responsive-font-size(24);
+                                    color: #154020;
+
+                                    strong {
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    #checkout-review-submit {
+
+                        .f-left {
+                            float: left;
+                            margin-top: 10px;
+                            width: 180px;
+                            text-align: center;
+                            text-decoration: none;
+
+                            @include breakpoint(mobile) {
+                                float: none;
+                                width: auto;
+                            }
+
+                            a {
+                                @include button-blink2(180px);
+                                display: block;
+                                @include global-underline();
+
+                                @include breakpoint(mobile) {
+                                    margin-right: auto;
+                                    margin-left: auto;
+                                }
+                            }
+                        }
+
+                        .buttons-set {
+                            margin-top: 30px;
+                            padding-top: 0;
+                            float: right;
+                            margin-bottom: 30px;
+                            border-top-style: none;
+
+                            @include breakpoint(mobile) {
+                                float: none;
+                                // Button would not center except using this style. Reason unknown.
+                                display: table;
+                                width: 260px;
+                                margin-right: auto;
+                                margin-left: auto;
+                            }
+
+                            button {
+                                @include button-b1(260px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .col-right {
+        display: block;
+        width: 28%;
+
+        @include breakpoint(max, $tabletWidthLandscape - 1) {
+            border: 5px solid red;
+            display: none;
+        }
+
+        // Magento hides checkout progress on the signin step by default. Uncomment to show (but why, there is no progress to show).
+        .opc-block-progress-step-login {
+            opacity: 1;
+        }
+
+        .opc-block-progress {
+            margin-top: 135px;
+            padding-left: 4px;
+            border-left-style: none;
+
+            // Top heading. Your checkout progress.
+            > .block-title {
+                margin: 3em 0 1em 0;
+                padding: 20px 0 0 0;
+                @include responsive-font-size($baseHeadingFontSizeH2 - 2);
+                color: $baseHeadingColorH2;
+
+                strong {
+                    font-weight: bold;
+                }
+            }
+
+            .block-content {
+
+                dl {
+
+                    dt {
+                        padding-top: 4px;
+                        padding-bottom: 4px;
+                        @include responsive-font-size(14);
+                        color: #999999;
+
+                        &.complete {
+                            font-weight: bold;
+
+                            .changelink {
+
+                                a {
+                                    text-transform: none;
+                                }
+                            }
+                        }
+                    }
+
+                    dd {
+                        padding: 0;
+                        font-style: normal;
+                        color: #999999;
+
+                        .payment-info {
+
+                            dt {
+                                padding: 0;
+                                font-style: normal;
+                            }
+                        }
+                    }
+
+                    /*----------------------------------------------------------------------------*/
+                    /* Sidebar: Billing Address
+                    /*----------------------------------------------------------------------------*/
+
+                    #billing-progress-opcheckout {
+
+                        address {
+                            @include responsive-font-size(12);
+                            font-style: normal;
+                            color: #999999;
+                        }
+                    }
+
+                    /*----------------------------------------------------------------------------*/
+                    /* Sidebar: Shipping Address
+                    /*----------------------------------------------------------------------------*/
+
+                    #shipping-progress-opcheckout {
+
+                        address {
+                            @include responsive-font-size(12);
+                            font-style: normal;
+                            color: #999999;
+                        }
+                    }
+
+                    /*----------------------------------------------------------------------------*/
+                    /* Sidebar: Shipping Methods
+                    /*----------------------------------------------------------------------------*/
+
+                    #shipping_method-progress-opcheckout {
+                    }
+
+                    /*----------------------------------------------------------------------------*/
+                    /* Sidebar: Payment Methods
+                    /*----------------------------------------------------------------------------*/
+
+                    #payment-progress-opcheckout {
+                    }
+
+                    /*----------------------------------------------------------------------------*/
+                    /* Sidebar: Order Summary
+                    /*----------------------------------------------------------------------------*/
+
+                    .block-title {
+                        margin: 0;
+                        padding: 25px 0 15px 20px;
+                        @include responsive-font-size(14);
+                        font-weight: bold;
+                        background-color: $baseHeadingBackgroundColor;
+
+                        strong {
+                            font-weight: strong;
+                        }
+                    }
+
+                    #review-progress-opcheckout {
+                        margin: 0 0 20px 0;
+                        @include responsive-font-size(14);
+                        background-color: $baseHeadingBackgroundColor;
+
+                        #checkout-review-table-wrapper {
+                            padding: 0 20px 0 20px;
+
+                            .data-table {
+                                padding: 0;
+
+                                tfoot {
+                                     background-color: $baseHeadingBackgroundColor;
+
+                                     tr {
+                                         background-color: inherit;
+
+                                         td {
+                                             padding-top: 4px;
+                                             padding-bottom: 4px;
+                                             @include responsive-font-size(12);
+                                             text-transform: uppercase;
+                                             font-style: normal;
+                                             color: #999999;
+                                             background-color: $baseHeadingBackgroundColor;
+                                         }
+
+                                         &:first-child {
+
+                                             td {
+                                                 padding-top: 1em;
+                                                 border-top: 1px solid #cccccc;
+                                             }
+                                         }
+
+                                         &:last-child {
+
+                                             td {
+                                                 margin-top: 1.5em;
+                                                 padding-top: 1.5em;
+                                                 @include responsive-font-size(12);
+                                                 font-weight: bold;
+                                                 text-transform: uppercase;
+                                                 color: $baseHeadingColorH2;
+                                                 border-top: 1px solid #cccccc;
+                                             }
+                                         }
+                                     }
+                                }
+
+                                tbody {
+
+                                    td {
+                                        padding-top: 4px;
+                                        padding-bottom: 4px;
+                                        border-bottom-style: none;
+                                        @include responsive-font-size(12);
+                                        font-style: normal;
+                                        color: #999999;
+
+                                        h3 {
+                                            color: inherit;
+                                        }
+
+                                        .price {
+                                            color: inherit;
+                                            font-style: inherit;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        #checkout-review-submit {
+
+                            .f-left {
+
+                                a {
+                                    @include global-underline();
+                                }
+                            }
+                        }
+                    }
+
+                    .buttons-set {
+                        margin-top: 0;
+                        padding: 10px 30px 20px 0;
+                        @include responsive-font-size(12);
+                        font-style: normal;
+                        text-transform: uppercase;
+                        color: #999999;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Order Confirmation
+/*----------------------------------------------------------------------------*/
+
+body.checkout-onepage-success {
+
+    .col-main {
+        min-height: 460px;
+        @include magento-e-base-page();
+        text-align: left;
+
+        @include breakpoint(tabletLandscape) {
+            min-height: 0;
+        }
+
+        @include breakpoint(mobile) {
+            width: auto;
+        }
+
+        .col-1 {
+            float: left;
+            width: 62%;
+            margin-right: 7%;
+
+            @include breakpoint(tabletLandscape) {
+                float: none;
+                width: 80%;
+            }
+
+            @include breakpoint(mobile) {
+                width: auto;
+            }
+        }
+
+        .col-2 {
+            float: right;
+            width: 30%;
+            margin-right: 1%;
+
+            @include breakpoint(tabletLandscape) {
+                float: none;
+                width: 380px;
+            }
+
+            @include breakpoint(mobile) {
+                width: auto;
+            }
+        }
+
+        h2 {
+            padding: 0;
+            margin: 0 0 1em 0;
+            @include responsive-font-size($baseHeadingFontSizeH2);
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $baseHeadingColorH2;
+        }
+
+        p {
+            @include responsive-font-size(14);
+            color: #666666;
+        }
+
+        .buttons-set {
+            border-top-style: none;
+            text-align: left;
+
+            @include breakpoint(mobile) {
+                text-align: center;
+            }
+
+            button {
+                @include button-b1(260px);
+
+                @include breakpoint(tablet) {
+                    margin-left: 0;
+                    margin-bottom: 10px;
+                }
+            }
+
+            > a {
+                @include button-blink1(260px);
+            }
+        }
+
+        .checkout-success-quote-container {
+
+            @include breakpoint(tabletLandscape) {
+                margin-top: 2em;
+            }
+
+            .quote {
+                @include quote();
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Login
+/*----------------------------------------------------------------------------*/
+
+body.customer-account-login {
+
+    .col-main {
+        @include magento-e-base-page();
+
+        .col2-set {
+
+            h2 {
+                @include base-h2();
+            }
+
+            .form-instructions {
+                margin: 2em 0;
+                @include responsive-font-size(14);
+                font-style: normal;
+                color: #666666;
+            }
+
+            .buttons-set {
+
+                @include breakpoint(mobile) {
+                    text-align: center;
+                }
+            }
+
+            p.required {
+                @include breakpoint(mobile) {
+                    display: block;
+                    text-align: center;
+                }
+            }
+
+            .new-users {
+                margin-top: 0;
+                padding-top: 0;
+
+                h2 {
+
+                    @include breakpoint(mobile) {
+                        margin-top: 60px;
+                    }
+                }
+
+                .button {
+                    @include button-blink1(180px);
+                }
+            }
+
+            .registered-users {
+                margin-top: 0;
+                padding-top: 0;
+                border-left-style: none;
+
+                @include breakpoint(mobile) {
+                    padding-right: 0;
+                }
+
+                .form-list {
+                    padding-left: 0;
+
+                    a.f-left {
+                        @include responsive-font-size(11);
+                        font-weight: normal;
+                        @include global-underline();
+                        text-transform: uppercase;
+                        color: #999999;
+
+                        @include breakpoint(mobile) {
+
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                button {
+                    @include button-b1(180px);
+                }
+            }
+        }
+
+        // ABP Customizations.
+        .col2-set {
+
+            .new-users {
+                border-left-style: none;
+
+                @include breakpoint(mobile) {
+                    float: none;
+                    width: auto;
+                    padding-left: 0;
+                }
+
+                .benefits {
+                    display: none;
+                }
+            }
+
+            .registered-users {
+
+                ul.form-list {
+                    list-style: none;
+
+                    .input-box {
+                        padding-right: 0;
+                    }
+                }
+
+                @include breakpoint(mobile) {
+                    float: none;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Logout
+/*----------------------------------------------------------------------------*/
+
+body.customer-account-logoutsuccess {
+
+    .col-main {
+        @include magento-e-base-page2();
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Register
+/*----------------------------------------------------------------------------*/
+
+body.customer-account-create {
+
+    .col-main {
+        @include magento-e-base-page2();
+
+        .account-create {
+            margin: 0;
+
+            .fieldset {
+                margin: 0;
+            }
+
+            .form-instructions {
+                margin: 0;
+                padding: 0;
+                @include responsive-font-size(14);
+                font-style: normal;
+                color: #666666;
+            }
+
+            ul.benefits {
+                margin: 0 0 2em 0;
+                padding: 0;
+                list-style: disc;
+
+                li {
+                    margin: 0 0 0 2em;
+                    padding: .15em 0;
+                }
+            }
+
+            .form-list {
+
+                .control {
+                    margin-top: 1.5em;
+                    margin-bottom: 1.5em;
+
+                    label {
+                        padding-left: 25px;
+                        background-color: transparent;
+                    }
+
+                    #is_subscribed {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .buttons-set {
+                max-width: none;
+                margin: 0;
+                padding: 0;
+                text-align: left;
+                border-top-style: none;
+
+                @include breakpoint(mobile) {
+                    text-align: center;
+                }
+
+                .back-link {
+                    display: none;
+                }
+
+                button {
+                    float: none;
+                    margin-left: 0;
+                    @include button-b1(180px);
+                }
+            }
+
+            p.required {
+                @include breakpoint(mobile) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Forgot Password
+/*----------------------------------------------------------------------------*/
+
+body.customer-account-forgotpassword,
+body.customer-account-confirmation {
+
+    .col-main {
+        @include magento-e-base-page2();
+
+        .page-title span,
+        h2,
+        p.required {
+            display: none;
+        }
+
+        .fieldset {
+            margin-left: 0;
+
+            .form-instructions {
+                margin: 2em 0;
+                @include responsive-font-size(14);
+                font-style: normal;
+                color: #666666;
+            }
+        }
+
+        .buttons-set {
+            margin-left: 0;
+            border-top-style: none;
+            text-align: left;
+
+            @include breakpoint(mobile) {
+                text-align: center;
+            }
+
+            .back-link {
+                display: none;
+            }
+
+            button {
+                float: none;
+                margin: 0;
+                @include button-b1(180px);
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Reset Password
+/*----------------------------------------------------------------------------*/
+
+body.customer-account-resetpassword {
+
+    .col-main {
+        @include magento-e-base-page2();
+
+        .buttons-set {
+            margin-left: 0;
+            border-top-style: none;
+            text-align: left;
+
+            @include breakpoint(mobile) {
+                text-align: center;
+            }
+
+            .back-link {
+                display: none;
+            }
+
+            button {
+                float: none;
+                margin: 0;
+                @include button-b1(180px);
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* 404 Page Not Found Error
+/*----------------------------------------------------------------------------*/
+
+body.cms-index-noroute {
+
+    .col-main {
+        @include magento-e-base-page();
+        text-align: center;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* 503 Service Unavailable
+/*----------------------------------------------------------------------------*/
+
+body.cms-service-unavailable {
+
+    .col-main {
+        @include magento-e-base-page();
+        text-align: center;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Paypal Express Review Order
+/*----------------------------------------------------------------------------*/
+
+body.paypal-express-review {
+
+    .col-main {
+        @include magento-e-base-page();
+
+        .buttons-set {
+            margin-left: 0;
+            border-top-style: none;
+            text-align: left;
+
+            @include breakpoint(mobile) {
+                text-align: center;
+            }
+
+            .back-link {
+                display: none;
+            }
+
+            button {
+                float: none;
+                margin: 0;
+                @include button-b1(180px);
+            }
+        }
+    }
+}
+
+/*
+Customer Account: Dashboard
+Customer Account: Manage Addresses
+Customer Account: Add New Address
+Customer Account: Edit Account Info
+Customer Account: Order History
+Customer Account: Order Detail
+Customer Account: Order Invoice
+Customer Account: Order Shipment
+Customer Account: Credit Memo
+Customer Account: Wishlist
+Customer Account: Share Wishlist
+Customer Account: Newsletter Subscriptions
+Customer Account: Shipping Tracking Popup
+*/
+
+/*----------------------------------------------------------------------------*/
+/* Customer Account: All
+/*----------------------------------------------------------------------------*/
+
+.customer-account {
+
+    .banner-container {
+        display: none;
+
+        @include breakpoint(tablet) {
+            display: table;
+        }
+    }
+
+    .col-main {
+        @include magento-e-base-page2();
+        width: 63%;
+        margin: 0;
+        padding: 67px 0 0 0;
+
+        @include breakpoint(tablet) {
+            width: auto;
+            padding-top: 1.5em;
+            margin-left: $pageTabletMarginSide;
+        }
+
+        @include breakpoint(mobile) {
+            margin-left: $pageMobileMarginSide;
+        }
+
+        @include breakpoint(mobile) {
+
+            .col2-set {
+
+                .col-1,
+                .col-2 {
+                    float: none;
+                    width: auto;
+                    margin-top: 1em;
+                    padding-left: 0;
+                }
+
+                li.item {
+                    float: none;
+                }
+            }
+        }
+
+        h2 {
+            @include base-h2;
+        }
+
+        h3 {
+            margin: 0;
+            padding: 0;
+            @include responsive-font-size(14);
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .title-buttons {
+
+            h1 {
+
+                @include breakpoint(mobile) {
+                    margin-bottom: 0.5em;
+                }
+            }
+
+            button {
+                margin-top: -1em;
+                @include button-b1();
+
+                @include breakpoint(mobile) {
+                    position: static !important;
+                    margin-top: 0;
+                }
+            }
+
+            a {
+                @include responsive-font-size(14);
+                @include global-underline();
+                text-transform: uppercase;
+                color: #666666;
+            }
+        }
+
+        .data-table {
+
+            @include breakpoint(mobile) {
+                @include linearize-table;
+            }
+
+            thead {
+
+                th {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    @include responsive-font-size(14);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: #999999;
+                    background-color: transparent;
+
+                    @include breakpoint(mobile) {
+                        padding-top: 5px;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+
+            tbody {
+
+                td {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                    @include responsive-font-size(14);
+                    color: #666666;
+
+                    @include breakpoint(mobile) {
+                        text-align: left !important;
+                    }
+
+                    em {
+                        font-style: normal;
+                    }
+
+                    &.last {
+
+                        @include breakpoint(mobile) {
+                            padding-top: 1em;
+                            padding-bottom: 1em;
+                            @include responsive-font-size(14);
+                            text-align: left;
+                            color: #666666;
+                        }
+
+                        a {
+                            @include global-underline();
+                        }
+                    }
+
+                    @include breakpoint(mobile) {
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                    }
+                }
+            }
+        }
+
+        .form-list {
+            margin: 0;
+            padding: 0;
+            border-top-style: none;
+
+            .control {
+
+                .checkbox {
+                    margin-left: 0;
+                }
+
+                label {
+                    margin-left: 0;
+                    padding-left: 2em;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        p.required {
+            display: none;
+        }
+
+        .buttons-set {
+            border-top-style: none;
+            text-align: left;
+
+            .back-link {
+                display: none;
+            }
+
+            button {
+                float: none;
+                margin-left: 0;
+                @include button-b1();
+            }
+        }
+    }
+
+    .col-left-first {
+        width: 21%;
+        margin: 0;
+        padding: 72px 0 0 0;
+
+        @include breakpoint(tablet) {
+            float: none;
+            width: auto;
+            margin: 1em $pageTabletMarginSide 0 0;
+            padding: 0;
+        }
+
+        @include breakpoint(mobile) {
+            margin-right: $pageMobileMarginSide;
+        }
+
+        .block-account {
+            border-style: none;
+
+            .block-title {
+                margin-bottom: 1em;
+                @include responsive-font-size(14);
+                font-style: bold;
+                color: #154020;
+
+                @include breakpoint(tablet) {
+                    display: none;
+                }
+            }
+
+            .block-content {
+
+                @include breakpoint(tablet) {
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+
+                &.no-display {
+                    display: block !important;
+                    border-style: none;
+                }
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        margin: 0;
+                        padding: 0;
+
+                        @include breakpoint(tablet) {
+                            display: inline-block;
+                            margin-right: 1.25em;
+                        }
+
+                        @include breakpoint(mobile) {
+                            display: block;
+                            margin-right: 0;
+                        }
+
+                        a {
+                            @include responsive-font-size(14);
+                            @include responsive-line-height(30);
+                            font-weight: normal;
+                            font-style: normal;
+                            color: #999999;
+                        }
+
+                        &.current {
+
+                            @include breakpoint(mobile) {
+                                display: block;
+                            }
+
+                            a strong {
+                                font-weight: normal;
+                                color: #154020 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Dashboard
+/*----------------------------------------------------------------------------*/
+
+.customer-account-index {
+
+    .col-main {
+
+        .welcome-msg {
+
+            .hello {
+                font-style: normal;
+            }
+        }
+
+        .box-account {
+            padding-bottom: 0;
+            border-bottom-style: none;
+
+            .box-head {
+                margin: 2em 0 0 0;
+                padding: 0;
+                border-bottom-style: none;
+                background-color: $baseHeadingBackgroundColor;
+
+                > a {
+                    @include responsive-font-size(11);
+                    @include global-underline();
+                    color: #666666;
+
+                    @include breakpoint(phone) {
+                        display: block;
+                        margin-left: 5px;
+                        padding-top: 0;
+                    }
+                }
+            }
+
+            .box-title {
+
+                > a {
+                     @include responsive-font-size(11);
+                     @include global-underline();
+                     color: #666666;
+                }
+            }
+
+            .box-content {
+
+                p {
+                    font-style: normal;
+                    @include responsive-font-size(12);
+                    color: #999999;
+                }
+
+                a {
+                    @include responsive-font-size(12);
+                    text-transform: uppercase;
+                    @include global-underline();
+                    color: #666666;
+                }
+
+                address {
+                    font-style: normal;
+                    @include responsive-font-size(12);
+                    color: #999999;
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Edit Account Info
+/*----------------------------------------------------------------------------*/
+
+body.customer-account-edit {
+
+    .col-main {
+
+        .buttons-set {
+            @include base-required-fields();
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Customer Account: Manage Addresses
+/*----------------------------------------------------------------------------*/
+
+body.customer-address-index {
+
+    .col-main {
+
+        h2 {
+            margin-bottom: 1em;
+        }
+
+        h3  {
+            margin-bottom: 1em;
+        }
+
+        p a {
+            @include responsive-font-size(11);
+            text-transform: uppercase;
+            @include global-underline();
+            color: #666666;
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Add New Address
+/*----------------------------------------------------------------------------*/
+
+body.customer-address-form {
+
+    .col-main {
+
+        .buttons-set {
+            @include base-required-fields();
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Customer Account: Order History
+/*----------------------------------------------------------------------------*/
+
+body.sales-order-history {
+
+    .col-main {
+
+        .page-title {
+            padding-bottom: 0;
+            border-bottom-style: none;
+        }
+
+        .pager {
+            float: none;
+            padding: 17px 15px;
+            background-color: $baseHeadingBackgroundColor;
+
+            .count-container {
+                float: left;
+
+                label {
+                    font-weight: normal;
+                }
+            }
+
+            .pages {
+                float: right;
+
+                a {
+                    color: #666666;
+
+                    &.next {
+                        border-color: #cccccc;
+                    }
+                }
+            }
+
+            @include breakpoint(tablet) {
+
+                .count-container,
+                .amount,
+                .limiter,
+                .pages {
+                    float: none;
+                }
+            }
+
+            select {
+                height: 30px;
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Order Detail
+/*----------------------------------------------------------------------------*/
+
+body.sales-order-view,
+.sales-order-invoice,
+.sales-order-creditmemo,
+.sales-order-shipment {
+
+    .col-main {
+
+        @include breakpoint(tablet) {
+            float: none;
+        }
+
+        .page-title {
+            padding-bottom: 0;
+            text-align: left;
+            border-bottom-style: none;
+
+            a {
+                position: static;
+                padding-top: 1em;
+            }
+        }
+
+        .box-title {
+            width: auto;
+            float: none;
+
+            h2 {
+                width: auto;
+                margin: 0 0 1em 0;
+                padding: 0;
+                @include responsive-font-size(14);
+                color: #999999;
+                background-color: transparent;
+            }
+        }
+
+        .form-list {
+            border-top-style: none;
+        }
+
+        .order-info {
+            border-bottom-style: none;
+
+            dt {
+                display: none;
+            }
+
+            #order-info-tabs {
+                display: block;
+                border-bottom: 1px solid #cccccc;
+
+                li {
+                    display: inline-block;
+                    margin: 0 0 0 2px;
+                    padding: 18px 5%;
+                    background-color: $baseHeadingBackgroundColor;
+
+                    &.current {
+                        background-color: transparent;
+                        border: 1px solid #cccccc;
+                        border-bottom-style: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Order Detail - Order Shipment
+/*----------------------------------------------------------------------------*/
+
+body.sales-order-shipment {
+
+    .col-main {
+
+        .tracking-table {
+
+            tbody {
+
+                tr.first {
+                    display: none;
+                }
+
+                th {
+                    background-color: transparent;
+                }
+
+                td {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    vertical-align: middle !important;
+                    border-bottom-style: none;
+                }
+            }
+        }
+
+        h3 {
+           display: none; // Items shipped.
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Shipping Tracking Popup
+/*----------------------------------------------------------------------------*/
+
+body.shipping-tracking-popup {
+
+    .col-main {
+
+        .buttons-set {
+
+            button {
+                @include button-b1();
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Customer Account: Newsletter Subscriptions
+/*----------------------------------------------------------------------------*/
+
+body.newsletter-manage-index {
+
+    .col-main {
+
+        .form-list {
+            border-top-style: none;
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Page Print
+/*----------------------------------------------------------------------------*/
+
+.page-print {
+
+    h1 {
+        color: #333333;
+    }
+
+    button,
+    .button {
+        @include button-blink1();
+    }
+
+    .logo {
+        padding: 0;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* IE Warning
+/*----------------------------------------------------------------------------*/
+
+.ie-warning-container {
+    text-align: center;
+
+    a {
+        @include responsive-font-size(12);
+        color: #666666;
+    }
+}

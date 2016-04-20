@@ -1,0 +1,5 @@
+# Crawlers Setup
+User-agent: *
+
+# Paths (clean URLs)
+Disallow: /blog/wp-admin/

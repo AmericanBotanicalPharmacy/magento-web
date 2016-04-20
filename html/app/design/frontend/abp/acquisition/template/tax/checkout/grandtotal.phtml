@@ -1,0 +1,46 @@
+<?php
+/* Author: Aydus
+ * Description: Mage_Tax_Block_Checkout_Shipping
+ *  - Progress review grand total title
+ */
+?>
+<?php if ($this->includeTax() && $this->getTotalExclTax()>=0):?>
+<tr>
+    <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
+    <?php if (Mage::registry('reviewProgressTotals')): ?>
+    	<?php echo $this->__('Total') ?>
+    <?php else: ?>
+        <strong><?php echo $this->helper('tax')->__('Grand Total Excl. Tax')?></strong>
+    <?php endif; ?>
+    </td>
+    <td style="<?php echo $this->getStyle() ?>" class="a-right">
+        <strong><?php echo $this->helper('checkout')->formatPrice($this->getTotalExclTax()) ?></strong>
+    </td>
+</tr>
+<?php echo $this->renderTotals('taxes', $this->getColspan()); ?>
+<tr>
+    <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
+    <?php if (Mage::registry('reviewProgressTotals')): ?>
+    	<?php echo $this->__('Total') ?>
+    <?php else: ?>
+    	<strong><?php echo $this->helper('tax')->__('Grand Total Incl. Tax')?></strong>
+    <?php endif; ?>
+    </td>
+    <td style="<?php echo $this->getStyle() ?>" class="a-right">
+        <strong><?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValue()) ?></strong>
+    </td>
+</tr>
+<?php else:?>
+<tr>
+    <td style="<?php echo $this->getStyle() ?>" class="a-right" colspan="<?php echo $this->getColspan(); ?>">
+    <?php if (Mage::registry('reviewProgressTotals')): ?>
+    	<?php echo $this->__('Total') ?>
+    <?php else: ?>
+    	<strong><?php echo $this->getTotal()->getTitle() ?></strong>
+    <?php endif; ?>
+    </td>
+    <td style="<?php echo $this->getStyle() ?>" class="a-right">
+        <strong><?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValue()) ?></strong>
+    </td>
+</tr>
+<?php endif;?>

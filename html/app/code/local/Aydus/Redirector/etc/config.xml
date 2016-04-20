@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Aydus_Redirector>
+            <version>0.0.1</version>
+        </Aydus_Redirector>
+    </modules>
+    <global>
+        <models>
+            <redirector>
+                <class>Redirector_Model</class>
+            </redirector>
+        </models>
+    </global>
+    <frontend>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <aydus_redirector_model_redirector>
+                        <type>singleton</type>
+                        <class>aydus_redirector_model_redirector</class>
+                        <method>observe</method>
+                    </aydus_redirector_model_redirector>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </frontend>
+</config>

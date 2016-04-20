@@ -1,0 +1,38 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */ 
+?>
+<?php $posts = $this->getPosts(); ?>
+
+<?php if (count($posts) > 0): ?>
+    <div class="block block-blog block-tmcp">
+        <?php if ($title = $this->getTitle()): ?>
+            <div class="block-title">
+                <strong><span><?php echo $this->__($title) ?></span></strong>
+            </div>
+        <?php endif; ?>
+        <div class="block-content">
+          
+                    <ul style="left: 0px; top: 0px;">
+	                    <?php //$posts = getPosts( array('orderby'=>'menu_order','order'=>'ASC' ) ); ?>
+                        <?php foreach($posts as $post): ?>
+                            <li>
+                                <div class="book-div">
+                                    <?php if ($featuredImage = $post->getFeaturedImage()): ?>
+                                        <div class="book-img"><img src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></div>
+                                    <?php endif; ?>
+                                    <div class="book-head"><a href="/<?php echo $post->getPostName();  //echo $post->getPermalink() ?>" title="<?php echo $this->htmlEscape($post->getPostTitle()) ?>"><?php echo $this->htmlEscape($post->getPostTitle()) ?></a></div>
+                                    <div class="book-content"><p><?php echo substr(strip_tags($post->getPostContent()),0); ?></p></div>
+                                </div>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                
+          
+        </div>
+    </div>
+<?php endif; ?>

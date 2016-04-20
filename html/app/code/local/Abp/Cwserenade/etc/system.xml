@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Settings
+ *
+ * @category    Abp
+ * @package     Abp_Cwserenade
+ * @author		Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+	<sections>
+        <abp_cwserenade translate="label" module="abp_cwserenade">
+            <label>CW Serenade</label>
+            <tab>sales</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>451</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <configuration translate="label" module="abp_cwserenade">
+                    <label>Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <cworderin_url translate="label" module="abp_cwserenade">
+                            <label>CWOrderIn URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Url to CWOrderIn WSDL.]]></comment>
+                        </cworderin_url> 
+                        <cwmessagein_url translate="label" module="abp_cwserenade">
+                            <label>CWMessageIn URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Url to CWMessageIn WSDL.]]></comment>
+                        </cwmessagein_url>                                                                   
+                        <retries translate="label" module="abp_cwserenade">
+                            <label>Number of retries</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Number of retries before marking as failure.]]></comment>
+                        </retries>  
+                        <reschedule_after translate="label" module="abp_cwserenade">
+                            <label>Resend Orders After</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Specify number of minutes before resending order.]]></comment>
+                        </reschedule_after>
+                        <maintenance_window_from translate="label" module="abp_cwserenade">
+							<label>Maintenance Start Time</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>6</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment><![CDATA[Start time of maintenance window (i.e. 4:09 AM) in EST.]]></comment>
+						</maintenance_window_from>    
+						<maintenance_window_to translate="label" module="abp_cwserenade">
+							<label>Maintenance End Time</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>7</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment><![CDATA[Maintenance end time (i.e. 5:41 AM) in EST.]]></comment>
+						</maintenance_window_to>                                                                                           
+                    </fields>
+                </configuration>
+            </groups>
+        </abp_cwserenade>
+    </sections>
+</config>
+

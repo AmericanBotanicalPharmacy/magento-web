@@ -1,0 +1,11 @@
+<config>
+    <modules>
+        <Collinsharper_Paymentech>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Payment />
+            </depends>
+        </Collinsharper_Paymentech>
+    </modules>
+</config>

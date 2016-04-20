@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Oscommerce module
+ * 
+ * @category    Abp
+ * @package     Abp_Oscommerce
+ * @author		Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+    <modules>
+        <Abp_Oscommerce>
+            <version>0.1.0</version>
+        </Abp_Oscommerce>
+    </modules>
+    <global>
+		<helpers>
+			<abp_oscommerce>
+				<class>Abp_Oscommerce_Helper</class>
+			</abp_oscommerce>
+		</helpers>   
+        <models>
+            <abp_oscommerce>
+                <class>Abp_Oscommerce_Model</class>
+            </abp_oscommerce>
+            <customer>
+            	<rewrite>
+            		<customer>Abp_Oscommerce_Model_Customer</customer>
+            	</rewrite>
+            </customer>
+        </models>
+        <resources>
+            <abp_oscommerce_setup>
+                <setup>
+                    <module>Abp_Oscommerce</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </abp_oscommerce_setup>        
+        </resources>        
+    </global>
+</config>

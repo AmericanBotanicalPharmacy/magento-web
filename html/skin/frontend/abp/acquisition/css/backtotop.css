@@ -1,0 +1,146 @@
+#back-to-top { 
+	position: fixed;
+	bottom: 0em;
+	right: 0em;
+	height: 80px;
+	width: 80px;
+	margin: 10px;
+	cursor:pointer;
+	opacity:.6;
+	display: none;
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	-o-transition-property: opacity;
+	transition-property: opacity;
+	-webkit-transition-duration: 350ms;
+	-moz-transition-duration: 350ms;
+	-o-transition-duration: 350ms;
+	transition-duration: 350ms;
+}
+#back-to-top:hover { opacity:1; }
+#back-to-top div {
+	text-decoration: none;
+	color: #000000;
+	background-image: url(/skin/frontend/abp/master/images/scrolltotop.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	font-size: 12px;
+	padding: 1em;
+	z-index: 100;
+	width: 80px;
+	height: 80px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.mfp-wrap.cmslightbox .mfp-content .content-container h1 { font-size:1.25rem !important;}
+.mfp-wrap.cmslightbox .mfp-content .content-container h2 { color: #154020 !important; font-size:1.125rem !important;}  /* overwrite styles.css */
+.mfp-wrap.cmslightbox .mfp-content .content-container p { color: #333333 !important; font-size:1rem !important;}
+
+/* global button hover fix */
+.cms-page-view .main a:hover { color:#404040; text-decoration:underline; }
+.cms-page-view .main a.btn:hover 
+,.post_readmore_btn > a:hover
+,.post-list-item a:hover
+,a.btn-default:hover
+,a.btn:hover
+,.blink:hover
+,.cms-page-view .main .view-all a:hover
+,.post_readmore_btn > a:hover
+,.post_readmore_btn .btn-default:hover
+,.btn-cart:hover
+,button:hover span
+,button:hover
+,.post_readmore_btn a:hover {color:white !important; text-decoration:none; } 
+
+.wrapper > .page {background-color:#ebe5dc;}
+.wrapper > .page > .footer {background-color:#fff;}
+.cms-home ul {margin-bottom:40px !important;}
+ul.ui-tabs-nav li, .ui-state-default {width:100% !important; float:none; clear:both;}
+
+.cms-home .section2 .ui-tabs-nav li,.cms-home .section3 .ui-tabs-nav li { width:100% !important; margin:5px 0 5px;}
+
+.cms-healthy-savings .category-products .block-title h2:after {
+	content: " FREE";
+	color: #a50808 !important;
+} 
+
+.cms-healthy-savings .category-products:nth-child(5) .block-title h2:after {
+	content: "" !important;
+} 
+
+.featherlight .featherlight-content {
+ min-width: 540px !important; 
+}
+
+/* Feedback rating form - store page*/
+#feedback-rating-form div, #feedback-rating-form button, #feedback-rating-form textarea {
+	padding-top:10px; padding-bottom:10px;
+}
+#feedback-rating-form button {
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 350ms;
+  -moz-transition-duration: 350ms;
+  -o-transition-duration: 350ms;
+  transition-duration: 350ms;	
+}
+
+#feedback-rating-form button:hover { 
+  background-color:#093314;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 350ms;
+  -moz-transition-duration: 350ms;
+  -o-transition-duration: 350ms;
+  transition-duration: 350ms;
+}
+
+#feedback-rating-form>ul li, #feedback-rating-form .form-list li {
+	clear:both; 
+	list-style:none; 
+	padding:5px 10px;
+	margin:5px 0; 
+	text-align:left; 
+	background-color:#093314;/*#fed807*/ 
+	color:#fff; 
+	border:1px solid #333;
+	width:100%; max-width:320px; min-width:200px;
+	cursor:pointer;
+}
+#feedback-rating-form>ul li:hover {background-color:#fed807; color:#333;font-weight:bold;}
+
+#feedback-rating-form h4 strong {color:#000;}
+#feedback-rating-form ul li span {padding-left:10px;}
+
+#feedback-rating-form textarea { width:100%; height:100px;}
+#feedback-rating-form .buttons-set button, #feedback-rating-form .buttons-set p{ float:left; margin-left:0; margin-top:7px;}
+
+.more {display:none;}
+.more ul li {padding-top:5px; padding-bottom:0px; margin-left:10px;}
+.more ul li label { color:#333; margin-left:8px;}
+
+input.chkbox {
+	width:20px; height:14px;
+}
+
+.wordpress-index-index .post-entry.entry, .post-entry {
+	height:auto !important;
+	overflow: auto;
+	margin-bottom:0;
+}
+
+.error-msg {display:none;}
+
+@media screen and (min-width: 769px) {
+	ul.ui-tabs-nav li, .ui-state-default { width:32.5% !important; float:left; clear:none; }
+	.cms-home .section2 .ui-tabs-nav li,.cms-home .section3 .ui-tabs-nav li { width:32.5% !important; margin:0px;}
+}

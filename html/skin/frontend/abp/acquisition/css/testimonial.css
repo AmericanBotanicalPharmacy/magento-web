@@ -1,0 +1,2669 @@
+/*PRAGYA SINGH*/
+
+/* Product Page*/
+
+div#product-testimonials.product-cms.product-testimonials div.std div.testimonial{
+    background: #c5e0eb !important;
+    padding:20px 0 !important;
+    margin-bottom: 65px !important;
+}
+
+div#product-why-you-need-it.product-cms.product-why-you-need-it div.std div.template2 div.table1 div.testimonial2 p{
+    color: #666666 !important;
+    font-size: 1.5rem !important;   
+}
+div#product-why-you-need-it.product-cms.product-why-you-need-it div.std div.template2 div.table1 h3{
+    color:#154020 !important;
+}
+.testimonial2 span {
+    color: #333333 !important;
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    margin-left: 44px;
+}
+div#product-how-it-works.product-cms.product-how-it-works div.std div.template2 div.table1 div.testimonial p{
+    color: #666666 !important;
+    font-size: 1.5rem !important;
+    
+}
+div#product-how-it-works.product-cms.product-how-it-works div.std div.template2 div.table1 div.column.right div.testimonial span{
+        color: #333333 !important;
+
+}
+body.catalog-product-view .product-view .product-cms-container .product-why-you-need-it .template2 .table1 ul li {
+    color: #333333 !important;
+    margin: 0 0 1.5em;
+    padding: 0;
+}
+
+div#product-why-you-need-it.product-cms.product-why-you-need-it div.std div.template2 div.table1 div p {
+    color: #333333 !important;
+    font-size: 1rem !important;
+}
+
+
+product-cms.product-why-you-need-it div.column.right li 
+{
+font-family: Montserrat, "Helvetica Neue", Verdana, Arial, sans-serif;
+  color: #333333 !important;
+  font-size: 1rem !important;
+  /*font-size:14px;*/
+  line-height: 1.5;
+}
+
+body.catalog-product-view .product-view .product-cms-container .product-why-you-need-it .template2 .table1 ul li {
+
+    margin: 1em 0 1.5em !important;
+    padding: 0;
+}
+
+body.catalog-product-view .product-view .product-shop .description ul li:before {
+    background-image: url("/skin/frontend/abp/master/images/sprites-sbbf0716586.png");
+    background-position: -18px -49px !important;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 14px;
+    margin-left: -36px !important;
+    margin-right: 18px;
+    overflow: hidden;
+    width: 18px;
+}
+body.catalog-product-view .product-view .product-cms-container .product-why-you-need-it .template1 .table2 ul li:before{
+    background-image: url("/skin/frontend/abp/master/images/sprites-sbbf0716586.png");
+    background-position: -18px -49px !important;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 14px;
+    margin-left: -36px !important;
+    margin-right: 18px;
+    overflow: hidden;
+    width: 18px;
+}
+
+.product-cms.product-ingredients div.std div.template1 div.table1 div.column-left-container div.column.left h5{
+    color: #636363;
+    font-family: Montserrat,"Helvetica Neue",Verdana,Arial,sans-serif;
+    font-size: 1rem !important;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0 0 10px;
+    text-rendering: optimizespeed;
+    text-transform: uppercase;
+}
+
+.product-cms.product-ingredients div.std div.template1 div.table1 div.column.right h5{
+    color: #636363;
+    font-family: Montserrat,"Helvetica Neue",Verdana,Arial,sans-serif;
+    font-size: 1rem !important;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0 0 10px;
+    text-rendering: optimizespeed;
+    text-transform: uppercase;
+
+}
+
+div#product-how-it-works.product-cms.product-how-it-works div.std div.template2 div.table1 div.column-left-container div.column.left h3{
+
+    color:  #154020 !important;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin: 0 0 1em;
+    padding: 0;
+    text-transform: uppercase;
+}
+div#product-how-it-works.product-cms.product-how-it-works div.std div.template1 div.table1 div.column-left-container div.column.left h3{
+    color: #154020 !important;
+    font-weight: bold !important;
+}
+
+div#product-how-it-works.product-cms.product-how-it-works div.std div.template2 div.table1 div.column-left-container div.column.left h5{
+    color: #333333 !important;
+    font-family: Montserrat,"Helvetica Neue",Verdana,Arial,sans-serif;
+    font-size: 1rem !important;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0 0 10px;
+    text-rendering: optimizespeed;
+    text-transform: uppercase;
+    
+}
+div#product-how-it-works.product-cms.product-how-it-works div.std div.template2 div.table1 div.column.right h3{
+    color: #154020 !important;
+    font-weight: bold !important;
+}
+
+div#product-ingredients.product-cms.product-ingredients div.std div.template2 div.table1 div.column-left-container div.column.left h3{
+    color: #2a5e37 !important;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin: 0 0 1em;
+    padding: 0;
+    text-transform: uppercase;
+  
+  }
+  
+div#product-ingredients.product-cms.product-ingredients div.std div.template2 div.table1 div.column-left-container div.column.left p{
+    color: #333333 !important;
+    font-size:1rem!important;
+  }
+  
+div#product-ingredients.product-cms.product-ingredients div.std div.template1 div.table1 ul li p{
+    color: #333333 !important;
+}
+body.catalog-product-view .product-view .product-cms-container .product-ingredients .template1 ul li.quote:before {
+    color: #636363 !important;
+    content: "“";
+    float: left;
+    font-size: 5.3125rem;
+    margin-left: 25px !important;
+    margin-right: 10px;
+    position: relative;
+    top: -46px;
+}
+
+.category-nutritional div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-how-it-works.product-cms.product-how-it-works div.std div.template2 div.table1 div.column-left-container div.column.left h5{
+    color: #333333 !important;
+}
+div#product-why-you-need-it.product-cms.product-why-you-need-it div.std div.template2 div.table1 div.column.right ul{
+    margin-left: 38px;
+}
+body.catalog-product-view .product-view .product-cms-container .product-why-you-need-it .template2 .table1 ul li:before {
+    background-image: url("/skin/frontend/abp/master/images/sprites-sbbf0716586.png");
+    background-position: -18px -49px !important;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 14px;
+    margin-left: -35px !important;
+    margin-right: 18px;
+    overflow: hidden;
+    width: 18px;
+}
+
+body.catalog-product-view .product-view .product-cms-container .product-ingredients .template1 ul li.quote p {
+    color: #666666!important;
+    font-size: 1.5rem!important;
+    margin: 0;
+    padding: 0; 
+    font-weight: bold;
+    line-height: 2.25rem;
+    margin: 0 0 0.5em;
+    padding: 0 44px;
+    
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-100-90-tablets div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it div.std div.template2 div.table1 div.column.right div.testimonial2 p{
+    font-size: 1.5rem !important;
+    color: #666666 !important;
+}
+
+/*SuperFood Bar/SuperFood-100 kids/How-it-works/Why-you-need-it(padding-bottom)*/
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-100-kids div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it{
+    padding-bottom: 0px !important;
+}
+
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar-12-pack div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-how-it-works.product-cms.product-how-it-works{
+
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+}
+
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar-12-pack div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+    
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-how-it-works.product-cms.product-how-it-works{
+     border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it{
+     border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar-crunch-12-pack div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-how-it-works.product-cms.product-how-it-works{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar-crunch-12-pack div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar-crunch div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-how-it-works.product-cms.product-how-it-works{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar-crunch div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+}
+
+/*END-How-it-works/Why-you-need-it(padding-bottom)*/
+
+/*SUPERSLIM*/
+
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-100-herbal-superslim-formula-powder div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it{
+     padding-bottom: 0px !important;
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-100-herbal-superslim-formula-packets div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it{
+    padding-bottom: 0px !important;
+}
+
+/*END*/
+
+/*VITALITY SHOT how-it-works*/
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-vitality-shot div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-how-it-works.product-cms.product-how-it-works div ul{
+     
+     font-size: 1.125rem !important;
+}
+/*END*/
+
+.product-view .product-shop .price-box .regular-price .price, .product-view .product-shop .price-box .special-price .price, .product-view .product-shop .price-box .full-product-price .price{
+    color: #154020 !important;
+}
+
+div#product-ingredients.product-cms.product-ingredients div.std div.template1 div.table1 div.column.right ul li.quote p{
+    color: #666666 !important;
+}
+
+/*LEARN PAGE*/
+
+body.cms-learn .section2 .column-left-container .column.left .inner-tube ul li.video a:before {
+content: '';
+background-image: url('../images/sprites-sbbf0716586.png');
+background-position: -76px -35px !important;
+background-repeat: no-repeat;
+overflow: hidden;
+display: block;
+height: 57px !important;
+width: 40px;
+display: inline-block;
+float: right;
+margin-left: 8px;
+vertical-align: middle;
+}
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-learn div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.col-main-content section.section2.clearfix div.column.right div.inner-tube ul.owl-carousel.owl-theme div.owl-wrapper-outer div.owl-wrapper div.owl-item li p{
+     font-size: 1.170rem !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-learn div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.col-main-content section.section2.clearfix div.column.right div.inner-tube ul.owl-carousel.owl-theme div.owl-wrapper-outer div.owl-wrapper div.owl-item li span{
+    font-size: 1.170rem !important;
+}
+/*End*/
+
+/*Difference Page*/
+html#top.js.no-touch.localstorage body.cms-page-view.cms-difference div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.difference.content-page div.section3.col2 div.column1 h3{
+     font-size: 24px !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-difference div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.difference.content-page div.section3.col2 div.column2 h3{
+    font-size: 24px !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-difference div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.difference.content-page div.section2.col2 div.column2 h3{
+    color: #333333 !important;
+    font-weight: 600 !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-difference div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.difference.content-page div.section3.col2 div.column3 h3{
+    text-align: center !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-difference div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.difference.content-page div.section6.col1 div.column1 h2{
+    color: #333333 !important;
+    font-weight: 600 !important;
+}
+difference .section7 .column1, .difference .section7 .column2 {
+       min-height: 854px !important;
+}
+.difference .section7 .content h3{
+     color: #174020 !important;
+     font-weight: bold;
+    
+}
+.difference .section5 h3{
+    font-weight: bold;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-difference div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.difference.content-page div.section4.col2 div.column2 p span.special{
+    color: #333333 !important;
+    font-weight: normal !important;
+}
+/*END*/
+
+
+/*CAREERS PAGE*/
+html#top.js.no-touch.localstorage body.cms-page-view.cms-careers div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section5.clearfix p{
+    clear:none !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-careers div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section5.clearfix h3{
+background: none repeat scroll 0 0 #ebe5dc;
+margin-left: 355px;
+ padding: 20px;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-careers div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section5.clearfix h4 span{
+    margin-top: 23px;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-careers div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section5.clearfix h4{
+    color:#333333 !important;
+    font-size: 1rem !important;
+}
+body.cms-careers .section3 h2{
+    font-size: 1.599rem !important
+}
+.table-container div.column-left-container div.column.left div.inner-tube div.description a.blink1 {
+    margin-bottom: 40px !important;
+    margin-top: 40px !important;
+    text-decoration: none;
+}
+.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.table-container div.column-left-container div.column.left div.inner-tube div.description a.blink1:hover{
+	color:white !important; 
+	text-decoration:none;
+	background-color: #154020;
+}
+
+/*END*/
+
+/*STORE PAGE*/
+/*html#top.js.no-touch.localstorage body.cms-page-view.cms-store div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.cms-banner-container.template1 div.widget.widget-banner ul li div.content-container div.image.desktop div.image.mobile div.content ul li:before {
+    background-image: url("http://herbdoc-production.aydus.com/skin/frontend/abp/master/images/sprites-sbbf0716586.png");
+    background-position: -18px -49px !important;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 14px;
+    margin-left: -36px !important;
+    margin-right: 18px;
+    overflow: hidden;
+    width: 18px;
+    margin-top: 8px;
+    }*/
+.products-grid .product-name, .products-list .product-name {
+    font-family: Montserrat,"Raleway","Helvetica Neue",Verdana,Arial,sans-serif;
+    font-size: 14px;
+    height: 25px!important;
+    margin-bottom: 12px !important;
+    text-transform: uppercase;
+}
+.products-grid .product-image{
+    margin-top: 20px;
+}
+.catalog-category-view .col2-left-layout .col-main .category-description:after, .catalogsearch-result-index .col2-left-layout .col-main .category-description:after {
+    /*background-image: url("../images/sprites-sbbf0716586.png");*/
+    background-image: url("") !important;
+    background-position: 0 -561px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 125px;
+    overflow: hidden;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    width: 131px;
+}
+body.cms-store .col-main .category-products ol li .product .product-image, body.cms-store .col-main .category-products ul li .product .product-image {
+    margin: 20px 0 30px !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-store div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.video-wrapper div.video div.video-header h2{
+    color: #333333 !important;
+    font-size: 2.25rem !important;
+}
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-store div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.video-wrapper div.video div.video-header p{
+     color: #666666 !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-store div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products div.block-title h2{
+    font-size: 2.25rem !important;
+}
+/*END*/
+
+/*ABOUT THE DOC */
+html#top.js.no-touch.localstorage body.cms-page-view.cms-about-the-doc div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.naturalhealing.content-page div.section3.col1 div.column2 h3{
+    background: none repeat scroll 0 0 #ebe5dc;
+    color: #0e0e0e;
+    font-size: 1.8 rem !important;
+    margin-top: 0px !important;
+    padding: 15px;
+    font-weight: bold;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-about-the-doc div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.naturalhealing.content-page div.section2.col2 div.column2 h3{
+    color: #154020 !important;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-about-the-doc div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.naturalhealing.content-page div.section4.col2 div.column1 h3{
+    color: #154020 !important;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-top: 24px;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-about-the-doc div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.naturalhealing.content-page div.section4.col2 div.column2 h3{
+    color: #154020 !important;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-top: 24px;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-about-the-doc div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.naturalhealing.content-page div.section2.col2 p{
+    color: #333333 !important;
+    font-size: 1rem !important;
+}
+/*END*/
+/*LOGIN PAGE*/
+body.customer-account-login .col-main .col2-set .form-instructions{
+    color: #333333 !important;
+    font-size: 1rem !important;
+}
+html.js.no-touch.localstorage body.customer-account-index.customer-account div.wrapper div.page div.header-top-background div.header-top-container.page-header div.top-right div.login.hidden-mobile{
+    padding: 11px 18px !important;
+}
+html#top.js.no-touch.localstorage body.checkout-cart-index div.wrapper div.page div.header-top-background div.header-top-container.page-header div.top-right div.login.hidden-mobile{
+    padding: 11px 18px !important;
+}
+body, button, input, select, table, textarea{
+    /*font-size: 1rem !important;*/
+    color:#333333 !important;
+}
+h2.product-name a {
+    color: #333333 !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+body.checkout-cart-index .col-main .cart .cart-table tbody .product-cart-price .cart-price{
+    font-size: 1rem !important;
+}
+body.checkout-cart-index .col-main .cart .cart-table tbody .product-cart-total{
+    font-size: 1rem !important;
+}
+
+/*END*/
+/*ABOUT-NATURAL-HEALING*/
+/*html#top.js.no-touch.localstorage body.cms-page-view.cms-about-natural-healing div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.naturalhealing.content-page div.section5.col2 div.column2{
+    width: 57% !important;
+}*/
+.naturalhealing .section6 .column2 h3 {
+    width: 64%;
+}
+.naturalhealing .column2 h3{
+    color:#154020 !important;
+    font-weight:bold;
+}
+.naturalhealing .section3 h3 {
+    color: #333333 !important;
+    text-align: center;
+}
+/*END*/
+/*HOME PAGE*/
+/*END*/
+
+/*SHIPPING&RETURNS*/
+html#top.js.no-touch.localstorage body.cms-page-view.cms-shipping-returns div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std h3{
+    color: #2a5e37 !important;
+    font-size: 1.125rem !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-shipping-returns div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std h2{
+    
+    color: #333333 !important;
+    font-size: 2.25rem !important;
+    font-weight: bold;
+    text-transform: uppercase !important;
+}
+/*END*/
+
+
+/*5 DAY DETAOXES*/
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-5-day-liver-detox-program.categorypath-5-day-detox-programs.category-5-day-detox-programs div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-ingredients.product-cms.product-ingredients div.std div.template1 div.table1 div.column-left-container div.column.left p a{
+    text-decoration: underline;
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-5-day-liver-detox-program.categorypath-5-day-detox-programs.category-5-day-detox-programs div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-ingredients.product-cms.product-ingredients div.std div.template1 div.table1 div.column-left-container div.column.left p a:hover{
+     text-decoration: none;
+}
+/*END*/
+
+
+
+.cms-healthy-savings .block-title h2:first-child:after {
+  content: 'Free';
+  color: #a50808 !important;
+  }
+ 
+ 
+  
+  
+  
+/*BLOG*/
+
+html#top.js.no-touch.localstorage body.wordpress-index-index.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.blog-home div.post-list ul#post-list li.item.odd div.post-list-item div.blog-desc div.post-entry.entry p{
+    font-size: 1rem !important;
+}
+
+html#top.js.no-touch.localstorage body.wordpress-index-index.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.blog-home div.post-list ul#post-list li.item.even div.post-list-item div.blog-desc div.post-entry.entry p
+{
+    font-size: 1rem !important;
+}
+
+/*Links*/
+.blog_links ul li a{
+
+    text-transform: none !important;
+    font-size: 1.125rem !important;
+    font-weight: normal !important;
+
+}
+
+.blog_links .blog-submenu li a{
+    font-size: 0.938rem !important;
+}
+
+.cms-page-view .main a{
+    text-decoration: none;
+}
+.cms-page-view .main a:hover {
+  text-decoration: underline;
+  color:#404040 !important;
+  
+}
+
+/*Hover on other blog pages*/
+.page div.main-container.col3-layout.blog_page div.main div.blog_links ul li a:hover{
+    text-decoration: underline !important;
+}
+.page div.main-container.col3-layout.blog_page div.main div.blog_links ul li a{
+    text-decoration:none !important;
+}
+html#top.js.no-touch.localstorage body.wordpress-post-view.is-blog div.wrapper div.page div.main-container.col1-layout div.main div.blog_links ul li a:hover{
+	 text-decoration: underline !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-my-favorite-videos div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.std div.blog-home div.post-list.videos-favorites ul#post-list li.item div.post-list-item div.blog-desc div.post_readmore_btn a:hover {
+	color:white !important; 
+	}
+/*End Hover on other blog pages*/
+/*End Links*/
+/*p TAGS*/
+.cms-page-view .std p, .cms-no-route .std p {
+    font-size: 1rem !important;
+    color:#333333 !important;
+}
+.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.std p{
+	font-size: 1rem !important;
+}
+.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.std div#links_container.cms-page-content div.holder p{
+	font-size: 1rem !important;
+}
+html#top.js.no-touch.localstorage body.wordpress-term-view.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.post-list ul#post-list li.item.odd div.post-list-item div.blog-desc div.post-entry.entry p{
+	font-size: 1rem !important;
+}
+html#top.js.no-touch.localstorage body.wordpress-term-view.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.post-list ul#post-list li.item.even div.post-list-item div.blog-desc div.post-entry.entry p{
+	font-size: 1rem !important;
+}
+
+html#top.js.no-touch.localstorage body.wordpress-post-view.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.posttype_question div.page-title.post-title blockquote{
+	font-size: 1rem !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-my-favorite-videos div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.std div.blog-home div.post-list.videos-favorites ul#post-list li.item div.post-list-item div.blog-desc div.post-entry.entry{	
+	font-size: 1rem !important;
+}
+
+/*End p*/
+/*Header tags*/
+.post-list-item .blog-desc h2 a {   
+    color: #2a5e37 !important;
+    font-size: 1.875rem !important;
+    font-weight: 700 !important;
+}
+
+.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.std h3{
+     font-size: 1.875rem !important;
+     color: #2a5e37 !important;
+    font-weight: bold;
+}
+.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.page-title h1{
+     color: #333333 !important;
+    font-size: 36px !important;
+    margin-bottom:30px !important;
+    margin-top: 20px;
+}
+
+.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.cms-page-content div.subtitle{
+	color: #666666 !important;
+	font-size: 1.125rem !important;
+	font-weight: 400 !important;
+	
+}
+
+.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.cms-page-content div.question_title{
+	color: #2a5e37 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    font-size: 1.875rem !important;
+}
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-my-favorite-videos div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.std div.blog-home div.post-list ul#post-list li.item div.post-list-item div.blog-desc div.featured-image a img{
+	padding-bottom:20px;
+}
+
+/*End Header tags*/
+html#top.js.no-touch.localstorage body.wordpress-post-view.is-blog div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.posttype_book div.post-view div.disclaimer{
+     margin-bottom: 125px;
+}
+/*Archives Pages*/
+html#top.js.no-touch.localstorage body.wordpress-post-view.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.posttype_question div.page-title.post-title blockquote{
+	font-style: italic;
+}
+html#top.js.no-touch.localstorage body.wordpress-post-view.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.posttype_question div.page-title.post-title blockquote:before {
+	content: "QUESTION";
+	display:block;
+	font-size: 1.875rem;
+	color:#2a5e37;
+	font-style: normal !important;
+	font-weight: 700;
+}
+html#top.js.no-touch.localstorage body.wordpress-post-view.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.posttype_question div.post-view div.post-entry.entry.std p.answer{
+	font-size: 1.875rem !important;
+	color:#2a5e37;
+	font-style: normal !important;
+	font-weight: 700;
+}
+
+html#top.js.no-touch.localstorage body.wordpress-post-view.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.posttype_question div.post-view div.post-entry.entry.std p strong span{
+	color: #333333;
+	text-decoration: none !important;
+}
+/*END*/  
+/* CHECKOUT BUTTON*/
+#header-cart .minicart-wrapper .minicart-actions ul.checkout-types li .checkout-button{
+	 padding: 0 21px !important;
+	 width: 259px !important;
+}
+#header-cart .minicart-wrapper .minicart-actions ul.checkout-types li .checkout-button
+/*END*/ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------*/
+/*LANDING PAGES SUPERFOOD1
+/*----------------------------------------------------------------------------*/
+/*Landing Pages section 1*/
+
+body.cms-superfood1 .breadcrumbs {
+  display: none;
+}
+body.cms-superfood1 .col-main .section1 {
+  margin-top: 50px;
+}
+body.cms-superfood1 .col-main .section1 div.table {
+  display: table;
+}
+body.cms-superfood1 .col-main .section1 div.table > div {
+  display: table-row;
+}
+body.cms-superfood1 .col-main .section1 div.table > div > div {
+  display: table-cell;
+}
+body.cms-superfood1 .col-main .section1 .table-cell {
+  vertical-align: top;
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-superfood1 .col-main .section1 .table-cell:nth-child(2) {
+    display: none;
+  }
+}
+body.cms-superfood1 .col-main .section1 .image-container img {
+  max-width: 100%;
+  height: auto !important;
+}
+body.cms-superfood1 .col-main .section1 .image-container.image1 {
+  margin-right: 5%;
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-superfood1 .col-main .section1 .image-container.image1 {
+    margin-right: 0%;
+  }
+}
+body.cms-superfood1 .col-main .section1 .image-container.image2 {
+  margin-bottom: 2%;
+}
+body.cms-superfood1 .section2 {
+  margin-bottom: 70px;
+}
+
+
+body.cms-superfood1 .section3 .column-middle-container {
+  float: left;
+  width: 100%;
+}
+body.cms-superfood1 .section3 .column-middle-container .column.middle {
+  margin: -2.7% 33% 0 31%;
+  /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth"*/
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body.cms-superfood1 .section3 .column.left {
+  float: left;
+  width: 35%;
+  /*Width of left column in percentage*/
+  margin-left: -103%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body.cms-superfood1 .section3 .column.right {
+  float: left;
+  width: 34%;
+  /*Width of right column in pixels*/
+  margin-left: -34%;
+  /*Set margin to that of -(RightColumnWidth)*/
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: -2.7%;
+}
+@media handheld, screen and (max-width: 767px) {
+  body.cms-superfood1 .section3 .column-middle-container {
+    float: none;
+    width: auto;
+  }
+  body.cms-superfood1 .section3 .column-middle-container .column.middle {
+    margin: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+  body.cms-superfood1 .section3 .column.left {
+    float: none;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+  body.cms-superfood1 .section3 .column.right {
+    float: none;
+    width: auto;
+    margin-left: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+}
+
+body.cms-superfood1 .section3 .blink1 {
+  display: inline-block;
+  width: auto;
+  height: 54px;
+  line-height: 54px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #302d26;
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: #fed807;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  padding: 0 30px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+body.cms-superfood1 .section3 .blink1:hover {
+  text-decoration: none;
+  color: #ffffff !important;
+  background-color: #154020;
+ 
+}
+
+body.cms-superfood1 .section3 img {
+  max-width: 100%;
+  height: auto !important;
+}
+/*body.cms-superfood1 .section3 .column.middle .inner-tube,
+body.cms-superfood1 .section3 .column.right .inner-tube {
+  margin-top: 2em;
+}*/
+body.cms-superfood1 .section3 .column.middle .inner-tube h2,
+body.cms-superfood1 .section3 .column.right .inner-tube h2 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+/*end*/
+
+/*Landing Pages section 2 (Tables)*/
+
+/*left column*/
+body.cms-superfood1 .section3 .column.left .inner-tube {
+  margin-right: 8.5%;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube div.table {
+  display: table;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube div.table > div {
+  display: table-row;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube div.table > div > div {
+  display: table-cell;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube h2 {
+  margin-bottom: 1.5em;
+}
+
+body.cms-superfood1 .section3 .column.left .inner-tube .table .table-row:nth-child(odd) {
+  background-color: #FFD806;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube .table .table-row:nth-child(even) {
+  background-color: #FFD806;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube .table .table-row.head {
+  background-color: #154020;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube .table .table-row.head .table-cell {
+  color: #ffffff;
+}
+    
+body.cms-superfood1 .section3 .column.left .inner-tube .blink1 {
+  margin-top: 1em;
+}
+
+.inner-tube div.table div.table-row.head div.table-cell{
+	 font-size: 36px;
+	 font-weight:100;
+}
+.inner-tube div.table div.table-row{
+	 font-size: 1rem;
+}
+
+/*middle column*/
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column-middle-container div.column.middle div.inner-tube div.table div.table-row.head{
+	background-color: #154020;
+	color: #ffffff;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column-middle-container div.column.middle div.inner-tube div.table div.table-row{
+	background-color: #C5E0EB;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column-middle-container div.column.middle div.inner-tube div.table div.table-row.head div.table-cell{
+	padding: 0.0em 0.5em;
+}
+body.cms-superfood1 .section3 .column.middle .inner-tube {
+  margin-right: 8.5%;
+}
+body.cms-superfood1 .section4 {
+  margin-top: 90px;
+  padding: 65px 0;
+  background-color: #c5e0eb;
+}
+
+/*right column*/
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column.right div.inner-tube div.table div.table-row.head{
+	background-color: #154020;
+	color: #ffffff;
+}
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column.right div.inner-tube div.table div.table-row{
+	background-color: #CFEBC5;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column.right div.inner-tube div.table div.table-row.head div.table-cell{
+	padding: 0.0em 0.5em;
+}
+
+
+
+/*Landing Pages section-2*/
+/*Products-Grid*/
+/*grey box*/
+.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last{
+	border: 1px solid #edecea;
+	padding: 5px;
+	width:30%;
+}
+.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last{
+	border: 1px solid #edecea;
+	padding: 5px;
+	width:30%;
+}
+/*remove quicklook*/
+.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info a.quickview{
+	display: none;
+}
+.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last div.product-info a.quickview{
+	display: none;
+}
+/*image size*/
+.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last a.product-image{
+	width:36%;
+	margin-top:-16%;
+}
+.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.even li.item.last a.product-image{
+	width:35%;
+	margin-top:-15%;
+}
+.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.img-container img{
+	margin-bottom: 3%;
+}
+/*product name and content*/
+.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.odd li.item.last h2.product-name{
+	margin-left: 41%;
+	margin-top:7%;
+	text-align: left;
+}
+.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last h2.product-name{
+	margin-left: 37%;
+	margin-top:7%;
+}
+.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.size{
+	margin-left: 42%;
+    margin-top: -20%;
+    text-align: left;
+    padding-bottom: 5%;
+}
+.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last div.product-info div.size{
+	margin-left: 42%;
+    margin-top: -20%;
+    text-align: left;
+    padding-bottom: 5%;
+}
+.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.price-box:before{
+	content:"ONLY ";
+	color: #302d26;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 14%;
+}
+.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.even li.item.last div.product-info div.price-box:before{
+	content:"ONLY ";
+	color: #302d26;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 16%;
+}
+
+/*buttons*/
+.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.actions button.button.btn-cart{
+	padding: 15px 35px;
+	 font-weight: bold;
+	 font-size: 0.875rem;
+	 margin-left: 27%;
+}
+.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.actions button.button.btn-cart:hover{
+	 color: #ffffff;
+	 background-color: #154020;
+}
+.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.even li.item.last div.product-info div.actions button.button.btn-cart{
+	padding: 15px 35px;
+	font-weight: bold;
+	font-size: 0.875rem;
+	margin-left: 27%;
+}
+.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.even li.item.last div.product-info div.actions button.button.btn-cart:hover{
+	color: #ffffff;
+	background-color: #154020;
+}
+.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.odd li.item.last div.product-info p.saving{
+	color: #a50808 !important;
+    font-size: 0.875rem;
+    font-weight: bold !important;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+    margin-left: 16%;
+}
+.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last div.product-info p.saving{
+	color: #a50808 !important;
+    font-size: 0.875rem;
+    font-weight: bold !important;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+    margin-left: 19%;
+}
+
+
+/*Responsive*/
+@media handheld, screen and (max-width: 768px) {
+	.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last{
+		width:92%;
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last{
+		width:92%;		
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.img-container img{
+		width:100%;
+}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.even li.item.last div.product-info div.price-box:before{
+		margin-left: 36%;
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.price-box:before{
+	margin-left: 39%;
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.size{
+	
+    margin-top: -12%;
+   
+}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last div.product-info div.size{
+		margin-top: 5%;
+		}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last{
+		width:100%;
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column.left div.inner-tube div.table{
+		margin-left: -7% !important;
+    width: 105% !important;
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column-middle-container div.column.middle div.inner-tube div.table{
+		 margin-left: -7% !important;
+		 width: 105% !important;
+	}
+}
+/*end*/
+
+/*Landing Pages Section-3*/
+
+/*----------------------------------------------------------------------------*/
+/* Home: Tabs
+/*----------------------------------------------------------------------------*/
+.cms-superfood1 .section2,
+.cms-superfood1 .section3 {
+  margin: 0 2.72222%;
+  margin-top: 77px;
+  margin-bottom: 49px;
+  margin-left:7%;
+}
+@media handheld, screen and (max-width: 768px) {
+  .cms-superfood1 .section2,
+  .cms-superfood1 .section3 {
+    margin: 0 35px;
+    margin-top: 50px;
+  }
+}
+@media handheld, screen and (max-width: 320px) {
+  .cms-superfood1 .section2,
+  .cms-superfood1 .section3 {
+    margin: 0 13px;
+    margin-top: 50px;
+  }
+}
+.cms-superfood1 .section2 img,
+.cms-superfood1 .section3 img {
+  max-width: 100%;
+  height: auto !important;
+}
+.cms-superfood1 .section2 h2,
+.cms-superfood1 .section3 h2 {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 36px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333333 !important;
+}
+.cms-superfood1 .section2 h3,
+.cms-superfood1 .section3 h3 {
+  margin: 0 0 30px 0;
+  padding: 0;
+  font-size: 18px;
+  font-size: 1.125rem;
+  text-align: center;
+  color: #666666;
+  text-transform: none;
+}
+.cms-superfood1 .section2 .ui-tabs-nav,
+.cms-superfood1 .section3 .ui-tabs-nav {
+  height: 50px !important;
+  padding: 3px;
+  display: block;
+  margin: 0 auto;
+  max-width: 650px;
+  width: 100%;
+  border-radius: 5px;
+  /* gradient generated by http://www.colorzilla.com/gradient-editor/ */
+  background: #dbd4cc;
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RiZDRjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjclIiBzdG9wLWNvbG9yPSIjZTdlMGQ4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTUlIiBzdG9wLWNvbG9yPSIjZWRlNmRlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODclIiBzdG9wLWNvbG9yPSIjZWNlNWRkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODklIiBzdG9wLWNvbG9yPSIjZWFlM2RiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTElIiBzdG9wLWNvbG9yPSIjZWJlNGRjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTglIiBzdG9wLWNvbG9yPSIjZGVkN2NmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RjZDVjZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dbd4cc), color-stop(7%, #e7e0d8), color-stop(15%, #ede6de), color-stop(87%, #ece5dd), color-stop(89%, #eae3db), color-stop(91%, #ebe4dc), color-stop(98%, #ded7cf), color-stop(100%, #dcd5cd));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbd4cc', endColorstr='#dcd5cd',GradientType=0 );
+  /* IE6-8 */
+  list-style: none;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood1 .section2 .ui-tabs-nav,
+  .cms-superfood1 .section3 .ui-tabs-nav {
+    width: 100%;
+    height: 132px !important;
+  }
+}
+.cms-superfood1 .section2 .ui-tabs-nav .ui-state-active,
+.cms-superfood1 .section3 .ui-tabs-nav .ui-state-active {
+  background: #154020;
+  border-radius: 5px;
+}
+.cms-superfood1 .section2 .ui-tabs-nav .ui-state-active a,
+.cms-superfood1 .section3 .ui-tabs-nav .ui-state-active a {
+  color: white;
+  text-decoration: none;
+}
+.cms-superfood1 .section2 .ui-tabs-nav .ui-state-active a:before, .cms-superfood1 .section2 .ui-tabs-nav .ui-state-active a:after,
+.cms-superfood1 .section3 .ui-tabs-nav .ui-state-active a:before,
+.cms-superfood1 .section3 .ui-tabs-nav .ui-state-active a:after {
+  position: absolute;
+  display: block;
+  content: '';
+  border: 9px solid transparent;
+  font-style: normal !important;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood1 .section2 .ui-tabs-nav .ui-state-active a:before, .cms-superfood1 .section2 .ui-tabs-nav .ui-state-active a:after,
+  .cms-superfood1 .section3 .ui-tabs-nav .ui-state-active a:before,
+  .cms-superfood1 .section3 .ui-tabs-nav .ui-state-active a:after {
+    display: none;
+  }
+}
+.cms-superfood1 .section2 .ui-tabs-nav .ui-state-active a:after,
+.cms-superfood1 .section3 .ui-tabs-nav .ui-state-active a:after {
+  top: 44px;
+  left: 98px;
+  border-top-color: #154020;
+}
+.cms-superfood1 .section2 .ui-tabs-nav li,
+.cms-superfood1 .section3 .ui-tabs-nav li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  height: 44px;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood1 .section2 .ui-tabs-nav li,
+  .cms-superfood1 .section3 .ui-tabs-nav li {
+    width: 100%;
+    height: auto;
+  }
+}
+.cms-superfood1 .section2 .ui-tabs-nav li a,
+.cms-superfood1 .section3 .ui-tabs-nav li a {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 44px;
+  line-height: 2.75rem;
+  display: block;
+  position: relative;
+  color: #878686;
+  text-decoration: none;
+}
+.cms-superfood1 .section2 .ui-tabs-nav li a:hover,
+.cms-superfood1 .section3 .ui-tabs-nav li a:hover {
+  text-decoration: none;
+}
+.cms-superfood1 .section2 .ui-tabs-panel,
+.cms-superfood1 .section3 .ui-tabs-panel {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 45px;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood1 .section2 .ui-tabs-panel,
+  .cms-superfood1 .section3 .ui-tabs-panel {
+    margin-top: 30px;
+  }
+}
+.cms-superfood1 .section2 .ui-tabs-panel .content h3,
+.cms-superfood1 .section3 .ui-tabs-panel .content h3 {
+  text-align: left;
+}
+.cms-superfood1 .section2 .ui-tabs-panel .content p,
+.cms-superfood1 .section3 .ui-tabs-panel .content p {
+  line-height: 28px;
+  color: #333333;
+}
+.cms-superfood1 .section2 .ui-tabs-panel div,
+.cms-superfood1 .section3 .ui-tabs-panel div {
+  width: 47%;
+  display: inline-block;
+  vertical-align: top;
+}
+.cms-superfood1 .section2 .ui-tabs-panel div div,
+.cms-superfood1 .section3 .ui-tabs-panel div div {
+  width: auto;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood1 .section2 .ui-tabs-panel div,
+  .cms-superfood1 .section3 .ui-tabs-panel div {
+    width: 100%;
+  }
+}
+.cms-superfood1 .section2 .ui-tabs-panel div:first-child,
+.cms-superfood1 .section3 .ui-tabs-panel div:first-child {
+  margin-right: 5%;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood1 .section2 .ui-tabs-panel div:first-child,
+  .cms-superfood1 .section3 .ui-tabs-panel div:first-child {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+.cms-superfood1 .section2 .ui-tabs-panel div .blink1,
+.cms-superfood1 .section3 .ui-tabs-panel div .blink1 {
+  display: inline-block;
+  width: auto;
+  height: 54px;
+  line-height: 54px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #302d26;
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: #fed807;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  padding: 0 30px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.cms-superfood1 .section2 .ui-tabs-panel div .blink1:hover,
+.cms-superfood1 .section3 .ui-tabs-panel div .blink1:hover {
+  text-decoration: none;
+  color: #ffffff !important;
+  background-color: #154020;
+}
+
+.cms-superfood1 .section2 .ui-tabs-nav .ui-state-active, .cms-superfood1 .section3 .ui-tabs-nav .ui-state-active{
+	background: none repeat scroll 0 0 #154020 !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1.ui-tabs-panel.ui-widget-content.ui-corner-bottom div.content h5{
+	color: #154020;
+    font-size: 1.125rem;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1.ui-tabs-panel.ui-widget-content.ui-corner-bottom div.content p{
+	font-size: 1rem !important;
+	padding-bottom: 5%;
+}
+/*END*/
+
+
+
+
+
+
+/*----------------------------------------------------------------------------*/
+/*LANDING PAGES SUPERFOOD2
+/*----------------------------------------------------------------------------*/
+/*Landing Pages section 1*/
+
+body.cms-superfood2 .breadcrumbs {
+  display: none;
+}
+body.cms-superfood2 .col-main .section1 {
+  margin-top: 50px;
+}
+body.cms-superfood2 .col-main .section1 div.table {
+  display: table;
+}
+body.cms-superfood2 .col-main .section1 div.table > div {
+  display: table-row;
+}
+body.cms-superfood2 .col-main .section1 div.table > div > div {
+  display: table-cell;
+}
+body.cms-superfood2 .col-main .section1 .table-cell {
+  vertical-align: top;
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-superfood2 .col-main .section1 .table-cell:nth-child(2) {
+    display: none;
+  }
+}
+body.cms-superfood2 .col-main .section1 .image-container img {
+  max-width: 100%;
+  height: auto !important;
+}
+body.cms-superfood2 .col-main .section1 .image-container.image1 {
+  margin-right: 5%;
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-superfood2 .col-main .section1 .image-container.image1 {
+    margin-right: 0%;
+  }
+}
+body.cms-superfood2 .col-main .section1 .image-container.image2 {
+  margin-bottom: 2%;
+}
+body.cms-superfood2 .section2 {
+  margin-bottom: 70px;
+}
+
+
+body.cms-superfood2 .section3 .column-middle-container {
+  float: left;
+  width: 100%;
+}
+body.cms-superfood2 .section3 .column-middle-container .column.middle {
+  margin: -2.7% 33% 0 31%;
+  /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth"*/
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body.cms-superfood2 .section3 .column.left {
+  float: left;
+  width: 35%;
+  /*Width of left column in percentage*/
+  margin-left: -103%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body.cms-superfood2 .section3 .column.right {
+  float: left;
+  width: 34%;
+  /*Width of right column in pixels*/
+  margin-left: -34%;
+  /*Set margin to that of -(RightColumnWidth)*/
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: -2.7%;
+}
+@media handheld, screen and (max-width: 767px) {
+  body.cms-superfood2 .section3 .column-middle-container {
+    float: none;
+    width: auto;
+  }
+  body.cms-superfood2 .section3 .column-middle-container .column.middle {
+    margin: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+  body.cms-superfood2 .section3 .column.left {
+    float: none;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+  body.cms-superfood2 .section3 .column.right {
+    float: none;
+    width: auto;
+    margin-left: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+}
+
+body.cms-superfood2 .section3 .blink1 {
+  display: inline-block;
+  width: auto;
+  height: 54px;
+  line-height: 54px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #302d26;
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: #fed807;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  padding: 0 30px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+body.cms-superfood2 .section3 .blink1:hover {
+  text-decoration: none;
+  color: #ffffff !important;
+  background-color: #154020;
+ 
+}
+
+body.cms-superfood2 .section3 img {
+  max-width: 100%;
+  height: auto !important;
+}
+/*body.cms-superfood2 .section3 .column.middle .inner-tube,
+body.cms-superfood2 .section3 .column.right .inner-tube {
+  margin-top: 2em;
+}*/
+body.cms-superfood2 .section3 .column.middle .inner-tube h2,
+body.cms-superfood2 .section3 .column.right .inner-tube h2 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+/*end*/
+
+/*Landing Pages section 2 (Tables)*/
+
+/*left column*/
+body.cms-superfood2 .section3 .column.left .inner-tube {
+  margin-right: 8.5%;
+}
+body.cms-superfood2 .section3 .column.left .inner-tube div.table {
+  display: table;
+}
+body.cms-superfood2 .section3 .column.left .inner-tube div.table > div {
+  display: table-row;
+}
+body.cms-superfood2 .section3 .column.left .inner-tube div.table > div > div {
+  display: table-cell;
+}
+body.cms-superfood2 .section3 .column.left .inner-tube h2 {
+  margin-bottom: 1.5em;
+}
+body.cms-superfood2 .section3 .column.left .inner-tube .table {
+  width: 100%;
+}
+body.cms-superfood2 .section3 .column.left .inner-tube .table .table-row:nth-child(odd) {
+  background-color: #FFD806;
+}
+body.cms-superfood2 .section3 .column.left .inner-tube .table .table-row:nth-child(even) {
+  background-color: #FFD806;
+}
+body.cms-superfood2 .section3 .column.left .inner-tube .table .table-row.head {
+  background-color: #154020;
+}
+body.cms-superfood2 .section3 .column.left .inner-tube .table .table-row.head .table-cell {
+  color: #ffffff;
+}
+    
+body.cms-superfood2 .section3 .column.left .inner-tube .blink1 {
+  margin-top: 1em;
+}
+
+.inner-tube div.table div.table-row.head div.table-cell{
+	 font-size: 36px;
+	 font-weight:100;
+}
+.inner-tube div.table div.table-row{
+	 font-size: 1rem;
+}
+
+/*middle column*/
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column-middle-container div.column.middle div.inner-tube div.table div.table-row.head{
+	background-color: #154020;
+	color: #ffffff;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column-middle-container div.column.middle div.inner-tube div.table div.table-row{
+	background-color: #C5E0EB;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column-middle-container div.column.middle div.inner-tube div.table div.table-row.head div.table-cell{
+	padding: 0.0em 0.5em;
+}
+body.cms-superfood2 .section3 .column.middle .inner-tube {
+  margin-right: 8.5%;
+}
+body.cms-superfood2 .section4 {
+  margin-top: 90px;
+  padding: 65px 0;
+  background-color: #c5e0eb;
+}
+
+/*right column*/
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column.right div.inner-tube div.table div.table-row.head{
+	background-color: #154020;
+	color: #ffffff;
+}
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column.right div.inner-tube div.table div.table-row{
+	background-color: #CFEBC5;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column.right div.inner-tube div.table div.table-row.head div.table-cell{
+	padding: 0.0em 0.5em;
+}
+
+
+
+
+
+
+
+
+
+/*Landing Pages section-2*/
+/*Products-Grid*/
+/*grey box*/
+.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last{
+	border: 1px solid #edecea;
+	padding: 5px;
+	width:30%;
+}
+.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last{
+	border: 1px solid #edecea;
+	padding: 5px;
+	width:30%;
+}
+/*remove quicklook*/
+.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info a.quickview{
+	display: none;
+}
+.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last div.product-info a.quickview{
+	display: none;
+}
+/*image size*/
+.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last a.product-image{
+	width:36%;
+	margin-top:-16%;
+}
+.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.even li.item.last a.product-image{
+	width:35%;
+	margin-top:-15%;
+}
+.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.img-container img{
+	margin-bottom: 3%;
+}
+/*product name and content*/
+.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.odd li.item.last h2.product-name{
+	margin-left: 41%;
+	margin-top:7%;
+	text-align: left;
+}
+.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last h2.product-name{
+	margin-left: 37%;
+	margin-top:7%;
+}
+.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.size{
+	margin-left: 42%;
+    margin-top: -20%;
+    text-align: left;
+    padding-bottom: 5%;
+}
+.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last div.product-info div.size{
+	margin-left: 42%;
+    margin-top: -20%;
+    text-align: left;
+    padding-bottom: 5%;
+}
+.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.price-box:before{
+	content:"ONLY ";
+	color: #302d26;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 14%;
+}
+.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.even li.item.last div.product-info div.price-box:before{
+	content:"ONLY ";
+	color: #302d26;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 16%;
+}
+
+/*buttons*/
+.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.actions button.button.btn-cart{
+	padding: 15px 35px;
+	 font-weight: bold;
+	 font-size: 0.875rem;
+	 margin-left: 27%;
+}
+.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.actions button.button.btn-cart:hover{
+	 color: #ffffff;
+	 background-color: #154020;
+}
+.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.even li.item.last div.product-info div.actions button.button.btn-cart{
+	padding: 15px 35px;
+	font-weight: bold;
+	font-size: 0.875rem;
+	margin-left: 27%;
+}
+.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.even li.item.last div.product-info div.actions button.button.btn-cart:hover{
+	color: #ffffff;
+	background-color: #154020;
+}
+.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.odd li.item.last div.product-info p.saving{
+	color: #a50808 !important;
+    font-size: 0.875rem;
+    font-weight: bold !important;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+    margin-left: 16%;
+}
+.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last div.product-info p.saving{
+	color: #a50808 !important;
+    font-size: 0.875rem;
+    font-weight: bold !important;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+    margin-left: 19%;
+}
+
+
+/*Responsive*/
+@media handheld, screen and (max-width: 768px) {
+	.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last{
+		width:92%;
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last{
+		width:92%;		
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.img-container img{
+		width:100%;
+}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.even li.item.last div.product-info div.price-box:before{
+		margin-left: 36%;
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.price-box:before{
+	margin-left: 39%;
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.size{
+	
+    margin-top: -12%;
+   
+}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last div.product-info div.size{
+		margin-top: 5%;
+		}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last{
+		width:100%;
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column.left div.inner-tube div.table{
+		margin-left: -7% !important;
+    width: 105% !important;
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column-middle-container div.column.middle div.inner-tube div.table{
+		 margin-left: -7% !important;
+		 width: 105% !important;
+	}
+}
+/*end*/
+
+
+
+/*Landing Pages Section-3*/
+
+/*----------------------------------------------------------------------------*/
+/* Home: Tabs
+/*----------------------------------------------------------------------------*/
+.cms-superfood2 .section2,
+.cms-superfood2 .section3 {
+  margin: 0 2.72222%;
+  margin-top: 77px;
+  margin-bottom: 49px;
+  margin-left:7%;
+}
+@media handheld, screen and (max-width: 768px) {
+  .cms-superfood2 .section2,
+  .cms-superfood2 .section3 {
+    margin: 0 35px;
+    margin-top: 50px;
+  }
+}
+@media handheld, screen and (max-width: 320px) {
+  .cms-superfood2 .section2,
+  .cms-superfood2 .section3 {
+    margin: 0 13px;
+    margin-top: 50px;
+  }
+}
+.cms-superfood2 .section2 img,
+.cms-superfood2 .section3 img {
+  max-width: 100%;
+  height: auto !important;
+}
+.cms-superfood2 .section2 h2,
+.cms-superfood2 .section3 h2 {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 36px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333333 !important;
+}
+.cms-superfood2 .section2 h3,
+.cms-superfood2 .section3 h3 {
+  margin: 0 0 30px 0;
+  padding: 0;
+  font-size: 18px;
+  font-size: 1.125rem;
+  text-align: center;
+  color: #666666;
+  text-transform: none;
+}
+.cms-superfood2 .section2 .ui-tabs-nav,
+.cms-superfood2 .section3 .ui-tabs-nav {
+  height: 50px !important;
+  padding: 3px;
+  display: block;
+  margin: 0 auto;
+  max-width: 650px;
+  width: 100%;
+  border-radius: 5px;
+  /* gradient generated by http://www.colorzilla.com/gradient-editor/ */
+  background: #dbd4cc;
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RiZDRjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjclIiBzdG9wLWNvbG9yPSIjZTdlMGQ4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTUlIiBzdG9wLWNvbG9yPSIjZWRlNmRlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODclIiBzdG9wLWNvbG9yPSIjZWNlNWRkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODklIiBzdG9wLWNvbG9yPSIjZWFlM2RiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTElIiBzdG9wLWNvbG9yPSIjZWJlNGRjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTglIiBzdG9wLWNvbG9yPSIjZGVkN2NmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RjZDVjZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dbd4cc), color-stop(7%, #e7e0d8), color-stop(15%, #ede6de), color-stop(87%, #ece5dd), color-stop(89%, #eae3db), color-stop(91%, #ebe4dc), color-stop(98%, #ded7cf), color-stop(100%, #dcd5cd));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbd4cc', endColorstr='#dcd5cd',GradientType=0 );
+  /* IE6-8 */
+  list-style: none;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood2 .section2 .ui-tabs-nav,
+  .cms-superfood2 .section3 .ui-tabs-nav {
+    width: 100%;
+    height: 132px !important;
+  }
+}
+.cms-superfood2 .section2 .ui-tabs-nav .ui-state-active,
+.cms-superfood2 .section3 .ui-tabs-nav .ui-state-active {
+  background: #154020;
+  border-radius: 5px;
+}
+.cms-superfood2 .section2 .ui-tabs-nav .ui-state-active a,
+.cms-superfood2 .section3 .ui-tabs-nav .ui-state-active a {
+  color: white;
+  text-decoration: none;
+}
+.cms-superfood2 .section2 .ui-tabs-nav .ui-state-active a:before, .cms-superfood2 .section2 .ui-tabs-nav .ui-state-active a:after,
+.cms-superfood2 .section3 .ui-tabs-nav .ui-state-active a:before,
+.cms-superfood2 .section3 .ui-tabs-nav .ui-state-active a:after {
+  position: absolute;
+  display: block;
+  content: '';
+  border: 9px solid transparent;
+  font-style: normal !important;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood2 .section2 .ui-tabs-nav .ui-state-active a:before, .cms-superfood2 .section2 .ui-tabs-nav .ui-state-active a:after,
+  .cms-superfood2 .section3 .ui-tabs-nav .ui-state-active a:before,
+  .cms-superfood2 .section3 .ui-tabs-nav .ui-state-active a:after {
+    display: none;
+  }
+}
+.cms-superfood2 .section2 .ui-tabs-nav .ui-state-active a:after,
+.cms-superfood2 .section3 .ui-tabs-nav .ui-state-active a:after {
+  top: 44px;
+  left: 98px;
+  border-top-color: #154020;
+}
+.cms-superfood2 .section2 .ui-tabs-nav li,
+.cms-superfood2 .section3 .ui-tabs-nav li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  height: 44px;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood2 .section2 .ui-tabs-nav li,
+  .cms-superfood2 .section3 .ui-tabs-nav li {
+    width: 100%;
+    height: auto;
+  }
+}
+.cms-superfood2 .section2 .ui-tabs-nav li a,
+.cms-superfood2 .section3 .ui-tabs-nav li a {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 44px;
+  line-height: 2.75rem;
+  display: block;
+  position: relative;
+  color: #878686;
+  text-decoration: none;
+}
+.cms-superfood2 .section2 .ui-tabs-nav li a:hover,
+.cms-superfood2 .section3 .ui-tabs-nav li a:hover {
+  text-decoration: none;
+}
+.cms-superfood2 .section2 .ui-tabs-panel,
+.cms-superfood2 .section3 .ui-tabs-panel {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 45px;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood2 .section2 .ui-tabs-panel,
+  .cms-superfood2 .section3 .ui-tabs-panel {
+    margin-top: 30px;
+  }
+}
+.cms-superfood2 .section2 .ui-tabs-panel .content h3,
+.cms-superfood2 .section3 .ui-tabs-panel .content h3 {
+  text-align: left;
+}
+.cms-superfood2 .section2 .ui-tabs-panel .content p,
+.cms-superfood2 .section3 .ui-tabs-panel .content p {
+  line-height: 28px;
+  color: #333333;
+}
+.cms-superfood2 .section2 .ui-tabs-panel div,
+.cms-superfood2 .section3 .ui-tabs-panel div {
+  width: 47%;
+  display: inline-block;
+  vertical-align: top;
+}
+.cms-superfood2 .section2 .ui-tabs-panel div div,
+.cms-superfood2 .section3 .ui-tabs-panel div div {
+  width: auto;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood2 .section2 .ui-tabs-panel div,
+  .cms-superfood2 .section3 .ui-tabs-panel div {
+    width: 100%;
+  }
+}
+.cms-superfood2 .section2 .ui-tabs-panel div:first-child,
+.cms-superfood2 .section3 .ui-tabs-panel div:first-child {
+  margin-right: 5%;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood2 .section2 .ui-tabs-panel div:first-child,
+  .cms-superfood2 .section3 .ui-tabs-panel div:first-child {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+.cms-superfood2 .section2 .ui-tabs-panel div .blink1,
+.cms-superfood2 .section3 .ui-tabs-panel div .blink1 {
+  display: inline-block;
+  width: auto;
+  height: 54px;
+  line-height: 54px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #302d26;
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: #fed807;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  padding: 0 30px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.cms-superfood2 .section2 .ui-tabs-panel div .blink1:hover,
+.cms-superfood2 .section3 .ui-tabs-panel div .blink1:hover {
+  text-decoration: none;
+  color: #ffffff !important;
+  background-color: #154020;
+}
+
+.cms-superfood2 .section2 .ui-tabs-nav .ui-state-active, .cms-superfood2 .section3 .ui-tabs-nav .ui-state-active{
+	background: none repeat scroll 0 0 #154020 !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1.ui-tabs-panel.ui-widget-content.ui-corner-bottom div.content h5{
+	color: #154020;
+    font-size: 1.125rem;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood2 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1.ui-tabs-panel.ui-widget-content.ui-corner-bottom div.content p{
+	font-size: 1rem !important;
+	padding-bottom: 5%;
+}
+/*END*/
+
+
+/*----------------------------------------------------------------------------*/
+/*LANDING PAGES SUPERFOOD3
+/*----------------------------------------------------------------------------*/
+/*Landing Pages section 1*/
+
+body.cms-superfood3 .breadcrumbs {
+  display: none;
+}
+body.cms-superfood3 .col-main .section1 {
+  margin-top: 50px;
+}
+body.cms-superfood3 .col-main .section1 div.table {
+  display: table;
+}
+body.cms-superfood3 .col-main .section1 div.table > div {
+  display: table-row;
+}
+body.cms-superfood3 .col-main .section1 div.table > div > div {
+  display: table-cell;
+}
+body.cms-superfood3 .col-main .section1 .table-cell {
+  vertical-align: top;
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-superfood3 .col-main .section1 .table-cell:nth-child(2) {
+    display: none;
+  }
+}
+body.cms-superfood3 .col-main .section1 .image-container img {
+  max-width: 100%;
+  height: auto !important;
+}
+body.cms-superfood3 .col-main .section1 .image-container.image1 {
+  margin-right: 5%;
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-superfood3 .col-main .section1 .image-container.image1 {
+    margin-right: 0%;
+  }
+}
+body.cms-superfood3 .col-main .section1 .image-container.image2 {
+  margin-bottom: 2%;
+}
+body.cms-superfood3 .section2 {
+  margin-bottom: 70px;
+}
+
+
+body.cms-superfood3 .section3 .column-middle-container {
+  float: left;
+  width: 100%;
+}
+body.cms-superfood3 .section3 .column-middle-container .column.middle {
+  margin: -2.7% 33% 0 31%;
+  /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth"*/
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body.cms-superfood3 .section3 .column.left {
+  float: left;
+  width: 35%;
+  /*Width of left column in percentage*/
+  margin-left: -103%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body.cms-superfood3 .section3 .column.right {
+  float: left;
+  width: 34%;
+  /*Width of right column in pixels*/
+  margin-left: -34%;
+  /*Set margin to that of -(RightColumnWidth)*/
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: -2.7%;
+}
+@media handheld, screen and (max-width: 767px) {
+  body.cms-superfood3 .section3 .column-middle-container {
+    float: none;
+    width: auto;
+  }
+  body.cms-superfood3 .section3 .column-middle-container .column.middle {
+    margin: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+  body.cms-superfood3 .section3 .column.left {
+    float: none;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+  body.cms-superfood3 .section3 .column.right {
+    float: none;
+    width: auto;
+    margin-left: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+}
+
+body.cms-superfood3 .section3 .blink1 {
+  display: inline-block;
+  width: auto;
+  height: 54px;
+  line-height: 54px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #302d26;
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: #fed807;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  padding: 0 30px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+body.cms-superfood3 .section3 .blink1:hover {
+  text-decoration: none;
+  color: #ffffff !important;
+  background-color: #154020;
+ 
+}
+
+body.cms-superfood3 .section3 img {
+  max-width: 100%;
+  height: auto !important;
+}
+/*body.cms-superfood3 .section3 .column.middle .inner-tube,
+body.cms-superfood3 .section3 .column.right .inner-tube {
+  margin-top: 2em;
+}*/
+body.cms-superfood3 .section3 .column.middle .inner-tube h2,
+body.cms-superfood3 .section3 .column.right .inner-tube h2 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+/*end*/
+
+/*Landing Pages section 2 (Tables)*/
+
+/*left column*/
+body.cms-superfood3 .section3 .column.left .inner-tube {
+  margin-right: 8.5%;
+}
+body.cms-superfood3 .section3 .column.left .inner-tube div.table {
+  display: table;
+}
+body.cms-superfood3 .section3 .column.left .inner-tube div.table > div {
+  display: table-row;
+}
+body.cms-superfood3 .section3 .column.left .inner-tube div.table > div > div {
+  display: table-cell;
+}
+body.cms-superfood3 .section3 .column.left .inner-tube h2 {
+  margin-bottom: 1.5em;
+}
+body.cms-superfood3 .section3 .column.left .inner-tube .table {
+  width: 100%;
+}
+body.cms-superfood3 .section3 .column.left .inner-tube .table .table-row:nth-child(odd) {
+  background-color: #FFD806;
+}
+body.cms-superfood3 .section3 .column.left .inner-tube .table .table-row:nth-child(even) {
+  background-color: #FFD806;
+}
+body.cms-superfood3 .section3 .column.left .inner-tube .table .table-row.head {
+  background-color: #154020;
+}
+body.cms-superfood3 .section3 .column.left .inner-tube .table .table-row.head .table-cell {
+  color: #ffffff;
+}
+    
+body.cms-superfood3 .section3 .column.left .inner-tube .blink1 {
+  margin-top: 1em;
+}
+
+.inner-tube div.table div.table-row.head div.table-cell{
+	 font-size: 36px;
+	 font-weight:100;
+}
+.inner-tube div.table div.table-row{
+	 font-size: 1rem;
+}
+
+/*middle column*/
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column-middle-container div.column.middle div.inner-tube div.table div.table-row.head{
+	background-color: #154020;
+	color: #ffffff;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column-middle-container div.column.middle div.inner-tube div.table div.table-row{
+	background-color: #C5E0EB;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column-middle-container div.column.middle div.inner-tube div.table div.table-row.head div.table-cell{
+	padding: 0.0em 0.5em;
+}
+body.cms-superfood3 .section3 .column.middle .inner-tube {
+  margin-right: 8.5%;
+}
+body.cms-superfood3 .section4 {
+  margin-top: 90px;
+  padding: 65px 0;
+  background-color: #c5e0eb;
+}
+
+/*right column*/
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column.right div.inner-tube div.table div.table-row.head{
+	background-color: #154020;
+	color: #ffffff;
+}
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column.right div.inner-tube div.table div.table-row{
+	background-color: #CFEBC5;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column.right div.inner-tube div.table div.table-row.head div.table-cell{
+	padding: 0.0em 0.5em;
+}
+
+
+
+
+
+
+
+/*Landing Pages section-2*/
+/*Products-Grid*/
+/*grey box*/
+.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last{
+	border: 1px solid #edecea;
+	padding: 5px;
+	width:30%;
+}
+.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last{
+	border: 1px solid #edecea;
+	padding: 5px;
+	width:30%;
+}
+/*remove quicklook*/
+.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info a.quickview{
+	display: none;
+}
+.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last div.product-info a.quickview{
+	display: none;
+}
+/*image size*/
+.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last a.product-image{
+	width:36%;
+	margin-top:-16%;
+}
+.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.even li.item.last a.product-image{
+	width:35%;
+	margin-top:-15%;
+}
+.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.img-container img{
+	margin-bottom: 3%;
+}
+/*product name and content*/
+.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.odd li.item.last h2.product-name{
+	margin-left: 41%;
+	margin-top:7%;
+	text-align: left;
+}
+.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last h2.product-name{
+	margin-left: 37%;
+	margin-top:7%;
+}
+.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.size{
+	margin-left: 42%;
+    margin-top: -20%;
+    text-align: left;
+    padding-bottom: 5%;
+}
+.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last div.product-info div.size{
+	margin-left: 42%;
+    margin-top: -20%;
+    text-align: left;
+    padding-bottom: 5%;
+}
+.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.price-box:before{
+	content:"ONLY ";
+	color: #302d26;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 14%;
+}
+.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.even li.item.last div.product-info div.price-box:before{
+	content:"ONLY ";
+	color: #302d26;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 16%;
+}
+
+/*buttons*/
+.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.actions button.button.btn-cart{
+	padding: 15px 35px;
+	 font-weight: bold;
+	 font-size: 0.875rem;
+	 margin-left: 27%;
+}
+.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.actions button.button.btn-cart:hover{
+	 color: #ffffff;
+	 background-color: #154020;
+}
+.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.even li.item.last div.product-info div.actions button.button.btn-cart{
+	padding: 15px 35px;
+	font-weight: bold;
+	font-size: 0.875rem;
+	margin-left: 27%;
+}
+.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.even li.item.last div.product-info div.actions button.button.btn-cart:hover{
+	color: #ffffff;
+	background-color: #154020;
+}
+.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.odd li.item.last div.product-info p.saving{
+	color: #a50808 !important;
+    font-size: 0.875rem;
+    font-weight: bold !important;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+    margin-left: 16%;
+}
+.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last div.product-info p.saving{
+	color: #a50808 !important;
+    font-size: 0.875rem;
+    font-weight: bold !important;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+    margin-left: 19%;
+}
+
+
+/*Responsive*/
+@media handheld, screen and (max-width: 768px) {
+	.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last{
+		width:92%;
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last{
+		width:92%;		
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.img-container img{
+		width:100%;
+}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.even li.item.last div.product-info div.price-box:before{
+		margin-left: 36%;
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.price-box:before{
+	margin-left: 39%;
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.odd li.item.last div.product-info div.size{
+	
+    margin-top: -12%;
+   
+}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last div.product-info div.size{
+		margin-top: 5%;
+		}
+}
+@media handheld, screen and (max-width: 768px) {
+	.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last{
+		width:100%;
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column.left div.inner-tube div.table{
+		margin-left: -7% !important;
+    width: 105% !important;
+	}
+}
+@media handheld, screen and (max-width: 768px) {
+	html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column-middle-container div.column.middle div.inner-tube div.table{
+		 margin-left: -7% !important;
+		 width: 105% !important;
+	}
+}
+/*end*/
+
+
+
+/*Landing Pages Section-3*/
+
+/*----------------------------------------------------------------------------*/
+/* Home: Tabs
+/*----------------------------------------------------------------------------*/
+.cms-superfood3 .section2,
+.cms-superfood3 .section3 {
+  margin: 0 2.72222%;
+  margin-top: 77px;
+  margin-bottom: 49px;
+  margin-left:7%;
+}
+@media handheld, screen and (max-width: 768px) {
+  .cms-superfood3 .section2,
+  .cms-superfood3 .section3 {
+    margin: 0 35px;
+    margin-top: 50px;
+  }
+}
+@media handheld, screen and (max-width: 320px) {
+  .cms-superfood3 .section2,
+  .cms-superfood3 .section3 {
+    margin: 0 13px;
+    margin-top: 50px;
+  }
+}
+.cms-superfood3 .section2 img,
+.cms-superfood3 .section3 img {
+  max-width: 100%;
+  height: auto !important;
+}
+.cms-superfood3 .section2 h2,
+.cms-superfood3 .section3 h2 {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 36px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333333 !important;
+}
+.cms-superfood3 .section2 h3,
+.cms-superfood3 .section3 h3 {
+  margin: 0 0 30px 0;
+  padding: 0;
+  font-size: 18px;
+  font-size: 1.125rem;
+  text-align: center;
+  color: #666666;
+  text-transform: none;
+}
+.cms-superfood3 .section2 .ui-tabs-nav,
+.cms-superfood3 .section3 .ui-tabs-nav {
+  height: 50px !important;
+  padding: 3px;
+  display: block;
+  margin: 0 auto;
+  max-width: 650px;
+  width: 100%;
+  border-radius: 5px;
+  /* gradient generated by http://www.colorzilla.com/gradient-editor/ */
+  background: #dbd4cc;
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RiZDRjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjclIiBzdG9wLWNvbG9yPSIjZTdlMGQ4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTUlIiBzdG9wLWNvbG9yPSIjZWRlNmRlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODclIiBzdG9wLWNvbG9yPSIjZWNlNWRkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODklIiBzdG9wLWNvbG9yPSIjZWFlM2RiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTElIiBzdG9wLWNvbG9yPSIjZWJlNGRjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTglIiBzdG9wLWNvbG9yPSIjZGVkN2NmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RjZDVjZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dbd4cc), color-stop(7%, #e7e0d8), color-stop(15%, #ede6de), color-stop(87%, #ece5dd), color-stop(89%, #eae3db), color-stop(91%, #ebe4dc), color-stop(98%, #ded7cf), color-stop(100%, #dcd5cd));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbd4cc', endColorstr='#dcd5cd',GradientType=0 );
+  /* IE6-8 */
+  list-style: none;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood3 .section2 .ui-tabs-nav,
+  .cms-superfood3 .section3 .ui-tabs-nav {
+    width: 100%;
+    height: 132px !important;
+  }
+}
+.cms-superfood3 .section2 .ui-tabs-nav .ui-state-active,
+.cms-superfood3 .section3 .ui-tabs-nav .ui-state-active {
+  background: #154020;
+  border-radius: 5px;
+}
+.cms-superfood3 .section2 .ui-tabs-nav .ui-state-active a,
+.cms-superfood3 .section3 .ui-tabs-nav .ui-state-active a {
+  color: white;
+  text-decoration: none;
+}
+.cms-superfood3 .section2 .ui-tabs-nav .ui-state-active a:before, .cms-superfood3 .section2 .ui-tabs-nav .ui-state-active a:after,
+.cms-superfood3 .section3 .ui-tabs-nav .ui-state-active a:before,
+.cms-superfood3 .section3 .ui-tabs-nav .ui-state-active a:after {
+  position: absolute;
+  display: block;
+  content: '';
+  border: 9px solid transparent;
+  font-style: normal !important;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood3 .section2 .ui-tabs-nav .ui-state-active a:before, .cms-superfood3 .section2 .ui-tabs-nav .ui-state-active a:after,
+  .cms-superfood3 .section3 .ui-tabs-nav .ui-state-active a:before,
+  .cms-superfood3 .section3 .ui-tabs-nav .ui-state-active a:after {
+    display: none;
+  }
+}
+.cms-superfood3 .section2 .ui-tabs-nav .ui-state-active a:after,
+.cms-superfood3 .section3 .ui-tabs-nav .ui-state-active a:after {
+  top: 44px;
+  left: 98px;
+  border-top-color: #154020;
+}
+.cms-superfood3 .section2 .ui-tabs-nav li,
+.cms-superfood3 .section3 .ui-tabs-nav li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  height: 44px;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood3 .section2 .ui-tabs-nav li,
+  .cms-superfood3 .section3 .ui-tabs-nav li {
+    width: 100%;
+    height: auto;
+  }
+}
+.cms-superfood3 .section2 .ui-tabs-nav li a,
+.cms-superfood3 .section3 .ui-tabs-nav li a {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 44px;
+  line-height: 2.75rem;
+  display: block;
+  position: relative;
+  color: #878686;
+  text-decoration: none;
+}
+.cms-superfood3 .section2 .ui-tabs-nav li a:hover,
+.cms-superfood3 .section3 .ui-tabs-nav li a:hover {
+  text-decoration: none;
+}
+.cms-superfood3 .section2 .ui-tabs-panel,
+.cms-superfood3 .section3 .ui-tabs-panel {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 45px;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood3 .section2 .ui-tabs-panel,
+  .cms-superfood3 .section3 .ui-tabs-panel {
+    margin-top: 30px;
+  }
+}
+.cms-superfood3 .section2 .ui-tabs-panel .content h3,
+.cms-superfood3 .section3 .ui-tabs-panel .content h3 {
+  text-align: left;
+}
+.cms-superfood3 .section2 .ui-tabs-panel .content p,
+.cms-superfood3 .section3 .ui-tabs-panel .content p {
+  line-height: 28px;
+  color: #333333;
+}
+.cms-superfood3 .section2 .ui-tabs-panel div,
+.cms-superfood3 .section3 .ui-tabs-panel div {
+  width: 47%;
+  display: inline-block;
+  vertical-align: top;
+}
+.cms-superfood3 .section2 .ui-tabs-panel div div,
+.cms-superfood3 .section3 .ui-tabs-panel div div {
+  width: auto;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood3 .section2 .ui-tabs-panel div,
+  .cms-superfood3 .section3 .ui-tabs-panel div {
+    width: 100%;
+  }
+}
+.cms-superfood3 .section2 .ui-tabs-panel div:first-child,
+.cms-superfood3 .section3 .ui-tabs-panel div:first-child {
+  margin-right: 5%;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood3 .section2 .ui-tabs-panel div:first-child,
+  .cms-superfood3 .section3 .ui-tabs-panel div:first-child {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+.cms-superfood3 .section2 .ui-tabs-panel div .blink1,
+.cms-superfood3 .section3 .ui-tabs-panel div .blink1 {
+  display: inline-block;
+  width: auto;
+  height: 54px;
+  line-height: 54px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #302d26;
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: #fed807;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  padding: 0 30px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.cms-superfood3 .section2 .ui-tabs-panel div .blink1:hover,
+.cms-superfood3 .section3 .ui-tabs-panel div .blink1:hover {
+  text-decoration: none;
+  color: #ffffff !important;
+  background-color: #154020;
+}
+
+.cms-superfood3 .section2 .ui-tabs-nav .ui-state-active, .cms-superfood3 .section3 .ui-tabs-nav .ui-state-active{
+	background: none repeat scroll 0 0 #154020 !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1.ui-tabs-panel.ui-widget-content.ui-corner-bottom div.content h5{
+	color: #154020;
+    font-size: 1.125rem;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood3 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1.ui-tabs-panel.ui-widget-content.ui-corner-bottom div.content p{
+	font-size: 1rem !important;
+	padding-bottom: 5%;
+}
+/*END*/
+
+
+

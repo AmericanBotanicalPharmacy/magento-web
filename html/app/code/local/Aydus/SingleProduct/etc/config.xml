@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Aydus_SingleProduct>
+            <version>0.0.1</version>
+        </Aydus_SingleProduct>
+    </modules>
+    <global>
+        <blocks>
+            <aydus_singleproduct>
+                <class>Aydus_SingleProduct_Block</class>
+            </aydus_singleproduct>
+        </blocks>
+        <helpers>
+            <aydus_singleproduct>
+                <class>Aydus_SingleProduct_Helper</class>
+            </aydus_singleproduct>
+        </helpers>
+    </global>
+</config>

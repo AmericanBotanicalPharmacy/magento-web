@@ -1,0 +1,1213 @@
+#Options +FollowSymLinks
+#RewriteEngine On
+#RewriteRule ^blog/question(.*)$ https://www.herbdoc.com/blog$1 [L,R=301]
+#RewriteRule ^blog/audio(.*)$ https://www.herbdoc.com/blog$1 [L,R=301]
+#RewriteRule ^blog/commentary(.*)$ https://www.herbdoc.com/blog$1 [L,R=301]
+#RewriteRule ^blog/book(.*)$ https://www.herbdoc.com/blog$1 [L,R=301]
+
+############################################
+## uncomment these lines for CGI mode
+## make sure to specify the correct cgi php binary file name
+## it might be /cgi-bin/php-cgi
+
+#    Action php5-cgi /cgi-bin/php5-cgi
+#    AddHandler php5-cgi .php
+
+############################################
+## GoDaddy specific options
+
+#   Options -MultiViews
+
+## you might also need to add this line to php.ini
+##     cgi.fix_pathinfo = 1
+## if it still doesn't work, rename php.ini to php5.ini
+
+############################################
+## this line is specific for 1and1 hosting
+
+    #AddType x-mapp-php5 .php
+    #AddHandler x-mapp-php5 .php
+
+############################################
+## default index file
+
+    DirectoryIndex index.php
+
+<IfModule mod_php5.c>
+
+############################################
+## adjust memory limit
+
+#    php_value memory_limit 64M
+    php_value memory_limit 256M
+    php_value max_execution_time 18000
+
+############################################
+## disable magic quotes for php request vars
+
+    php_flag magic_quotes_gpc off
+
+############################################
+## disable automatic session start
+## before autoload was initialized
+
+    php_flag session.auto_start off
+
+############################################
+## enable resulting html compression
+
+    #php_flag zlib.output_compression on
+
+###########################################
+# disable user agent verification to not break multiple image upload
+
+    php_flag suhosin.session.cryptua off
+
+###########################################
+# turn off compatibility with PHP4 when dealing with objects
+
+    php_flag zend.ze1_compatibility_mode Off
+
+</IfModule>
+
+<IfModule mod_security.c>
+###########################################
+# disable POST processing to not break multiple image upload
+
+    SecFilterEngine Off
+    SecFilterScanPOST Off
+</IfModule>
+
+<IfModule mod_deflate.c>
+
+############################################
+## enable apache served files compression
+## http://developer.yahoo.com/performance/rules.html#gzip
+
+    # Insert filter on all content
+    ###SetOutputFilter DEFLATE
+    # Insert filter on selected content types only
+    #AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+
+    # Netscape 4.x has some problems...
+    #BrowserMatch ^Mozilla/4 gzip-only-text/html
+
+    # Netscape 4.06-4.08 have some more problems
+    #BrowserMatch ^Mozilla/4\.0[678] no-gzip
+
+    # MSIE masquerades as Netscape, but it is fine
+    #BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+    # Don't compress images
+    #SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+
+    # Make sure proxies don't deliver the wrong content
+    #Header append Vary User-Agent env=!dont-vary
+
+</IfModule>
+
+<IfModule mod_ssl.c>
+
+############################################
+## make HTTPS env vars available for CGI mode
+
+    SSLOptions StdEnvVars
+
+</IfModule>
+
+<IfModule mod_rewrite.c>
+
+############################################
+## enable rewrites
+
+    Options +FollowSymLinks
+    RewriteEngine on
+
+#	RewriteCond %{HTTPS} !^on$
+#	RewriteRule (.*) https://www.herbdoc.com/$1 [R,L]
+    
+    #RewriteCond %{HTTP_HOST} ^www\. [NC]
+	#RewriteRule ^ https://www.herbdoc.com%{REQUEST_URI} [NE,R=301,L]
+	#RewriteCond %{HTTPS} off [OR]
+	#RewriteCond %{HTTP_HOST} ^www\. [NC]
+	#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+	#RewriteRule ^/(.*)         https://www.herbdoc.com/$1 [L,R]
+	#RewriteCond %{HTTPS} !^on$
+	#RewriteRule (.*) https://www.herbdoc.com/$1 [R,L]
+
+############################################
+## you can put here your magento root folder
+## path relative to web root
+
+    #RewriteBase /magento/
+
+############################################
+## uncomment next line to enable light API calls processing
+
+#    RewriteRule ^api/([a-z][0-9a-z_]+)/?$ api.php?type=$1 [QSA,L]
+
+############################################
+## rewrite API2 calls to api.php (by now it is REST only)
+
+    RewriteRule ^api/rest api.php?type=rest [QSA,L]
+
+############################################
+## workaround for HTTP authorization
+## in CGI environment
+
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+############################################
+## TRACE and TRACK HTTP methods disabled to prevent XSS attacks
+
+    RewriteCond %{REQUEST_METHOD} ^TRAC[EK]
+    RewriteRule .* - [L,R=405]
+
+############################################
+## redirect for mobile user agents
+
+    #RewriteCond %{REQUEST_URI} !^/mobiledirectoryhere/.*$
+    #RewriteCond %{HTTP_USER_AGENT} "android|blackberry|ipad|iphone|ipod|iemobile|opera mobile|palmos|webos|googlebot-mobile" [NC]
+    #RewriteRule ^(.*)$ /mobiledirectoryhere/ [L,R=302]
+
+############################################
+## always send 404 on missing files in these folders
+
+    RewriteCond %{REQUEST_URI} !^/(media|skin|js)/
+
+############################################
+## never rewrite for existing files, directories and links
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-l
+
+############################################
+## rewrite everything else to index.php
+
+    RewriteRule .* index.php [L]
+
+</IfModule>
+
+
+############################################
+## Prevent character encoding issues from server overrides
+## If you still have problems, use the second line instead
+
+    AddDefaultCharset Off
+    #AddDefaultCharset UTF-8
+
+<IfModule mod_expires.c>
+
+############################################
+## Add default Expires header
+## http://developer.yahoo.com/performance/rules.html#expires
+
+    ExpiresDefault "access plus 1 year"
+
+</IfModule>
+
+############################################
+## By default allow all access
+
+    Order allow,deny
+    Allow from all
+
+###########################################
+## Deny access to release notes to prevent disclosure of the installed Magento version
+
+    <Files RELEASE_NOTES.txt>
+        order allow,deny
+        deny from all
+    </Files>
+
+############################################
+## If running in cluster environment, uncomment this
+## http://developer.yahoo.com/performance/rules.html#etags
+
+    #FileETag none
+    
+# BEGIN REQUIRED FOR WEBFONTS
+
+AddType font/ttf .ttf
+AddType font/eot .eot
+AddType font/otf .otf
+AddType font/woff .woff
+
+AddType video/ogg .ogv
+AddType video/mp4 .mp4
+AddType video/webm .webm
+
+<FilesMatch "\.(ttf|otf|eot|woff)$">
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+    </IfModule>
+</FilesMatch>
+
+# END REQUIRED FOR WEBFONTS
+
+############################################
+# 301 Redirects
+
+Redirect 301	/index.php/index.php	https://herbdoc.com
+Redirect 301	/index.php?option=com_content&task=view&id=426&Itemid=106	https://herbdoc.com
+Redirect 301	/index.php/About-ABP-Content-Page.html	https://herbdoc.com
+Redirect 301	/index.php?option=com_content&task=view&id=28&Itemid=106	https://herbdoc.com
+Redirect 301	/index.php?option=com_frontpage&Itemid=1	https://herbdoc.com
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=1493&Itemid=42	https://herbdoc.com/100-herbal-superslim-formula-packets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1493	https://herbdoc.com/100-herbal-superslim-formula-packets.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=1501&Itemid=42	https://herbdoc.com/100-herbal-superslim-formula-powder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1501	https://herbdoc.com/100-herbal-superslim-formula-powder.html
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=01&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=02&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=03&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=04&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=05&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=06&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=07&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=08&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=09&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=10&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=100&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=101&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=102&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=103&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=104&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=105&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=106&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=107&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=108&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=109&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=11&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=110&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=111&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=112&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=113&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=114&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=115&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=116&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=117&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=118&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=119&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=12&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=120&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=121&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=122&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=123&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=124&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=13&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=14&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=15&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=16&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=17&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=18&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=19&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=20&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=21&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=22&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=23&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=24&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=25&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=26&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=27&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=28&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=29&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=30&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=31&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=32&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=33&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=34&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=35&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=36&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=37&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=38&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=39&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=40&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=41&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=42&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=43&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=44&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=45&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=46&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=47&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=48&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=49&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=50&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=51&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=52&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=53&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=54&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=55&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=56&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=57&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=58&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=59&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=60&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=61&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=62&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=63&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=64&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=65&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=66&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=67&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=68&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=69&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=70&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=71&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=72&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=73&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=74&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=75&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=76&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=77&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=78&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=79&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=80&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=81&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=82&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=83&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=84&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=85&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=86&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=87&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=88&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=89&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=90&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=91&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=92&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=93&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=94&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=95&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=96&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=97&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=98&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/Publication.html?pgtotal=124&pubpage=99&pubtitle=2014_Catalog	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=01	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=02	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=03	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=04	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=05	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=06	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=07	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=08	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=09	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=10	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=100	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=101	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=102	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=103	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=104	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=105	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=106	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=107	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=108	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=109	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=11	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=110	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=111	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=112	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=113	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=114	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=115	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=116	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=117	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=118	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=119	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=12	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=120	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=121	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=122	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=123	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=124	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=13	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=14	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=15	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=16	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=17	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=18	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=19	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=20	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=21	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=22	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=23	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=24	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=25	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=26	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=27	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=28	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=29	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=30	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=31	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=32	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=33	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=34	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=35	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=36	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=37	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=38	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=39	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=40	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=41	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=42	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=43	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=44	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=45	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=46	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=47	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=48	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=49	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=50	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=51	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=52	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=53	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=54	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=55	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=56	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=57	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=58	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=59	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=60	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=61	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=62	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=63	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=64	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=65	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=66	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=67	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=68	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=69	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=70	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=71	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=72	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=73	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=74	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=75	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=76	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=77	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=78	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=79	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=80	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=81	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=82	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=83	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=84	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=85	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=86	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=87	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=88	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=89	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=90	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=91	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=92	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=93	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=94	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=95	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=96	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=97	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=98	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014_Catalog&pgtotal=124&pubpage=99	https://herbdoc.com/2014-catalog
+Redirect 301	/index.php/20-Powerful-Steps-Form.html	https://herbdoc.com/20-powerful-steps
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=14&Itemid=42	https://herbdoc.com/24-hour-bowel-detox.html
+Redirect 301	/index.php/Store/24-Hour-Bowel-Detox	https://herbdoc.com/24-hour-bowel-detox.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=14	https://herbdoc.com/24-hour-bowel-detox.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=14&osCsid=	https://herbdoc.com/24-hour-bowel-detox.html
+Redirect 301	/index.php/5-Day-Detox-Programs	https://herbdoc.com/30-day-detox-program-capsules.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=22&Itemid=42	https://herbdoc.com/30-day-detox-program-capsules.html
+Redirect 301	/index.php/Store/5-Day-Bowel-Detox-Program-Capsules	https://herbdoc.com/30-day-detox-program-capsules.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=22	https://herbdoc.com/30-day-detox-program-capsules.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=22&osCsid=	https://herbdoc.com/30-day-detox-program-capsules.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=22&Itemid=42	https://herbdoc.com/30-day-detox-program-capsules.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=28&Itemid=42	https://herbdoc.com/30-day-detox-program-mixed.html
+Redirect 301	/index.php/Store/30-Day-Detox-Program-Mixed	https://herbdoc.com/30-day-detox-program-mixed.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=28	https://herbdoc.com/30-day-detox-program-mixed.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=28&osCsid=	https://herbdoc.com/30-day-detox-program-mixed.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=23&Itemid=42	https://herbdoc.com/30-day-detox-program-packets.html
+Redirect 301	/index.php/Store/30-Day-Detox-Program-Packets	https://herbdoc.com/30-day-detox-program-packets.html
+Redirect 301	/index.php/Store/5-Day-Bowel-Detox-Program-Packets	https://herbdoc.com/30-day-detox-program-packets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=27	https://herbdoc.com/30-day-detox-program-packets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=23	https://herbdoc.com/5-day-bowel-detox-program-packets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=23&osCsid=	https://herbdoc.com/5-day-bowel-detox-program-packets.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=25&Itemid=42	https://herbdoc.com/5-day-kidney-detox-program.html
+Redirect 301	/index.php/Store/5-Day-Kidney-Detox-Program	https://herbdoc.com/5-day-kidney-detox-program.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=25	https://herbdoc.com/5-day-kidney-detox-program.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=25&osCsid=	https://herbdoc.com/5-day-kidney-detox-program.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=25&Itemid=42	https://herbdoc.com/5-day-kidney-detox-program.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=24&Itemid=42	https://herbdoc.com/5-day-liver-detox-program.html
+Redirect 301	/index.php/Store/5-Day-Liver-Detox-Program	https://herbdoc.com/5-day-liver-detox-program.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=24	https://herbdoc.com/5-day-liver-detox-program.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=24&osCsid=	https://herbdoc.com/5-day-liver-detox-program.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=24&Itemid=42	https://herbdoc.com/5-day-liver-detox-program.html
+Redirect 301	/index.php/Air-Detoxification	https://herbdoc.com/air-detox-2oz.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=49&Itemid=42	https://herbdoc.com/air-detox-2oz.html
+Redirect 301	/index.php/Store/Air-Detox-2OZ	https://herbdoc.com/air-detox-2oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=49	https://herbdoc.com/air-detox-2oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=49&osCsid=	https://herbdoc.com/air-detox-2oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=21&Itemid=42	https://herbdoc.com/air-detox-4oz.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=50&Itemid=42	https://herbdoc.com/air-detox-4oz.html
+Redirect 301	/index.php/Store/Air-Detox-4OZ	https://herbdoc.com/air-detox-4oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=50	https://herbdoc.com/air-detox-4oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=50&osCsid=	https://herbdoc.com/air-detox-4oz.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=48&Itemid=42	https://herbdoc.com/anti-i-formula.html
+Redirect 301	/index.php/Store/Anti-I-Formula	https://herbdoc.com/anti-i-formula.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=48	https://herbdoc.com/anti-i-formula.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=48&osCsid=	https://herbdoc.com/anti-i-formula.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=177&Itemid=42	https://herbdoc.com/bowel-flush-shot-3-pack.html
+Redirect 301	/index.php/Store/Bowel-Flush-Shot-3-Pack	https://herbdoc.com/bowel-flush-shot-3-pack.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=177	https://herbdoc.com/bowel-flush-shot-3-pack.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=177&osCsid=	https://herbdoc.com/bowel-flush-shot-3-pack.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=40&Itemid=42	https://herbdoc.com/brain-formula.html
+Redirect 301	/index.php/Store/Brain-Formula	https://herbdoc.com/brain-formula.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=40	https://herbdoc.com/brain-formula.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=40&osCsid=	https://herbdoc.com/brain-formula.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=40&Itemid=42	https://herbdoc.com/brain-formula.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=178&Itemid=42	https://herbdoc.com/bug-barrier.html
+Redirect 301	/index.php/Store/Bug-Barrier	https://herbdoc.com/bug-barrier.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=178	https://herbdoc.com/bug-barrier.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=178&osCsid=	https://herbdoc.com/bug-barrier.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=179&Itemid=42	https://herbdoc.com/bug-block.html
+Redirect 301	/index.php/Store/Bug-Block	https://herbdoc.com/bug-block.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=179	https://herbdoc.com/bug-block.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=179&osCsid=	https://herbdoc.com/bug-block.html
+Redirect 301	/index.php/30-Years-of-Dr.-Schulze-ABP.html	https://herbdoc.com/careers
+Redirect 301	/index.php/Employee-Spotlight-Hilda-Ganjian.html	https://herbdoc.com/careers
+Redirect 301	/index.php/Job-Listing	https://herbdoc.com/careers
+Redirect 301	/index.php/Job-Listings-Page.html	https://herbdoc.com/careers
+Redirect 301	/index.php/Jobs	https://herbdoc.com/careers
+Redirect 301	/index.php?option=com_content&task=view&id=34	https://herbdoc.com/careers
+Redirect 301	/index.php?option=com_content&task=view&id=491	https://herbdoc.com/careers
+Redirect 301	/index.php?option=com_content&task=view&id=517	https://herbdoc.com/careers
+Redirect 301	/index.php/Living-Our-Philosophy	https://herbdoc.com/careers
+Redirect 301	/index.php?option=com_content&task=view&id=33	https://herbdoc.com/careers
+Redirect 301	/index.php?option=com_content&task=view&id=516	https://herbdoc.com/careers
+Redirect 301	/index.php/About-ABP.html	https://herbdoc.com/careers
+Redirect 301	/index.php/Conversation-with-Adam-Loef.html	https://herbdoc.com/careers
+Redirect 301	/index.php?option=com_content&task=view&id=544	https://herbdoc.com/careers
+Redirect 301	/index.php/Circulation	https://herbdoc.com/cayenne-powder.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=42&Itemid=42	https://herbdoc.com/cayenne-powder.html
+Redirect 301	/index.php/Store/Cayenne-Powder	https://herbdoc.com/cayenne-powder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=42	https://herbdoc.com/cayenne-powder.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=41&Itemid=42	https://herbdoc.com/cayenne-tincture.html
+Redirect 301	/index.php/Store/Cayenne-Tincture	https://herbdoc.com/cayenne-tincture.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=41	https://herbdoc.com/cayenne-tincture.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=41&osCsid=	https://herbdoc.com/cayenne-tincture.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=5&Itemid=42	https://herbdoc.com/children-echinacea.html
+Redirect 301	/index.php/Store/Childrens-Echinacea	https://herbdoc.com/children-echinacea.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=5	https://herbdoc.com/children-echinacea.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=5&osCsid=	https://herbdoc.com/children-echinacea.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=1481&Itemid=42	https://herbdoc.com/cold-flu-herbal-10-shot.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1481	https://herbdoc.com/cold-flu-herbal-10-shot.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1481&osCsid=	https://herbdoc.com/cold-flu-herbal-10-shot.html
+Redirect 301	/index.php/Cold-%26-Flu	https://herbdoc.com/cold-flu-herbal-6-shot.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=90&Itemid=42	https://herbdoc.com/cold-flu-herbal-6-shot.html
+Redirect 301	/index.php/Store/Cold-%26-Flu-Herbal-Shot-6-Pack	https://herbdoc.com/cold-flu-herbal-6-shot.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=90	https://herbdoc.com/cold-flu-herbal-6-shot.html
+Redirect 301	/index.php/Contact-ABP-Form.html	https://herbdoc.com/contact-us
+Redirect 301	/index.php/Form.html	https://herbdoc.com/contact-us
+Redirect 301	/index.php?option=com_content&task=view&id=471&Itemid=42	https://herbdoc.com/contact-us
+Redirect 301	/index.php?option=com_content&task=view&id=532	https://herbdoc.com/contact-us
+Redirect 301	/index.php/Customer-Service	https://herbdoc.com/contact-us
+Redirect 301	/index.php?option=com_oscommerce&osMod=login&Itemid=42	https://herbdoc.com/customer/account/login/
+Redirect 301	/index.php?option=com_content&task=view&id=499&Itemid=42	https://herbdoc.com/customer/account/login/
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=603&Itemid=42	https://herbdoc.com/daily-oral-therapy.html
+Redirect 301	/index.php/Store/Daily-Oral-Therapy	https://herbdoc.com/daily-oral-therapy.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=46&Itemid=42	https://herbdoc.com/deep-tissue-oil.html
+Redirect 301	/index.php/Store/Deep-Tissue-Oil	https://herbdoc.com/deep-tissue-oil.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=46	https://herbdoc.com/deep-tissue-oil.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=46&osCsid=	https://herbdoc.com/deep-tissue-oil.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=58&Itemid=42	https://herbdoc.com/deep-tissue-ointment.html
+Redirect 301	/index.php/Store/Deep-Tissue-Ointment	https://herbdoc.com/deep-tissue-ointment.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=58	https://herbdoc.com/deep-tissue-ointment.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=58&osCsid=	https://herbdoc.com/deep-tissue-ointment.html
+Redirect 301	/index.php/Our_Products/30-Day-Detox-Programs	https://herbdoc.com/detox/30-day-detox-program.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=39	https://herbdoc.com/detox/30-day-detox-program.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=39&Itemid=42	https://herbdoc.com/detox/30-day-detox-program.html
+Redirect 301	/index.php/30-Day-Detox-Programs	https://herbdoc.com/detox/30-day-detox-program.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=27&Itemid=42	https://herbdoc.com/detox/30-day-detox-program.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=26&Itemid=42	https://herbdoc.com/detox/30-day-detox-program.html
+Redirect 301	/index.php/Store/30-Day-Detox-Program-Capsules	https://herbdoc.com/detox/30-day-detox-program.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=26	https://herbdoc.com/detox/30-day-detox-program.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=26&osCsid=	https://herbdoc.com/detox/30-day-detox-program.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=26&Itemid=42	https://herbdoc.com/detox/30-day-detox-program.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=38	https://herbdoc.com/detox/5-day-detox-programs.html
+Redirect 301	/index.php/Our_Products/5-Day-Detox-Programs	https://herbdoc.com/detox/5-day-detox-programs.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=38&Itemid=42	https://herbdoc.com/detox/5-day-detox-programs.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=42	https://herbdoc.com/detox/incurables-program.html
+Redirect 301	/index.php/Our_Products/Incurable-Program	https://herbdoc.com/detox/incurables-program.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=42&Itemid=42	https://herbdoc.com/detox/incurables-program.html
+Redirect 301	/index.php/Incurables-Program	https://herbdoc.com/detox/incurables-program.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=20&Itemid=42	https://herbdoc.com/detox-formula-lymph.html
+Redirect 301	/index.php/Store/Detox-Formula	https://herbdoc.com/detox-formula-lymph.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=20	https://herbdoc.com/detox-formula-lymph.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=17&Itemid=42	https://herbdoc.com/detox-tea-6oz.html
+Redirect 301	/index.php/Store/Detox-Tea	https://herbdoc.com/detox-tea-6oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=17	https://herbdoc.com/detox-tea-6oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=17&osCsid=	https://herbdoc.com/detox-tea-6oz.html
+Redirect 301	/index.php/Best-Herbal-Formulas-Supplements.html	https://herbdoc.com/difference
+Redirect 301	/index.php/Intro.html	https://herbdoc.com/difference
+Redirect 301	/index.php/Maximum-Potency-Herbal-Extracts.html	https://herbdoc.com/difference
+Redirect 301	/index.php/Organic-Wild-Harvested-Herbs.html	https://herbdoc.com/difference
+Redirect 301	/index.php?option=com_content&task=view&id=41&Itemid=76	https://herbdoc.com/difference
+Redirect 301	/index.php?option=com_content&task=view&id=42&Itemid=76	https://herbdoc.com/difference
+Redirect 301	/index.php?option=com_content&task=view&id=43&Itemid=76	https://herbdoc.com/difference
+Redirect 301	/index.php?option=com_content&task=view&id=44&Itemid=76	https://herbdoc.com/difference
+Redirect 301	/index.php?option=com_content&task=view&id=540&Itemid=76	https://herbdoc.com/difference
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=176&Itemid=42	https://herbdoc.com/digestive-shot-3-pack.html
+Redirect 301	/index.php/Store/Digestive-Shot-3-Pack	https://herbdoc.com/digestive-shot-3-pack.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=176	https://herbdoc.com/digestive-shot-3-pack.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=176&osCsid=	https://herbdoc.com/digestive-shot-3-pack.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=16&Itemid=42	https://herbdoc.com/digestive-tonic.html
+Redirect 301	/index.php/Store/Digestive-Tonic	https://herbdoc.com/digestive-tonic.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=16	https://herbdoc.com/digestive-tonic.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=16&osCsid=	https://herbdoc.com/digestive-tonic.html
+Redirect 301	/index.php/Healing-Miracle-Personal-Life-Story-of-Herbal-Doctor-Schulze.html	https://herbdoc.com/dr-schulze
+Redirect 301	/index.php/index.php?option=com_content&task=view&id=18&Itemid=	https://herbdoc.com/dr-schulze
+Redirect 301	/index.php/Meet-Dr-Schulze	https://herbdoc.com/dr-schulze
+Redirect 301	/index.php?option=com_content&task=view&id=18&Itemid=39	https://herbdoc.com/dr-schulze
+Redirect 301	/index.php?option=com_content&task=view&id=37&Itemid=106	https://herbdoc.com/dr-schulze
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=4&Itemid=42	https://herbdoc.com/echinacea-plus-2oz.html
+Redirect 301	/index.php/Store/Echinacea-Plus-ECH+	https://herbdoc.com/echinacea-plus-2oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=4	https://herbdoc.com/echinacea-plus-2oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=4&osCsid=	https://herbdoc.com/echinacea-plus-2oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=4&Itemid=42	https://herbdoc.com/echinacea-plus-2oz.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=716&Itemid=42	https://herbdoc.com/echinacea-plus-4oz.html
+Redirect 301	/index.php/Store/Echinacea-Plus-ECH+-4OZ	https://herbdoc.com/echinacea-plus-4oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=716	https://herbdoc.com/echinacea-plus-4oz.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=45&Itemid=42	https://herbdoc.com/eyebright-formula.html
+Redirect 301	/index.php/Store/Eyebright-Formula	https://herbdoc.com/eyebright-formula.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=45	https://herbdoc.com/eyebright-formula.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=34&Itemid=42	https://herbdoc.com/female-formula-2oz.html
+Redirect 301	/index.php/Store/Female-Formula	https://herbdoc.com/female-formula-2oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=34	https://herbdoc.com/female-formula-2oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=34&osCsid=	https://herbdoc.com/female-formula-2oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=34&Itemid=42	https://herbdoc.com/female-formula-2oz.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=35&Itemid=42	https://herbdoc.com/female-plus-2oz.html
+Redirect 301	/index.php/Store/Female-Plus-FEM+	https://herbdoc.com/female-plus-2oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=35	https://herbdoc.com/female-plus-2oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=35&osCsid=	https://herbdoc.com/female-plus-2oz.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=376&Itemid=42	https://herbdoc.com/female-shot-3-pack.html
+Redirect 301	/index.php/Store/Female-Shot-3-Pack	https://herbdoc.com/female-shot-3-pack.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=376	https://herbdoc.com/female-shot-3-pack.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=5	https://herbdoc.com/foundational/digestive-elimination.html
+Redirect 301	/index.php/Our_Products/Digestive-%26-Elimination	https://herbdoc.com/foundational/digestive-elimination.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=5&Itemid=42	https://herbdoc.com/foundational/digestive-elimination.html
+Redirect 301	/index.php/Digestion-%26-Elimination	https://herbdoc.com/foundational/digestive-elimination.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=8	https://herbdoc.com/foundational/immune.html
+Redirect 301	/index.php/Our_Products/Immune	https://herbdoc.com/foundational/immune.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=8&Itemid=42	https://herbdoc.com/foundational/immune.html
+Redirect 301	/index.php/Immune	https://herbdoc.com/foundational/immune.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=27	https://herbdoc.com/foundational/jumpstart-your-health.html
+Redirect 301	/index.php/Our_Products/Jumpstart-Your-Health	https://herbdoc.com/foundational/jumpstart-your-health.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=27&Itemid=42	https://herbdoc.com/foundational/jumpstart-your-health.html
+Redirect 301	/index.php/Jumpstart-Your-Health	https://herbdoc.com/foundational/jumpstart-your-health.html
+Redirect 301	/index.php/Our_Products/Nutritional	https://herbdoc.com/foundational/nutritional.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=13&Itemid=42	https://herbdoc.com/foundational/nutritional.html
+Redirect 301	/index.php/Nutritional	https://herbdoc.com/foundational/nutritional.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=13	https://herbdoc.com/foundational/nutritional.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=33	https://herbdoc.com/foundational/prevention.html
+Redirect 301	/index.php/Our_Products/Prevention	https://herbdoc.com/foundational/prevention.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=33&Itemid=42	https://herbdoc.com/foundational/prevention.html
+Redirect 301	/index.php/Prevention	https://herbdoc.com/foundational/prevention.html
+Redirect 301	/index.php?option=com_content&task=view&id=521	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Email-Sign-Up	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=505	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=01&pubtitle=2013-09_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=01&pubtitle=2014-05_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=02&pubtitle=2013-09_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=02&pubtitle=2014-05_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=03&pubtitle=2013-09_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=03&pubtitle=2014-05_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=04&pubtitle=2013-09_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=04&pubtitle=2014-05_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=05&pubtitle=2013-09_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=05&pubtitle=2014-05_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=06&pubtitle=2013-09_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=06&pubtitle=2014-05_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=07&pubtitle=2013-09_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=07&pubtitle=2014-05_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=08&pubtitle=2013-09_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=08&pubtitle=2014-05_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=09&pubtitle=2013-09_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=09&pubtitle=2014-05_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=10&pubtitle=2013-09_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=10&pubtitle=2014-05_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=11&pubtitle=2013-09_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=11&pubtitle=2014-05_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=12&pubtitle=2013-09_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=12&pubtitle=2014-05_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=13&pubtitle=2013-09_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=13&pubtitle=2014-05_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=14&pubtitle=2013-09_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=14&pubtitle=2014-05_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=15&pubtitle=2013-09_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=15&pubpage=15&pubtitle=2014-05_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=01&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=01&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=01&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=01&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=01&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=02&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=02&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=02&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=02&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=02&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=03&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=03&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=03&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=03&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=03&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=04&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=04&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=04&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=04&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=04&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=05&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=05&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=05&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=05&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=05&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=06&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=06&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=06&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=06&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=06&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=07&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=07&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=07&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=07&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=07&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=08&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=08&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=08&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=08&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=08&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=09&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=09&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=09&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=09&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=09&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=10&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=10&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=10&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=10&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=10&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=11&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=11&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=11&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=11&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=11&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=12&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=12&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=12&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=12&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=12&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=13&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=13&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=13&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=13&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=13&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=14&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=14&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=14&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=14&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=14&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=15&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=15&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=15&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=15&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=15&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=16&pubtitle=2013-10_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=16&pubtitle=2013-11_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=16&pubtitle=2014-02_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=16&pubtitle=2014-06_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publication.html?pgtotal=16&pubpage=16&pubtitle=2014-07_Publication	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-09_Publication&pgtotal=15&pubpage=01	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-09_Publication&pgtotal=15&pubpage=02	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-09_Publication&pgtotal=15&pubpage=03	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-09_Publication&pgtotal=15&pubpage=04	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-09_Publication&pgtotal=15&pubpage=05	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-09_Publication&pgtotal=15&pubpage=06	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-09_Publication&pgtotal=15&pubpage=07	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-09_Publication&pgtotal=15&pubpage=08	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-09_Publication&pgtotal=15&pubpage=09	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-09_Publication&pgtotal=15&pubpage=10	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-09_Publication&pgtotal=15&pubpage=11	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-09_Publication&pgtotal=15&pubpage=12	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-09_Publication&pgtotal=15&pubpage=13	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-09_Publication&pgtotal=15&pubpage=14	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-09_Publication&pgtotal=15&pubpage=15	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=01	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=02	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=03	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=04	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=05	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=06	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=07	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=08	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=09	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=10	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=11	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=12	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=13	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=14	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=15	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-10_Publication&pgtotal=16&pubpage=16	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=01	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=02	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=03	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=04	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=05	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=06	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=07	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=08	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=09	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=10	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=11	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=12	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=13	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=14	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=15	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2013-11_Publication&pgtotal=16&pubpage=16	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=01	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=02	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=03	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=04	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=05	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=06	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=07	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=08	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=09	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=10	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=11	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=12	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=13	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=14	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=15	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-02_Publication&pgtotal=16&pubpage=16	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-05_Publication&pgtotal=15&pubpage=01	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-05_Publication&pgtotal=15&pubpage=02	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-05_Publication&pgtotal=15&pubpage=03	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-05_Publication&pgtotal=15&pubpage=04	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-05_Publication&pgtotal=15&pubpage=05	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-05_Publication&pgtotal=15&pubpage=06	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-05_Publication&pgtotal=15&pubpage=07	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-05_Publication&pgtotal=15&pubpage=08	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-05_Publication&pgtotal=15&pubpage=09	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-05_Publication&pgtotal=15&pubpage=10	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-05_Publication&pgtotal=15&pubpage=11	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-05_Publication&pgtotal=15&pubpage=12	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-05_Publication&pgtotal=15&pubpage=13	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-05_Publication&pgtotal=15&pubpage=14	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-05_Publication&pgtotal=15&pubpage=15	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=01	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=02	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=03	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=04	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=05	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=06	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=07	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=08	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=09	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=10	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=11	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=12	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=13	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=14	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=15	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-06_Publication&pgtotal=16&pubpage=16	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=01	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=02	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=03	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=04	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=05	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=06	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=07	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=08	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=09	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=10	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=11	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=12	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=13	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=14	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=15	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=233&Itemid=106&pubtitle=2014-07_Publication&pgtotal=16&pubpage=16	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Free-Offers.html	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Order-Catalog.html	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=531	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Publications-Sign-Up.html	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Site-Map	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=534	https://herbdoc.com/free-offers
+Redirect 301	/index.php?option=com_content&task=view&id=804	https://herbdoc.com/free-offers
+Redirect 301	/index.php/2012-Blog-Postings.html	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Healing-Stories	https://herbdoc.com/free-offers
+Redirect 301	/index.php/Order-CD.html	https://herbdoc.com/free-offers
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=401&Itemid=42	https://herbdoc.com/fresh-breath-plus-5-pack.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=401	https://herbdoc.com/fresh-breath-plus-5-pack.html
+Redirect 301	/index.php/Store/Fresh-Breath-Plus-5-Pack	https://herbdoc.com/fresh-breath-plus-5-pack.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=65&Itemid=42	https://herbdoc.com/fresh-breath-plus-bottle.html
+Redirect 301	/index.php/Store/Fresh-Breath-Plus	https://herbdoc.com/fresh-breath-plus-bottle.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=65	https://herbdoc.com/fresh-breath-plus-bottle.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=65&osCsid=	https://herbdoc.com/fresh-breath-plus-bottle.html
+Redirect 301	/index.php/Store/New-Products	https://herbdoc.com/healthy-savings
+Redirect 301	/index.php?option=com_content&task=view&id=669	https://herbdoc.com/healthy-savings
+Redirect 301	/index.php?option=com_oscommerce&osMod=catalogNewOnly&Itemid=42	https://herbdoc.com/healthy-savings
+Redirect 301	/index.php?option=com_oscommerce&osMod=specials&Itemid=42	https://herbdoc.com/healthy-savings
+Redirect 301	/index.php?option=com_oscommerce&osMod=specials_scrollpage&Itemid=42&prod_id=1510	https://herbdoc.com/healthy-savings
+Redirect 301	/index.php?option=com_oscommerce&osMod=specials_scrollpage&Itemid=42&prod_id=1539	https://herbdoc.com/healthy-savings
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=145&Itemid=42	https://herbdoc.com/heart-formula-2oz.html
+Redirect 301	/index.php/Store/Heart-Formula	https://herbdoc.com/heart-formula-2oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=145	https://herbdoc.com/heart-formula-2oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=145&osCsid=	https://herbdoc.com/heart-formula-2oz.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=145&Itemid=42	https://herbdoc.com/heart-formula-2oz.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=607&Itemid=42	https://herbdoc.com/herbalmucil-plus-powder.html
+Redirect 301	/index.php/Store/HerbalMucil-Plus-Powder	https://herbdoc.com/herbalmucil-plus-powder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=307	https://herbdoc.com/herbalmucil-plus-powder.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=29&Itemid=42	https://herbdoc.com/incurables-program.html
+Redirect 301	/index.php/Store/Incurables-Program	https://herbdoc.com/incurables-program.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=29	https://herbdoc.com/incurables-program.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=55&Itemid=42	https://herbdoc.com/intestinal-formula-1-250caps.html
+Redirect 301	/index.php/Store/Intestinal-Formula-1-250	https://herbdoc.com/intestinal-formula-1-250caps.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=55	https://herbdoc.com/intestinal-formula-1-250caps.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=55&osCsid=	https://herbdoc.com/intestinal-formula-1-250caps.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=55&Itemid=42	https://herbdoc.com/intestinal-formula-1-250caps.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=10&Itemid=42	https://herbdoc.com/intestinal-formula-1-90caps.html
+Redirect 301	/index.php/Store/Intestinal-Formula-1-90	https://herbdoc.com/intestinal-formula-1-90caps.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=10	https://herbdoc.com/intestinal-formula-1-90caps.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=10&osCsid=	https://herbdoc.com/intestinal-formula-1-90caps.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=175&Itemid=42	https://herbdoc.com/intestinal-formula-1-max.html
+Redirect 301	/index.php/Store/Intestinal-Formula-1-MAX	https://herbdoc.com/intestinal-formula-1-max.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=175	https://herbdoc.com/intestinal-formula-1-max.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=175&osCsid=	https://herbdoc.com/intestinal-formula-1-max.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=12&Itemid=42	https://herbdoc.com/intestinal-formula-2-capsules.html
+Redirect 301	/index.php/Store/Intestinal-Formula-2-Capsules	https://herbdoc.com/intestinal-formula-2-capsules.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=12	https://herbdoc.com/intestinal-formula-2-capsules.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=12&osCsid=	https://herbdoc.com/intestinal-formula-2-capsules.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=13&Itemid=42	https://herbdoc.com/intestinal-formula-2-packets.html
+Redirect 301	/index.php/Store/Intestinal-Formula-2-Packets	https://herbdoc.com/intestinal-formula-2-packets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=13	https://herbdoc.com/intestinal-formula-2-packets.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=11&Itemid=42	https://herbdoc.com/intestinal-formula-2-powder.html
+Redirect 301	/index.php/Store/Intestinal-Formula-2-Powder	https://herbdoc.com/intestinal-formula-2-powder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=11	https://herbdoc.com/intestinal-formula-2-powder.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=15&Itemid=42	https://herbdoc.com/intestinal-formula-3.html
+Redirect 301	/index.php/Store/Intestinal-Formula-3	https://herbdoc.com/intestinal-formula-3.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=15	https://herbdoc.com/intestinal-formula-3.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=15&osCsid=	https://herbdoc.com/intestinal-formula-3.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=47&Itemid=42	https://herbdoc.com/jojoba-tea-tree-oil.html
+Redirect 301	/index.php/Store/Jojoba-%26-Tea-Tree-Oil	https://herbdoc.com/jojoba-tea-tree-oil.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=47	https://herbdoc.com/jojoba-tea-tree-oil.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=47&osCsid=	https://herbdoc.com/jojoba-tea-tree-oil.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=57&Itemid=42	https://herbdoc.com/jojoba-tea-tree-ointment.html
+Redirect 301	/index.php/Store/Jojoba-%26-Tea-Tree-Ointment	https://herbdoc.com/jojoba-tea-tree-ointment.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=57	https://herbdoc.com/jojoba-tea-tree-ointment.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=57&osCsid=	https://herbdoc.com/jojoba-tea-tree-ointment.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=18&Itemid=42	https://herbdoc.com/k-b-formula-kidney-bladder.html
+Redirect 301	/index.php/Store/K-B-Formula	https://herbdoc.com/k-b-formula-kidney-bladder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=18	https://herbdoc.com/k-b-formula-kidney-bladder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=18&osCsid=	https://herbdoc.com/k-b-formula-kidney-bladder.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=19&Itemid=42	https://herbdoc.com/k-b-tea-kidney-bladder.html
+Redirect 301	/index.php/Store/K-B-Tea	https://herbdoc.com/k-b-tea-kidney-bladder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=19	https://herbdoc.com/k-b-tea-kidney-bladder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=19&osCsid=	https://herbdoc.com/k-b-tea-kidney-bladder.html
+Redirect 301	/index.php/Education	https://herbdoc.com/learn
+Redirect 301	/index.php/index.php?option=com_content&task=view&id=19&Itemid=	https://herbdoc.com/learn
+Redirect 301	/index.php?option=com_content&Itemid=144&id=878&lang=en&task=view	https://herbdoc.com/learn
+Redirect 301	/index.php?option=com_content&task=view&id=19&Itemid=40	https://herbdoc.com/learn
+Redirect 301	/index.php?option=com_content&task=view&id=541	https://herbdoc.com/learn
+Redirect 301	/index.php?option=com_members&Itemidmem=107	https://herbdoc.com/learn
+Redirect 301	/index.php?option=com_members&Itemidmem=11	https://herbdoc.com/learn
+Redirect 301	/index.php?option=com_members&Itemidmem=12	https://herbdoc.com/learn
+Redirect 301	/index.php?option=com_members&Itemidmem=13	https://herbdoc.com/learn
+Redirect 301	/index.php?option=com_members&Itemidmem=14	https://herbdoc.com/learn
+Redirect 301	/index.php?option=com_members&Itemidmem=15	https://herbdoc.com/learn
+Redirect 301	/index.php?option=com_members&Itemidmem=16	https://herbdoc.com/learn
+Redirect 301	/index.php?option=com_members&Itemidmem=17	https://herbdoc.com/learn
+Redirect 301	/index.php/Clinically-Proven-Herbal-Formulas-that-Work.html	https://herbdoc.com/learn
+Redirect 301	/index.php/Customer-Healing-Stories/Elazar-A	https://herbdoc.com/learn
+Redirect 301	/index.php/Customer-Healing-Stories/Fiona-M	https://herbdoc.com/learn
+Redirect 301	/index.php/Customer-Healing-Stories/Healing-Testimonials/	https://herbdoc.com/learn
+Redirect 301	/index.php/Customer-Healing-Stories/Laura-W	https://herbdoc.com/learn
+Redirect 301	/index.php/Customer-Healing-Stories/Phillip-T	https://herbdoc.com/learn
+Redirect 301	/index.php/Customer-Healing-Stories/Theodore-T	https://herbdoc.com/learn
+Redirect 301	/index.php/Customer-Healing-Stories/Ty-T	https://herbdoc.com/learn
+Redirect 301	/index.php/Customers-Healing-Stories/Mark-P	https://herbdoc.com/learn
+Redirect 301	/index.php/Customer-Testimonials.html	https://herbdoc.com/learn
+Redirect 301	/index.php?option=com_content&task=view&id=20&Itemid=41	https://herbdoc.com/learn
+Redirect 301	/index.php?option=com_content&task=view&id=27&Itemid=106	https://herbdoc.com/learn
+Redirect 301	/index.php/index.php?option=com_content&task=view&id=20&Itemid=	https://herbdoc.com/learn.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=6&Itemid=42	https://herbdoc.com/l-gb-formula-liver-gallbladder.html
+Redirect 301	/index.php/Store/L-GB-Formula	https://herbdoc.com/l-gb-formula-liver-gallbladder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=6	https://herbdoc.com/l-gb-formula-liver-gallbladder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=6&osCsid=	https://herbdoc.com/l-gb-formula-liver-gallbladder.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=33&Itemid=42	https://herbdoc.com/lung-tonic.html
+Redirect 301	/index.php/Store/Lung-Tonic	https://herbdoc.com/lung-tonic.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=33	https://herbdoc.com/lung-tonic.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=33&osCsid=	https://herbdoc.com/lung-tonic.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=37&Itemid=42	https://herbdoc.com/male-formula.html
+Redirect 301	/index.php/Store/Male-Formula	https://herbdoc.com/male-formula.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=37	https://herbdoc.com/male-formula.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=37&osCsid=	https://herbdoc.com/male-formula.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=181&Itemid=42	https://herbdoc.com/male-shot.html
+Redirect 301	/index.php/Store/Male-Shot	https://herbdoc.com/male-shot.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=181	https://herbdoc.com/male-shot.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=181&osCsid=	https://herbdoc.com/male-shot.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=43&Itemid=42	https://herbdoc.com/nerve-formula.html
+Redirect 301	/index.php/Store/Nerve-Formula	https://herbdoc.com/nerve-formula.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=43	https://herbdoc.com/nerve-formula.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=43&osCsid=	https://herbdoc.com/nerve-formula.html
+Redirect 301	/index.php/Privacy-Policy.html	https://herbdoc.com/privacy-policy
+Redirect 301	/index.php?option=com_content&task=view&id=206&Itemid=106	https://herbdoc.com/privacy-policy
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=36&Itemid=42	https://herbdoc.com/prostate-formula.html
+Redirect 301	/index.php/Store/Prostate-Formula	https://herbdoc.com/prostate-formula.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=36	https://herbdoc.com/prostate-formula.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=36&osCsid=	https://herbdoc.com/prostate-formula.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=144&osCsid=	https://herbdoc.com/protect-formula-120-capsules.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1492	https://herbdoc.com/protect-formula-120-capsules.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1492&osCsid=	https://herbdoc.com/protect-formula-120-capsules.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=144&Itemid=42	https://herbdoc.com/protect-formula-60-capsules.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=1492&Itemid=42	https://herbdoc.com/protect-formula-60-capsules.html
+Redirect 301	/index.php/Store/Protect-Formula	https://herbdoc.com/protect-formula-60-capsules.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=144	https://herbdoc.com/protect-formula-60-capsules.html
+Redirect 301	/index.php/Returns-Exchanges	https://herbdoc.com/shipping-returns
+Redirect 301	/index.php?option=com_content&task=view&id=502&Itemid=42	https://herbdoc.com/shipping-returns
+Redirect 301	/index.php/Shipping-Delivery.html	https://herbdoc.com/shipping-returns
+Redirect 301	/index.php/Shipping-Options.html	https://herbdoc.com/shipping-returns
+Redirect 301	/index.php?option=com_content&task=view&id=500&Itemid=42	https://herbdoc.com/shipping-returns
+Redirect 301	/index.php?option=com_content&task=view&id=501&Itemid=42	https://herbdoc.com/shipping-returns
+Redirect 301	/index.php?option=com_content&task=view&id=503&Itemid=42	https://herbdoc.com/shipping-returns
+Redirect 301	/index.php/5-Ways-to-Order	https://herbdoc.com/shipping-returns
+Redirect 301	/index.php/Payment-Info.html	https://herbdoc.com/shipping-returns
+Redirect 301	/index.php?option=com_content&task=view&id=504&Itemid=42	https://herbdoc.com/shipping-returns
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=21	https://herbdoc.com/specific/air-detoxification.html
+Redirect 301	/index.php/Our_Products/Detoxification	https://herbdoc.com/specific/air-detoxification.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=17	https://herbdoc.com/specific/circulation.html
+Redirect 301	/index.php/Our_Products/Circulation	https://herbdoc.com/specific/circulation.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=17&Itemid=42	https://herbdoc.com/specific/circulation.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=14	https://herbdoc.com/specific/cold-flu.html
+Redirect 301	/index.php/Our_Products/Cold-%26-Flu	https://herbdoc.com/specific/cold-flu.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=14&Itemid=42	https://herbdoc.com/specific/cold-flu.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=40	https://herbdoc.com/specific/detoxification.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=41	https://herbdoc.com/specific/detoxification.html
+Redirect 301	/index.php/Our_Products/Kidney	https://herbdoc.com/specific/detoxification.html
+Redirect 301	/index.php/Our_Products/Liver	https://herbdoc.com/specific/detoxification.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=12&Itemid=42	https://herbdoc.com/specific/detoxification.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=40&Itemid=42	https://herbdoc.com/specific/detoxification.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=41&Itemid=42	https://herbdoc.com/specific/detoxification.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=12	https://herbdoc.com/specific/detoxification.html
+Redirect 301	/index.php/Detoxification	https://herbdoc.com/specific/detoxification.html
+Redirect 301	/index.php/Kidney	https://herbdoc.com/specific/detoxification.html
+Redirect 301	/index.php/Liver	https://herbdoc.com/specific/detoxification.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=20	https://herbdoc.com/specific/external.html
+Redirect 301	/index.php/Our_Products/External	https://herbdoc.com/specific/external.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=20&Itemid=42	https://herbdoc.com/specific/external.html
+Redirect 301	/index.php/External	https://herbdoc.com/specific/external.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=19	https://herbdoc.com/specific/eyes-mouth.html
+Redirect 301	/index.php/Our_Products/Eyes-%26-Mouth	https://herbdoc.com/specific/eyes-mouth.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=19&Itemid=42	https://herbdoc.com/specific/eyes-mouth.html
+Redirect 301	/index.php/Eyes-%26-Mouth	https://herbdoc.com/specific/eyes-mouth.html
+Redirect 301	/index.php/Female	https://herbdoc.com/specific/eyes-mouth.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=15	https://herbdoc.com/specific/female.html
+Redirect 301	/index.php/Our_Products/Female	https://herbdoc.com/specific/female.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=15&Itemid=42	https://herbdoc.com/specific/female.html
+Redirect 301	/index.php/Our-Products?cid=15	https://herbdoc.com/specific/female.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=16	https://herbdoc.com/specific/male.html
+Redirect 301	/index.php/Our_Products/Male	https://herbdoc.com/specific/male.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=16&Itemid=42	https://herbdoc.com/specific/male.html
+Redirect 301	/index.php/Male	https://herbdoc.com/specific/male.html
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38&cid=18	https://herbdoc.com/specific/nervine.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=category_info&cid=18&Itemid=42	https://herbdoc.com/specific/nervine.html
+Redirect 301	/index.php/Nervine	https://herbdoc.com/specific/nervine.html
+Redirect 301	/index.php/Our-Products?cid=18	https://herbdoc.com/specific/nervine.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=7&Itemid=42	https://herbdoc.com/starter-kit-powder.html
+Redirect 301	/index.php/Store/Starter-Kit-SuperFood-Powder	https://herbdoc.com/starter-kit-powder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=7	https://herbdoc.com/starter-kit-powder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=7&osCsid=	https://herbdoc.com/starter-kit-powder.html
+Redirect 301	/index.php/index.php?option=com_content&task=view&id=16&Itemid=	https://herbdoc.com/starter-kit-tablets.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=174&Itemid=42	https://herbdoc.com/starter-kit-tablets.html
+Redirect 301	/index.php/New-Customers	https://herbdoc.com/starter-kit-tablets.html
+Redirect 301	/index.php/Store/Starter-Kit-Super-Food-Tablets	https://herbdoc.com/starter-kit-tablets.html
+Redirect 301	/index.php?option=com_content&task=view&id=16&Itemid=36	https://herbdoc.com/starter-kit-tablets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=174	https://herbdoc.com/starter-kit-tablets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=174&osCsid=	https://herbdoc.com/starter-kit-tablets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=174&Itemid=42	https://herbdoc.com/starter-kit-tablets.html
+Redirect 301	/index.php/index.php?option=com_content&Itemid=146&id=958&lang=en&task=view	https://herbdoc.com/store/
+Redirect 301	/index.php/index.php?option=com_content&task=view&id=17&Itemid=	https://herbdoc.com/store/
+Redirect 301	/index.php/index.php?option=com_oscommerce&Itemid=154	https://herbdoc.com/store/
+Redirect 301	/index.php/Our-Products	https://herbdoc.com/store/
+Redirect 301	/index.php?option=com_content&task=view&id=17&Itemid=38	https://herbdoc.com/store/
+Redirect 301	/index.php?option=com_oscommerce&Itemid=42	https://herbdoc.com/store/
+Redirect 301	/index.php/Store	https://herbdoc.com/store-directions
+Redirect 301	/index.php/Store-Location-Google-Maps.html	https://herbdoc.com/store-directions
+Redirect 301	/index.php?option=com_content&task=view&id=446&Itemid=42	https://herbdoc.com/store-directions
+Redirect 301	/index.php/Submit-Your-Natural-Healing-Story.html	https://herbdoc.com/submit-your-natural-healing-story/
+Redirect 301	/index.php/Track-Order.html	https://herbdoc.com/submit-your-natural-healing-story/
+Redirect 301	/index.php?option=com_content&task=view&id=537	https://herbdoc.com/submit-your-natural-healing-story/
+Redirect 301	/index.php?option=com_content&task=view&id=58	https://herbdoc.com/submit-your-natural-healing-story/
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=1482&Itemid=42	https://herbdoc.com/super-c-plus-powder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1482	https://herbdoc.com/super-c-plus-powder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1482&osCsid=	https://herbdoc.com/super-c-plus-powder.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=1483&Itemid=42	https://herbdoc.com/super-c-plus-tablets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1483	https://herbdoc.com/super-c-plus-tablets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1483&osCsid=	https://herbdoc.com/super-c-plus-tablets.html
+Redirect 301	/index.php/Store/SuperFood-100-Family-Size	https://herbdoc.com/superfood-100-270-tablets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1089	https://herbdoc.com/superfood-100-270-tablets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1089&osCsid=	https://herbdoc.com/superfood-100-270-tablets.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=1089&Itemid=42	https://herbdoc.com/superfood-100-90-tablets.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=479&Itemid=42	https://herbdoc.com/superfood-100-90-tablets.html
+Redirect 301	/index.php/Store/SuperFood-100	https://herbdoc.com/superfood-100-90-tablets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=479	https://herbdoc.com/superfood-100-90-tablets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=479&osCsid=	https://herbdoc.com/superfood-100-90-tablets.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=1380&Itemid=42	https://herbdoc.com/superfood-100-kids.html
+Redirect 301	/index.php/Store/Superfood-100-For-Kids	https://herbdoc.com/superfood-100-kids.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1380	https://herbdoc.com/superfood-100-kids.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1380&osCsid=	https://herbdoc.com/superfood-100-kids.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=402&Itemid=42	https://herbdoc.com/superfood-bar.html
+Redirect 301	/index.php/Store/SuperFood-Bar-Single	https://herbdoc.com/superfood-bar.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=402	https://herbdoc.com/superfood-bar.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=402&osCsid=	https://herbdoc.com/superfood-bar.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=403&Itemid=42	https://herbdoc.com/superfood-bar-12-pack.html
+Redirect 301	/index.php/Store/SuperFood-Bar-12-Pack	https://herbdoc.com/superfood-bar-12-pack.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=403	https://herbdoc.com/superfood-bar-12-pack.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=403&osCsid=	https://herbdoc.com/superfood-bar-12-pack.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=1307&Itemid=42	https://herbdoc.com/superfood-bar-crunch.html
+Redirect 301	/index.php/Store/SuperFood-Apple-Cinnamon-Crunch-Single	https://herbdoc.com/superfood-bar-crunch.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=1478&Itemid=42	https://herbdoc.com/superfood-bar-crunch-12-pack.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=9&Itemid=42	https://herbdoc.com/superfood-plus-packets.html
+Redirect 301	/index.php/Store/SuperFood-Plus-On-The-Go	https://herbdoc.com/superfood-plus-packets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=9	https://herbdoc.com/superfood-plus-packets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=9&osCsid=	https://herbdoc.com/superfood-plus-packets.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=21&Itemid=42	https://herbdoc.com/superfood-plus-powder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=21	https://herbdoc.com/superfood-plus-powder.html
+Redirect 301	/index.php/Store/SuperFood-Plus-Powder	https://herbdoc.com/superfood-plus-powder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=21&osCsid=	https://herbdoc.com/superfood-plus-powder.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=21&Itemid=42	https://herbdoc.com/superfood-plus-powder.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=8&Itemid=42	https://herbdoc.com/superfood-plus-tablets.html
+Redirect 301	/index.php/Store/SuperFood-Plus-Tablets	https://herbdoc.com/superfood-plus-tablets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=8	https://herbdoc.com/superfood-plus-tablets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=8&osCsid=	https://herbdoc.com/superfood-plus-tablets.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=8&Itemid=42	https://herbdoc.com/superfood-plus-tablets.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=38&Itemid=42	https://herbdoc.com/super-ginseng.html
+Redirect 301	/index.php/Store/Super-Ginseng	https://herbdoc.com/super-ginseng.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=38	https://herbdoc.com/super-ginseng.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=38&osCsid=	https://herbdoc.com/super-ginseng.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=31&Itemid=42	https://herbdoc.com/super-tonic.html
+Redirect 301	/index.php/Store/Super-Tonic	https://herbdoc.com/super-tonic.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=31	https://herbdoc.com/super-tonic.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=31&osCsid=	https://herbdoc.com/super-tonic.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=31&Itemid=42	https://herbdoc.com/super-tonic.html
+Redirect 301	/index.php/Store/Throat-%26-Tonsil-Spray-1OZ	https://herbdoc.com/throat-tonsil-spray.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=53	https://herbdoc.com/throat-tonsil-spray.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=53&osCsid=	https://herbdoc.com/throat-tonsil-spray.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=32&Itemid=42	https://herbdoc.com/throat-tonsil-tincture.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=53&Itemid=42	https://herbdoc.com/throat-tonsil-tincture.html
+Redirect 301	/index.php/Store/Throat-%26-Tonsil-Formula-2OZ	https://herbdoc.com/throat-tonsil-tincture.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=32	https://herbdoc.com/throat-tonsil-tincture.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=44&Itemid=42	https://herbdoc.com/tooth-gum-formula.html
+Redirect 301	/index.php/Store/Tooth-%26-Gum-Formula	https://herbdoc.com/tooth-gum-formula.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=44	https://herbdoc.com/tooth-gum-formula.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=44&osCsid=	https://herbdoc.com/tooth-gum-formula.html
+Redirect 301	/index.php/index.php?option=com_oscommerce&osMod=product_infoNew&products_id=1491&Itemid=42	https://herbdoc.com/vitality-shot.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1491&osCsid=	https://herbdoc.com/vitality-shot.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1499&osCsid=	https://herbdoc.com/vitality-shot.html
+Redirect 301	/index.php?option=com_oscommerce&osMod=product_infoNew&Itemid=42&products_id=1500	https://herbdoc.com/vitality-shot.html
+Redirect 301	/index.php?option=com_content&task=view&id=946	https://herbdocblog.com/book-view/12/
+Redirect 301	/index.php/Detoxification-Manual-Volume-Two.html	https://herbdocblog.com/book-view/8/
+Redirect 301	/index.php/Order-Free-Book-Detoxification-Manual	https://herbdocblog.com/book-view/9/

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Aydus_CustomPages>
+            <version>0.0.1</version>
+        </Aydus_CustomPages>
+    </modules>
+    <global>
+        <blocks>
+            <aydus_custompages>
+                <class>Aydus_CustomPages_Block</class>
+            </aydus_custompages>
+        </blocks>
+    </global>
+</config>

@@ -1,0 +1,15 @@
+<?php
+/* Author: Aydus
+ * Description: Mage_Checkout_Block_Cart_Sidebar
+ *  - Display cart items count.
+ */
+?>
+
+<?php
+    $_cartQty = $this->getSummaryCount();
+    if (!isset($_cartQty))
+    {
+        $_cartQty = 0;
+    }
+    echo '<span class="cart-summary-count">' . $_cartQty . '</span>';
+

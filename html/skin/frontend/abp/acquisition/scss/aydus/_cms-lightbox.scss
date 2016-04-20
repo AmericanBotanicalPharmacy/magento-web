@@ -1,0 +1,83 @@
+/*----------------------------------------------------------------------------*/
+/* CMS Lightbox
+/*----------------------------------------------------------------------------*/
+
+.mfp-wrap.cmslightbox {
+
+    .mfp-preloader {
+        height: 48px; // Height of background image.
+        z-index: 1100; // Top of lightbox.
+        background: url(../images/opc-ajax-loader.gif) no-repeat center center;
+    }
+
+    .mfp-content {
+        max-width: 700px;
+        height: 100%; // Required to scroll content within it's own container.
+        max-height: 75%;
+        overflow: hidden;
+        padding: 40px 35px;
+        background-color: #ffffff;
+        @include box-shadow(rgba(0,0,0,.21) 0 0 5px, rgba(0,0,0,.21) 1px 2px 1px);
+
+        @include breakpoint(tablet) {
+            max-width: 75%;
+        }
+
+        @include breakpoint(mobile) {
+            max-width: 85%;
+        }
+
+        .content-container {
+            height: 100%;
+            padding-right: 20px;
+            overflow-y: scroll;
+
+            h1 {
+                margin: 0 0 25px 0;
+                padding: 0;
+                @include responsive-font-size(18);
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #154020;
+            }
+
+            h2 {
+                margin: 0 0 17px 0;
+                padding: 0;
+                @include responsive-font-size(14);
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #eabd07;
+            }
+
+            p {
+                margin: 0 0 1em 0;
+                padding: 0;
+                @include responsive-font-size(14);
+                color: #999999;
+            }
+
+            .button-container {
+                margin: 30px 0 0 0;
+
+                @include breakpoint(tablet) {
+                    text-align: center;
+                }
+
+                .blink1 {
+                    float: right;
+                    @include button-blink1(230px);
+
+                    @include breakpoint(tablet) {
+                        float: none;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .blink2 {
+                    @include button-blink2(230px);
+                }
+            }
+        }
+    }
+}

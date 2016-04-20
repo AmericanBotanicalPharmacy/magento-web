@@ -1,0 +1,466 @@
+/*---------------------------------------------------------------------------*/
+/* Menu Top
+/*----------------------------------------------------------------------------*/
+
+/*
+    Not true responsive. Desktop: fixed width. 1300: move promos bottom. TabletLandscape: switch to tablet.
+*/
+
+#megamenu-container {
+    display: none; // Remove jump when class/styles applied after page load.
+
+    .sub1 {
+        display: none;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Start Container Desktop
+/*----------------------------------------------------------------------------*/
+
+#megamenu-container.desktop {
+    display: block;
+
+$topMenuDesktopWidth: 480;
+$menuDesktopWidth: 965;
+$menuTabletWidth: 700;
+
+/*----------------------------------------------------------------------------*/
+/* Level 1
+/*----------------------------------------------------------------------------*/
+
+    > ul {
+        margin-left: 14px;
+        white-space: nowrap;
+
+        li.sub {
+            display: inline-block;
+            margin: 18px 17px 0 0;
+
+            @include breakpoint(tabletLandscape) {
+                margin-right: 0;
+            }
+
+            .close {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 20px;
+                cursor: pointer;
+
+                &:after {
+                    content: '';
+                    @include use-sprite('megamenu-close');
+                }
+            }
+
+            h3 {
+                margin: 0;
+                padding: 18px 13px 14px 24px;
+
+                @include breakpoint(max, 740) {
+                    padding-right: 6px;
+                    padding-left: 10px;
+                }
+
+                a {
+                    display: block;
+                    @include responsive-font-size(18);
+                    text-transform: none;
+                    @include global-no-underline();
+                    color: #333333;
+
+                    @include breakpoint(tablet) {
+                        @include responsive-font-size(16);
+                    }
+
+                    @include breakpoint(max, 740) {
+                        @include responsive-font-size(14);
+                    }
+
+                    &:after {
+                        margin: 0 0 0 7px;
+                        content: '';
+                        @include use-sprite('megamenu-arrow');
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            &.active {
+
+                h3 {
+                    @include box-shadow(#d4d4d4 0 0 8px);
+                }
+
+                &:after {
+                    content: '';
+                    width: 100%;
+                    height: 10px;
+                    background: white;
+                    display: block;
+                    margin-top: -7px;
+                    z-index: 999;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    /*----------------------------------------------------------------------------*/
+    /* Level 2
+    /*----------------------------------------------------------------------------*/
+
+    .sub1 {
+        //display: block;
+        position: absolute;
+        left: 264px;
+        z-index: 200;
+        width: $menuDesktopWidth*1px;
+        background-color: #ffffff;
+        //@include box-shadow(#d4d4d4 0 0 8px);
+        box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.25);
+
+        @include breakpoint(max, 1300) {
+            width: $menuTabletWidth*1px;
+        }
+
+        @include breakpoint(tabletLandscape) {
+            left: 0;
+            width: 100%;
+            padding-top: 40px; // Move menu to under logo.
+        }
+
+        > ul {
+            margin: 0;
+            padding: 0;
+            vertical-align: top;
+
+            > li {
+                float: left;
+                margin: 31px 0 25px 0;
+
+                &:nth-child(1) {
+                    margin-left: 29px;
+                }
+                &:nth-child(2) {
+                    margin-left: 45px;
+                }
+                &:nth-child(3) {
+                    margin-left: 50px;
+                }
+
+                h4 {
+                    margin: 0;
+                    padding: 0 0 5px 0;
+
+                    a {
+                        @include responsive-font-size(16);
+                        font-weight: bold;
+                        @include global-no-underline();
+                        color: #154020;
+                    }
+                }
+            }
+        }
+
+        .promotion {
+            float: right;
+            width: 295/$menuDesktopWidth*100%;
+            padding: 50px 30px;
+            background-color: #eae6df;
+
+            @include breakpoint(max, 1300) {
+                clear: left;
+                width: auto;
+                float: none;
+                padding: 30px 0 25px;
+                text-align: center;
+            }
+
+            .img-container {
+                overflow: hidden;
+                width: 240px;
+                padding-bottom: 16px;
+
+                @include breakpoint(max, 1300) {
+                    display: inline-block;
+                    width: auto;
+                    padding-bottom: 0;
+                    padding-right: 20px;
+                }
+
+                img {
+                    @include responsive-img;
+                }
+            }
+        }
+    }
+
+    // Active menu.
+    .sub.active .sub1 {
+        display: block;
+    }
+
+    // Set menu2 and menu3 width to narrow.
+    .sub.menu2,
+    .sub.menu3 {
+
+        .sub1 {
+            width: 485px;
+
+            @include breakpoint(tabletLandscape) {
+                width: 100%;
+            }
+        }
+
+        .promotion {
+            width: 50.5%
+        }
+    }
+
+    /*----------------------------------------------------------------------------*/
+    /* Level 3
+    /*----------------------------------------------------------------------------*/
+
+    .sub2 {
+
+        > ul {
+
+            > li {
+                padding: 5px 0;
+
+                h5 {
+                    margin: 0;
+                    padding: 0;
+
+                    a {
+                        @include responsive-font-size(13);
+                        font-weight: normal;
+                        @include global-no-underline();
+                        text-transform: none;
+                        color: #666666;
+                    }
+                }
+
+                .view-all {
+                    @include responsive-font-size(14);
+                    text-transform: none;
+                    color: #eabd07;
+                }
+            }
+        }
+    }
+
+/*----------------------------------------------------------------------------*/
+/* End Container
+/*----------------------------------------------------------------------------*/
+
+}
+
+/*----------------------------------------------------------------------------*/
+/* Start Container Mobile
+/*----------------------------------------------------------------------------*/
+
+#megamenu-container.mobile {
+    display: block;
+    margin-right: 20px;
+    margin-top: 7px;
+    cursor: pointer;
+    width: 100%;
+
+    /*----------------------------------------------------------------------------*/
+    /* Level 1
+    /*----------------------------------------------------------------------------*/
+
+    &:after {
+        content: '';
+        @include use-sprite('megamenu-mobile');
+        position: absolute;
+        right: 18px;
+        top: 23px;
+    }
+
+    // Hide single layer menus on menu 2 and 3.
+    .menu2,
+    .menu3 {
+        h4 {
+            display: none;
+        }
+    }
+
+
+    > ul {
+        display: none;
+        //display: block;
+        position: absolute;
+        z-index: 200;
+        top: 68px;
+        left: 2%;
+        width: 96%;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        @include box-shadow(#d4d4d4 0 0 8px);
+
+        li.sub {
+            margin: 0;
+            padding: 0;
+
+            h3 {
+                height: 55px;
+                line-height: 55px;
+                margin: 0;
+                padding: 0 0 0 24px;
+                border-top: 1px solid #999999;
+
+                &:before {
+                    content: '';
+                    @include use-sprite('megamenu-plus');
+                    position: absolute;
+                    right: 0;
+                    margin: 23px 24px 0 0;
+                }
+
+                a {
+                    @include responsive-font-size(16);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: #154020;
+                }
+            }
+
+            &.expanded {
+
+                h3 {
+                    background-color: #d8d1c3;
+                    border-top: 1px solid #d8d1c3;
+
+                    &:before {
+                        @include use-sprite('megamenu-minus');
+                    }
+                }
+            }
+        }
+    }
+
+    /*----------------------------------------------------------------------------*/
+    /* Level 2
+    /*----------------------------------------------------------------------------*/
+
+    .sub1 {
+        background-color: #f6f4f0;
+
+        > ul {
+            margin: 0;
+            padding: 0 0 20px 0;
+
+            > li {
+                margin: 0;
+                padding: 20px 0 0 34px;
+
+                h4 {
+                    margin: 0;
+                    padding: 0 0 8px 0;
+
+                    &:before {
+                        content: '';
+                        @include use-sprite('megamenu-plus');
+                        position: absolute;
+                        right: 0;
+                        margin: 3px 24px 0 0;
+                    }
+
+                    a {
+                        @include responsive-font-size(16);
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        color: #154020;
+                    }
+
+                    &.expanded {
+
+                        &:before {
+                            @include use-sprite('megamenu-minus');
+                        }
+                    }
+                }
+            }
+        }
+
+        .promotion {
+            padding: 0 15px 15px 15px;
+            border-top: 1px solid #999999;
+
+            &.shop,
+            &.learn {
+                display: none;
+            }
+
+            .img-container {
+                overflow: hidden;
+                width: 270px;
+                padding-top: 15px;
+
+                img {
+                    @include responsive-img;
+                }
+            }
+        }
+    }
+
+    .sub.expanded .sub1 {
+        display: block;
+    }
+
+    /*----------------------------------------------------------------------------*/
+    /* Level 3
+    /*----------------------------------------------------------------------------*/
+
+    .sub2 {
+        display: none;
+
+        > ul {
+            margin: 0;
+            padding: 0;
+
+            > li {
+                margin: 0;
+                padding: 8px 0 0 0
+
+                h5 {
+                    margin: 0;
+                    padding: 0;
+                    @include responsive-font-size(13);
+                    text-transform: none;
+                    font-weight: normal;
+                    color: #666666;
+                }
+
+                .view-all {
+                    @include responsive-font-size(13);
+                    text-transform: none;
+                    color: #eabd07;
+                }
+            }
+        }
+    }
+
+    .sub1 li.expanded > .sub2 {
+        display: block;
+    }
+
+    &.active:after {
+        content: 'X';
+        font-size: 20px;
+        line-height: 15px;
+        background: none;
+    }
+
+/*----------------------------------------------------------------------------*/
+/* End Container
+/*----------------------------------------------------------------------------*/
+}

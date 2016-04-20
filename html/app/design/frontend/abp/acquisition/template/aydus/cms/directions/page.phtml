@@ -1,0 +1,63 @@
+<!-- Begin: Google Maps Scripts -->
+<script type="text/javascript" src="https://www.google.com/jsapi?key=AIzaSyBMVjT63gPvZ-O63f1c-pbCEJip6-IgXCg"></script>
+<script type="text/javascript" charset="utf-8">
+	google.load("maps", "2.x");
+	google.load("jquery", "1.3.1");
+</script>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+		var map = new GMap2(document.getElementById('map'));
+		var directionsPanel = document.getElementById("directions");
+		var directions = new GDirections(map, directionsPanel);
+		var abpLocation = new GLatLng(33.98938,-118.442299);
+		var abpMarker = new GMarker (abpLocation);
+		map.addOverlay(abpMarker);
+		map.setCenter(abpLocation, 13);
+		map.setUIToDefault();
+		$("input#submit").click(function(event){
+			directions.load(document.getElementById('start_address').value+" to 4114 Glencoe Ave, Marina Del Rey, CA 90292");
+			event.preventDefault();
+		});
+	});
+</script>
+
+
+<div class="content-page directions">
+	<div class="section1 col2">
+		<div class="column1">
+			<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA); ?>wysiwyg/cms/directions/picture_of_store.jpg" />
+			<div class="hours">
+				<h2>Retail Store</h2>
+				<p>4114 Glencoe Ave. Marina Del Rey, CA 90292</p>
+
+				<h2>Retail Store Hours</h2>
+				<p>Monday – Friday: 9am–7pm</p>
+				<p>Saturday: 9am–6pm</p>
+				<p>Sunday: 10am–6pm</p>
+			</div>
+		</div>
+		<div class="column2">
+			<div id="map">
+
+			</div>
+			<div class="directions">
+				<h2>Get Directions</h2>
+				<form name="directions_form" action="" method="post" class="directions">
+					<div style="position: relative;" class="from">
+						<label for="start_address" alt="Enter starting address" title="Enter starting address">From:</label> 
+						<input name="start_address" id="start_address" type="text" size="" maxlength="" alt="Enter starting address" title="Enter starting address" value="">
+					</div>
+					<div style="position: relative;" class="to">
+						<label for="end_address" alt="Enter ending address" title="Enter ending address" class="right-pad">To:</label> 
+						<input name="end_address" id="end_address" type="text" size="" maxlength="" alt="American Botanical Pharmacy - 4114 Glencoe Ave, Marina Del Rey, CA 90292" title="American Botanical Pharmacy - 4114 Glencoe Ave, Marina Del Rey, CA 90292" value="4114 Glencoe Ave, Marina Del Rey, CA 90292" readonly="readonly">
+					</div>
+					<input class="submit" type="submit" id="submit" value="submit" name="submit" alt="Get Directions to American Botanical Pharmacy" title="Get Directions to American Botanical Pharmacy">
+					<div class="clear"></div>
+				</form>
+			</div>
+			<div id="directions">
+
+			</div>
+		</div>
+	</div>
+</div>

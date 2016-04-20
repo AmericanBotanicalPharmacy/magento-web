@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <reference name="head">
+            <block type="aydus_socialmeta/meta" name="socialMeta" before="-" />
+        </reference>
+    </default>
+</layout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * System configuration acl
+ *
+ * @category    Abp
+ * @package     Abp_Cwserenade
+ * @author		Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <abp_cwserenade translate="title" module="abp_cwserenade">
+                                        <title>CWSerenade settings</title>
+                                    </abp_cwserenade>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

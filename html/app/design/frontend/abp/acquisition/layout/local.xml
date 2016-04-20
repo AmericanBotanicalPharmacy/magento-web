@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Description:
+ * - Layout updates for Herbdoc
+ */
+-->
+<layout version="0.1.0">
+	<default>
+
+		<reference name="head">
+            <block type="core/text_tag" name="responsive-viewport">
+                <action method="setTagName">
+                    <name>meta</name>
+                </action>
+                <action method="setTagParam">
+                    <param>name</param>
+                    <value>viewport</value>
+                </action>
+                <action method="setTagParam">
+                    <param>content</param>
+                    <value>width=device-width, initial-scale=1.0</value>
+                </action>
+            </block>
+            <block type="core/text_tag" name="google-webmaster-tools">
+                <action method="setTagName"><name>meta</name></action>
+                <action method="setTagParam"><param>name</param><value>google-site-verification</value></action>
+                <action method="setTagParam"><param>content</param><value></value></action>
+            </block>
+            <block type="core/text_tag" name="bing-webmaster-tools">
+                <action method="setTagName"><name>meta</name></action>
+                <action method="setTagParam"><param>name</param><value>msvalidate.01</value></action>
+                <action method="setTagParam"><param>content</param><value></value></action>
+            </block>
+            <!--
+<block type="core/text" name="google-fonts">
+                <action method="setText">
+                    <text><![CDATA[<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700"/>]]></text>
+                    
+                    http://fonts.googleapis.com/css?family=Montserrat:300italic,400italic,600italic,700italic,400,700,600,300
+                    
+                </action>
+            </block>
+-->
+            
+            <block type="core/text" name="google-fonts">
+                <action method="setText">
+                    <text><![CDATA[<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300italic,400italic,600italic,700italic,400,700,600,300"/>]]></text>
+                </action>
+            </block>
+            <!-- Google Font Fix: https://code.google.com/p/googlefontdirectory/issues/detail?id=152 -->
+            <block type="core/text" name="google-fonts-fix">
+                <action method="setText">
+                    <text><![CDATA[
+                        <style>
+                            @font-face {
+                              font-family: 'Montserrat';
+                              font-style: normal;
+                              font-weight: 400;
+                              src: local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v5/zhcz-_WihjSQC0oHJ9TCYAzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+                              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+                            }
+                            @font-face {
+                              font-family: 'Montserrat';
+                              font-style: normal;
+                              font-weight: 700;
+                              src: local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v5/IQHow_FEYlDC4Gzy_m8fcmaVI6zN22yiurzcBKxPjFE.woff2) format('woff2');
+                              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+                            }
+                        </style>
+                    ]]></text>
+                </action>
+            </block>
+
+            <!-- Remove Style Sheets -->
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/madisonisland.css</name>
+            </action>
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/madisonisland-ie8.css</name>
+            </action>
+
+            <!-- Style Sheets IE selector limit fix. For IE9 (and lower) only. -->
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/styles_2.css</name>
+                <group>iefix</group>
+                <if>lte IE 9</if>
+            </action>
+
+            <!-- Force styles to be loaded for IE8 and lower. -->
+            <action method="addItem"><type>skin_css</type><name>css/styles.css</name><params/></action>
+
+            <!-- Style Sheets -->
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/owl.carousel.css</name>
+            </action>
+            <!-- Style Sheets -->
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/styles.css</name>
+            </action>
+            
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/owl.transitions.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/owl.carousel.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/product.css</name> <!--Special case. This stylesheet is being used by the client for custom product page content styling. Aydus in general should not touch this unless directed to do so.-->
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/testimonial.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/backtotop.css</name>
+            </action>
+            <!-- JS Libraries -->
+            <action method="addItem">
+				<type>skin_js</type>
+				<name>js/jquery-ui-1.11.1.custom.js</name>
+			</action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.cookie.js</name>
+            </action>
+            <!-- https://github.com/louisremi/jquery-smartresize -->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.debouncedresize.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.throttledresize.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jqmodal.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.magnific-popup.js</name>
+            </action>
+            <action method="removeItem"><type>skin_js</type><name>js/lib/jquery.cycle2.min.js</name></action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.cycle2.js</name>
+            </action>
+            <action method="removeItem"><type>skin_js</type><name>js/lib/jquery.cycle2.swipe.min.js</name></action>
+            <action method="removeItem">
+                <type>skin_js</type>
+                <name>js/jquery.cycle2.swipe.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/bundle.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/owl.carousel.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.scrollTo.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.hoverIntent.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.fitvids.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.columns.plugin.js</name>
+            </action>
+
+            <!-- JS Custom -->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/aydus.helper.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/aydus.store.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/aydus.responsive.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.aydus.matchheight.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.aydus.hoverintentresponsive.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.aydus.megamenu.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.aydus.megamenumobile.js</name>
+            </action>
+            <action method="addItem"><type>skin_js</type><name>js/slideshow.js</name></action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.aydus.bannerenhanced.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.aydus.addtocart.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.aydus.newslettersubscribe.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.aydus.emailsignup.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.aydus.minicart.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.aydus.quickview.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.aydus.tabletsearch.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.aydus.tabletsearch.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.aydus.addtocart.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.aydus.cmslightbox.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.abp.js</name>
+            </action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/main.js</name>
+			</action>
+			<!--
+<action method="addItem">
+                <type>skin_js</type>
+                <name>js/s_code_omni.js</name>
+            </action>
+-->
+			
+		</reference>
+
+        <!-- To add block after the body tag add it here. -->
+        <reference name="after_body_start">
+	        
+	        <block type="core/template" name="s_code" template="aydus/page/html/s_code.phtml" />
+            <!-- Add jdata widget across all pages. Adds server side data to page for use client side. -->
+            <block type="aydus_jdata/main" name="jdata" />
+
+            <!-- Add html block: IE old version warning. -->
+            <block type="core/template" name="ieWarning" template="aydus/page/html/iewarning.phtml" />
+        </reference>
+        <!-- To add block before end of body tag add it here. -->
+        <reference name="before_body_end">
+            <!-- Add new CMS block: Email Signup. -->
+            <!--<block type="cms/block" name="emailSignup"><action method="setBlockId"><block_id>email_signup</block_id></action></block>-->
+        </reference>
+
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>
+            <!-- Add custom structural block: banner. Requires render statement in page template i.e. add this to 1column.phtml <?php echo $this->getChildHtml('banner') ?> -->
+            <block type="core/text_list" name="banner"/>
+        </reference>
+
+        <reference name="header">
+            <!-- Add html block: Megamenu. -->
+            <!-- <block type="core/template" name="megamenu" template="aydus/page/html/megamenu.phtml" /> -->
+
+            <!-- Add html block: Cart summary. Based on cart sidebar object to work with FPC. -->
+            <block type="checkout/cart_sidebar" name="cart_summary" as="cartSummary" template="aydus/checkout/cart/summary.phtml" />
+        </reference>
+		
+	</default>
+
+    <!-- Home -->
+    <cms_index_index>
+        <!-- Add banner widget. -->
+        <block type="bannerenhanced/main" name="bannerEnhanced" />
+    </cms_index_index>
+    
+     <!-- Home -->
+    <cms_page_view>
+        <!-- Add banner widget. -->
+        <block type="bannerenhanced/main" name="bannerEnhanced" />
+    </cms_page_view>
+
+    <!-- Category -->
+    <catalog_category_default>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <!-- Add html banner. -->
+        <reference name="banner">
+            <block type="catalog/category_view" name="category_banner" template="aydus/catalog/category/banner.phtml" />
+        </reference>
+        <!--Add recently viewed products (standard Magento block). Displays when customer logged in only. -->
+        <reference name="product_list">
+            <block type="reports/product_viewed" name="reports.product.viewed" template="reports/product_viewed.phtml" />
+        </reference>
+        <reference name="left_first">
+            <action method="unsetChild"><name>catalog.leftnav</name></action>
+        </reference>
+        <reference name="left">
+            <!-- Column count set in list.phtml. -->
+            <block type="catalog/navigation" name="catalog.leftnav" before="-" template="catalog/navigation/left.phtml"/>
+        </reference>
+    </catalog_category_default>
+
+    <!-- Category Layered -->
+    <catalog_category_layered>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <!--Add html banner. -->
+        <reference name="banner">
+            <block type="catalog/category_view" name="category_banner" template="aydus/catalog/category/banner.phtml" />
+        </reference>
+        <!--Add recently viewed products (standard Magento block). Displays when customer logged in only. -->
+        <reference name="product_list">
+            <block type="reports/product_viewed" name="reports.product.viewed" template="reports/product_viewed.phtml" />
+        </reference>
+        <reference name="left_first">
+            <!--Remove standard layered navigation -->
+            <remove name="enterprisecatalog.leftnav"/>
+        </reference>
+        <reference name="left">
+            <!-- Column count set in list.phtml. -->
+            <block type="catalog/navigation" name="catalog.leftnav2" before="-" template="catalog/navigation/left.phtml"/>
+        </reference>
+    </catalog_category_layered>
+
+    <!-- Search -->
+    <catalogsearch_result_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <!--Add html banner. -->
+        <reference name="banner">
+            <block type="catalogsearch/layer" name="catalogsearch_banner" template="aydus/catalogsearch/banner.phtml" />
+        </reference>
+        <reference name="left_first">
+            <!--Remove standard layered navigation -->
+            <remove name="enterprisesearch.leftnav"/>
+        </reference>
+        <reference name="left">
+            <block type="catalog/navigation" name="catalog.leftnav" before="-" template="catalog/navigation/left.phtml"/>
+        </reference>
+    </catalogsearch_result_index>
+
+    <!-- Product -->
+    <catalog_product_view>
+        <!-- Add html banner. -->
+        <reference name="banner">
+            <block type="catalog/product_view" name="product_banner" template="aydus/catalog/product/banner.phtml" />
+        </reference>
+    </catalog_product_view>
+
+    <checkout_cart_index>
+        <reference name="checkout.cart.extra">
+            <!-- Hide gift card form. -->
+            <action method="unsetChild"><name>giftcards</name></action>
+        </reference>
+
+        <reference name="checkout.cart">
+            <!-- Hide shipping estimator. -->
+            <action method="unsetChild"><name>shipping</name></action>
+            <reference name="checkout.cart.top_methods">
+                <!-- Hide proceed to shopping cart button block. -->
+                <action method="unsetChild"><name>checkout.cart.methods.onepage.top</name></action>
+            </reference>
+            <!--Add custom proceed to checkout button block.-->
+            <block type="checkout/onepage_link" name="shipping.message" template="aydus/checkout/onepage/shipping_message.phtml" after="-" />
+            <!-- Add new CMS block: Shipping message. -->
+            <block type="cms/block" name="shippingMessage">
+                <action method="setBlockId">
+                    <block_id>shoppingcart_shipping_message</block_id>
+                </action>
+            </block>
+        </reference>
+    </checkout_cart_index>
+
+    <!-- Customer Account -->
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="removeLinkByName"><name>wishlist</name></action>
+            <action method="removeLinkByName"><name>billing_agreements</name></action>
+            <action method="removeLinkByName"><name>recurring_profiles</name></action>
+            <action method="removeLinkByName"><name>OAuth Customer Tokens</name></action>
+            <action method="removeLinkByName"><name>giftregistry</name></action>
+            <action method="removeLinkByName"><name>invitations</name></action>
+            <action method="removeLinkByName"><name>reviews</name></action>
+            <action method="removeLinkByName"><name>tags</name></action>
+            <action method="removeLinkByName"><name>applications</name></action>
+            <action method="removeLinkByName"><name>enterprise_giftcardaccount</name></action>
+            <action method="removeLinkByName"><name>downloadable_products</name></action>
+            <action method="removeLinkByName"><name>autoresponderlists</name></action>
+            <action method="removeLinkByName"><name>enterprise_customerbalance</name></action>
+            <action method="removeLinkByName"><name>enterprise_reward</name></action>
+            <action method="removeLinkByName"><name>facebookconnect</name></action>
+            <action method="setLinkOrder"><link>account</link><order>0</order></action>
+            <action method="setLinkOrder"><link>orders</link><order>1</order></action>
+            <action method="setLinkOrder"><link>account_edit</link><order>2</order></action>
+            <action method="setLinkOrder"><link>address_book</link><order>3</order></action>
+            <action method="setLinkOrder"><link>newsletter</link><order>4</order></action>
+        </reference>
+
+        <reference name="banner">
+            <reference name="banner">
+                <block type="core/template" name="content_heading" template="aydus/cms/banner.phtml">
+                    <action method="setData"><name>content_heading</name><value>My Account</value></action>
+                </block>
+            </reference>
+        </reference>
+
+        <reference name="left">
+            <!-- Remove last compare product block. -->
+            <action method="unsetChild"><name>catalog.compare.sidebar</name></action>
+            <!-- Remove last ordered items block. -->
+            <action method="unsetChild"><name>reorder</name></action>
+        </reference>
+    </customer_account>
+    
+    <!-- Order Confirmation -->
+    <checkout_onepage_success>
+        <reference name="checkout.success">
+            <!-- Add new CMS block: Checkout success / order confirmation quote. -->
+            <block type="page/html_wrapper" name="checkoutSuccessQuoteContainer" translate="label">
+                <label>Checkout Success Quote Container</label>
+                <action method="setElementClass"><value>checkout-success-quote-container</value></action>
+                <block type="cms/block" name="checkoutSuccessQuote">
+                    <action method="setBlockId">
+                        <block_id>checkout_success_quote</block_id>
+                    </action>
+                </block>
+            </block>
+        </reference>
+        <!--
+<reference name="before_body_end">
+			<block name="conversion_tracking" template="checkout/conversion_tracking.phtml" type="core/template" />
+		</reference>
+-->
+    </checkout_onepage_success>
+
+    <!-- Footer -->
+    <default>
+        <!--<block type="page/html_footer" name="footer" as="footer" template="page/html/footer.phtml">
+            <label>Page Footer</label>
+            <action method="setElementClass"><value>bottom-container</value></action>
+        </block>-->
+        <block type="page/template_links" name="footer_links" as="footer_links" template="page/template/links.phtml">
+            <action method="unsetChild"><name>Quick Links</name></action>
+        </block>
+        <block type="page/template_links" name="footer_links2" as="footer_links2" template="page/template/links.phtml">
+            <action method="unsetChild"><name>Account</name></action>
+        </block>
+        <block type="cms/block" name="cms_footer_links" before="footer_links">
+            <action method="unsetChild"><block_id>footer_links_company</block_id></action>
+        </block>
+        <reference name="footer">
+            <block type="page/template_links" name="footer_links_aydus" as="footer_links_aydus" template="aydus/footer/links.phtml">
+                <action method="setTitle"><name>Hello</name></action>
+            </block>
+        </reference>
+    </default>
+    <set_root_template>
+        <reference name="root">
+             <action method="setTemplate"><template>page/column.phtml</template></action>
+        </reference>
+    </set_root_template>
+</layout>

@@ -1,0 +1,294 @@
+6464,2906474701,0,admin_login,"2014-10-10 15:35:17",login,"a:1:{s:7:""general"";N;}",success,davidt@aydus.com,7,adminhtml_index_index,,173.61.72.205
+6465,2906474701,0,sales_orders,"2014-10-10 15:35:33",view,"a:2:{s:7:""general"";s:2:""34"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:34;a:1:{s:12:""increment_id"";s:9:""100000044"";}}}}",success,davidt@aydus.com,7,adminhtml_sales_order_view,,173.61.72.205
+6466,2906474701,0,adminhtml_system_config,"2014-10-10 15:37:09",view,"a:1:{s:7:""general"";s:7:""payment"";}",success,davidt@aydus.com,7,adminhtml_system_config_edit,,173.61.72.205
+6467,2906474701,0,adminhtml_system_config,"2014-10-10 15:37:49",save,"a:1:{s:7:""general"";s:7:""payment"";}",success,davidt@aydus.com,7,adminhtml_system_config_save,,173.61.72.205
+6468,1077703917,0,admin_login,"2014-10-10 15:42:13",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_index,,64.60.116.237
+6469,1077703917,0,adminhtml_system_config,"2014-10-10 15:52:54",view,"a:1:{s:7:""general"";s:3:""dev"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6470,1077703917,0,adminhtml_system_config,"2014-10-10 15:53:22",view,"a:1:{s:7:""general"";s:5:""admin"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6471,1077703917,0,admin_login,"2014-10-10 15:53:57",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_index,,64.60.116.237
+6472,1077703917,0,catalog_products,"2014-10-10 15:54:28",view,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6473,1077703917,0,adminhtml_system_config,"2014-10-10 15:54:39",view,"a:1:{s:7:""general"";s:6:""system"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6474,1077703917,0,adminhtml_system_config,"2014-10-10 15:55:20",view,"a:1:{s:7:""general"";s:8:""advanced"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6475,1077703917,0,adminhtml_system_config,"2014-10-10 15:57:28",view,"a:1:{s:7:""general"";s:6:""system"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6476,1077703917,0,adminhtml_system_config,"2014-10-10 15:57:43",view,"a:1:{s:7:""general"";s:5:""admin"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6477,1077703917,0,catalog_products,"2014-10-10 15:58:12",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6478,1077703917,0,index_management,"2014-10-10 15:58:36",massUpdate,"a:1:{s:7:""general"";s:1:""1"";}",success,jlivingston@herbdoc.com,4,adminhtml_process_massReindex,,64.60.116.237
+6479,1077703917,0,cache_management,"2014-10-10 15:58:46",save,"a:1:{s:7:""general"";s:69:""Cache types: eav, block_html, translate, collections, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6480,1077703917,0,admin_login,"2014-10-10 15:59:24",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_index_index,,64.60.116.237
+6481,1077703917,0,catalog_products,"2014-10-10 16:01:10",view,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6482,1077703917,0,catalog_products,"2014-10-10 16:01:18",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6483,1077703917,0,catalog_products,"2014-10-10 16:01:55",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6484,1077703917,0,cache_management,"2014-10-10 16:02:21",save,"a:1:{s:7:""general"";s:24:""Cache types: block_html "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6485,1077703917,0,index_management,"2014-10-10 16:02:28",reindex_process,"a:1:{s:7:""general"";i:1;}",success,jlivingston@herbdoc.com,4,adminhtml_process_reindexProcess,,64.60.116.237
+6486,1077703917,0,catalog_products,"2014-10-10 16:02:30",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6487,1077703917,0,cache_management,"2014-10-10 16:02:45",save,"a:1:{s:7:""general"";s:23:""Cache types: full_page "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6488,1077703917,0,cache_management,"2014-10-10 16:02:52",save,"a:1:{s:7:""general"";s:35:""Cache types: block_html, full_page "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6489,1077703917,0,adminhtml_system_config,"2014-10-10 16:03:27",view,"a:1:{s:7:""general"";s:6:""system"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6490,1077703917,0,adminhtml_system_config,"2014-10-10 16:04:30",view,"a:1:{s:7:""general"";s:3:""api"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6491,1077703917,0,catalog_products,"2014-10-10 16:04:38",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6492,1077703917,0,index_management,"2014-10-10 16:04:55",reindex_process,"a:1:{s:7:""general"";i:1;}",success,jlivingston@herbdoc.com,4,adminhtml_process_reindexProcess,,64.60.116.237
+6493,1077703917,0,cache_management,"2014-10-10 16:05:07",save,"a:1:{s:7:""general"";s:24:""Cache types: block_html "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6494,1077703917,0,cache_management,"2014-10-10 16:05:16",save,"a:1:{s:7:""general"";s:23:""Cache types: full_page "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massEnable,,64.60.116.237
+6495,1077703917,0,catalog_products,"2014-10-10 16:07:44",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6496,1077703917,0,catalog_products,"2014-10-10 16:24:23",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6497,1077703917,0,cache_management,"2014-10-10 16:24:58",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6498,1077703917,0,index_management,"2014-10-10 16:25:06",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,jlivingston@herbdoc.com,4,adminhtml_process_massReindex,,64.60.116.237
+6499,1077703917,0,catalog_products,"2014-10-10 16:27:22",view,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6500,1077703917,0,catalog_products,"2014-10-10 16:27:29",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6501,1077703917,0,cache_management,"2014-10-10 16:27:44",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6502,1077703917,0,index_management,"2014-10-10 16:27:51",massUpdate,"a:1:{s:7:""general"";s:4:""9, 1"";}",success,jlivingston@herbdoc.com,4,adminhtml_process_massReindex,,64.60.116.237
+6503,1077703917,0,catalog_products,"2014-10-10 16:27:57",view,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6504,1077703917,0,index_management,"2014-10-10 16:33:00",reindex_process,"a:1:{s:7:""general"";i:1;}",success,jlivingston@herbdoc.com,4,adminhtml_process_reindexProcess,,64.60.116.237
+6505,1077703917,0,catalog_products,"2014-10-10 16:33:55",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6506,1077703917,0,catalog_attributes,"2014-10-10 16:36:03",view,"a:1:{s:7:""general"";s:3:""184"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_attribute_edit,,64.60.116.237
+6507,1077703917,0,catalog_attributes,"2014-10-10 16:36:07",delete,"a:1:{s:7:""general"";s:3:""184"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_attribute_delete,,64.60.116.237
+6508,1077703917,0,catalog_products,"2014-10-10 16:36:54",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6509,1077703917,0,catalog_attributes,"2014-10-10 16:37:45",view,"a:1:{s:7:""general"";s:2:""72"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_attribute_edit,,64.60.116.237
+6510,1077703917,0,catalog_attributes,"2014-10-10 16:37:49",view,"a:1:{s:7:""general"";s:2:""92"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_attribute_edit,,64.60.116.237
+6511,1077703917,0,catalog_attributes,"2014-10-10 16:38:22",save,"a:1:{s:7:""general"";s:3:""185"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_attribute_save,,64.60.116.237
+6512,1077703917,0,catalog_attributesets,"2014-10-10 16:38:39",view,"a:1:{s:7:""general"";s:1:""4"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_set_edit,,64.60.116.237
+6513,1077703917,0,catalog_attributesets,"2014-10-10 16:38:45",save,"a:1:{s:7:""general"";s:1:""4"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_set_save,,64.60.116.237
+6514,1077703917,0,cache_management,"2014-10-10 16:40:14",flush,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_cache_flushAll,,64.60.116.237
+6515,1077703917,0,index_management,"2014-10-10 16:40:32",reindex_process,"a:1:{s:7:""general"";i:1;}",success,jlivingston@herbdoc.com,4,adminhtml_process_reindexProcess,,64.60.116.237
+6516,1077703917,0,catalog_products,"2014-10-10 16:42:52",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6517,1077703917,0,cache_management,"2014-10-10 16:43:12",save,"a:1:{s:7:""general"";s:51:""Cache types: translate, block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6518,1077703917,0,index_management,"2014-10-10 16:43:19",massUpdate,"a:1:{s:7:""general"";s:1:""1"";}",success,jlivingston@herbdoc.com,4,adminhtml_process_massReindex,,64.60.116.237
+6519,1077703917,0,catalog_products,"2014-10-10 16:44:22",view,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6520,1077703917,0,catalog_products,"2014-10-10 16:44:28",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6521,1077703917,0,cache_management,"2014-10-10 16:46:47",save,"a:1:{s:7:""general"";s:24:""Cache types: block_html "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6522,1077703917,0,index_management,"2014-10-10 16:46:52",reindex_process,"a:1:{s:7:""general"";i:1;}",success,jlivingston@herbdoc.com,4,adminhtml_process_reindexProcess,,64.60.116.237
+6523,1077703917,0,cache_management,"2014-10-10 16:57:11",save,"a:1:{s:7:""general"";s:69:""Cache types: eav, translate, layout, config, block_html, collections "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6524,1077703917,0,catalog_products,"2014-10-10 16:59:31",view,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6525,1077703917,0,admin_login,"2014-10-10 17:00:20",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_index_index,,64.60.116.237
+6526,1077703917,0,catalog_products,"2014-10-10 17:00:43",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6527,1077703917,0,cache_management,"2014-10-10 17:01:08",save,"a:1:{s:7:""general"";s:24:""Cache types: block_html "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6528,1077703917,0,index_management,"2014-10-10 17:01:17",massUpdate,"a:1:{s:7:""general"";s:1:""1"";}",success,jlivingston@herbdoc.com,4,adminhtml_process_massReindex,,64.60.116.237
+6529,1077703917,0,catalog_products,"2014-10-10 17:04:17",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6530,1077703917,0,catalog_products,"2014-10-10 17:05:17",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6531,1077703917,0,cache_management,"2014-10-10 17:05:26",save,"a:1:{s:7:""general"";s:51:""Cache types: translate, block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6532,1077703917,0,index_management,"2014-10-10 17:05:32",massUpdate,"a:1:{s:7:""general"";s:1:""1"";}",success,jlivingston@herbdoc.com,4,adminhtml_process_massReindex,,64.60.116.237
+6533,1077703917,0,catalog_products,"2014-10-10 17:06:08",view,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6534,1077703917,0,catalog_products,"2014-10-10 17:06:17",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6535,1077703917,0,admin_login,"2014-10-10 17:06:23",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_index_index,,64.60.116.237
+6536,1077703917,0,cache_management,"2014-10-10 17:09:24",save,"a:1:{s:7:""general"";s:24:""Cache types: block_html "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6537,1077703917,0,index_management,"2014-10-10 17:09:45",reindex_process,"a:1:{s:7:""general"";i:1;}",success,jlivingston@herbdoc.com,4,adminhtml_process_reindexProcess,,64.60.116.237
+6538,1077703917,0,index_management,"2014-10-10 17:11:37",reindex_process,"a:1:{s:7:""general"";i:1;}",success,jlivingston@herbdoc.com,4,adminhtml_process_reindexProcess,,64.60.116.237
+6539,1077703917,0,adminhtml_system_config,"2014-10-10 17:12:20",view,"a:1:{s:7:""general"";s:6:""system"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6540,1077703917,0,adminhtml_system_config,"2014-10-10 17:12:59",view,"a:1:{s:7:""general"";s:16:""index_management"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6541,1077703917,0,adminhtml_system_config,"2014-10-10 17:13:27",view,"a:1:{s:7:""general"";s:3:""dev"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6542,1077703917,0,adminhtml_system_config,"2014-10-10 17:13:56",view,"a:1:{s:7:""general"";s:8:""advanced"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6543,1077703917,0,adminhtml_system_config,"2014-10-10 17:15:01",view,"a:1:{s:7:""general"";s:5:""admin"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6544,1077703917,0,adminhtml_system_config,"2014-10-10 17:16:01",view,"a:1:{s:7:""general"";s:7:""catalog"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6545,1077703917,0,catalog_products,"2014-10-10 17:18:16",view,"a:1:{s:7:""general"";s:3:""660"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6546,1077703917,0,catalog_products,"2014-10-10 17:18:25",save,"a:1:{s:7:""general"";s:3:""660"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6547,1077703917,0,cache_management,"2014-10-10 17:27:33",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6548,1077703917,0,index_management,"2014-10-10 17:39:23",reindex_process,"a:1:{s:7:""general"";i:1;}",success,jlivingston@herbdoc.com,4,adminhtml_process_reindexProcess,,64.60.116.237
+6549,1077703917,0,index_management,"2014-10-10 17:41:42",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,jlivingston@herbdoc.com,4,adminhtml_process_massReindex,,64.60.116.237
+6550,1077703917,0,cache_management,"2014-10-10 17:41:51",save,"a:1:{s:7:""general"";s:51:""Cache types: config, layout, block_html, translate "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6551,1077703917,0,catalog_products,"2014-10-10 17:48:18",view,"a:1:{s:7:""general"";s:3:""591"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6552,1077703917,0,catalog_products,"2014-10-10 17:49:27",save,"a:1:{s:7:""general"";s:3:""591"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6553,1077703917,0,index_management,"2014-10-10 17:54:11",reindex_process,"a:1:{s:7:""general"";i:1;}",success,jlivingston@herbdoc.com,4,adminhtml_process_reindexProcess,,64.60.116.237
+6554,1077703917,0,cache_management,"2014-10-10 17:54:22",save,"a:1:{s:7:""general"";s:24:""Cache types: block_html "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6555,1077703917,0,admin_login,"2014-10-10 17:59:12",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_cms_page_edit,,64.60.116.237
+6556,1077703917,0,cache_management,"2014-10-10 17:59:30",save,"a:1:{s:7:""general"";s:40:""Cache types: config, layout, block_html "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6557,1077703917,0,index_management,"2014-10-10 17:59:58",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,jlivingston@herbdoc.com,4,adminhtml_process_massReindex,,64.60.116.237
+6558,1077703917,0,catalog_products,"2014-10-10 18:12:02",view,"a:1:{s:7:""general"";s:3:""660"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6559,1077703917,0,catalog_products,"2014-10-10 18:12:09",save,"a:1:{s:7:""general"";s:3:""660"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6560,1077703917,0,adminhtml_system_config,"2014-10-10 18:13:39",view,"a:1:{s:7:""general"";s:16:""index_management"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6561,1077703917,0,adminhtml_system_config,"2014-10-10 18:13:52",view,"a:1:{s:7:""general"";s:7:""catalog"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_edit,,64.60.116.237
+6562,1077703917,0,adminhtml_system_config,"2014-10-10 18:14:05",save,"a:1:{s:7:""general"";s:7:""catalog"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_config_save,,64.60.116.237
+6563,1077703917,0,catalog_products,"2014-10-10 18:17:40",massUpdate,"a:1:{s:7:""general"";s:18:""Attributes Updated"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_massStatus,,64.60.116.237
+6564,1077703917,0,cache_management,"2014-10-10 18:19:30",save,"a:1:{s:7:""general"";s:40:""Cache types: config, layout, block_html "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6565,1077703917,0,cache_management,"2014-10-10 18:19:33",clean,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_cache_cleanImages,,64.60.116.237
+6566,1077703917,0,cache_management,"2014-10-10 18:19:37",clean,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_cache_cleanImages,,64.60.116.237
+6567,1077703917,0,cache_management,"2014-10-10 18:19:50",save,"a:1:{s:7:""general"";s:23:""Cache types: full_page "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6568,1077703917,0,catalog_products,"2014-10-10 18:28:23",view,"a:1:{s:7:""general"";s:3:""652"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6569,1077703917,0,catalog_products,"2014-10-10 18:28:33",save,"a:1:{s:7:""general"";s:3:""652"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6570,1077703917,0,catalog_products,"2014-10-10 18:30:22",save,"a:1:{s:7:""general"";s:3:""526"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6571,1077703917,0,catalog_products,"2014-10-10 18:30:38",save,"a:1:{s:7:""general"";s:3:""590"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6572,1077703917,0,catalog_products,"2014-10-10 18:30:48",save,"a:1:{s:7:""general"";s:3:""558"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6573,1077703917,0,catalog_products,"2014-10-10 18:30:57",save,"a:1:{s:7:""general"";s:3:""659"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6574,1077703917,0,catalog_products,"2014-10-10 18:31:06",save,"a:1:{s:7:""general"";s:3:""583"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6575,1077703917,0,catalog_products,"2014-10-10 18:31:15",save,"a:1:{s:7:""general"";s:3:""551"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6576,1077703917,0,catalog_products,"2014-10-10 18:31:24",save,"a:1:{s:7:""general"";s:3:""576"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6577,1077703917,0,catalog_products,"2014-10-10 18:31:33",save,"a:1:{s:7:""general"";s:3:""544"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6578,1077703917,0,catalog_products,"2014-10-10 18:31:42",save,"a:1:{s:7:""general"";s:3:""645"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6579,1077703917,0,catalog_products,"2014-10-10 18:31:51",save,"a:1:{s:7:""general"";s:3:""569"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6580,1077703917,0,catalog_products,"2014-10-10 18:31:59",save,"a:1:{s:7:""general"";s:3:""537"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6581,1077703917,0,catalog_products,"2014-10-10 18:32:09",save,"a:1:{s:7:""general"";s:3:""601"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6582,1077703917,0,catalog_products,"2014-10-10 18:32:18",save,"a:1:{s:7:""general"";s:3:""530"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6583,1077703917,0,catalog_products,"2014-10-10 18:32:26",save,"a:1:{s:7:""general"";s:3:""594"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6584,1077703917,0,catalog_products,"2014-10-10 18:32:41",save,"a:1:{s:7:""general"";s:3:""562"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6585,1077703917,0,catalog_products,"2014-10-10 18:32:49",save,"a:1:{s:7:""general"";s:3:""587"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6586,1077703917,0,catalog_products,"2014-10-10 18:32:59",save,"a:1:{s:7:""general"";s:3:""555"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6587,1077703917,0,catalog_attributes,"2014-10-10 18:33:38",view,"a:1:{s:7:""general"";s:3:""185"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_attribute_edit,,64.60.116.237
+6588,1077703917,0,catalog_attributes,"2014-10-10 18:34:16",save,"a:1:{s:7:""general"";s:3:""185"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_attribute_save,,64.60.116.237
+6589,1077703917,0,catalog_products,"2014-10-10 18:34:46",save,"a:1:{s:7:""general"";s:3:""656"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6590,1077703917,0,admin_login,"2014-10-10 18:40:34",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_index,,64.60.116.237
+6591,1077703917,0,catalog_products,"2014-10-10 18:41:01",view,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6592,1077703917,0,catalog_products,"2014-10-10 18:41:59",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6593,1077703917,0,catalog_products,"2014-10-10 18:42:54",save,"a:1:{s:7:""general"";s:3:""550"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6594,1077703917,0,cache_management,"2014-10-10 18:49:31",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6595,1077703917,0,index_management,"2014-10-10 18:49:40",massUpdate,"a:1:{s:7:""general"";s:1:""1"";}",success,jlivingston@herbdoc.com,4,adminhtml_process_massReindex,,64.60.116.237
+6596,1077703917,0,catalog_products,"2014-10-10 18:55:35",view,"a:1:{s:7:""general"";s:3:""586"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6597,1077703917,0,catalog_products,"2014-10-10 18:59:07",save,"a:1:{s:7:""general"";s:3:""586"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6598,1077703917,0,catalog_products,"2014-10-10 19:00:33",view,"a:1:{s:7:""general"";s:3:""585"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6599,1077703917,0,catalog_products,"2014-10-10 19:01:00",view,"a:1:{s:7:""general"";s:3:""585"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6600,1077703917,0,catalog_products,"2014-10-10 19:01:05",view,"a:1:{s:7:""general"";s:3:""586"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6601,1077703917,0,catalog_products,"2014-10-10 19:01:30",save,"a:1:{s:7:""general"";s:3:""585"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6602,1077703917,0,catalog_products,"2014-10-10 19:02:12",view,"a:1:{s:7:""general"";s:3:""584"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6603,1077703917,0,catalog_products,"2014-10-10 19:02:50",save,"a:1:{s:7:""general"";s:3:""584"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6604,1077703917,0,catalog_products,"2014-10-10 19:03:18",view,"a:1:{s:7:""general"";s:3:""589"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6605,1077703917,0,cache_management,"2014-10-10 19:22:54",save,"a:1:{s:7:""general"";s:51:""Cache types: translate, block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6606,1077703917,0,index_management,"2014-10-10 19:23:01",massUpdate,"a:1:{s:7:""general"";s:4:""9, 1"";}",success,jlivingston@herbdoc.com,4,adminhtml_process_massReindex,,64.60.116.237
+6607,1077703917,0,admin_login,"2014-10-10 19:24:44",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_index,,64.60.116.237
+6608,1077703917,0,catalog_products,"2014-10-10 19:36:03",view,"a:1:{s:7:""general"";s:3:""586"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6609,1077703917,0,catalog_products,"2014-10-10 19:36:20",view,"a:1:{s:7:""general"";s:3:""586"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6610,1077703917,0,catalog_products,"2014-10-10 19:36:43",view,"a:1:{s:7:""general"";s:3:""585"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6611,1077703917,0,catalog_products,"2014-10-10 19:37:10",view,"a:1:{s:7:""general"";s:3:""584"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6612,1077703917,0,admin_login,"2014-10-10 19:38:00",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6613,1077703917,0,catalog_products,"2014-10-10 19:43:30",view,"a:1:{s:7:""general"";s:3:""589"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6614,1077703917,0,catalog_products,"2014-10-10 19:44:34",save,"a:1:{s:7:""general"";s:3:""589"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6615,1077703917,0,cache_management,"2014-10-10 19:44:58",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6616,1077703917,0,index_management,"2014-10-10 19:45:04",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,jlivingston@herbdoc.com,4,adminhtml_process_massReindex,,64.60.116.237
+6617,1077703917,0,catalog_products,"2014-10-10 19:46:33",view,"a:1:{s:7:""general"";s:3:""534"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6618,1077703917,0,catalog_products,"2014-10-10 19:46:38",view,"a:1:{s:7:""general"";s:3:""591"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6619,1077703917,0,catalog_products,"2014-10-10 19:46:48",view,"a:1:{s:7:""general"";s:3:""590"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6620,1077703917,0,catalog_products,"2014-10-10 19:46:51",view,"a:1:{s:7:""general"";s:3:""589"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6621,1077703917,0,catalog_products,"2014-10-10 19:47:09",save,"a:1:{s:7:""general"";s:3:""589"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6622,1077703917,0,cache_management,"2014-10-10 19:47:16",save,"a:1:{s:7:""general"";s:51:""Cache types: translate, block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6623,1077703917,0,index_management,"2014-10-10 19:47:24",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,jlivingston@herbdoc.com,4,adminhtml_process_massReindex,,64.60.116.237
+6624,1077703917,0,catalog_products,"2014-10-10 19:47:40",view,"a:1:{s:7:""general"";s:3:""589"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6625,1077703917,0,catalog_products,"2014-10-10 19:48:33",save,"a:1:{s:7:""general"";s:3:""589"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6626,1077703917,0,catalog_products,"2014-10-10 19:49:00",save,"a:1:{s:7:""general"";s:3:""589"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6627,1077703917,0,catalog_products,"2014-10-10 19:51:40",massUpdate,"a:1:{s:7:""general"";s:18:""Attributes Updated"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_action_attribute_save,,64.60.116.237
+6628,1077703917,0,catalog_products,"2014-10-10 19:58:51",view,"a:1:{s:7:""general"";s:3:""591"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6629,1077703917,0,catalog_products,"2014-10-10 20:16:32",save,"a:1:{s:7:""general"";s:3:""591"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6630,1077703917,0,catalog_products,"2014-10-10 20:17:54",view,"a:1:{s:7:""general"";s:3:""660"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6631,1077703917,0,catalog_products,"2014-10-10 20:17:54",view,"a:1:{s:7:""general"";s:3:""593"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6632,1077703917,0,admin_login,"2014-10-10 20:19:54",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_index,,64.60.116.237
+6633,1077703917,0,cms_pages,"2014-10-10 20:20:50",view,"a:1:{s:7:""general"";s:2:""11"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_page_edit,,64.60.116.237
+6634,1077703917,0,cms_blocks,"2014-10-10 20:21:36",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6635,1077703917,0,cms_blocks,"2014-10-10 20:24:42",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_save,,64.60.116.237
+6636,1077703917,0,catalog_products,"2014-10-10 20:24:42",save,"a:1:{s:7:""general"";s:3:""593"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6637,1077703917,0,cms_blocks,"2014-10-10 20:25:15",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6638,1077703917,0,cache_management,"2014-10-10 20:26:04",save,"a:1:{s:7:""general"";s:51:""Cache types: block_html, layout, config, translate "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6639,1077703917,0,cms_blocks,"2014-10-10 20:26:23",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_save,,64.60.116.237
+6640,1077703917,0,index_management,"2014-10-10 20:26:48",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,jlivingston@herbdoc.com,4,adminhtml_process_massReindex,,64.60.116.237
+6641,1077703917,0,cms_blocks,"2014-10-10 20:27:09",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6642,1077703917,0,cms_blocks,"2014-10-10 20:27:42",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_save,,64.60.116.237
+6643,1077703917,0,admin_login,"2014-10-10 20:27:48",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_index,,64.60.116.237
+6644,1077703917,0,cms_blocks,"2014-10-10 20:27:58",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6645,1077703917,0,catalog_products,"2014-10-10 20:28:14",view,"a:1:{s:7:""general"";s:3:""592"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6646,1077703917,0,catalog_products,"2014-10-10 20:28:23",view,"a:1:{s:7:""general"";s:3:""592"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6647,1077703917,0,catalog_products,"2014-10-10 20:28:28",view,"a:1:{s:7:""general"";s:3:""593"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6648,1077703917,0,cms_blocks,"2014-10-10 20:28:29",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_save,,64.60.116.237
+6649,1077703917,0,cms_blocks,"2014-10-10 20:28:45",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6650,1077703917,0,catalog_products,"2014-10-10 20:28:47",save,"a:1:{s:7:""general"";s:3:""592"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6651,1077703917,0,cache_management,"2014-10-10 20:29:12",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6652,1077703917,0,catalog_products,"2014-10-10 20:29:19",save,"a:1:{s:7:""general"";s:3:""593"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6653,1077703917,0,cms_blocks,"2014-10-10 20:29:54",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6654,1077703917,0,cms_blocks,"2014-10-10 20:30:25",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_save,,64.60.116.237
+6655,1077703917,0,adminhtml_system_email_template,"2014-10-10 20:30:47",edit,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_email_template_edit,,64.60.116.237
+6656,1077703917,0,cache_management,"2014-10-10 20:31:03",save,"a:1:{s:7:""general"";s:40:""Cache types: config, layout, block_html "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6657,1077703917,0,cms_blocks,"2014-10-10 20:33:26",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6658,1077703917,0,adminhtml_system_email_template,"2014-10-10 20:33:34",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_email_template_save,,64.60.116.237
+6659,1077703917,0,cms_blocks,"2014-10-10 20:33:42",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_save,,64.60.116.237
+6660,1077703917,0,cache_management,"2014-10-10 20:33:53",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6661,1077703917,0,adminhtml_system_email_template,"2014-10-10 20:33:59",edit,"a:1:{s:7:""general"";s:1:""8"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_email_template_edit,,64.60.116.237
+6662,1077703917,0,adminhtml_system_email_template,"2014-10-10 20:34:11",edit,"a:1:{s:7:""general"";s:1:""9"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_email_template_edit,,64.60.116.237
+6663,1077703917,0,adminhtml_system_email_template,"2014-10-10 20:34:57",edit,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_email_template_edit,,64.60.116.237
+6664,1077703917,0,adminhtml_system_email_template,"2014-10-10 20:36:23",edit,"a:1:{s:7:""general"";s:1:""7"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_email_template_edit,,64.60.116.237
+6665,1077703917,0,cms_blocks,"2014-10-10 20:36:32",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6666,1077703917,0,adminhtml_system_email_template,"2014-10-10 20:36:39",save,"a:1:{s:7:""general"";s:1:""7"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_email_template_save,,64.60.116.237
+6667,1077703917,0,cms_blocks,"2014-10-10 20:37:20",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_save,,64.60.116.237
+6668,1077703917,0,adminhtml_system_email_template,"2014-10-10 20:37:51",edit,"a:1:{s:7:""general"";s:2:""19"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_email_template_edit,,64.60.116.237
+6669,1077703917,0,cache_management,"2014-10-10 20:37:51",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6670,1077703917,0,cms_blocks,"2014-10-10 20:40:19",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6671,1077703917,0,adminhtml_system_email_template,"2014-10-10 20:40:42",save,"a:1:{s:7:""general"";s:2:""19"";}",success,jlivingston@herbdoc.com,4,adminhtml_system_email_template_save,,64.60.116.237
+6672,1077703917,0,catalog_products,"2014-10-10 20:41:20",save,"a:1:{s:7:""general"";s:3:""553"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6673,1077703917,0,catalog_products,"2014-10-10 20:42:41",save,"a:1:{s:7:""general"";s:3:""553"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6674,1077703917,0,cms_blocks,"2014-10-10 20:43:06",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_save,,64.60.116.237
+6675,1077703917,0,catalog_products,"2014-10-10 20:43:17",save,"a:1:{s:7:""general"";s:3:""553"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6676,1077703917,0,cache_management,"2014-10-10 20:43:17",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6677,1077703917,0,catalog_products,"2014-10-10 20:43:55",view,"a:1:{s:7:""general"";s:3:""536"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6678,1077703917,0,cms_blocks,"2014-10-10 20:45:27",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6679,1077703917,0,cms_blocks,"2014-10-10 20:45:37",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_save,,64.60.116.237
+6680,1077703917,0,cache_management,"2014-10-10 20:45:51",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6681,1077703917,0,cms_blocks,"2014-10-10 20:50:59",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6682,1077703917,0,cms_blocks,"2014-10-10 20:51:11",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_save,,64.60.116.237
+6683,1077703917,0,cache_management,"2014-10-10 20:51:25",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6684,1077703917,0,cms_blocks,"2014-10-10 20:53:34",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6685,1077703917,0,cms_blocks,"2014-10-10 20:55:14",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_save,,64.60.116.237
+6686,1077703917,0,cache_management,"2014-10-10 20:55:25",save,"a:1:{s:7:""general"";s:40:""Cache types: config, layout, block_html "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6687,1077703917,0,cms_blocks,"2014-10-10 20:57:25",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6688,1077703917,0,cms_blocks,"2014-10-10 20:57:34",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_save,,64.60.116.237
+6689,1077703917,0,cache_management,"2014-10-10 20:57:47",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6690,1077703917,0,cms_blocks,"2014-10-10 21:02:51",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6691,1077703917,0,cms_blocks,"2014-10-10 21:03:01",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_save,,64.60.116.237
+6692,1077703917,0,cache_management,"2014-10-10 21:03:25",save,"a:1:{s:7:""general"";s:40:""Cache types: config, layout, block_html "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6693,1077703917,0,admin_login,"2014-10-10 21:26:40",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_index_index,,64.60.116.237
+6694,1077703917,0,catalog_products,"2014-10-10 21:29:23",massUpdate,"a:1:{s:7:""general"";s:18:""Attributes Updated"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_action_attribute_save,,64.60.116.237
+6695,1077703917,0,catalog_products,"2014-10-10 21:30:18",massUpdate,"a:1:{s:7:""general"";s:18:""Attributes Updated"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_action_attribute_save,,64.60.116.237
+6696,1077703917,0,catalog_products,"2014-10-10 21:32:31",view,"a:1:{s:7:""general"";s:3:""660"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6697,1077703917,0,admin_login,"2014-10-10 22:03:01",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_cache_index,,64.60.116.237
+6698,1077703917,0,admin_login,"2014-10-10 22:03:06",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6699,1077703917,0,cms_blocks,"2014-10-10 22:03:16",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6700,1077703917,0,cms_blocks,"2014-10-10 22:03:35",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_save,,64.60.116.237
+6701,1077703917,0,cache_management,"2014-10-10 22:04:22",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6702,1077703917,0,admin_login,"2014-10-10 22:11:34",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_index,,64.60.116.237
+6703,1077703917,0,cms_pages,"2014-10-10 22:17:48",view,"a:1:{s:7:""general"";s:2:""21"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_page_edit,,64.60.116.237
+6704,1077703917,0,cms_pages,"2014-10-10 22:18:16",save,"a:1:{s:7:""general"";s:2:""21"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_page_save,,64.60.116.237
+6705,1077703917,0,cache_management,"2014-10-10 22:18:38",save,"a:1:{s:7:""general"";s:40:""Cache types: layout, config, block_html "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6706,1077703917,0,cms_pages,"2014-10-10 22:19:08",save,"a:1:{s:7:""general"";s:2:""21"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_page_save,,64.60.116.237
+6707,1077703917,0,catalog_products,"2014-10-10 22:19:55",view,"a:1:{s:7:""general"";s:3:""557"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6708,1077703917,0,catalog_products,"2014-10-10 22:20:15",save,"a:1:{s:7:""general"";s:3:""557"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6709,1077703917,0,catalog_products,"2014-10-10 22:20:54",view,"a:1:{s:7:""general"";s:3:""572"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6710,1077703917,0,catalog_products,"2014-10-10 22:23:01",view,"a:1:{s:7:""general"";s:3:""647"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6711,1077703917,0,catalog_products,"2014-10-10 22:23:51",save,"a:1:{s:7:""general"";s:3:""647"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6712,1077703917,0,cache_management,"2014-10-10 22:24:15",save,"a:1:{s:7:""general"";s:40:""Cache types: config, layout, block_html "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6713,1077703917,0,index_management,"2014-10-10 22:24:22",massUpdate,"a:1:{s:7:""general"";s:1:""1"";}",success,jlivingston@herbdoc.com,4,adminhtml_process_massReindex,,64.60.116.237
+6714,1077703917,0,catalog_products,"2014-10-10 22:25:46",save,"a:1:{s:7:""general"";s:3:""647"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6715,1077703917,0,catalog_products,"2014-10-10 22:26:56",save,"a:1:{s:7:""general"";s:3:""551"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6716,1077703917,0,catalog_products,"2014-10-10 22:27:27",save,"a:1:{s:7:""general"";s:3:""551"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6717,1077703917,0,catalog_products,"2014-10-10 22:27:56",view,"a:1:{s:7:""general"";s:3:""534"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6718,1077703917,0,catalog_products,"2014-10-10 22:28:01",view,"a:1:{s:7:""general"";s:3:""536"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6719,1077703917,0,catalog_products,"2014-10-10 22:28:02",view,"a:1:{s:7:""general"";s:3:""551"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6720,1077703917,0,catalog_products,"2014-10-10 22:28:06",view,"a:1:{s:7:""general"";s:3:""551"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6721,1077703917,0,catalog_products,"2014-10-10 22:28:13",view,"a:1:{s:7:""general"";s:3:""551"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6722,1077703917,0,cms_blocks,"2014-10-10 22:30:58",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6723,1077703917,0,catalog_products,"2014-10-10 22:34:50",save,"a:1:{s:7:""general"";s:3:""551"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6724,1077703917,0,catalog_products,"2014-10-10 22:38:08",view,"a:1:{s:7:""general"";s:3:""552"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6725,1077703917,0,catalog_products,"2014-10-10 22:38:25",save,"a:1:{s:7:""general"";s:3:""552"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6726,1077703917,0,catalog_products,"2014-10-10 22:38:52",save,"a:1:{s:7:""general"";s:3:""552"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6727,1077703917,0,catalog_products,"2014-10-10 22:40:24",view,"a:1:{s:7:""general"";s:3:""556"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6728,1077703917,0,catalog_products,"2014-10-10 22:40:29",view,"a:1:{s:7:""general"";s:3:""555"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6729,1077703917,0,catalog_products,"2014-10-10 22:40:34",view,"a:1:{s:7:""general"";s:3:""555"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6730,1077703917,0,catalog_products,"2014-10-10 22:40:38",view,"a:1:{s:7:""general"";s:3:""554"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6731,1077703917,0,catalog_products,"2014-10-10 22:50:41",save,"a:1:{s:7:""general"";s:3:""554"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6732,1077703917,0,cache_management,"2014-10-10 22:52:12",clean,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_cache_cleanMedia,,64.60.116.237
+6733,1077703917,0,cache_management,"2014-10-10 22:57:41",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6734,1077703917,0,cache_management,"2014-10-10 22:57:47",clean,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_cache_cleanMedia,,64.60.116.237
+6735,1077703917,0,catalog_products,"2014-10-10 22:59:01",save,"a:1:{s:7:""general"";s:3:""554"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6736,1077703917,0,catalog_products,"2014-10-10 22:59:22",save,"a:1:{s:7:""general"";s:3:""555"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6737,1077703917,0,catalog_products,"2014-10-10 22:59:31",save,"a:1:{s:7:""general"";s:3:""556"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_save,,64.60.116.237
+6738,1077703917,0,cache_management,"2014-10-10 23:11:20",clean,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_cache_cleanMedia,,64.60.116.237
+6739,1077703917,0,cache_management,"2014-10-10 23:11:28",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6740,1077703917,0,catalog_products,"2014-10-10 23:18:31",view,"a:1:{s:7:""general"";s:3:""533"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6741,1077703917,0,admin_login,"2014-10-10 23:42:22",login,"a:1:{s:7:""general"";N;}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_index,,64.60.116.237
+6742,1077703917,0,cms_pages,"2014-10-10 23:42:36",view,"a:1:{s:7:""general"";s:2:""18"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_page_edit,,64.60.116.237
+6743,1077703917,0,enterprise_banner,"2014-10-10 23:43:10",view,"a:1:{s:7:""general"";s:1:""4"";}",success,jlivingston@herbdoc.com,4,adminhtml_banner_edit,,64.60.116.237
+6744,1077703917,0,cms_blocks,"2014-10-10 23:44:09",view,"a:1:{s:7:""general"";s:2:""22"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6745,1077703917,0,cache_management,"2014-10-10 23:50:35",save,"a:1:{s:7:""general"";s:51:""Cache types: translate, block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6746,1077703917,0,cache_management,"2014-10-11 00:04:41",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6747,1077703917,0,cache_management,"2014-10-11 00:06:13",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6748,1077703917,0,cache_management,"2014-10-11 00:07:29",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6749,1077703917,0,cache_management,"2014-10-11 00:12:15",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6750,1077703917,0,catalog_products,"2014-10-11 00:14:10",view,"a:1:{s:7:""general"";s:3:""604"";}",success,jlivingston@herbdoc.com,4,adminhtml_catalog_product_edit,,64.60.116.237
+6751,1077703917,0,cms_blocks,"2014-10-11 00:25:57",view,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_edit,,64.60.116.237
+6752,1077703917,0,cms_blocks,"2014-10-11 00:26:38",save,"a:1:{s:7:""general"";s:1:""6"";}",success,jlivingston@herbdoc.com,4,adminhtml_cms_block_save,,64.60.116.237
+6753,1800228916,0,admin_login,"2014-10-11 00:26:41",login,"a:1:{s:7:""general"";N;}",success,garrison@aydus.com,5,adminhtml_index_index,,107.77.80.52
+6754,1077703917,0,cache_management,"2014-10-11 00:26:54",save,"a:1:{s:7:""general"";s:40:""Cache types: config, layout, block_html "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6755,1800228916,0,catalog_products,"2014-10-11 00:28:40",view,"a:1:{s:7:""general"";s:3:""588"";}",success,garrison@aydus.com,5,adminhtml_catalog_product_edit,,107.77.80.52
+6756,1077703917,0,cache_management,"2014-10-11 00:43:21",save,"a:1:{s:7:""general"";s:40:""Cache types: block_html, layout, config "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237
+6757,1077703917,0,cache_management,"2014-10-11 00:43:58",save,"a:1:{s:7:""general"";s:40:""Cache types: config, layout, block_html "";}",success,jlivingston@herbdoc.com,4,adminhtml_cache_massRefresh,,64.60.116.237

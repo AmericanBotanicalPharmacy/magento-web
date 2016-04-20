@@ -1,0 +1,64 @@
+23697,1077703917,0,admin_login,"2015-10-26 18:00:53",login,"a:1:{s:7:""general"";N;}",success,vaughn,,adminhtml_index_index,,64.60.116.237
+23698,1077703917,0,admin_login,"2015-10-26 18:57:17",login,"a:1:{s:7:""general"";N;}",success,vaughn,,adminhtml_sales_order_index,,64.60.116.237
+23699,1077703917,0,cms_blocks,"2015-10-26 18:57:46",view,"a:1:{s:7:""general"";s:2:""20"";}",success,vaughn,,adminhtml_cms_block_edit,,64.60.116.237
+23700,1077703917,0,cms_blocks,"2015-10-26 19:16:10",save,"a:1:{s:7:""general"";s:2:""20"";}",success,vaughn,,adminhtml_cms_block_save,,64.60.116.237
+23701,1077703917,0,cms_blocks,"2015-10-26 19:16:10",view,"a:1:{s:7:""general"";s:2:""20"";}",success,vaughn,,adminhtml_cms_block_edit,,64.60.116.237
+23702,1077703917,0,admin_login,"2015-10-26 21:22:36",login,"a:1:{s:7:""general"";N;}",failure,psingh,,adminhtml_sales_order_view,,64.60.116.237
+23703,1077703917,0,admin_login,"2015-10-26 21:22:42",login,"a:1:{s:7:""general"";N;}",success,psingh,,adminhtml_sales_order_view,,64.60.116.237
+23704,1077703917,0,catalog_products,"2015-10-26 21:34:11",view,"a:1:{s:7:""general"";s:3:""752"";}",success,psingh,,adminhtml_catalog_product_edit,,64.60.116.237
+23705,1077703917,0,index_management,"2015-10-26 21:34:27",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,,adminhtml_process_massReindex,,64.60.116.237
+23706,1077703917,0,admin_login,"2015-10-26 22:13:55",login,"a:1:{s:7:""general"";N;}",success,psingh,,adminhtml_process_list,,64.60.116.237
+23707,1077703917,0,index_management,"2015-10-26 22:18:40",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,,adminhtml_process_massReindex,,64.60.116.237
+23708,1077703917,0,admin_login,"2015-10-26 22:22:53",login,"a:1:{s:7:""general"";N;}",success,vaughn,,adminhtml_cms_block_edit,,64.60.116.237
+23709,1077703917,0,admin_login,"2015-10-26 23:57:13",login,"a:1:{s:7:""general"";N;}",success,psingh,,adminhtml_process_list,,64.60.116.237
+23710,1077703917,0,catalog_products,"2015-10-26 23:57:28",view,"a:1:{s:7:""general"";s:3:""766"";}",success,psingh,,adminhtml_catalog_product_edit,,64.60.116.237
+23711,3629571434,0,admin_login,"2015-10-27 00:36:18",login,"a:1:{s:7:""general"";N;}",success,eczar,15,adminhtml_index_index,,216.86.221.106
+23712,3629571434,0,index_management,"2015-10-27 00:36:27",view,"a:1:{s:7:""general"";s:1:""1"";}",success,eczar,15,adminhtml_process_edit,,216.86.221.106
+23713,3629571434,0,index_management,"2015-10-27 00:36:30",reindex_process,"a:1:{s:7:""general"";i:1;}",success,eczar,15,adminhtml_process_reindexProcess,,216.86.221.106
+23714,3629571434,0,cache_management,"2015-10-27 00:36:49",save,"a:1:{s:7:""general"";s:23:""Cache types: full_page "";}",success,eczar,15,adminhtml_cache_massEnable,,216.86.221.106
+23715,3629571434,0,cache_management,"2015-10-27 00:37:43",save,"a:1:{s:7:""general"";s:23:""Cache types: full_page "";}",success,eczar,15,adminhtml_cache_massDisable,,216.86.221.106
+23716,3629571434,0,cache_management,"2015-10-27 00:38:05",save,"a:1:{s:7:""general"";s:23:""Cache types: full_page "";}",success,eczar,15,adminhtml_cache_massEnable,,216.86.221.106
+23717,3629571434,0,cache_management,"2015-10-27 00:38:40",save,"a:1:{s:7:""general"";s:23:""Cache types: full_page "";}",success,eczar,15,adminhtml_cache_massDisable,,216.86.221.106
+23718,3629571434,0,cache_management,"2015-10-27 00:40:26",save,"a:1:{s:7:""general"";s:23:""Cache types: full_page "";}",success,eczar,15,adminhtml_cache_massEnable,,216.86.221.106
+23719,3629571434,0,cache_management,"2015-10-27 00:40:45",save,"a:1:{s:7:""general"";s:23:""Cache types: full_page "";}",success,eczar,15,adminhtml_cache_massDisable,,216.86.221.106
+23720,3629571434,0,cache_management,"2015-10-27 00:40:46",save,"a:1:{s:7:""general"";s:23:""Cache types: full_page "";}",success,eczar,15,adminhtml_cache_massDisable,,216.86.221.106
+23721,3629571434,0,index_management,"2015-10-27 00:44:45",view,"a:1:{s:7:""general"";s:1:""1"";}",success,eczar,15,adminhtml_process_edit,,216.86.221.106
+23722,1077703917,0,admin_login,"2015-10-27 15:04:32",login,"a:1:{s:7:""general"";N;}",success,vaughn,,adminhtml_index_index,,64.60.116.237
+23723,1077703917,0,sales_orders,"2015-10-27 15:22:57",view,"a:2:{s:7:""general"";s:6:""125399"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:125399;a:1:{s:12:""increment_id"";s:9:""100112682"";}}}}",success,vaughn,,adminhtml_sales_order_view,,64.60.116.237
+23724,1077703917,0,sales_orders,"2015-10-27 15:32:29",view,"a:2:{s:7:""general"";s:6:""125400"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:125400;a:1:{s:12:""increment_id"";s:9:""100112685"";}}}}",success,vaughn,,adminhtml_sales_order_view,,64.60.116.237
+23725,1077703917,0,admin_login,"2015-10-27 15:39:07",login,"a:1:{s:7:""general"";N;}",success,psingh,,adminhtml_catalog_product_edit,,64.60.116.237
+23726,1077703917,0,index_management,"2015-10-27 15:39:17",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,,adminhtml_process_massReindex,,64.60.116.237
+23727,1077703917,0,catalog_products,"2015-10-27 15:39:33",view,"a:1:{s:7:""general"";s:3:""651"";}",success,psingh,,adminhtml_catalog_product_edit,,64.60.116.237
+23728,1077703917,0,catalog_products,"2015-10-27 15:41:27",view,"a:1:{s:7:""general"";s:3:""769"";}",success,psingh,,adminhtml_catalog_product_edit,,64.60.116.237
+23729,1077703917,0,sales_orders,"2015-10-27 15:41:30",view,"a:2:{s:7:""general"";s:6:""125399"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:125399;a:1:{s:12:""increment_id"";s:9:""100112682"";}}}}",success,vaughn,,adminhtml_sales_order_view,,64.60.116.237
+23730,1077703917,0,catalog_products,"2015-10-27 15:42:02",view,"a:1:{s:7:""general"";s:3:""716"";}",success,psingh,,adminhtml_catalog_product_edit,,64.60.116.237
+23731,1077703917,0,catalog_products,"2015-10-27 15:42:35",view,"a:1:{s:7:""general"";s:3:""701"";}",success,psingh,,adminhtml_catalog_product_edit,,64.60.116.237
+23732,1077703917,0,index_management,"2015-10-27 15:50:13",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,,adminhtml_process_massReindex,,64.60.116.237
+23733,401615653,0,admin_login,"2015-10-27 16:25:00",login,"a:1:{s:7:""general"";N;}",success,eczar,15,adminhtml_index_index,,23.240.43.37
+23734,1077703917,0,admin_login,"2015-10-27 17:14:56",login,"a:1:{s:7:""general"";N;}",success,eczar,15,adminhtml_process_list,,64.60.116.237
+23735,1077703917,0,index_management,"2015-10-27 17:15:00",reindex_process,"a:1:{s:7:""general"";i:1;}",success,eczar,15,adminhtml_process_reindexProcess,,64.60.116.237
+23736,1077703917,0,cache_management,"2015-10-27 17:35:00",save,"a:1:{s:7:""general"";s:23:""Cache types: full_page "";}",success,eczar,15,adminhtml_cache_massEnable,,64.60.116.237
+23737,1077703917,0,cache_management,"2015-10-27 17:35:19",save,"a:1:{s:7:""general"";s:23:""Cache types: full_page "";}",success,eczar,15,adminhtml_cache_massDisable,,64.60.116.237
+23738,1077703917,0,admin_login,"2015-10-27 17:48:19",login,"a:1:{s:7:""general"";N;}",success,psingh,,adminhtml_process_list,,64.60.116.237
+23739,1077703917,0,index_management,"2015-10-27 17:48:27",massUpdate,"a:1:{s:7:""general"";s:4:""1, 9"";}",success,psingh,,adminhtml_process_massReindex,,64.60.116.237
+23740,1077703917,0,cms_pages,"2015-10-27 17:48:54",view,"a:1:{s:7:""general"";s:2:""45"";}",success,psingh,,adminhtml_cms_page_edit,,64.60.116.237
+23741,1077703917,0,cms_pages,"2015-10-27 17:49:34",view,"a:1:{s:7:""general"";s:2:""89"";}",success,psingh,,adminhtml_cms_page_edit,,64.60.116.237
+23742,1077703917,0,cms_pages,"2015-10-27 17:50:11",view,"a:1:{s:7:""general"";s:2:""86"";}",success,psingh,,adminhtml_cms_page_edit,,64.60.116.237
+23743,1077703917,0,cms_pages,"2015-10-27 17:50:38",view,"a:1:{s:7:""general"";s:2:""76"";}",success,psingh,,adminhtml_cms_page_edit,,64.60.116.237
+23744,1077703917,0,admin_login,"2015-10-27 17:52:50",login,"a:1:{s:7:""general"";N;}",success,vaughn,,adminhtml_dashboard_index,,64.60.116.237
+23745,1077703917,0,cache_management,"2015-10-27 17:56:35",save,"a:1:{s:7:""general"";s:23:""Cache types: full_page "";}",success,eczar,15,adminhtml_cache_massEnable,,64.60.116.237
+23746,1077703917,0,cache_management,"2015-10-27 17:56:45",save,"a:1:{s:7:""general"";s:23:""Cache types: full_page "";}",success,eczar,15,adminhtml_cache_massDisable,,64.60.116.237
+23747,1077703917,0,sales_orders,"2015-10-27 17:57:34",view,"a:2:{s:7:""general"";s:6:""124276"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:124276;a:1:{s:12:""increment_id"";s:9:""100111636"";}}}}",success,psingh,,adminhtml_sales_order_view,,64.60.116.237
+23748,1077703917,0,admin_login,"2015-10-27 18:29:13",login,"a:1:{s:7:""general"";N;}",success,psingh,,adminhtml_cms_page_index,,64.60.116.237
+23749,1077703917,0,cms_pages,"2015-10-27 18:29:30",view,"a:1:{s:7:""general"";s:2:""76"";}",success,psingh,,adminhtml_cms_page_edit,,64.60.116.237
+23750,1077703917,0,admin_login,"2015-10-27 22:56:23",login,"a:1:{s:7:""general"";N;}",success,psingh,,adminhtml_cms_page_edit,,64.60.116.237
+23751,1077703917,0,sales_orders,"2015-10-27 22:59:11",view,"a:2:{s:7:""general"";s:6:""125544"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:125544;a:1:{s:12:""increment_id"";s:9:""100112820"";}}}}",success,psingh,,adminhtml_sales_order_view,,64.60.116.237
+23752,758231143,0,admin_login,"2015-10-28 04:18:18",login,"a:1:{s:7:""general"";N;}",success,jarroyo,,adminhtml_index_index,,45.49.176.103
+23753,758231143,0,sales_orders,"2015-10-28 04:21:36",view,"a:2:{s:7:""general"";s:6:""123534"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:123534;a:1:{s:12:""increment_id"";s:9:""100110942"";}}}}",success,jarroyo,,adminhtml_sales_order_view,,45.49.176.103
+23754,758231143,0,admin_login,"2015-10-28 06:31:50",login,"a:1:{s:7:""general"";N;}",success,jarroyo,,adminhtml_sales_order_index,,45.49.176.103
+23755,758231143,0,adminhtml_system_config,"2015-10-28 06:32:40",view,"a:1:{s:7:""general"";s:18:""aydus_productlinks"";}",success,jarroyo,,adminhtml_system_config_edit,,45.49.176.103
+23756,758231143,0,adminhtml_system_config,"2015-10-28 06:32:52",view,"a:1:{s:7:""general"";s:6:""design"";}",success,jarroyo,,adminhtml_system_config_edit,,45.49.176.103
+23757,758231143,0,adminhtml_system_config,"2015-10-28 06:33:57",view,"a:1:{s:7:""general"";s:14:""abp_cwserenade"";}",success,jarroyo,,adminhtml_system_config_edit,,45.49.176.103
+23758,758231143,0,adminhtml_system_config,"2015-10-28 06:34:26",view,"a:1:{s:7:""general"";s:8:""lightbox"";}",success,jarroyo,,adminhtml_system_config_edit,,45.49.176.103
+23759,758231143,0,adminhtml_system_config,"2015-10-28 06:36:11",view,"a:1:{s:7:""general"";s:5:""admin"";}",success,jarroyo,,adminhtml_system_config_edit,,45.49.176.103
+23760,758231143,0,admin_login,"2015-10-28 08:22:29",login,"a:1:{s:7:""general"";N;}",success,jarroyo,,adminhtml_index_index,,45.49.176.103

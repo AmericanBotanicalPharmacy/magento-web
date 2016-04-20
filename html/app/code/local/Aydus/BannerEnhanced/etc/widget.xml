@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<widgets>
+    <bannerenhanced_main type="bannerenhanced/main" translate="name description" module="bannerenhanced">
+        <name>Banner Enhanced</name>
+        <description type="desc">Enhanced enterprise banner.</description>
+    </bannerenhanced_main>
+</widgets>

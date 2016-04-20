@@ -1,0 +1,23 @@
+/*----------------------------------------------------------------------------*/
+/* Helper Functions
+/*----------------------------------------------------------------------------*/
+
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+/*----------------------------------------------------------------------------*/
+/* Helper Mixins
+/*----------------------------------------------------------------------------*/
+
+// Position absolute center vertical/horizontal.
+// http://coding.smashingmagazine.com/2013/08/09/absolute-horizontal-vertical-centering-css/
+// Change top/left/bottom/right to auto to center to side of container.
+@mixin helper-absolute-center() {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}

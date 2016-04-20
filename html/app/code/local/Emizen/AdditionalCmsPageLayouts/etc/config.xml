@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <page>
+            <layouts>
+            <three_columns_blog>
+                <label>2 Columns For blog</label>
+                <template>page/2columns-blog.phtml</template>
+            </three_columns_blog>
+            </layouts>
+        </page>
+        <page>
+            <layouts>
+            <one_column_acquisition>
+                <label>Single Column For Acquisition</label>
+                <template>page/1column-acquisition.phtml</template>
+            </one_column_acquisition>
+            </layouts>
+        </page>
+    </global>
+</config>

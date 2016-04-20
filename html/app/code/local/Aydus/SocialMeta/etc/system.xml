@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <aydus translate="label" module="aydus_socialmeta">
+            <label>Social Meta</label>
+            <sort_order>10</sort_order>
+        </aydus>
+    </tabs>
+    <sections>
+        <aydus_socialmeta translate="label" module="aydus_socialmeta">
+            <label>Social Meta</label>
+            <sort_order>200</sort_order>
+            <tab>catalog</tab><!-- associate with new tab from above -->
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label" module="aydus_socialmeta">
+                    <label>General Settings</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <facebook_app_id translate="label" module="aydus_socialmeta">
+                            <label>Facebook App ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>The Facebook application ID required to validate open graph tags.</comment>
+                        </facebook_app_id>
+                        <twitter_site translate="label" module="aydus_socialmeta">
+                            <label>Twitter Site</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>The Twitter @username for the website used in the card footer. e.g. @nytimes</comment>
+                        </twitter_site>
+                    </fields>
+                </general>
+            </groups>
+        </aydus_socialmeta>
+    </sections>
+</config>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Aydus_QuickView>
+            <version>1.0.0</version>
+        </Aydus_QuickView>
+    </modules>
+    <!--<global>-->
+        <!--<blocks>-->
+            <!--<aydus_quickview>-->
+                <!--<class>Aydus_QuickView_Block</class>-->
+            <!--</aydus_quickview>-->
+        <!--</blocks>-->
+    <!--</global>-->
+    <frontend>
+        <layout>
+            <updates>
+                <aydus_quickview module="Aydus_QuickView">
+                    <file>aydus/quickview/quickview.xml</file>
+                </aydus_quickview>
+            </updates>
+        </layout>
+        <!--<routers>-->
+            <!--<aydus_quickview>-->
+                <!--<use>standard</use>-->
+                <!--<args>-->
+                    <!--<module>Aydus_QuickView</module>-->
+                    <!--<frontName>quickview</frontName>-->
+                <!--</args>-->
+            <!--</aydus_quickview>-->
+        <!--</routers>-->
+    </frontend>
+</config>

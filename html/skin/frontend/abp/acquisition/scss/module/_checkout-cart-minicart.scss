@@ -1,0 +1,249 @@
+/*----------------------------------------------------------------------------*/
+/* Minicart
+/* Based on skin/frontend/rwd/default/scss/module/_checkout-cart-minicart.scss
+/*----------------------------------------------------------------------------*/
+
+@import '../aydus/retina-sprites.scss';
+@import '../aydus/retina-background-image.scss';
+@import '../aydus/responsive';
+@import '../aydus/button';
+
+/*----------------------------------------------------------------------------*/
+/* Header
+/*----------------------------------------------------------------------------*/
+
+.header-minicart {
+    float: right;
+
+
+    .menu-cart, .menu-cart-mobile {
+        width: 203px;
+        height: 36px;
+        @include use-sprite('header-cart');
+        cursor: pointer;
+
+        @include breakpoint(mobile) {
+            @include use-sprite('mobile-cart');
+            text-indent: -999em;
+        }
+
+        .count {
+            display: block;
+            float: right;
+            width: 40px;
+            margin: 5px 23px 0 0;
+            @include responsive-font-size(18);
+            font-weight: bold;
+            text-align: center;
+            color: #ffcc00;
+        }
+    }
+
+    &.active {
+
+        .menu-cart {
+            @include use-sprite('header-cart-active');
+        }
+    }
+
+    .hidden-mobile {
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    .hidden-all {
+        display: none;
+    }
+
+    .show-mobile {
+
+        @include breakpoint(mobile) {
+            display: block;
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/* Body
+/*----------------------------------------------------------------------------*/
+
+#header-cart {
+    display: none;
+    position: absolute;
+    z-index: 200;
+    top: 37px;
+    right: inherit;
+    width: 295px;
+    margin-left: -92px;
+    border: none;
+    background: #ffffff;
+    box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.25);
+
+    &.undocked {
+        position: fixed;
+    }
+
+    > .close {
+        display: none;
+    }
+
+    &.undocked > .close {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 11px;
+        height: 10px;
+        background-image: url('../images/minicart/cross.png');
+        cursor: pointer;
+    }
+
+    .message {
+        display: block;
+        padding: 5px 20px;
+        @include responsive-font-size(12);
+        font-weight: bold;
+    }
+
+    #minicart-success-message {
+        @extend .message;
+        color: #85b14e;
+    }
+
+    #minicart-error-message {
+        @extend .message;
+        color: #ff4f39;
+    }
+
+    .minicart-wrapper {
+        @include loadingOverlay();
+        clear: both;
+        position: relative;
+        display: block;
+        padding: 0 20px 21px;
+        @include box-sizing(border-box);
+
+        .close {
+            display: none;
+        }
+
+        .block-subtitle {
+            margin: 0 0 10px 0;
+            padding: 0 0 8px 0;
+            @include responsive-font-size(16);
+            font-weight: bold;
+            color: #444444;
+            border-bottom: 1px solid #c7c7c7;
+        }
+
+        > div {
+            display: block; // Fix Magento inline block bug.
+        }
+
+        ul.mini-products-list {
+
+            li {
+                margin: 0 0 10px 0;
+                padding: 0 0 10px 0;
+                border-bottom: 1px solid #c7c7c7;
+
+                a {
+                    border: none;
+
+                    img {
+
+                    }
+                }
+
+                .product-details {
+                    position: relative;
+                    display: block;
+                    margin-left: 80px;
+
+                    .product-name {
+                        width: 90%; // Allow for absolute position delete icon.
+                        margin: 0;
+                        padding: 0;
+
+                        a {
+                            @include responsive-font-size(12);
+                            font-weight: normal;
+                            color: #777777;
+                            text-transform: none;
+                        }
+                    }
+
+                    table.info-wrapper {
+                        width: 100%;
+                        margin-top: 1em;
+
+                        .qty {
+                            display: block;
+                            float: left;
+                            @include responsive-font-size(12);
+                            font-weight: normal;
+                            color: #444444;
+                        }
+
+                        .price {
+                            display: block;
+                            float: right;
+                            @include responsive-font-size(12);
+                            font-weight: normal;
+                            color: #444444;
+                        }
+                    }
+
+                    .btn-edit {
+                        display: none;
+                    }
+
+                    .remove {
+                        position: absolute;
+                        top: 5px;
+                        right: 0;
+                        @include link-to-button-image(11px, 10px, '../images/minicart/cross.png');
+                    }
+                }
+            }
+        }
+
+        .block-content {
+            display: block;
+            margin: 0 0 25px 0;
+            text-align: right;
+        }
+
+        .minicart-actions {
+            display: block;
+
+            .cart-link {
+                display: none;
+            }
+
+            ul.checkout-types {
+                float: none;
+                text-align: center;
+
+                .paypal-logo {
+                    display: none; // Hide PayPal Express button.
+                }
+
+                li {
+                    margin: 0;
+                    padding: 0;
+                    border-top: none;
+
+                    .checkout-button {
+                        @include button-blink1(250px);
+                    }
+                }
+            }
+        }
+    }
+}

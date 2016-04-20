@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Aydus_Addtocart>
+            <version>0.0.1</version>
+        </Aydus_Addtocart>
+    </modules>
+    <global>
+        <models>
+            <aydus_addtocart>
+                <class>Aydus_Addtocart_Model</class>
+            </aydus_addtocart>
+        </models>
+        <blocks>
+            <aydus_addtocart>
+                <class>Aydus_Addtocart_Block</class>
+            </aydus_addtocart>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <aydus_addtocart module="Aydus_Addtocart">
+                    <file>aydus/addtocart/addtocart.xml</file>
+                </aydus_addtocart>
+            </updates>
+        </layout>
+        <routers>
+            <aydus_addtocart>
+                <use>standard</use>
+                <args>
+                    <module>Aydus_Addtocart</module>
+                    <frontName>addtocart</frontName>
+                </args>
+            </aydus_addtocart>
+        </routers>
+    </frontend>
+</config>

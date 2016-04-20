@@ -1,0 +1,8 @@
+<?php $_helper    = $this->helper('catalog/output'); ?>
+<?php $_category  = $this->getCurrentCategory(); ?>
+
+<div class="banner-container">
+    <div class="container">
+        <span><?php echo $_helper->categoryAttribute($_category, $_category->getName(), 'name') ?></span>
+    </div>
+</div>

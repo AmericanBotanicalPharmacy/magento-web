@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<widgets>
+    <jdata_main type="aydus_jdata/main" translate="name description" module="aydus_jdata">
+        <name>JQuery Data</name>
+        <description type="desc">Add core data for use with client side jquery scripts.</description>
+    </jdata_main>
+</widgets>

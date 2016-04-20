@@ -1,0 +1,9 @@
+<?php
+/**
+ *
+ */
+?>
+<div class="wp-sidebar">
+	<?php echo $this->getChildHtml() ?>
+        <?php echo $this->getLayout()->createBlock('newsletter/subscribe')->setTemplate('newsletter/subscribe_blog.phtml')->toHtml(); ?>
+</div>

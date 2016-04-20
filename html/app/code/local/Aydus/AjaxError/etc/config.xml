@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Aydus_AjaxError>
+            <version>0.0.1</version>
+        </Aydus_AjaxError>
+    </modules>
+    <frontend>
+        <routers>
+            <aydus_ajaxerror>
+                <use>standard</use>
+                <args>
+                    <module>Aydus_AjaxError</module>
+                    <frontName>ajaxerror</frontName>
+                </args>
+            </aydus_ajaxerror>
+        </routers>
+    </frontend>
+</config>

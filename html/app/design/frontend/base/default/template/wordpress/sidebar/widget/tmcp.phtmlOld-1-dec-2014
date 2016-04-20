@@ -1,0 +1,69 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+?>
+<?php $posts = $this->getPosts() ?>
+<?php if (count($posts) > 0): ?>
+    <div class="block block-blog block-tmcp">
+        <?php if ($title = $this->getTitle()): ?>
+            <div class="block-title">
+                <strong><span><?php echo $this->__($title) ?></span></strong>
+            </div>
+        <?php endif; ?>
+        <div class="block-content">
+            <div class="jcarousel-wrapper">
+                <div data-jcarousel="true" class="jcarousel">
+                    <ul style="left: 0px; top: 0px;">
+                        <?php foreach($posts as $post): ?>
+                            <li>
+                                <div class="book-div">
+                                    <?php if ($featuredImage = $post->getFeaturedImage()): ?>
+                                        <div class="book-img"><img src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/></div>
+                                    <?php endif; ?>
+                                    <div class="book-head"><a href="<?php echo $post->getPermalink() ?>" title="<?php echo $this->htmlEscape($post->getPostTitle()) ?>"><?php echo $this->htmlEscape($post->getPostTitle()) ?></a></div>
+                                    <div class="book-content"><p><?php echo substr(strip_tags($post->getPostContent()),0,80); ?></p></div>
+                                </div>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                <a data-jcarouselcontrol="true" href="#" class="jcarousel-control-prev inactive">‹</a>
+                <a data-jcarouselcontrol="true" href="#" class="jcarousel-control-next">›</a>
+            </div>
+            <script type="text/javascript" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS); ?>fishpig/wordpress/jquery_002.js"></script>
+            <script type="text/javascript">
+                (function($) {
+                    $(function() {
+                        $('.jcarousel').jcarousel();
+
+                        $('.jcarousel-control-prev')
+                            .on('jcarouselcontrol:active', function() {
+                                $(this).removeClass('inactive');
+                            })
+                            .on('jcarouselcontrol:inactive', function() {
+                                $(this).addClass('inactive');
+                            })
+                            .jcarouselControl({
+                                target: '-=1'
+                            });
+
+                        $('.jcarousel-control-next')
+                            .on('jcarouselcontrol:active', function() {
+                                $(this).removeClass('inactive');
+                            })
+                            .on('jcarouselcontrol:inactive', function() {
+                                $(this).addClass('inactive');
+                            })
+                            .jcarouselControl({
+                                target: '+=1'
+                            });
+                    });
+                })(jQuery);
+            </script>
+        </div>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,3470 @@
+/*PRAGYA SINGH*/
+
+/* Product Page*/
+
+div#product-testimonials.product-cms.product-testimonials div.std div.testimonial{
+    background: #c5e0eb !important;
+    padding:20px 0 !important;
+    margin-bottom: 65px !important;
+}
+
+div#product-why-you-need-it.product-cms.product-why-you-need-it div.std div.template2 div.table1 div.testimonial2 p{
+    color: #666666 !important;
+    font-size: 1.5rem !important;   
+}
+div#product-why-you-need-it.product-cms.product-why-you-need-it div.std div.template2 div.table1 h3{
+    color:#154020 !important;
+}
+.testimonial2 span {
+    color: #333333 !important;
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    margin-left: 44px;
+}
+div#product-how-it-works.product-cms.product-how-it-works div.std div.template2 div.table1 div.testimonial p{
+    color: #666666 !important;
+    font-size: 1.5rem !important;
+    
+}
+div#product-how-it-works.product-cms.product-how-it-works div.std div.template2 div.table1 div.column.right div.testimonial span{
+        color: #333333 !important;
+
+}
+body.catalog-product-view .product-view .product-cms-container .product-why-you-need-it .template2 .table1 ul li {
+    color: #333333 !important;
+    margin: 0 0 1.5em;
+    padding: 0;
+}
+
+div#product-why-you-need-it.product-cms.product-why-you-need-it div.std div.template2 div.table1 div p {
+    color: #333333 !important;
+    font-size: 1rem !important;
+}
+
+
+product-cms.product-why-you-need-it div.column.right li 
+{
+font-family: Montserrat, "Helvetica Neue", Verdana, Arial, sans-serif;
+  color: #333333 !important;
+  font-size: 1rem !important;
+  /*font-size:14px;*/
+  line-height: 1.5;
+}
+
+body.catalog-product-view .product-view .product-cms-container .product-why-you-need-it .template2 .table1 ul li {
+
+    margin: 1em 0 1.5em !important;
+    padding: 0;
+}
+
+body.catalog-product-view .product-view .product-shop .description ul li:before {
+    background-image: url("/skin/frontend/abp/master/images/sprites-sbbf0716586.png");
+    /*background-position: -18px -49px !important;*/
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 14px;
+    margin-left: -36px !important;
+    margin-right: 18px;
+    overflow: hidden;
+    width: 18px;
+}
+body.catalog-product-view .product-view .product-cms-container .product-why-you-need-it .template1 .table2 ul li:before{
+    background-image: url("/skin/frontend/abp/master/images/sprites-sbbf0716586.png");
+    background-position: -18px -49px !important;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 14px;
+    margin-left: -36px !important;
+    margin-right: 18px;
+    overflow: hidden;
+    width: 18px;
+}
+
+.product-cms.product-ingredients div.std div.template1 div.table1 div.column-left-container div.column.left h5{
+    color: #636363;
+    font-family: Montserrat,"Helvetica Neue",Verdana,Arial,sans-serif;
+    font-size: 1rem !important;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0 0 10px;
+    text-rendering: optimizespeed;
+    text-transform: uppercase;
+}
+
+.product-cms.product-ingredients div.std div.template1 div.table1 div.column.right h5{
+    color: #636363;
+    font-family: Montserrat,"Helvetica Neue",Verdana,Arial,sans-serif;
+    font-size: 1rem !important;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0 0 10px;
+    text-rendering: optimizespeed;
+    text-transform: uppercase;
+
+}
+
+div#product-how-it-works.product-cms.product-how-it-works div.std div.template2 div.table1 div.column-left-container div.column.left h3{
+
+    color:  #154020 !important;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin: 0 0 1em;
+    padding: 0;
+    text-transform: uppercase;
+}
+div#product-how-it-works.product-cms.product-how-it-works div.std div.template1 div.table1 div.column-left-container div.column.left h3{
+    color: #154020 !important;
+    font-weight: bold !important;
+}
+
+div#product-how-it-works.product-cms.product-how-it-works div.std div.template2 div.table1 div.column-left-container div.column.left h5{
+    color: #333333 !important;
+    font-family: Montserrat,"Helvetica Neue",Verdana,Arial,sans-serif;
+    font-size: 1rem !important;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0 0 10px;
+    text-rendering: optimizespeed;
+    text-transform: uppercase;
+    
+}
+div#product-how-it-works.product-cms.product-how-it-works div.std div.template2 div.table1 div.column.right h3{
+    color: #154020 !important;
+    font-weight: bold !important;
+}
+
+div#product-ingredients.product-cms.product-ingredients div.std div.template2 div.table1 div.column-left-container div.column.left h3{
+    color: #2a5e37 !important;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin: 0 0 1em;
+    padding: 0;
+    text-transform: uppercase;
+  
+  }
+  
+div#product-ingredients.product-cms.product-ingredients div.std div.template2 div.table1 div.column-left-container div.column.left p{
+    color: #333333 !important;
+    font-size:1rem!important;
+  }
+  
+div#product-ingredients.product-cms.product-ingredients div.std div.template1 div.table1 ul li p{
+    color: #333333 !important;
+    padding-left: 100px;
+}
+body.catalog-product-view .product-view .product-cms-container .product-ingredients .template1 ul li.quote:before {
+    color: #636363 !important;
+    content: "“";
+    float: left;
+    font-size: 5.3125rem;
+    margin-left: 25px !important;
+    margin-right: 10px;
+    position: relative;
+    top: -46px;
+}
+
+.category-nutritional div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-how-it-works.product-cms.product-how-it-works div.std div.template2 div.table1 div.column-left-container div.column.left h5{
+    color: #333333 !important;
+}
+div#product-why-you-need-it.product-cms.product-why-you-need-it div.std div.template2 div.table1 div.column.right ul{
+    margin-left: 38px;
+}
+body.catalog-product-view .product-view .product-cms-container .product-why-you-need-it .template2 .table1 ul li:before {
+    background-image: url("/skin/frontend/abp/master/images/sprites-sbbf0716586.png");
+    background-position: -18px -49px !important;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 14px;
+    margin-left: -35px !important;
+    margin-right: 18px;
+    overflow: hidden;
+    width: 18px;
+}
+
+body.catalog-product-view .product-view .product-cms-container .product-ingredients .template1 ul li.quote p {
+    color: #666666!important;
+    font-size: 1.5rem!important;
+    margin: 0;
+    padding: 0; 
+    font-weight: bold;
+    line-height: 2.25rem;
+    margin: 0 0 0.5em;
+    padding: 0 44px;
+    
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-100-90-tablets div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it div.std div.template2 div.table1 div.column.right div.testimonial2 p{
+    font-size: 1.5rem !important;
+    color: #666666 !important;
+}
+
+/*SuperFood Bar/SuperFood-100 kids/How-it-works/Why-you-need-it(padding-bottom)*/
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-100-kids div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it{
+    padding-bottom: 0px !important;
+}
+
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar-12-pack div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-how-it-works.product-cms.product-how-it-works{
+
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+}
+
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar-12-pack div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+    
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-how-it-works.product-cms.product-how-it-works{
+     border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it{
+     border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar-crunch-12-pack div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-how-it-works.product-cms.product-how-it-works{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar-crunch-12-pack div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar-crunch div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-how-it-works.product-cms.product-how-it-works{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-superfood-bar-crunch div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 0px !important;
+}
+
+/*END-How-it-works/Why-you-need-it(padding-bottom)*/
+
+/*SUPERSLIM*/
+
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-100-herbal-superslim-formula-powder div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it{
+     padding-bottom: 0px !important;
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-100-herbal-superslim-formula-packets div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-why-you-need-it.product-cms.product-why-you-need-it{
+    padding-bottom: 0px !important;
+}
+
+/*END*/
+
+/*VITALITY SHOT how-it-works*/
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-vitality-shot div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-how-it-works.product-cms.product-how-it-works div ul{
+     
+     font-size: 1.125rem !important;
+}
+/*END*/
+
+.product-view .product-shop .price-box .regular-price .price, .product-view .product-shop .price-box .special-price .price, .product-view .product-shop .price-box .full-product-price .price{
+    color: #154020 !important;
+}
+
+div#product-ingredients.product-cms.product-ingredients div.std div.template1 div.table1 div.column.right ul li.quote p{
+    color: #666666 !important;
+}
+
+/*LEARN PAGE*/
+
+body.cms-learn .section2 .column-left-container .column.left .inner-tube ul li.video a:before {
+content: '';
+background-image: url('../images/sprites-sbbf0716586.png');
+background-position: -76px -35px !important;
+background-repeat: no-repeat;
+overflow: hidden;
+display: block;
+height: 57px !important;
+width: 40px;
+display: inline-block;
+float: right;
+margin-left: 8px;
+vertical-align: middle;
+}
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-learn div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.col-main-content section.section2.clearfix div.column.right div.inner-tube ul.owl-carousel.owl-theme div.owl-wrapper-outer div.owl-wrapper div.owl-item li p{
+     font-size: 1.170rem !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-learn div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.col-main-content section.section2.clearfix div.column.right div.inner-tube ul.owl-carousel.owl-theme div.owl-wrapper-outer div.owl-wrapper div.owl-item li span{
+    font-size: 1.170rem !important;
+}
+/*End*/
+
+/*Difference Page*/
+html#top.js.no-touch.localstorage body.cms-page-view.cms-difference div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.difference.content-page div.section3.col2 div.column1 h3{
+     font-size: 24px !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-difference div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.difference.content-page div.section3.col2 div.column2 h3{
+    font-size: 24px !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-difference div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.difference.content-page div.section2.col2 div.column2 h3{
+    color: #333333 !important;
+    font-weight: 600 !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-difference div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.difference.content-page div.section3.col2 div.column3 h3{
+    text-align: center !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-difference div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.difference.content-page div.section6.col1 div.column1 h2{
+    color: #333333 !important;
+    font-weight: 600 !important;
+}
+difference .section7 .column1, .difference .section7 .column2 {
+       min-height: 854px !important;
+}
+.difference .section7 .content h3{
+     color: #174020 !important;
+     font-weight: bold;
+    
+}
+.difference .section5 h3{
+    font-weight: bold;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-difference div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.difference.content-page div.section4.col2 div.column2 p span.special{
+    color: #333333 !important;
+    font-weight: normal !important;
+}
+/*END*/
+
+
+/*CAREERS PAGE*/
+html#top.js.no-touch.localstorage body.cms-page-view.cms-careers div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section5.clearfix p{
+    clear:none !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-careers div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section5.clearfix h3{
+background: none repeat scroll 0 0 #ebe5dc;
+margin-left: 355px;
+ padding: 20px;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-careers div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section5.clearfix h4 span{
+    margin-top: 23px;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-careers div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section5.clearfix h4{
+    color:#333333 !important;
+    font-size: 1rem !important;
+}
+body.cms-careers .section3 h2{
+    font-size: 1.599rem !important
+}
+.table-container div.column-left-container div.column.left div.inner-tube div.description a.blink1 {
+    margin-bottom: 40px !important;
+    margin-top: 40px !important;
+    text-decoration: none;
+}
+.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.table-container div.column-left-container div.column.left div.inner-tube div.description a.blink1:hover{
+	color:white !important; 
+	text-decoration:none;
+	background-color: #154020;
+}
+.cms-page-view.cms-careers div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section4.clearfix div.inner-tube div.table div.table-row div.table-cell p{
+	font-size: 1.875rem !important;
+}
+
+/*END*/
+
+/*STORE PAGE*/
+/*html#top.js.no-touch.localstorage body.cms-page-view.cms-store div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.cms-banner-container.template1 div.widget.widget-banner ul li div.content-container div.image.desktop div.image.mobile div.content ul li:before {
+    background-image: url("http://herbdoc-production.aydus.com/skin/frontend/abp/master/images/sprites-sbbf0716586.png");
+    background-position: -18px -49px !important;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 14px;
+    margin-left: -36px !important;
+    margin-right: 18px;
+    overflow: hidden;
+    width: 18px;
+    margin-top: 8px;
+    }*/
+.products-grid .product-name, .products-list .product-name {
+    font-family: Montserrat,"Raleway","Helvetica Neue",Verdana,Arial,sans-serif;
+    font-size: 14px;
+    height: 25px!important;
+    margin-bottom: 12px !important;
+    text-transform: uppercase;
+}
+.products-grid .product-image{
+    margin-top: 20px;
+}
+.catalog-category-view .col2-left-layout .col-main .category-description:after, .catalogsearch-result-index .col2-left-layout .col-main .category-description:after {
+    /*background-image: url("../images/sprites-sbbf0716586.png");*/
+    background-image: url("") !important;
+    background-position: 0 -561px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 125px;
+    overflow: hidden;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    width: 131px;
+}
+body.cms-store .col-main .category-products ol li .product .product-image, body.cms-store .col-main .category-products ul li .product .product-image {
+    margin: 20px 0 30px !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-store div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.video-wrapper div.video div.video-header h2{
+    color: #333333 !important;
+    font-size: 2.25rem !important;
+}
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-store div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.video-wrapper div.video div.video-header p{
+     color: #666666 !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-store div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products div.block-title h2{
+    font-size: 2.25rem !important;
+}
+/*END*/
+
+/*ABOUT THE DOC */
+html#top.js.no-touch.localstorage body.cms-page-view.cms-about-the-doc div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.naturalhealing.content-page div.section3.col1 div.column2 h3{
+    background: none repeat scroll 0 0 #ebe5dc;
+    color: #0e0e0e;
+    font-size: 1.8 rem !important;
+    margin-top: 0px !important;
+    padding: 15px;
+    font-weight: bold;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-about-the-doc div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.naturalhealing.content-page div.section2.col2 div.column2 h3{
+    color: #154020 !important;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-about-the-doc div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.naturalhealing.content-page div.section4.col2 div.column1 h3{
+    color: #154020 !important;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-top: 24px;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-about-the-doc div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.naturalhealing.content-page div.section4.col2 div.column2 h3{
+    color: #154020 !important;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-top: 24px;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-about-the-doc div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.naturalhealing.content-page div.section2.col2 p{
+    color: #333333 !important;
+    font-size: 1rem !important;
+}
+/*END*/
+/*LOGIN PAGE*/
+body.customer-account-login .col-main .col2-set .form-instructions{
+    color: #333333 !important;
+    font-size: 1rem !important;
+}
+html.js.no-touch.localstorage body.customer-account-index.customer-account div.wrapper div.page div.header-top-background div.header-top-container.page-header div.top-right div.login.hidden-mobile{
+    padding: 11px 18px !important;
+}
+html#top.js.no-touch.localstorage body.checkout-cart-index div.wrapper div.page div.header-top-background div.header-top-container.page-header div.top-right div.login.hidden-mobile{
+    padding: 11px 18px !important;
+}
+body, button, input, select, table, textarea{
+    /*font-size: 1rem !important;*/
+    color:#333333 !important;
+}
+h2.product-name a {
+    color: #333333 !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+body.checkout-cart-index .col-main .cart .cart-table tbody .product-cart-price .cart-price{
+    font-size: 1rem !important;
+}
+body.checkout-cart-index .col-main .cart .cart-table tbody .product-cart-total{
+    font-size: 1rem !important;
+}
+
+/*END*/
+/*ABOUT-NATURAL-HEALING*/
+/*html#top.js.no-touch.localstorage body.cms-page-view.cms-about-natural-healing div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.naturalhealing.content-page div.section5.col2 div.column2{
+    width: 57% !important;
+}*/
+.naturalhealing .section6 .column2 h3 {
+    width: 64%;
+}
+.naturalhealing .column2 h3{
+    color:#154020 !important;
+    font-weight:bold;
+}
+.naturalhealing .section3 h3 {
+    color: #333333 !important;
+    text-align: center;
+}
+/*END*/
+/*HOME PAGE*/
+
+
+
+/*END*/
+
+/*SHIPPING&RETURNS*/
+html#top.js.no-touch.localstorage body.cms-page-view.cms-shipping-returns div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std h3{
+    color: #2a5e37 !important;
+    font-size: 1.125rem !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-shipping-returns div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std h2{
+    
+    color: #333333 !important;
+    font-size: 2.25rem !important;
+    font-weight: bold;
+    text-transform: uppercase !important;
+}
+/*END*/
+
+
+/*5 DAY DETAOXES*/
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-5-day-liver-detox-program.categorypath-5-day-detox-programs.category-5-day-detox-programs div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-ingredients.product-cms.product-ingredients div.std div.template1 div.table1 div.column-left-container div.column.left p a{
+    text-decoration: underline;
+}
+html#top.js.no-touch.localstorage body.catalog-product-view.catalog-product-view.product-5-day-liver-detox-program.categorypath-5-day-detox-programs.category-5-day-detox-programs div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.product-view div.product-cms-container div#product-ingredients.product-cms.product-ingredients div.std div.template1 div.table1 div.column-left-container div.column.left p a:hover{
+     text-decoration: none;
+}
+/*END*/
+
+
+/*HEALTHY SAVINGS*/
+/*PUBLICATIONS*/
+.cms-healthy-savings .block-title h2:first-child:after {
+ /* content: 'Free'; */
+  color: #a50808 !important;
+  }
+ 
+.cms-page-view.cms-latest-publication div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std a.blink1{
+	background: none repeat scroll 0 0 #fed807;
+    border-radius: 0;
+    color: #302d26;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: 54px;
+    line-height: 54px;
+    padding: 0 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease-in-out 0s;
+    white-space: nowrap;
+    width: auto;
+    margin-bottom: 30px;
+    margin-left: 41%;
+    margin-top: 30px;
+}
+
+.cms-page-view.cms-special-report-letter div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std a.blink1{
+	background: none repeat scroll 0 0 #fed807;
+    border-radius: 0;
+    color: #302d26;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: 54px;
+    line-height: 54px;
+    padding: 0 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease-in-out 0s;
+    white-space: nowrap;
+    width: auto;
+    margin-bottom: 30px;
+    margin-left: 524px;
+    margin-top: 30px;
+    float:left;
+} 
+.cms-latest-publication div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.buttons-set{
+	 text-align: left !important;
+}
+.cms-page-view.cms-supermeal-8-9 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.buttons-set a.blink1{
+	background: none repeat scroll 0 0 #fed807;
+    border-radius: 0;
+    color: #302d26;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: 54px;
+    line-height: 54px;
+    padding: 0 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease-in-out 0s;
+    white-space: nowrap;
+    width: auto;
+    margin-bottom: 30px;
+    margin-right: 244px !important;
+    margin-top: 30px;
+    margin-left: 0px !important;
+}
+
+.cms-page-view.cms-2015-catalog-immune-section div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.buttons-set a.blink1{
+	background: none repeat scroll 0 0 #fed807;
+    border-radius: 0;
+    color: #302d26;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: 54px;
+    line-height: 54px;
+    margin-bottom: 30px;
+    margin-left: 25%;
+    margin-top: 30px;
+    padding: 0 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease-in-out 0s;
+    white-space: nowrap;
+    width: auto;
+}
+
+/*New YOU SAVE STYLING*/
+.wrapper div.page div.main-container.col2-left-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last div.product-info div.price-box span.regular-price{
+	 color: #a50808;
+	 font-weight: bold;
+	 font-size: 16px;
+}
+
+div.category-products span.red_price span.price 
+{color:#a50808 !important;
+}
+
+.wrapper div.page div.main-container.col2-left-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last div.product-info div.saving{
+	
+	 color: #999999  !important;
+}
+
+
+/*Healthy- Savings Free shipping promo*/
+
+@media handheld, screen and (max-width: 768px) {
+div.page div.top-container div.promo p {
+	
+/*     left:25%; */
+	
+/*width: 300px;*/
+/*padding-left:75px;*/
+
+width: 300px;
+height:5em!important;
+padding-left:10px;
+    
+	}
+}  
+
+/*index-of-ailments PAGE*/
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-index-of-ailments div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.content-page.index-of-ailments div.section3 div#ailments-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div.tabs-nav-container{
+	 margin-bottom: 4%;
+    padding-top: 3%;
+}  
+/*FOOTER*/
+.footer div.outer div.shortcuts ul{
+	margin: 0 3.935% 0 0 !important;
+}
+  
+/*BLOG*/
+
+html#top.js.no-touch.localstorage body.wordpress-index-index.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.blog-home div.post-list ul#post-list li.item.odd div.post-list-item div.blog-desc div.post-entry.entry p{
+    font-size: 1rem !important;
+}
+
+html#top.js.no-touch.localstorage body.wordpress-index-index.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.blog-home div.post-list ul#post-list li.item.even div.post-list-item div.blog-desc div.post-entry.entry p
+{
+    font-size: 1rem !important;
+}
+
+/*Links*/
+.blog_links ul li a{
+
+    text-transform: none !important;
+    font-size: 1.125rem !important;
+    font-weight: normal !important;
+
+}
+
+.blog_links .blog-submenu li a{
+    font-size: 0.938rem !important;
+}
+
+.cms-page-view .main a{
+    text-decoration: none;
+}
+.cms-page-view .main a:hover {
+  text-decoration: underline;
+  color:#404040 !important;
+  
+}
+
+/*Hover on other blog pages*/
+.page div.main-container.col3-layout.blog_page div.main div.blog_links ul li a:hover{
+    text-decoration: underline !important;
+}
+.page div.main-container.col3-layout.blog_page div.main div.blog_links ul li a{
+    text-decoration:none !important;
+}
+html#top.js.no-touch.localstorage body.wordpress-post-view.is-blog div.wrapper div.page div.main-container.col1-layout div.main div.blog_links ul li a:hover{
+	 text-decoration: underline !important;
+}
+.item div.post-list-item div.blog-desc div.post_readmore_btn a:hover {
+	color:white !important; 
+	}
+	
+/*End Hover on other blog pages*/
+/*End Links*/
+/*p TAGS*/
+.cms-page-view .std p, .cms-no-route .std p {
+    font-size: 1rem !important;
+    color:#333333 !important;
+     font-family: "montserratregular",sans-serif !important;
+}
+/*.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.std p{
+	font-size: 1rem !important;
+}*/
+.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.std div#links_container.cms-page-content div.holder p{
+	font-size: 1rem !important;
+}
+html#top.js.no-touch.localstorage body.wordpress-term-view.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.post-list ul#post-list li.item.odd div.post-list-item div.blog-desc div.post-entry.entry p{
+	font-size: 1rem !important;
+}
+html#top.js.no-touch.localstorage body.wordpress-term-view.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.post-list ul#post-list li.item.even div.post-list-item div.blog-desc div.post-entry.entry p{
+	font-size: 1rem !important;
+}
+
+html#top.js.no-touch.localstorage body.wordpress-post-view.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.posttype_question div.page-title.post-title blockquote{
+	font-size: 1rem !important;
+}
+.post-entry.entry p{	
+	font-size: 1rem !important;
+}
+
+.post-entry.entry.std p{
+	font-size: 1rem !important;
+}
+
+/*End p*/
+/*Header tags*/
+.post-list-item .blog-desc h2 a {   
+    color: #2a5e37 !important;
+    font-size: 1.875rem !important;
+    font-weight: 700 !important;
+}
+
+.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.std h3{
+     font-size: 1.875rem !important;
+     color: #2a5e37 !important;
+    font-weight: bold;
+}
+.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.page-title h1{
+     color: #333333 !important;
+    font-size: 36px !important;
+    margin-bottom:30px !important;
+    margin-top: 20px;
+}
+
+.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.cms-page-content div.subtitle{
+	color: #666666 !important;
+	font-size: 1.125rem !important;
+	font-weight: 400 !important;
+	
+}
+
+.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.cms-page-content div.question_title{
+	color: #2a5e37 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    font-size: 1.875rem !important;
+}
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-my-favorite-videos div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.std div.blog-home div.post-list ul#post-list li.item div.post-list-item div.blog-desc div.featured-image a img{
+	padding-bottom:20px;
+}
+
+.blog_page div.main div.col-wrapper div.col-left.sidebar div.wp-sidebar div.block.block-subscribe div.block-title strong span{
+	color: #154020;
+}
+/*End Header tags*/
+html#top.js.no-touch.localstorage body.wordpress-post-view.is-blog div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.posttype_book div.post-view div.disclaimer{
+     margin-bottom: 125px;
+}
+/*Archives Pages*/
+html#top.js.no-touch.localstorage body.wordpress-post-view.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.posttype_question div.page-title.post-title blockquote{
+	font-style: italic;
+}
+html#top.js.no-touch.localstorage body.wordpress-post-view.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.posttype_question div.page-title.post-title blockquote:before {
+	content: "QUESTION";
+	display:block;
+	font-size: 1.875rem;
+	color:#2a5e37;
+	font-style: normal !important;
+	font-weight: 700;
+}
+html#top.js.no-touch.localstorage body.wordpress-post-view.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.posttype_question div.post-view div.post-entry.entry.std p.answer{
+	font-size: 1.875rem !important;
+	color:#2a5e37;
+	font-style: normal !important;
+	font-weight: 700;
+}
+
+html#top.js.no-touch.localstorage body.wordpress-post-view.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.posttype_question div.post-view div.post-entry.entry.std p strong span{
+	color: #333333;
+	text-decoration: none !important;
+}
+/*END*/  
+/* CHECKOUT BUTTON*/
+#header-cart .minicart-wrapper .minicart-actions ul.checkout-types li .checkout-button{
+	 padding: 0 21px !important;
+	 width: 259px !important;
+}
+#header-cart .minicart-wrapper .minicart-actions ul.checkout-types li .checkout-button
+/*Subscribe button left sidebar*/
+.cart .buttons-set .button, .cart-table .button, .sidebar .actions .button, .button.button-secondary {
+	background: none repeat scroll 0 0 #fed807 !important;
+}
+.cart .buttons-set .button:hover,
+.cart-table .button:hover,
+.sidebar .actions .button:hover,
+.button.button-secondary:hover {
+  background: #154020 !important;
+  cursor: pointer;
+  
+}
+html#top.js.no-touch.localstorage body.wordpress-post-view.is-blog div.wrapper div.page div.main-container.col3-layout.blog_page div.main div.col-wrapper div.col-main div.posttype_question div.post-view div.disclaimer{
+	padding-bottom:5%;
+}
+/*END*/ 
+
+
+/*----------------------------------------------------------------------------*/
+/*WEB EXCLUSIVES
+/*----------------------------------------------------------------------------*/
+@media handheld, screen and (max-width: 640px) {
+	.cms-page-view.cms-web-exclusives div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd{
+		margin-left: 1px !important;
+	}
+}
+@media handheld, screen and (max-width: 640px){
+	.cms-page-view.cms-web-exclusives div.wrapper div.page div.main-container.col1-layout div.main div.col-main div a img{
+	padding-right: 1px !important;
+}
+}
+.cms-banner-container.template2 .widget-banner .content-container .content ul li:before {
+    background-image: url("../images/sprites-sbbf0716586.png");
+    background-position: -18px -49px!important;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 14px;
+    margin-right: 18px!important;
+    margin-left: -36px !important;
+    overflow: hidden;
+    width: 18px;
+}
+
+.cms-web-exclusives .col-main .products-grid li.item .product-info, .cms-web-exclusives .col-main .products-list li.item .product-info {
+    min-height: 260px!important;
+    padding-bottom: 0;
+}
+
+.products-grid .product-name, .products-list h2.product-name {
+    font-family: Montserrat,"Helvetica Neue",Verdana,Arial,sans-serif!important;
+    font-size: 0.875rem!important;
+    margin-bottom: 5px;
+    text-transform: none!important;
+    color:#333333!important;
+}
+
+h2.product-name a{
+	color:#333333!important;
+	font-size: 0.875rem!important;
+	font-weight: bold !important;
+	text-decoration: none !important;
+}
+
+.cms-banner-container.template2 .widget-banner .product-container {
+    left: 16%;
+    position: absolute;
+    top: 250px!important;
+}
+
+.cms-banner-container.template2 .widget-banner .content-container .content h2 {
+    color: #333333!important;
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.cms-banner-container.template2 .widget-banner .content-container .content h2 span {
+    color: #333333!important;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cms-banner-container.template2 .widget-banner .content-container .content p.saving {
+    color: #a50808!important;
+    font-weight:bold!important;
+    font-size: 0.875rem;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+}
+
+.cms-banner-container.template2 .widget-banner .content-container .content p.only {
+    color: #333333!important;
+    font-size: 1.125rem!important;
+    font-weight: bold;
+}
+
+.cms-page-view.cms-web-exclusives a.quickview {
+	text-align:center!important;
+}
+
+.cms-page-view.cms-web-exclusives div.block-title-special {
+	margin: 2em 0 1em;
+    padding: 0;
+    text-align: center;
+}
+
+.cms-page-view.cms-web-exclusives div.block-title-special h2 {
+	color: #333333;
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+body.cms-web-exclusives .category-products .products-grid .item {
+    box-sizing: border-box;
+    /*margin: 0;
+    padding: 0 2.5% 2.5% 0;
+    width: 20%!important;*/
+    border: 1px solid #edecea!important;
+    padding: 5px!important;
+    /*margin-right: 19px!important;*/
+}
+
+
+.product-image, .no-touch .product-img-box .product-image:hover:not(.zoom-available) {
+    border: none!important;
+    display: block;
+    position: relative;
+}
+
+body.cms-web-exclusives .products-grid > li {
+    margin-bottom: 20px!important;
+    position: relative;
+    text-align: center;
+}
+
+body.cms-web-exclusives .products-grid > li {
+    float: left;
+}
+
+body.cms-web-exclusives .products-grid .product-image img {
+    height: auto;
+    margin-left: 6%!important;
+    width: 80%!important;
+}
+
+body.cms-page-view.cms-web-exclusives .actions button {
+    background-color: #fed807;
+    border-radius: 0;
+    color: #302d26;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: 54px;
+    left: 0;
+    line-height: 1;
+    margin: auto;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease-in-out 0s;
+    width: 90%;
+}
+
+body.cms-page-view.cms-web-exclusives .actions button:hover {
+    background-color: #154020;
+    color: #ffffff!important;
+}
+
+.cms-banner-container.template2 .widget-banner .content-container .content .single-product-container button:hover {
+    background-color: #154020;
+    color: #ffffff!important;
+}
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-web-exclusives div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last div.product-info div.size {
+    font-size: 0.875rem!important;
+    min-height: 4em;
+}
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-web-exclusives div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last div.product-info div.size {
+	font-size: 0.875rem!important;
+    min-height: 4em;
+}
+
+body.cms-page-view.cms-web-exclusives div.product-info p.saving {
+    color: #a50808!important;
+    font-weight:bold!important;
+    font-size: 0.875rem;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+}
+
+@media handheld, screen and (max-width: 640px) {
+  body.cms-web-exclusives .col-main .cms-banner-container .image.mobile .product-container {
+    position: relative;
+    top: 0 !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.cms-web-exclusives .category-products .block-title h2:after {
+	/* content: " FREE"; */
+	color: #a50808 !important;
+} 
+
+.cms-web-exclusives .category-products:nth-child(2) .block-title h2:after {
+	content: "" !important;
+	
+} 
+.cms-web-exclusives .category-products:nth-child(4) .block-title h2:after {
+	content: "" !important;
+} 
+html#top.js.no-touch.localstorage body.cms-page-view.cms-web-exclusives div#quickview-dialog-wrapper div.quickview-container div.inner-tube div.product-view div.product-essential form#product_addtocart_form div.product-img-box a.quickview{
+	display: none;
+}
+
+
+/*----------------------------------------------------------------------------*/
+/* WEB EXCLUSIVES
+/*----------------------------------------------------------------------------*/
+body.cms-web-exclusives .breadcrumbs {
+  display: none;
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-web-exclusives .col-main .cms-banner-container .image.mobile {
+    height: auto !important;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-web-exclusives .col-main .cms-banner-container .image.mobile .product-container {
+    position: relative;
+    top: 0 !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-web-exclusives .col-main .cms-banner-container .image.mobile .content {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 !important;
+    margin: 25px 0 0 0;
+  }
+}
+body.cms-web-exclusives .col-main .promotion-container {
+  text-align: center;
+}
+body.cms-web-exclusives .col-main .promotion-container h2 {
+  margin: 50px 0 0 0;
+  padding: 0;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333333;
+}
+body.cms-web-exclusives .col-main .promotion-container p {
+  margin: 0 0 1em 0;
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #154020;
+}
+body.cms-web-exclusives .col-main .promotion-container .promotion1 {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #a50808;
+}
+@media handheld, screen and (max-width: 1200px) {
+  body.cms-web-exclusives .col-main .promotion-container .promotion1 {
+    width: 95%;
+  }
+}
+
+/*----------------------------------------------------------------------------*/
+/* WEB EXCLUSIVES Products Grid
+/*----------------------------------------------------------------------------*/
+.cms-web-exclusives .note-msg {
+  margin-top: 20px;
+}
+.cms-web-exclusives .block-title {
+  margin: 2em 0 1em 0;
+  padding: 0;
+  text-align: center;
+}
+.cms-web-exclusives .block-title h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333333;
+}
+.cms-web-exclusives .col-main {
+  margin: 0 7.72222%;
+}
+@media handheld, screen and (max-width: 768px) {
+  .cms-web-exclusives .col-main {
+    margin: 0 35px;
+  }
+}
+@media handheld, screen and (max-width: 320px) {
+  .cms-web-exclusives .col-main {
+    margin: 0 13px;
+  }
+}
+@media handheld, screen and (max-width: 1000pxpx) {
+  .cms-web-exclusives .col-main {
+    width: 100%;
+    padding: 0 5.46875%;
+    margin-top: 30px;
+    margin: 0 auto;
+  }
+}
+.cms-web-exclusives .col-main .toolbar {
+  background: transparent;
+  margin-top: 20px;
+  padding: 7px 10px 0px 10px;
+  margin-bottom: 36px;
+}
+.cms-web-exclusives .col-main .toolbar .sorter {
+  float: none;
+  margin-bottom: 7px;
+}
+.cms-web-exclusives .col-main .toolbar .sorter .view-mode {
+  float: none;
+  max-width: 120px;
+  margin: 0 auto;
+}
+.cms-web-exclusives .col-main .toolbar .sorter .view-mode .grid {
+  background-image: url('../images/sprites-sb62a2101cc.png');
+  background-position: -77px 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 18px;
+  width: 21px;
+  /*
+  // mod start Aydus 9/30/2014: Remove retina sprite functionality.
+  // Must have 2x image size otherwise images display at 50% size.
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: sprite-url($icons-2x);
+      background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+      background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+      height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+      width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+  }
+  */
+  top: 6px;
+  background-size: auto;
+}
+.cms-web-exclusives .col-main .toolbar .sorter .view-mode strong.grid {
+  background-image: url('../images/sprites-sb62a2101cc.png');
+  background-position: -98px 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 19px;
+  width: 22px;
+  /*
+  // mod start Aydus 9/30/2014: Remove retina sprite functionality.
+  // Must have 2x image size otherwise images display at 50% size.
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: sprite-url($icons-2x);
+      background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+      background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+      height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+      width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+  }
+  */
+  top: 6px;
+  background-size: auto;
+}
+.cms-web-exclusives .col-main .toolbar .sorter .view-mode .list {
+  background-image: url('../images/sprites-sb62a2101cc.png');
+  background-position: -55px 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 18px;
+  width: 22px;
+  /*
+  // mod start Aydus 9/30/2014: Remove retina sprite functionality.
+  // Must have 2x image size otherwise images display at 50% size.
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: sprite-url($icons-2x);
+      background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+      background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+      height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+      width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+  }
+  */
+  top: 5px;
+  background-size: auto;
+}
+.cms-web-exclusives .col-main .toolbar .sorter .view-mode strong.list {
+  background-image: url('../images/sprites-sb62a2101cc.png');
+  background-position: -33px 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 18px;
+  width: 22px;
+  /*
+  // mod start Aydus 9/30/2014: Remove retina sprite functionality.
+  // Must have 2x image size otherwise images display at 50% size.
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: sprite-url($icons-2x);
+      background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+      background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+      height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+      width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+  }
+  */
+  top: 5px;
+  background-size: auto;
+}
+.cms-web-exclusives .col-main .toolbar .sorter .view-mode .grid, .cms-web-exclusives .col-main .toolbar .sorter .view-mode .list {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.cms-web-exclusives .col-main .toolbar .sorter .view-mode label, .cms-web-exclusives .col-main .toolbar .sorter .view-mode .grid, .cms-web-exclusives .col-main .toolbar .sorter .view-mode strong.grid, .cms-web-exclusives .col-main .toolbar .sorter .view-mode .list, .cms-web-exclusives .col-main .toolbar .sorter .view-mode strong.list {
+  float: none;
+  display: inline-block;
+}
+.cms-web-exclusives .col-main .products-grid li.item, .cms-web-exclusives .col-main .products-list li.item {
+  border: 1px solid #edecea;
+  padding: 5px;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-web-exclusives .col-main .products-grid li.item, .cms-web-exclusives .col-main .products-list li.item {
+    display: block;
+    width: 100%;
+  }
+}
+.cms-web-exclusives .col-main .products-grid li.item .product-image, .cms-web-exclusives .col-main .products-list li.item .product-image {
+  border: 0px none transparent;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-web-exclusives .col-main .products-grid li.item .product-image, .cms-web-exclusives .col-main .products-list li.item .product-image {
+    width: 45.2054795%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+  }
+  .cms-web-exclusives .col-main .products-grid li.item .product-image img, .cms-web-exclusives .col-main .products-list li.item .product-image img {
+    max-width: 100%;
+    width: auto;
+  }
+}
+.cms-web-exclusives .col-main .products-grid li.item .product-info, .cms-web-exclusives .col-main .products-list li.item .product-info {
+  padding-bottom: 0;
+  min-height: 300px;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-web-exclusives .col-main .products-grid li.item .product-info, .cms-web-exclusives .col-main .products-list li.item .product-info {
+    width: 52.7945205%;
+    display: inline-block;
+    vertical-align: middle;
+    height: 143px;
+    padding-top: 15px;
+    min-height: 0;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-web-exclusives .col-main .products-grid li.item .product-info .price-box, .cms-web-exclusives .col-main .products-list li.item .product-info .price-box {
+    margin: 0 !important;
+    text-align: left;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-web-exclusives .col-main .products-grid li.item .product-info .saving, .cms-web-exclusives .col-main .products-list li.item .product-info .saving {
+    text-align: left;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-web-exclusives .col-main .products-grid li.item .product-info .more-info, .cms-web-exclusives .col-main .products-list li.item .product-info .more-info {
+    display: none;
+  }
+}
+.cms-web-exclusives .col-main .products-grid li.item .product-info .product-name, .cms-web-exclusives .col-main .products-list li.item .product-info .product-name {
+  min-height: 3.75em;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-web-exclusives .col-main .products-grid li.item .product-info .product-name, .cms-web-exclusives .col-main .products-list li.item .product-info .product-name {
+    width: 90%;
+    text-align: left;
+    margin: 0 auto;
+    height: auto;
+    min-height: 1.75em;
+  }
+}
+.cms-web-exclusives .col-main .products-grid li.item .product-info .product-name a, .cms-web-exclusives .col-main .products-list li.item .product-info .product-name a {
+  text-transform: none;
+  font-weight: normal;
+  color: #302d26;
+}
+.cms-web-exclusives .col-main .products-grid li.item .product-info .product-name a:hover, .cms-web-exclusives .col-main .products-list li.item .product-info .product-name a:hover {
+  color: #636363;
+}
+.cms-web-exclusives .col-main .products-grid li.item .product-info .size, .cms-web-exclusives .col-main .products-list li.item .product-info .size {
+  font-size: 12px;
+  min-height: 4em;
+}
+@media handheld, screen and (max-width: 768px) {
+  .cms-web-exclusives .col-main .products-grid li.item .product-info .size, .cms-web-exclusives .col-main .products-list li.item .product-info .size {
+    min-height: 6em;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-web-exclusives .col-main .products-grid li.item .product-info .size, .cms-web-exclusives .col-main .products-list li.item .product-info .size {
+    display: none;
+  }
+}
+.cms-web-exclusives .col-main .products-grid li.item .product-info .actions, .cms-web-exclusives .col-main .products-list li.item .product-info .actions {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-web-exclusives .col-main .products-grid li.item .product-info .actions, .cms-web-exclusives .col-main .products-list li.item .product-info .actions {
+    position: relative;
+    right: auto;
+    left: auto;
+    bottom: auto;
+  }
+}
+.cms-web-exclusives .col-main .products-grid li.item .product-info .actions button, .cms-web-exclusives .col-main .products-list li.item .product-info .actions button {
+  width: 90%;
+  height: 54px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1;
+  text-decoration: none;
+  color: #302d26;
+  background-color: #fed807;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.cms-web-exclusives .col-main .products-grid li.item .product-info .actions button:hover, .cms-web-exclusives .col-main .products-list li.item .product-info .actions button:hover {
+  color: #ffffff;
+  background-color: #154020;
+}
+.cms-web-exclusives .col-main .products-grid li.item .product-info .actions button span, .cms-web-exclusives .col-main .products-list li.item .product-info .actions button span {
+  width: auto;
+  height: auto !important;
+  padding: 0 !important;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background-image: none;
+}
+.cms-web-exclusives .col-main .products-grid li.item .product-info .actions button span span, .cms-web-exclusives .col-main .products-list li.item .product-info .actions button span span {
+  width: auto;
+  height: auto !important;
+  padding: 0 !important;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  background-image: none;
+  color: inherit;
+}
+.cms-web-exclusives .col-main .products-grid li.item .product-info .actions button span span:hover, .cms-web-exclusives .col-main .products-list li.item .product-info .actions button span span:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-web-exclusives .col-main .products-grid li.item .product-info .actions button, .cms-web-exclusives .col-main .products-list li.item .product-info .actions button {
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+.cms-web-exclusives .col-main .products-grid li.item .product-info .actions button span, .cms-web-exclusives .col-main .products-list li.item .product-info .actions button span {
+  color: black;
+  font-weight: bold;
+}
+.cms-web-exclusives .col-main .category-description {
+  background: #f8f7f7;
+  padding: 40px 160px 45px 60px;
+  position: relative;
+}
+.cms-web-exclusives .col-main .category-description h3 {
+  text-transform: none;
+  color: #154020;
+  margin-bottom: 30px;
+}
+.cms-web-exclusives .col-main .category-description p {
+  color: #999999;
+}
+.cms-web-exclusives .col-main .category-description:after {
+  content: '';
+  background-image: url('../images/sprites-sb62a2101cc.png');
+  background-position: 0 -561px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 125px;
+  width: 131px;
+  /*
+  // mod start Aydus 9/30/2014: Remove retina sprite functionality.
+  // Must have 2x image size otherwise images display at 50% size.
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: sprite-url($icons-2x);
+      background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+      background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+      height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+      width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+  }
+  */
+  position: absolute;
+  top: 0px;
+  right: 30px;
+}
+/*----------------------------------------------------------------------------*/
+/*END
+/*----------------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------------------*/
+/*REMOVING AUTO SUGGESTED SEARCH
+/*----------------------------------------------------------------------------*/
+
+.search-autocomplete {
+ 
+  display: none !important;
+}
+
+/*----------------------------------------------------------------------------*/
+/*END
+/*----------------------------------------------------------------------------*/
+
+
+
+
+
+
+/*----------------------------------------------------------------------------*/
+/*LANDING PAGES
+/*----------------------------------------------------------------------------*/
+/*Landing Pages section 1*/
+
+body.cms-superfood1 .breadcrumbs {
+  display: none;
+}
+body.cms-superfood1 .col-main .section1 {
+  margin-top: 50px;
+}
+body.cms-superfood1 .col-main .section1 div.table {
+  display: table;
+}
+body.cms-superfood1 .col-main .section1 div.table > div {
+  display: table-row;
+}
+body.cms-superfood1 .col-main .section1 div.table > div > div {
+  display: table-cell;
+}
+body.cms-superfood1 .col-main .section1 .table-cell {
+  vertical-align: top;
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-superfood1 .col-main .section1 .table-cell:nth-child(2) {
+    display: none;
+  }
+}
+body.cms-superfood1 .col-main .section1 .image-container img {
+  max-width: 100%;
+  height: auto !important;
+}
+body.cms-superfood1 .col-main .section1 .image-container.image1 {
+  margin-right: 5%;
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-superfood1 .col-main .section1 .image-container.image1 {
+    margin-right: 0%;
+  }
+}
+body.cms-superfood1 .col-main .section1 .image-container.image2 {
+  margin-bottom: 2%;
+}
+body.cms-superfood1 .section2 {
+  margin-bottom: 70px;
+}
+
+
+body.cms-superfood1 .section3 .column-middle-container {
+  float: left;
+  width: 100%;
+}
+body.cms-superfood1 .section3 .column-middle-container .column.middle {
+  margin: -2.7% 33% 0 31%;
+  /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth"*/
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body.cms-superfood1 .section3 .column.left {
+  float: left;
+  width: 35%;
+  /*Width of left column in percentage*/
+  margin-left: -103%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body.cms-superfood1 .section3 .column.right {
+  float: left;
+  width: 34%;
+  /*Width of right column in pixels*/
+  margin-left: -34%;
+  /*Set margin to that of -(RightColumnWidth)*/
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: -2.7%;
+}
+@media handheld, screen and (max-width: 767px) {
+  body.cms-superfood1 .section3 .column-middle-container {
+    float: none;
+    width: auto;
+  }
+  body.cms-superfood1 .section3 .column-middle-container .column.middle {
+    margin: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+  body.cms-superfood1 .section3 .column.left {
+    float: none;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+  body.cms-superfood1 .section3 .column.right {
+    float: none;
+    width: auto;
+    margin-left: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+}
+
+body.cms-superfood1 .section3 .blink1 {
+  display: inline-block;
+  width: auto;
+  height: 54px;
+  line-height: 54px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #302d26;
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: #fed807;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  padding: 0 30px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+body.cms-superfood1 .section3 .blink1:hover {
+  text-decoration: none;
+  color: #ffffff !important;
+  background-color: #154020;
+ 
+}
+
+body.cms-superfood1 .section3 img {
+  max-width: 100%;
+  height: auto !important;
+}
+/*body.cms-superfood1 .section3 .column.middle .inner-tube,
+body.cms-superfood1 .section3 .column.right .inner-tube {
+  margin-top: 2em;
+}*/
+body.cms-superfood1 .section3 .column.middle .inner-tube h2,
+body.cms-superfood1 .section3 .column.right .inner-tube h2 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+/*end*/
+
+/*Landing Pages section 2 (Tables)*/
+
+/*left column*/
+body.cms-superfood1 .section3 .column.left .inner-tube {
+  margin-right: 8.5%;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube div.table {
+  display: table;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube div.table > div {
+  display: table-row;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube div.table > div > div {
+  display: table-cell;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube h2 {
+  margin-bottom: 1.5em;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube .table {
+  width: 100%;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube .table .table-row:nth-child(odd) {
+  background-color: #FFD806;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube .table .table-row:nth-child(even) {
+  background-color: #FFD806;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube .table .table-row.head {
+  background-color: #154020;
+}
+body.cms-superfood1 .section3 .column.left .inner-tube .table .table-row.head .table-cell {
+  color: #ffffff;
+}
+    
+body.cms-superfood1 .section3 .column.left .inner-tube .blink1 {
+  margin-top: 1em;
+}
+
+.inner-tube div.table div.table-row.head div.table-cell{
+	 font-size: 36px;
+	 font-weight:100;
+}
+.inner-tube div.table div.table-row{
+	 font-size: 1rem;
+}
+
+/*middle column*/
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column-middle-container div.column.middle div.inner-tube div.table div.table-row.head{
+	background-color: #154020;
+	color: #ffffff;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column-middle-container div.column.middle div.inner-tube div.table div.table-row{
+	background-color: #C5E0EB;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column-middle-container div.column.middle div.inner-tube div.table div.table-row.head div.table-cell{
+	padding: 0.0em 0.5em;
+}
+body.cms-superfood1 .section3 .column.middle .inner-tube {
+  margin-right: 8.5%;
+}
+body.cms-superfood1 .section4 {
+  margin-top: 90px;
+  padding: 65px 0;
+  background-color: #c5e0eb;
+}
+
+/*right column*/
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column.right div.inner-tube div.table div.table-row.head{
+	background-color: #154020;
+	color: #ffffff;
+}
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column.right div.inner-tube div.table div.table-row{
+	background-color: #CFEBC5;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section3.clearfix div.column.right div.inner-tube div.table div.table-row.head div.table-cell{
+	padding: 0.0em 0.5em;
+}
+
+
+
+
+/*Landing Pages section-2*/
+/*Products-Grid*/
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last{
+
+	border: 1px solid #edecea;
+	padding: 5px;
+	list-style: none outside none;
+	width: 30.3333%;
+	
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last a.product-image img#product-collection-image-572{
+	 max-width: 42%;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last h2.product-name{
+	text-align: left;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last div.product-info{
+	text-align: left;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last div.product-info div.actions{
+	 margin-left: 41%;
+}/*button*/
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last div.product-info div.actions button.button.btn-cart{
+	 padding: 15px 35px;
+	 font-weight: bold;
+	 font-size: 0.875rem;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last div.product-info div.actions button.button.btn-cart:hover{
+	 color: #ffffff;
+  background-color: #154020;
+}
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section2.clearfix div.col-main{
+	margin: 0 0;
+	margin-top:3%;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section2.clearfix div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last{
+	margin-right: 2.22222%;
+}
+
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last a.product-image img#product-collection-image-577{
+	 max-width: 42%;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section2.clearfix div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last a.product-image img#product-collection-image-551{
+	max-width: 42%;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section2.clearfix div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last a.product-image img#product-collection-image-544{
+	max-width: 42%;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div section.section2.clearfix div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd.even li.item.last a.product-image img#product-collection-image-552{
+	max-width: 42%;
+}
+/*end*/
+
+
+
+
+
+
+
+/*Landing Pages Section-3*/
+
+/*----------------------------------------------------------------------------*/
+/* Home: Tabs
+/*----------------------------------------------------------------------------*/
+.cms-superfood1 .section2,
+.cms-superfood1 .section3 {
+  margin: 0 2.72222%;
+  margin-top: 77px;
+  margin-bottom: 102px;
+  margin-left:7%;
+}
+@media handheld, screen and (max-width: 768px) {
+  .cms-superfood1 .section2,
+  .cms-superfood1 .section3 {
+    margin: 0 35px;
+    margin-top: 50px;
+  }
+}
+@media handheld, screen and (max-width: 320px) {
+  .cms-superfood1 .section2,
+  .cms-superfood1 .section3 {
+    margin: 0 13px;
+    margin-top: 50px;
+  }
+}
+.cms-superfood1 .section2 img,
+.cms-superfood1 .section3 img {
+  max-width: 100%;
+  height: auto !important;
+}
+.cms-superfood1 .section2 h2,
+.cms-superfood1 .section3 h2 {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 36px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333333 !important;
+}
+.cms-superfood1 .section2 h3,
+.cms-superfood1 .section3 h3 {
+  margin: 0 0 30px 0;
+  padding: 0;
+  font-size: 18px;
+  font-size: 1.125rem;
+  text-align: center;
+  color: #666666;
+  text-transform: none;
+}
+.cms-superfood1 .section2 .ui-tabs-nav,
+.cms-superfood1 .section3 .ui-tabs-nav {
+  height: 50px !important;
+  padding: 3px;
+  display: block;
+  margin: 0 auto;
+  max-width: 650px;
+  width: 100%;
+  border-radius: 5px;
+  /* gradient generated by http://www.colorzilla.com/gradient-editor/ */
+  background: #dbd4cc;
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RiZDRjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjclIiBzdG9wLWNvbG9yPSIjZTdlMGQ4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTUlIiBzdG9wLWNvbG9yPSIjZWRlNmRlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODclIiBzdG9wLWNvbG9yPSIjZWNlNWRkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODklIiBzdG9wLWNvbG9yPSIjZWFlM2RiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTElIiBzdG9wLWNvbG9yPSIjZWJlNGRjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTglIiBzdG9wLWNvbG9yPSIjZGVkN2NmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RjZDVjZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dbd4cc), color-stop(7%, #e7e0d8), color-stop(15%, #ede6de), color-stop(87%, #ece5dd), color-stop(89%, #eae3db), color-stop(91%, #ebe4dc), color-stop(98%, #ded7cf), color-stop(100%, #dcd5cd));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #dbd4cc 0%, #e7e0d8 7%, #ede6de 15%, #ece5dd 87%, #eae3db 89%, #ebe4dc 91%, #ded7cf 98%, #dcd5cd 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbd4cc', endColorstr='#dcd5cd',GradientType=0 );
+  /* IE6-8 */
+  list-style: none;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood1 .section2 .ui-tabs-nav,
+  .cms-superfood1 .section3 .ui-tabs-nav {
+    width: 100%;
+    height: 132px !important;
+  }
+}
+.cms-superfood1 .section2 .ui-tabs-nav .ui-state-active,
+.cms-superfood1 .section3 .ui-tabs-nav .ui-state-active {
+  background: #154020;
+  border-radius: 5px;
+}
+.cms-superfood1 .section2 .ui-tabs-nav .ui-state-active a,
+.cms-superfood1 .section3 .ui-tabs-nav .ui-state-active a {
+  color: white;
+  text-decoration: none;
+}
+.cms-superfood1 .section2 .ui-tabs-nav .ui-state-active a:before, .cms-superfood1 .section2 .ui-tabs-nav .ui-state-active a:after,
+.cms-superfood1 .section3 .ui-tabs-nav .ui-state-active a:before,
+.cms-superfood1 .section3 .ui-tabs-nav .ui-state-active a:after {
+  position: absolute;
+  display: block;
+  content: '';
+  border: 9px solid transparent;
+  font-style: normal !important;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood1 .section2 .ui-tabs-nav .ui-state-active a:before, .cms-superfood1 .section2 .ui-tabs-nav .ui-state-active a:after,
+  .cms-superfood1 .section3 .ui-tabs-nav .ui-state-active a:before,
+  .cms-superfood1 .section3 .ui-tabs-nav .ui-state-active a:after {
+    display: none;
+  }
+}
+.cms-superfood1 .section2 .ui-tabs-nav .ui-state-active a:after,
+.cms-superfood1 .section3 .ui-tabs-nav .ui-state-active a:after {
+  top: 44px;
+  left: 98px;
+  border-top-color: #154020;
+}
+.cms-superfood1 .section2 .ui-tabs-nav li,
+.cms-superfood1 .section3 .ui-tabs-nav li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  height: 44px;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood1 .section2 .ui-tabs-nav li,
+  .cms-superfood1 .section3 .ui-tabs-nav li {
+    width: 100%;
+    height: auto;
+  }
+}
+.cms-superfood1 .section2 .ui-tabs-nav li a,
+.cms-superfood1 .section3 .ui-tabs-nav li a {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 44px;
+  line-height: 2.75rem;
+  display: block;
+  position: relative;
+  color: #878686;
+  text-decoration: none;
+}
+.cms-superfood1 .section2 .ui-tabs-nav li a:hover,
+.cms-superfood1 .section3 .ui-tabs-nav li a:hover {
+  text-decoration: none;
+}
+.cms-superfood1 .section2 .ui-tabs-panel,
+.cms-superfood1 .section3 .ui-tabs-panel {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 45px;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood1 .section2 .ui-tabs-panel,
+  .cms-superfood1 .section3 .ui-tabs-panel {
+    margin-top: 30px;
+  }
+}
+.cms-superfood1 .section2 .ui-tabs-panel .content h3,
+.cms-superfood1 .section3 .ui-tabs-panel .content h3 {
+  text-align: left;
+}
+.cms-superfood1 .section2 .ui-tabs-panel .content p,
+.cms-superfood1 .section3 .ui-tabs-panel .content p {
+  line-height: 28px;
+  color: #333333;
+}
+.cms-superfood1 .section2 .ui-tabs-panel div,
+.cms-superfood1 .section3 .ui-tabs-panel div {
+  width: 47%;
+  display: inline-block;
+  vertical-align: top;
+}
+.cms-superfood1 .section2 .ui-tabs-panel div div,
+.cms-superfood1 .section3 .ui-tabs-panel div div {
+  width: auto;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood1 .section2 .ui-tabs-panel div,
+  .cms-superfood1 .section3 .ui-tabs-panel div {
+    width: 100%;
+  }
+}
+.cms-superfood1 .section2 .ui-tabs-panel div:first-child,
+.cms-superfood1 .section3 .ui-tabs-panel div:first-child {
+  margin-right: 5%;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-superfood1 .section2 .ui-tabs-panel div:first-child,
+  .cms-superfood1 .section3 .ui-tabs-panel div:first-child {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+.cms-superfood1 .section2 .ui-tabs-panel div .blink1,
+.cms-superfood1 .section3 .ui-tabs-panel div .blink1 {
+  display: inline-block;
+  width: auto;
+  height: 54px;
+  line-height: 54px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #302d26;
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: #fed807;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  padding: 0 30px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.cms-superfood1 .section2 .ui-tabs-panel div .blink1:hover,
+.cms-superfood1 .section3 .ui-tabs-panel div .blink1:hover {
+  text-decoration: none;
+  color: #ffffff !important;
+  background-color: #154020;
+}
+
+.cms-superfood1 .section2 .ui-tabs-nav .ui-state-active, .cms-superfood1 .section3 .ui-tabs-nav .ui-state-active{
+	background: none repeat scroll 0 0 #154020 !important;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.widget.widget-static-block div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1.ui-tabs-panel.ui-widget-content.ui-corner-bottom div.content h5{
+	color: #154020;
+    font-size: 1.125rem;
+}
+html#top.js.no-touch.localstorage body.cms-page-view.cms-superfood1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.widget.widget-static-block div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1.ui-tabs-panel.ui-widget-content.ui-corner-bottom div.content p{
+	font-size: 1rem !important;
+}
+/*END*/
+
+
+
+/*----------------------------------------------------------------------------*/
+/*END
+/*----------------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------------------*/
+/*LANDING PAGES- COLD & FLU ROUTINE
+/*----------------------------------------------------------------------------*/
+.cms-page-view.cms-schulze-cold-flu-routine div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.widget.widget-static-block div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1 div.content div.expand_wrapper h2.expand_heading.inactive{
+	display:none;
+}
+.cms-page-view.cms-schulze-cold-flu-routine div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.widget.widget-static-block div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1{
+    margin: 45px auto 0;
+    max-width: 1000px;
+}
+.cms-page-view.cms-schulze-cold-flu-routine div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.widget.widget-static-block div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1 div.image{
+
+	display: inline-block;
+    vertical-align: top;
+    width: 47%;
+    float: left;
+    margin-bottom: 50px;
+     margin-right: 5%;
+}
+.cms-page-view.cms-schulze-cold-flu-routine div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.widget.widget-static-block div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1 div.content div.expand_wrapper h2.expand_heading.active a img{
+	
+	display:inline;
+}
+.cms-page-view.cms-schulze-cold-flu-routine div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.widget.widget-static-block div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1 div.content div.expand_wrapper h2.expand_heading a img{
+	display:inline;
+}
+.cms-page-view.cms-schulze-cold-flu-routine div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.widget.widget-static-block div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1 div.content h5{
+	color: #2a5e37;
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    margin: 0 0 10px;
+    padding: 0;
+    text-transform: uppercase;
+    
+}
+.cms-page-view.cms-schulze-cold-flu-routine div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.widget.widget-static-block div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1 div.content div.expand_wrapper h2.expand_heading{
+	color: #333333 !important;
+    font-family: "montserratregular",sans-serif !important;
+    font-size: 1rem !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none !important;
+    display:inline;
+    
+}
+
+
+.cms-page-view.cms-schulze-cold-flu-routine div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div div.widget.widget-static-block div.section2 div#section-two-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all div#section-two-1 div.content div.expand_wrapper h2.expand_heading.active a{
+	 color: #333333 !important;
+    font-family: "montserratregular",sans-serif !important;
+    font-size: 1rem !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+.cms-page-view.cms-schulze-cold-flu-routine div.wrapper div.page div.main-container.col1-layout div.main div.footer div.outer div.menu div.links ul li a{
+	text-decoration: none !important;
+}
+.cms-page-view.cms-schulze-cold-flu-routine div.wrapper div.page div.main-container.col1-layout div.main div.footer div.outer div.shortcuts ul li a{
+	text-decoration: none !important;
+}
+
+/*products*/
+.cms-banner-container.template2 .widget-banner .content-container .content ul li:before {
+    background-image: url("../images/sprites-sbbf0716586.png");
+    background-position: -18px -49px!important;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 14px;
+    margin-right: 18px!important;
+    margin-left: -36px !important;
+    overflow: hidden;
+    width: 18px;
+}
+
+.cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info {
+    min-height: 260px!important;
+    padding-bottom: 0;
+}
+
+.products-grid .product-name, .products-list h2.product-name {
+    font-family: Montserrat,"Helvetica Neue",Verdana,Arial,sans-serif!important;
+    font-size: 0.875rem!important;
+    margin-bottom: 5px;
+    text-transform: none!important;
+    color:#333333!important;
+}
+
+h2.product-name a{
+	color:#333333!important;
+	font-size: 0.875rem!important;
+	font-weight: bold !important;
+	text-decoration: none !important;
+}
+
+.cms-banner-container.template2 .widget-banner .product-container {
+    left: 16%;
+    position: absolute;
+    top: 250px!important;
+}
+
+.cms-banner-container.template2 .widget-banner .content-container .content h2 {
+    color: #333333!important;
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.cms-banner-container.template2 .widget-banner .content-container .content h2 span {
+    color: #333333!important;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cms-banner-container.template2 .widget-banner .content-container .content p.saving {
+    color: #a50808!important;
+    font-weight:bold!important;
+    font-size: 0.875rem;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+}
+
+.cms-banner-container.template2 .widget-banner .content-container .content p.only {
+    color: #333333!important;
+    font-size: 1.125rem!important;
+    font-weight: bold;
+}
+
+.cms-page-view.cms-schulze-cold-flu-routine a.quickview {
+	text-align:center!important;
+}
+
+.cms-page-view.cms-schulze-cold-flu-routine div.block-title-special {
+	margin: 2em 0 1em;
+    padding: 0;
+    text-align: center;
+}
+
+.cms-page-view.cms-schulze-cold-flu-routine div.block-title-special h2 {
+	color: #333333;
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+body.cms-schulze-cold-flu-routine .category-products .products-grid .item {
+    box-sizing: border-box;
+    /*margin: 0;
+    padding: 0 2.5% 2.5% 0;
+    width: 20%!important;*/
+    border: 1px solid #edecea!important;
+    padding: 5px!important;
+    list-style: none outside none;
+    /*margin-right: 19px!important;*/
+    
+}
+
+
+.product-image, .no-touch .product-img-box .product-image:hover:not(.zoom-available) {
+    border: none!important;
+    display: block;
+    position: relative;
+}
+
+body.cms-schulze-cold-flu-routine .products-grid > li {
+    margin-bottom: 20px!important;
+    position: relative;
+    text-align: center;
+    margin-right: 2.22222%;
+}
+
+body.cms-schulze-cold-flu-routine .products-grid > li {
+    float: left;
+}
+
+body.cms-schulze-cold-flu-routine .products-grid .product-image img {
+    height: auto;
+    margin-left: 6%!important;
+    width: 80%!important;
+}
+
+body.cms-page-view.cms-schulze-cold-flu-routine .actions button {
+    background-color: #fed807;
+    border-radius: 0;
+    color: #302d26;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: 54px;
+    left: 0;
+    line-height: 1;
+    margin: auto;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease-in-out 0s;
+    width: 90%;
+}
+
+body.cms-page-view.cms-schulze-cold-flu-routine .actions button:hover {
+    background-color: #154020;
+    color: #ffffff!important;
+}
+
+.cms-banner-container.template2 .widget-banner .content-container .content .single-product-container button:hover {
+    background-color: #154020;
+    color: #ffffff!important;
+}
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-schulze-cold-flu-routine div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last div.product-info div.size {
+    font-size: 0.875rem!important;
+    min-height: 4em;
+}
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-schulze-cold-flu-routine div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last div.product-info div.size {
+	font-size: 0.875rem!important;
+    min-height: 4em;
+}
+
+body.cms-page-view.cms-schulze-cold-flu-routine div.product-info p.saving {
+    color: #a50808!important;
+    font-weight:bold!important;
+    font-size: 0.875rem;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+}
+
+@media handheld, screen and (max-width: 640px) {
+  body.cms-schulze-cold-flu-routine .col-main .cms-banner-container .image.mobile .product-container {
+    position: relative;
+    top: 0 !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.cms-schulze-cold-flu-routine .category-products .block-title h2:after {
+/* content: " FREE"; */
+	color: #a50808 !important;} 
+
+.cms-schulze-cold-flu-routine .category-products:nth-child(3) .block-title h2:after {
+	content: "" !important;
+	
+	
+} 
+.cms-schulze-cold-flu-routine .category-products:nth-child(4) .block-title h2:after {
+	content: "" !important;
+} 
+.cms-schulze-cold-flu-routine .category-products:nth-child(5) .block-title h2:after {
+	content: "" !important;
+} 
+html#top.js.no-touch.localstorage body.cms-page-view.cms-schulze-cold-flu-routine div#quickview-dialog-wrapper div.quickview-container div.inner-tube div.product-view div.product-essential form#product_addtocart_form div.product-img-box a.quickview{
+	display: none;
+}
+
+
+
+body.cms-schulze-cold-flu-routine .breadcrumbs {
+  display: none;
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-schulze-cold-flu-routine .col-main .cms-banner-container .image.mobile {
+    height: auto !important;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-schulze-cold-flu-routine .col-main .cms-banner-container .image.mobile .product-container {
+    position: relative;
+    top: 0 !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-schulze-cold-flu-routine .col-main .cms-banner-container .image.mobile .content {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 !important;
+    margin: 25px 0 0 0;
+  }
+}
+body.cms-schulze-cold-flu-routine .col-main .promotion-container {
+  text-align: center;
+}
+body.cms-schulze-cold-flu-routine .col-main .promotion-container h2 {
+  margin: 50px 0 0 0;
+  padding: 0;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333333;
+}
+body.cms-schulze-cold-flu-routine .col-main .promotion-container p {
+  margin: 0 0 1em 0;
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #154020;
+}
+body.cms-schulze-cold-flu-routine .col-main .promotion-container .promotion1 {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #a50808;
+}
+@media handheld, screen and (max-width: 1200px) {
+  body.cms-schulze-cold-flu-routine .col-main .promotion-container .promotion1 {
+    width: 95%;
+  }
+}
+
+
+.cms-schulze-cold-flu-routine .note-msg {
+  margin-top: 20px;
+}
+.cms-schulze-cold-flu-routine .block-title {
+  margin: 2em 0 1em 0;
+  padding: 0;
+  text-align: center;
+}
+.cms-schulze-cold-flu-routine .block-title h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333333 !important;
+}
+.cms-schulze-cold-flu-routine .col-main {
+  margin: 0 7.72222%;
+}
+@media handheld, screen and (max-width: 768px) {
+  .cms-schulze-cold-flu-routine .col-main {
+    margin: 0 35px;
+  }
+}
+@media handheld, screen and (max-width: 320px) {
+  .cms-schulze-cold-flu-routine .col-main {
+    margin: 0 13px;
+  }
+}
+@media handheld, screen and (max-width: 1000pxpx) {
+  .cms-schulze-cold-flu-routine .col-main {
+    width: 100%;
+    padding: 0 5.46875%;
+    margin-top: 30px;
+    margin: 0 auto;
+  }
+}
+.cms-schulze-cold-flu-routine .col-main .toolbar {
+  background: transparent;
+  margin-top: 20px;
+  padding: 7px 10px 0px 10px;
+  margin-bottom: 36px;
+}
+.cms-schulze-cold-flu-routine .col-main .toolbar .sorter {
+  float: none;
+  margin-bottom: 7px;
+}
+.cms-schulze-cold-flu-routine .col-main .toolbar .sorter .view-mode {
+  float: none;
+  max-width: 120px;
+  margin: 0 auto;
+}
+.cms-schulze-cold-flu-routine .col-main .toolbar .sorter .view-mode .grid {
+  background-image: url('../images/sprites-sb62a2101cc.png');
+  background-position: -77px 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 18px;
+  width: 21px;
+  /*
+  // mod start Aydus 9/30/2014: Remove retina sprite functionality.
+  // Must have 2x image size otherwise images display at 50% size.
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: sprite-url($icons-2x);
+      background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+      background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+      height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+      width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+  }
+  */
+  top: 6px;
+  background-size: auto;
+}
+.cms-schulze-cold-flu-routine .col-main .toolbar .sorter .view-mode strong.grid {
+  background-image: url('../images/sprites-sb62a2101cc.png');
+  background-position: -98px 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 19px;
+  width: 22px;
+  /*
+  // mod start Aydus 9/30/2014: Remove retina sprite functionality.
+  // Must have 2x image size otherwise images display at 50% size.
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: sprite-url($icons-2x);
+      background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+      background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+      height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+      width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+  }
+  */
+  top: 6px;
+  background-size: auto;
+}
+.cms-schulze-cold-flu-routine .col-main .toolbar .sorter .view-mode .list {
+  background-image: url('../images/sprites-sb62a2101cc.png');
+  background-position: -55px 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 18px;
+  width: 22px;
+  /*
+  // mod start Aydus 9/30/2014: Remove retina sprite functionality.
+  // Must have 2x image size otherwise images display at 50% size.
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: sprite-url($icons-2x);
+      background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+      background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+      height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+      width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+  }
+  */
+  top: 5px;
+  background-size: auto;
+}
+.cms-schulze-cold-flu-routine .col-main .toolbar .sorter .view-mode strong.list {
+  background-image: url('../images/sprites-sb62a2101cc.png');
+  background-position: -33px 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 18px;
+  width: 22px;
+  /*
+  // mod start Aydus 9/30/2014: Remove retina sprite functionality.
+  // Must have 2x image size otherwise images display at 50% size.
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: sprite-url($icons-2x);
+      background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+      background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+      height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+      width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+  }
+  */
+  top: 5px;
+  background-size: auto;
+}
+.cms-schulze-cold-flu-routine .col-main .toolbar .sorter .view-mode .grid, .cms-schulze-cold-flu-routine .col-main .toolbar .sorter .view-mode .list {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.cms-schulze-cold-flu-routine .col-main .toolbar .sorter .view-mode label, .cms-schulze-cold-flu-routine .col-main .toolbar .sorter .view-mode .grid, .cms-schulze-cold-flu-routine .col-main .toolbar .sorter .view-mode strong.grid, .cms-schulze-cold-flu-routine .col-main .toolbar .sorter .view-mode .list, .cms-schulze-cold-flu-routine .col-main .toolbar .sorter .view-mode strong.list {
+  float: none;
+  display: inline-block;
+}
+/*.cms-schulze-cold-flu-routine .col-main .products-grid li.item, .cms-schulze-cold-flu-routine .col-main .products-list li.item {
+  border: 1px solid #edecea;
+  padding: 5px;
+}*/
+@media handheld, screen and (max-width: 640px) {
+  .cms-schulze-cold-flu-routine .col-main .products-grid li.item, .cms-schulze-cold-flu-routine .col-main .products-list li.item {
+    display: block;
+    width: 100%;
+  }
+}
+.cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-image, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-image {
+  border: 0px none transparent;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-image, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-image {
+    width: 45.2054795%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+  }
+  .cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-image img, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-image img {
+    max-width: 100%;
+    width: auto;
+  }
+}
+.cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info {
+  padding-bottom: 0;
+  min-height: 300px;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info {
+    width: 52.7945205%;
+    display: inline-block;
+    vertical-align: middle;
+    height: 143px;
+    padding-top: 15px;
+    min-height: 0;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .price-box, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .price-box {
+    margin: 0 !important;
+    text-align: left;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .saving, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .saving {
+    text-align: left;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .more-info, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .more-info {
+    display: none;
+  }
+}
+.cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .product-name, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .product-name {
+  min-height: 3.75em;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .product-name, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .product-name {
+    width: 90%;
+    text-align: left;
+    margin: 0 auto;
+    height: auto;
+    min-height: 1.75em;
+  }
+}
+.cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .product-name a, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .product-name a {
+  text-transform: none;
+  font-weight: normal;
+  color: #302d26;
+}
+.cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .product-name a:hover, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .product-name a:hover {
+  color: #636363;
+}
+.cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .size, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .size {
+  font-size: 12px;
+  min-height: 4em;
+}
+@media handheld, screen and (max-width: 768px) {
+  .cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .size, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .size {
+    min-height: 6em;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .size, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .size {
+    display: none;
+  }
+}
+.cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .actions, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .actions {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .actions, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .actions {
+    position: relative;
+    right: auto;
+    left: auto;
+    bottom: auto;
+  }
+}
+.cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .actions button, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .actions button {
+  width: 90%;
+  height: 54px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1;
+  text-decoration: none;
+  color: #302d26;
+  background-color: #fed807;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .actions button:hover, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .actions button:hover {
+  color: #ffffff;
+  background-color: #154020;
+}
+.cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .actions button span, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .actions button span {
+  width: auto;
+  height: auto !important;
+  padding: 0 !important;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background-image: none;
+}
+.cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .actions button span span, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .actions button span span {
+  width: auto;
+  height: auto !important;
+  padding: 0 !important;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  background-image: none;
+  color: inherit;
+}
+.cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .actions button span span:hover, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .actions button span span:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+@media handheld, screen and (max-width: 640px) {
+  .cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .actions button, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .actions button {
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+.cms-schulze-cold-flu-routine .col-main .products-grid li.item .product-info .actions button span, .cms-schulze-cold-flu-routine .col-main .products-list li.item .product-info .actions button span {
+  color: black;
+  font-weight: bold;
+}
+.cms-schulze-cold-flu-routine .col-main .category-description {
+  background: #f8f7f7;
+  padding: 40px 160px 45px 60px;
+  position: relative;
+}
+.cms-schulze-cold-flu-routine .col-main .category-description h3 {
+  text-transform: none;
+  color: #154020;
+  margin-bottom: 30px;
+}
+.cms-schulze-cold-flu-routine .col-main .category-description p {
+  color: #999999;
+}
+.cms-schulze-cold-flu-routine .col-main .category-description:after {
+  content: '';
+  background-image: url('../images/sprites-sb62a2101cc.png');
+  background-position: 0 -561px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 125px;
+  width: 131px;
+  /*
+  // mod start Aydus 9/30/2014: Remove retina sprite functionality.
+  // Must have 2x image size otherwise images display at 50% size.
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: sprite-url($icons-2x);
+      background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+      background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+      height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+      width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+  }
+  */
+  position: absolute;
+  top: 0px;
+  right: 30px;
+}
+
+.cms-page-view.cms-schulze-cold-flu-routine div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last{
+	width:22.75%;
+}
+
+
+/*top selling products*/
+body.cms-schulze-cold-flu-routine .breadcrumbs {
+  display: none;
+}
+body.cms-schulze-cold-flu-routine .col-main {
+  margin: 0;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products {
+  width: 78%;
+  margin: 0 auto;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products .block-title h2,
+body.cms-schulze-cold-flu-routine .col-main .category-products .box-title h2 {
+  margin: 0;
+  padding: 60px 0 60px 0;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333333;
+}
+@media handheld, screen and (max-width: 768px) {
+  body.cms-schulze-cold-flu-routine .col-main .category-products .block-title h2,
+  body.cms-schulze-cold-flu-routine .col-main .category-products .box-title h2 {
+    margin: 45px 0 40px 0;
+  }
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul {
+  width: auto;
+  margin: 0 auto;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media handheld, screen and (max-width: 768px) {
+  body.cms-schulze-cold-flu-routine .col-main .category-products ol,
+  body.cms-schulze-cold-flu-routine .col-main .category-products ul {
+    width: 90%;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-schulze-cold-flu-routine .col-main .category-products ol,
+  body.cms-schulze-cold-flu-routine .col-main .category-products ul {
+    width: 80%;
+  }
+}
+@media handheld, screen and (max-width: 320px) {
+  body.cms-schulze-cold-flu-routine .col-main .category-products ol,
+  body.cms-schulze-cold-flu-routine .col-main .category-products ul {
+    width: 75%;
+  }
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li {
+  
+  padding: 0 15px;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .checkbox,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .checkbox {
+  display: none;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product {
+  position: static;
+  margin: 0;
+  padding: 9px;
+  /*border: 1px solid #edecea;*/
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-image,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-image {
+  margin: 0 0 30px 0;
+  float: none;
+  min-width: auto;
+  border: none;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-image img,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-image img {
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto !important;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-details,
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-info,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-details,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-info {
+  min-height: auto;
+  margin: 0;
+  padding: 0;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-details .product-name,
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-info .product-name,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-details .product-name,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-info .product-name {
+  height: 3.25em;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-transform: none;
+  color: #302d26;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-details .product-name a,
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-info .product-name a,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-details .product-name a,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-info .product-name a {
+  text-transform: none;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-details .price-box,
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-info .price-box,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-details .price-box,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-info .price-box {
+  margin: 0;
+  padding: 0;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-details .price-box span,
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-info .price-box span,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-details .price-box span,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-info .price-box span {
+  float: none;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-details .actions,
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-info .actions,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-details .actions,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-info .actions {
+  position: static;
+  min-height: initial;
+  margin: 0;
+  padding: 0;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-details .btn-cart,
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-info .btn-cart,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-details .btn-cart,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-info .btn-cart {
+  margin: 20px 0 0 0;
+  width: 100%;
+  height: 54px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1;
+  text-decoration: none;
+  color: #302d26;
+  background-color: #fed807;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color .25s ease-in-out;
+  -moz-transition: background-color .25s ease-in-out;
+  -webkit-transition: background-color .25s ease-in-out;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-details .btn-cart:hover,
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-info .btn-cart:hover,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-details .btn-cart:hover,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-info .btn-cart:hover {
+  color: #ffffff;
+  background-color: #154020;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-details .btn-cart span,
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-info .btn-cart span,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-details .btn-cart span,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-info .btn-cart span {
+  width: auto;
+  height: auto !important;
+  padding: 0 !important;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background-image: none;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-details .btn-cart span span,
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-info .btn-cart span span,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-details .btn-cart span span,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-info .btn-cart span span {
+  width: auto;
+  height: auto !important;
+  padding: 0 !important;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  background-image: none;
+  color: inherit;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-details .btn-cart span span:hover,
+body.cms-schulze-cold-flu-routine .col-main .category-products ol li .product .product-info .btn-cart span span:hover,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-details .btn-cart span span:hover,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul li .product .product-info .btn-cart span span:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol .owl-controls .navigation, body.cms-schulze-cold-flu-routine .col-main .category-products ol .owl-controls .owl-next, body.cms-schulze-cold-flu-routine .col-main .category-products ol .owl-controls .owl-prev, body.cms-schulze-cold-flu-routine .col-main .category-products ol body.cms-learn .section2 .column.right .inner-tube ul .owl-controls .owl-next, body.cms-learn .section2 .column.right .inner-tube ul body.cms-schulze-cold-flu-routine .col-main .category-products ol .owl-controls .owl-next, body.cms-schulze-cold-flu-routine .col-main .category-products ol body.cms-learn .section2 .column.right .inner-tube ul .owl-controls .owl-prev, body.cms-learn .section2 .column.right .inner-tube ul body.cms-schulze-cold-flu-routine .col-main .category-products ol .owl-controls .owl-prev,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul .owl-controls .navigation,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul .owl-controls .owl-next,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul .owl-controls .owl-prev,
+body.cms-schulze-cold-flu-routine .col-main .category-products body.cms-learn .section2 .column.right .inner-tube ul .owl-controls .owl-next,
+body.cms-learn .section2 .column.right .inner-tube body.cms-schulze-cold-flu-routine .col-main .category-products ul .owl-controls .owl-next,
+body.cms-schulze-cold-flu-routine .col-main .category-products body.cms-learn .section2 .column.right .inner-tube ul .owl-controls .owl-prev,
+body.cms-learn .section2 .column.right .inner-tube body.cms-schulze-cold-flu-routine .col-main .category-products ul .owl-controls .owl-prev {
+  position: absolute;
+  z-index: 102;
+  top: 25%;
+  width: 47px;
+  height: 108px;
+  cursor: pointer;
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol .owl-controls .owl-next,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul .owl-controls .owl-next {
+  right: -7%;
+  background-image: url('../images/sprites-sb62a2101cc.png');
+  background-position: -150px -329px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 124px;
+  width: 50px;
+  /*
+  // mod start Aydus 9/30/2014: Remove retina sprite functionality.
+  // Must have 2x image size otherwise images display at 50% size.
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: sprite-url($icons-2x);
+      background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+      background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+      height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+      width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+  }
+  */
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-schulze-cold-flu-routine .col-main .category-products ol .owl-controls .owl-next,
+  body.cms-schulze-cold-flu-routine .col-main .category-products ul .owl-controls .owl-next {
+    right: -15%;
+  }
+}
+@media handheld, screen and (max-width: 320px) {
+  body.cms-schulze-cold-flu-routine .col-main .category-products ol .owl-controls .owl-next,
+  body.cms-schulze-cold-flu-routine .col-main .category-products ul .owl-controls .owl-next {
+    right: -16%;
+  }
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol .owl-controls .owl-next:hover,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul .owl-controls .owl-next:hover {
+  background-image: url('../images/sprites-sb62a2101cc.png');
+  background-position: -100px -329px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 124px;
+  width: 50px;
+  /*
+  // mod start Aydus 9/30/2014: Remove retina sprite functionality.
+  // Must have 2x image size otherwise images display at 50% size.
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: sprite-url($icons-2x);
+      background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+      background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+      height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+      width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+  }
+  */
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol .owl-controls .owl-prev,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul .owl-controls .owl-prev {
+  left: -7%;
+  background-image: url('../images/sprites-sb62a2101cc.png');
+  background-position: 0 -329px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 124px;
+  width: 50px;
+  /*
+  // mod start Aydus 9/30/2014: Remove retina sprite functionality.
+  // Must have 2x image size otherwise images display at 50% size.
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: sprite-url($icons-2x);
+      background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+      background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+      height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+      width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+  }
+  */
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-schulze-cold-flu-routine .col-main .category-products ol .owl-controls .owl-prev,
+  body.cms-schulze-cold-flu-routine .col-main .category-products ul .owl-controls .owl-prev {
+    left: -15%;
+  }
+}
+@media handheld, screen and (max-width: 320px) {
+  body.cms-schulze-cold-flu-routine .col-main .category-products ol .owl-controls .owl-prev,
+  body.cms-schulze-cold-flu-routine .col-main .category-products ul .owl-controls .owl-prev {
+    left: -16%;
+  }
+}
+body.cms-schulze-cold-flu-routine .col-main .category-products ol .owl-controls .owl-prev:hover,
+body.cms-schulze-cold-flu-routine .col-main .category-products ul .owl-controls .owl-prev:hover {
+  background-image: url('../images/sprites-sb62a2101cc.png');
+  background-position: -50px -329px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 124px;
+  width: 50px;
+  /*
+  // mod start Aydus 9/30/2014: Remove retina sprite functionality.
+  // Must have 2x image size otherwise images display at 50% size.
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: sprite-url($icons-2x);
+      background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+      background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+      height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+      width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+  }
+  */
+}
+body.cms-schulze-cold-flu-routine .col-main .title.section1 {
+  padding-top: 4em;
+}
+body.cms-schulze-cold-flu-routine .col-main .widget-banner .content-container .content ul li:before {
+  content: "";
+  display: block;
+  float: left;
+  height: 14px;
+  margin-left: -36px;
+  margin-right: 18px;
+  overflow: hidden;
+  width: 18px;
+  margin-top: 8px;
+  background-image: url('../images/sprites-sb62a2101cc.png');
+  background-position: -18px -49px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  height: 14px;
+  width: 18px;
+  /*
+  // mod start Aydus 9/30/2014: Remove retina sprite functionality.
+  // Must have 2x image size otherwise images display at 50% size.
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: sprite-url($icons-2x);
+      background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+      background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+      height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+      width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+  }
+  */
+}
+@media handheld, screen and (max-width: 1024px) {
+  body.cms-schulze-cold-flu-routine .col-main .widget-banner .content-container .content ul li:before {
+    margin-left: -14px;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-schulze-cold-flu-routine .col-main .widget-banner .content-container .content ul li:before {
+    margin-left: -5px;
+  }
+}
+
+
+html#top.js.no-touch.localstorage body.cms-page-view.cms-schulze-cold-flu-routine div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.category-products ul.products-grid.products-grid--max-15-col.last.even.owl-carousel.owl-theme div.owl-wrapper-outer div.owl-wrapper div.owl-item li.item.last{
+	margin-left: 7%;
+}
+
+
+/*----------------------------------------------------------------------------*/
+/*END
+/*----------------------------------------------------------------------------*/
+
+
+/*VIEW-ALL-SEM*/
+
+cms-banner-container.template2 .widget-banner .content-container .content ul li:before {
+    background-image: url("../images/sprites-sbbf0716586.png");
+    background-position: -18px -49px!important;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 14px;
+    margin-right: 18px!important;
+    margin-left: -36px !important;
+    overflow: hidden;
+    width: 18px;
+}
+
+.cms-view-all-lp1 .col-main .products-grid li.item .product-info, .cms-view-all-lp1 .col-main .products-list li.item .product-info {
+    min-height: 260px!important;
+    padding-bottom: 0;
+}
+
+.products-grid .product-name, .products-list h2.product-name {
+    font-family: Montserrat,"Helvetica Neue",Verdana,Arial,sans-serif!important;
+    font-size: 0.875rem!important;
+    margin-bottom: 5px;
+    text-transform: none!important;
+    color:#333333!important;
+}
+
+h2.product-name a{
+	color:#333333!important;
+	font-size: 0.875rem!important;
+	font-weight: bold !important;
+	text-decoration: none !important;
+}
+
+.cms-banner-container.template2 .widget-banner .product-container {
+    left: 16%;
+    position: absolute;
+    top: 250px!important;
+}
+
+.cms-banner-container.template2 .widget-banner .content-container .content h2 {
+    color: #333333!important;
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.cms-banner-container.template2 .widget-banner .content-container .content h2 span {
+    color: #333333!important;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cms-banner-container.template2 .widget-banner .content-container .content p.saving {
+    color: #a50808!important;
+    font-weight:bold!important;
+    font-size: 0.875rem;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+}
+
+.cms-banner-container.template2 .widget-banner .content-container .content p.only {
+    color: #333333!important;
+    font-size: 1.125rem!important;
+    font-weight: bold;
+}
+
+.cms-page-view.cms-view-all-lp1 a.quickview {
+	text-align:center!important;
+}
+
+.cms-page-view.cms-view-all-lp1 div.block-title-special {
+	margin: 2em 0 1em;
+    padding: 0;
+    text-align: center;
+}
+
+.cms-page-view.cms-view-all-lp1 div.block-title-special h2 {
+	color: #333333;
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+body.cms-view-all-lp1 .category-products .products-grid .item {
+    box-sizing: border-box;
+    /*margin: 0;
+    padding: 0 2.5% 2.5% 0;
+    width: 20%!important;*/
+    border: 1px solid #edecea!important;
+    padding: 5px!important;
+    /*margin-right: 19px!important;*/
+}
+
+body.cms-view-all-lp1 .category-products .products-grid {
+    /*margin: 0 -2.5% 0 10%!important;*/
+}
+
+.product-image, .no-touch .product-img-box .product-image:hover:not(.zoom-available) {
+    border: none!important;
+    display: block;
+    position: relative;
+}
+
+body.cms-view-all-lp1 .products-grid > li {
+    margin-bottom: 20px!important;
+    position: relative;
+    text-align: center;
+}
+
+body.cms-view-all-lp1 .products-grid > li {
+    float: left;
+}
+
+body.cms-view-all-lp1 .products-grid .product-image img {
+    height: auto;
+    margin-left: 6%!important;
+    width: 80%!important;
+}
+
+body.cms-page-view.cms-view-all-lp1 .actions button {
+    background-color: #fed807;
+    border-radius: 0;
+    color: #302d26;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: 54px;
+    left: 0;
+    line-height: 1;
+    margin: auto;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease-in-out 0s;
+    width: 90%;
+}
+
+body.cms-page-view.cms-view-all-lp1 .actions button:hover {
+    background-color: #154020;
+    color: #ffffff!important;
+}
+
+.cms-banner-container.template2 .widget-banner .content-container .content .single-product-container button:hover {
+    background-color: #154020;
+    color: #ffffff!important;
+}
+
+.cms-page-view.cms-view-all-lp1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.last.even li.item.last div.product-info div.size {
+    font-size: 0.875rem!important;
+    min-height: 4em;
+}
+
+.cms-page-view.cms-view-all-lp1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last div.product-info div.size {
+	font-size: 0.875rem!important;
+    min-height: 4em;
+}
+
+body.cms-page-view.cms-view-all-lp1 div.product-info p.saving {
+    color: #a50808!important;
+    font-weight:bold!important;
+    font-size: 0.875rem;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+}
+
+.cms-page-view.cms-view-all-lp1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last{
+	margin-right: 2.22222%;
+}
+
+@media handheld, screen and (max-width: 640px) {
+  body.cms-view-all-lp1 .col-main .cms-banner-container .image.mobile {
+    height: auto !important;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-view-all-lp1 .col-main .cms-banner-container .image.mobile .product-container {
+    position: relative;
+    top: 0 !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+  body.cms-view-all-lp1 .col-main .cms-banner-container .image.mobile .content {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 !important;
+    margin: 25px 0 0 0;
+  }
+}
+@media handheld, screen and (max-width: 1200px) {
+  body.cms-view-all-lp1 .col-main .promotion-container .promotion1 {
+    width: 95%;
+  }
+}
+@media only screen and (min-width: 960px) {
+	html#top.js.no-touch.localstorage body.cms-page-view.cms-view-all-lp1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last{
+		 width: 14.3333% !important;
+	}
+}
+@media handheld, screen and (max-width: 640px){
+	html#top.js.no-touch.localstorage body.cms-page-view.cms-view-all-lp1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.category-products ul.products-grid.products-grid--max-4-col.first.last.odd li.item.last{
+		 width: 100% !important;
+		 display: block;
+	}
+}
+.cms-page-view.cms-view-all-lp1 div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.block-title-special div.promotion.promotion1{
+	margin-bottom: 50px;
+}
+
+/*END*/
+
+
+
+/*END*/
+
+/*Personal-recipes*/
+.cms-page-view.cms-personal-recipes div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.buttons-set a.blink1{
+	background: none repeat scroll 0 0 #fed807;
+    border-radius: 0;
+    color: #302d26;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: 54px;
+    line-height: 54px;
+    padding: 0 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease-in-out 0s;
+    white-space: nowrap;
+    width: auto;
+    margin-bottom: 30px;
+    margin-left: 353px;
+    margin-top: 30px;
+    float:left;
+} 
+@media handheld, screen and (max-width: 640px){
+.cms-page-view.cms-personal-recipes div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.buttons-set a.blink1{
+	margin-left: 30px !important;
+}
+
+	}
+/*end*/
+
+/*New CATALOG*/
+.cms-page-view.cms-2015-catalog div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.buttons-set a.blink1{
+	background: none repeat scroll 0 0 #fed807;
+    border-radius: 0;
+    color: #302d26;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: 54px;
+    line-height: 54px;
+    padding: 0 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.25s ease-in-out 0s;
+    white-space: nowrap;
+    width: auto;
+    margin-bottom: 30px;
+    margin-left: 353px;
+    margin-top: 30px;
+    float:left;
+} 
+@media handheld, screen and (max-width: 640px){
+.cms-page-view.cms-2015-catalog div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.buttons-set a.blink1{
+	margin-left: 30px !important;
+}
+
+	}
+
+/*end*/
+
+/*SuperMeal*/
+.cms-page-view.cms-store div.wrapper div.page div.main-container.col1-layout div.main div.col-main div.std div.cms-banner-container.template1 div.widget.widget-banner ul li div.content-container div.image.desktop div.image.mobile div.content ul li{
+	color: #ffffff !important;
+}
+/*body.cms-store .col-main .widget-banner .content-container .content ul li:before {
+	 background-position: 0px -49px !important;
+}*/
+.cms-home #banners-container .banners > .banner .content-container .content.template2 .content-inner-tube.sm{
+	 background-color: rgba(100, 60, 118, 0.51);
+    max-width: 520px;
+    padding: 18px 25px 23px 59px;
+    text-align: right;
+}
+
+/*NEW FIXES*/
+/*home page section2-3*/
+.section3 #section-three-3 .content{
+	width: 46% !important;
+}
+@media handheld, screen and (max-width: 640px) {
+	.section3 #section-three-3 .content{
+	width:100% !important;
+}
+}
+/*Configurables Styling*/
+label.required:after, span.required:after{
+	color:#666666 !important;
+}

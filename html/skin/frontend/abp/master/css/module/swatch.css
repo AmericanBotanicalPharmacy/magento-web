@@ -1,0 +1,7 @@
+/*----------------------------------------------------------------------------*/
+/* Product: Configurable
+/*----------------------------------------------------------------------------*/
+body.catalog-product-view .product-view .swatch-wrapper .swatch {
+  padding: 40px;
+  border: 1px solid #333333;
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout>
+    <!-- Easy ajax extension custom action. -->
+    <easy_ajax_aydus_addtocart_index_index>
+        <block type="aydus_addtocart/addtocart" name="root" output="toHtml" template="aydus/addtocart/root.phtml">
+            <block type="checkout/cart_sidebar" name="addtocartproduct" as="addToCartProduct" template="aydus/addtocart/product.phtml" />
+        </block>
+    </easy_ajax_aydus_addtocart_index_index>
+</layout>

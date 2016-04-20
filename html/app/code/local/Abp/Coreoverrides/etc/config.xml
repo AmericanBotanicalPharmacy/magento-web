@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Core code rewrites
+ *
+ * @category    Abp
+ * @package     Abp_Coreoverrides
+ * @author		Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+    <modules>
+        <Abp_Coreoverrides>
+            <version>0.1.0</version>
+        </Abp_Coreoverrides>
+    </modules>
+    <global>
+        <models>
+            <abp_coreoverrides>
+                <class>Abp_Coreoverrides_Model</class>
+            </abp_coreoverrides>
+            <catalog>
+            	<rewrite>
+            		<product>Abp_Coreoverrides_Model_Catalog_Product</product>
+            	</rewrite>
+            </catalog>
+        </models>
+        <blocks>
+            <editable>
+                <class>Abp_Coreoverrides_Block</class>
+            </editable>
+        </blocks>
+        <helpers>
+            <editable>
+                <class>Abp_Coreoverrides_Helper</class>
+            </editable>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <editable>
+                <use>admin</use>
+                <args>
+                    <module>Abp_Coreoverrides</module>
+                    <frontName>editable</frontName> 
+                </args>
+            </editable>
+        </routers>
+    </admin>
+    <adminhtml>
+        <events>
+            <core_block_abstract_prepare_layout_after>
+                <observers>
+                    <addColumnToGrid>
+                        <type>model</type>
+                        <class>Abp_Coreoverrides_Model</class>
+                        <method>core_block_abstract_prepare_layout_after</method>
+                    </addColumnToGrid>
+                </observers>
+            </core_block_abstract_prepare_layout_after>
+            <core_block_abstract_prepare_layout_after>
+                <observers>
+                    <addColumnToGridJs>
+                        <type>model</type>
+                        <class>Abp_Coreoverrides_Model</class>
+                        <method>core_block_abstract_prepare_layout_after_javascript_init</method>
+                    </addColumnToGridJs>
+                </observers>
+            </core_block_abstract_prepare_layout_after>
+        </events>
+    </adminhtml>
+</config>
