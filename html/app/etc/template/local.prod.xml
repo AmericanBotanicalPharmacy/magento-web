@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   Mage
+ * @package    Mage_Core
+ * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <global>
+        <install>
+            <date><![CDATA[Thu, 12 Jun 2014 18:52:03 +0000]]></date>
+        </install>
+        <crypt>
+            <key><![CDATA[ed575fbdb6c4623d75f8f1db3790f682]]></key>
+        </crypt>
+        <disable_local_modules>false</disable_local_modules>
+        <resources>
+            <db>
+                <table_prefix><![CDATA[]]></table_prefix>
+            </db>
+            <default_setup>
+                <connection>
+                    <host><![CDATA[10.232.159.12]]></host>
+                    <username><![CDATA[herbdocdb]]></username>
+                    <password><![CDATA[Nz51ZEeG=MAHP]]></password>
+                    <dbname><![CDATA[herbdocdb]]></dbname>
+                    <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
+                    <model><![CDATA[mysql4]]></model>
+                    <type><![CDATA[pdo_mysql]]></type>
+                    <pdoType><![CDATA[]]></pdoType>
+                    <active>1</active>
+                </connection>
+            </default_setup>
+        </resources>
+
+        <session_save><![CDATA[memcache]]></session_save>
+        <session_save_path>
+            <![CDATA[tcp://10.232.159.12:11213?persistent=0&weight=2&timeout=2&retry_interval=3]]>
+        </session_save_path>
+
+        <cache>
+            <backend>memcached</backend>
+            <slow_backend>database</slow_backend>
+            <slow_backend_store_data>0</slow_backend_store_data>
+            <auto_refresh_fast_cache>1</auto_refresh_fast_cache>
+            <memcached>
+                <servers>
+                    <server>
+                        <host><![CDATA[10.232.159.12]]></host>
+                        <port><![CDATA[11212]]></port>
+                        <persistent><![CDATA[0]]></persistent>
+                        <weight><![CDATA[1]]></weight>
+                        <timeout><![CDATA[60]]></timeout>
+                        <retry_interval><![CDATA[10]]></retry_interval>
+                        <status><![CDATA[]]></status>
+                    </server>
+                </servers>
+                <compression><![CDATA[0]]></compression>
+                <cache_dir><![CDATA[]]></cache_dir>
+                <hashed_directory_level><![CDATA[]]></hashed_directory_level>
+                <hashed_directory_umask><![CDATA[]]></hashed_directory_umask>
+                <file_name_prefix><![CDATA[]]></file_name_prefix>
+            </memcached>
+        </cache>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <frontName><![CDATA[VItWIGi]]></frontName>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>
