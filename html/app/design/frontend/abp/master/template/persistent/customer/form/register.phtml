@@ -51,6 +51,7 @@
         <div class="fieldset">
             <input type="hidden" name="success_url" value="<?php echo $this->getSuccessUrl() ?>" />
             <input type="hidden" name="error_url" value="<?php echo $this->getErrorUrl() ?>" />
+            <input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" />
             <p class="form-instructions"><?php echo $this->__('Join to receive these great benefits:') ?></p>
             <ul class="benefits">
                 <li><?php echo $this->__('Fast & Easy Checkout') ?></li>
