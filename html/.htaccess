@@ -7,7 +7,7 @@
 #    AddHandler php5-cgi .php
 
 ############################################
-## GoDaddy specific options *
+## GoDaddy specific options
 
 #   Options -MultiViews
 
@@ -80,7 +80,7 @@
     # Insert filter on all content
     ###SetOutputFilter DEFLATE
     # Insert filter on selected content types only
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+    #AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
 
     # Netscape 4.x has some problems...
     #BrowserMatch ^Mozilla/4 gzip-only-text/html
@@ -118,7 +118,7 @@
 
 	RewriteCond %{HTTP_HOST} ^herbdocblog.com [NC]
 	RewriteRule ^(.*)$ https://www.herbdoc.com/$1 [R=301,L]
-	
+
 	RewriteCond %{HTTP_HOST} ^www.herbdocblog.com [NC]
 	RewriteRule ^(.*)$ https://www.herbdoc.com/$1 [R=301,L]
 
@@ -135,10 +135,10 @@
         # If disabled site will become unresponsive
 	RewriteCond %{REQUEST_URI} !^/healthcheck.php
 	RewriteRule ^ https://www.herbdoc.com%{REQUEST_URI} [R=301,L]
-	
-	
-	
-	
+
+
+
+
     #RewriteCond %{HTTP_HOST} ^www\. [NC]
 	#RewriteRule ^ https://www.herbdoc.com%{REQUEST_URI} [NE,R=301,L]
 	#RewriteCond %{HTTPS} off [OR]
@@ -215,10 +215,10 @@
 ############################################
 ## Add default Expires header
 ## http://developer.yahoo.com/performance/rules.html#expires
-	
+
 	ExpiresActive on
     ExpiresDefault "access plus 1 year"
-    
+
     # Media files
 
     ExpiresByType audio/ogg                             "access plus 1 month"
@@ -257,7 +257,7 @@
 ## http://developer.yahoo.com/performance/rules.html#etags
 
     FileETag none
-    
+
 # BEGIN REQUIRED FOR WEBFONTS
 
 AddType font/ttf .ttf
