@@ -5,15 +5,13 @@ skin/frontend/abp/master/scss/config.codekit
 skin/frontend/abp/master/scss/compass_app_log.txt
 skin/frontend/abp/master/.sass-cache
 
-../.idea
+../.idea/
 media/catalog/product/
 
 app/code/community/Phoenix/
 app/etc/config.xml
 app/etc/enterprise.xml
 app/etc/local.xml
-app/etc/local.xml.additional
-app/etc/local.xml.template
 
 LICENSE_AFL.txt
 LICENSE.html
