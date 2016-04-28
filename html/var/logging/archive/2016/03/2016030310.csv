@@ -1,4 +1,0 @@
-25908,1077703917,0,admin_login,"2015-12-31 19:26:10",login,"a:1:{s:7:""general"";N;}",success,dallen,18,adminhtml_dashboard_index,,64.60.116.237
-25909,1077703917,0,sales_orders,"2015-12-31 19:26:28",view,"a:2:{s:7:""general"";s:6:""148364"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:148364;a:1:{s:12:""increment_id"";s:9:""100134145"";}}}}",success,dallen,18,adminhtml_sales_order_view,,64.60.116.237
-25910,1077703917,0,sales_orders,"2015-12-31 19:27:43",view,"a:2:{s:7:""general"";s:6:""149177"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:149177;a:1:{s:12:""increment_id"";s:9:""100134912"";}}}}",success,dallen,18,adminhtml_sales_order_view,,64.60.116.237
-25911,1077703917,0,admin_login,"2015-12-31 21:58:07",login,"a:1:{s:7:""general"";N;}",success,dallen,18,adminhtml_dashboard_index,,64.60.116.237

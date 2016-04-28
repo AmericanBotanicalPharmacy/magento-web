@@ -1,3 +1,0 @@
-23508,1077703917,0,admin_login,"2015-10-19 20:18:27",login,"a:1:{s:7:""general"";N;}",success,psingh,,adminhtml_sales_order_index,,64.60.116.237
-23509,1077703917,0,sales_orders,"2015-10-19 20:18:44",view,"a:2:{s:7:""general"";s:6:""122109"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:122109;a:1:{s:12:""increment_id"";s:9:""100109595"";}}}}",success,psingh,,adminhtml_sales_order_view,,64.60.116.237
-23510,1077703917,0,sales_orders,"2015-10-19 20:19:12",view,"a:2:{s:7:""general"";s:6:""122539"";s:10:""additional"";a:1:{s:22:""Mage_Sales_Model_Order"";a:1:{i:122539;a:1:{s:12:""increment_id"";s:9:""100109990"";}}}}",success,psingh,,adminhtml_sales_order_view,,64.60.116.237

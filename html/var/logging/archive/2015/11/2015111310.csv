@@ -1,8 +1,0 @@
-22194,1077703917,0,admin_login,"2015-09-11 16:01:54",login,"a:1:{s:7:""general"";N;}",success,vaughn,14,adminhtml_index_index,,64.60.116.237
-22195,1077703917,0,admin_login,"2015-09-11 16:08:44",login,"a:1:{s:7:""general"";N;}",failure,admin,,adminhtml_index_index,,64.60.116.237
-22196,1077703917,0,admin_login,"2015-09-11 16:08:51",login,"a:1:{s:7:""general"";N;}",success,vaughn,14,adminhtml_index_index,,64.60.116.237
-22197,1077703917,0,admin_login,"2015-09-11 19:01:18",login,"a:1:{s:7:""general"";N;}",success,psingh,13,adminhtml_system_email_template_index,,64.60.116.237
-22198,1077703917,0,index_management,"2015-09-11 19:01:31",massUpdate,"a:1:{s:7:""general"";s:4:""9, 1"";}",success,psingh,13,adminhtml_process_massReindex,,64.60.116.237
-22199,1077703917,0,catalog_products,"2015-09-11 19:05:46",view,"a:1:{s:7:""general"";s:3:""694"";}",success,psingh,13,adminhtml_catalog_product_edit,,64.60.116.237
-22200,1127522518,0,admin_login,"2015-09-12 15:50:10",login,"a:1:{s:7:""general"";N;}",success,matthew@aydus.com,3,adminhtml_index_index,,67.52.160.214
-22201,1127522518,0,enterprise_banner,"2015-09-12 15:50:29",view,"a:1:{s:7:""general"";s:1:""1"";}",success,matthew@aydus.com,3,adminhtml_banner_edit,,67.52.160.214
