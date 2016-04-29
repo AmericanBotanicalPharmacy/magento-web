@@ -40,9 +40,9 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[10.232.159.12]]></host>
+                    <host><![CDATA[10.10.10.10]]></host>
                     <username><![CDATA[herbdocdb]]></username>
-                    <password><![CDATA[Nz51ZEeG=MAHP]]></password>
+                    <password><![CDATA[0000000000]]></password>
                     <dbname><![CDATA[herbdocdb]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
@@ -55,7 +55,7 @@
 
         <session_save><![CDATA[memcache]]></session_save>
         <session_save_path>
-            <![CDATA[tcp://10.232.159.12:11213?persistent=0&weight=2&timeout=2&retry_interval=3]]>
+            <![CDATA[tcp://10.10.10.10:11213?persistent=0&weight=2&timeout=2&retry_interval=3]]>
         </session_save_path>
 
         <cache>
@@ -66,7 +66,7 @@
             <memcached>
                 <servers>
                     <server>
-                        <host><![CDATA[10.232.159.12]]></host>
+                        <host><![CDATA[10.10.10.10]]></host>
                         <port><![CDATA[11212]]></port>
                         <persistent><![CDATA[0]]></persistent>
                         <weight><![CDATA[1]]></weight>
@@ -87,7 +87,7 @@
         <routers>
             <adminhtml>
                 <args>
-                    <frontName><![CDATA[VItWIGi]]></frontName>
+                    <frontName><![CDATA[admin]]></frontName>
                 </args>
             </adminhtml>
         </routers>
