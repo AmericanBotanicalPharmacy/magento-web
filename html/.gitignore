@@ -22,6 +22,9 @@ media/downloadable/
 media/.htaccess
 media/import/
 media/xmlconnect/
+media/css/
+media/js/
+
 nbproject/
 pear/
 php.ini.sample
@@ -37,6 +40,4 @@ wp/wp-config.php
 
 .DS_Store
 /vendor/
-media/css/
-media/js/
 misc
