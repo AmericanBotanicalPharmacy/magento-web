@@ -5,8 +5,6 @@ skin/frontend/abp/master/scss/config.codekit
 skin/frontend/abp/master/scss/compass_app_log.txt
 skin/frontend/abp/master/.sass-cache
 
-media/catalog/product/
-
 app/code/community/Phoenix/
 app/etc/config.xml
 app/etc/enterprise.xml
@@ -17,6 +15,7 @@ LICENSE.html
 LICENSE.txt
 LICENSE_EE*
 
+media/catalog/product/
 media/customer/
 media/dhl/
 media/downloadable/
@@ -27,10 +26,14 @@ nbproject/
 pear/
 php.ini.sample
 RELEASE_NOTES.txt
+
 var/
+
 downloader/.cache/
 downloader/cache.cfg
 downloader/connect.cfg
+
+wp/wp-config.php
 
 .DS_Store
 /vendor/
