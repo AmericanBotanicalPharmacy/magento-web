@@ -1153,7 +1153,12 @@ class Mage_Paygate_Model_Authorizenet extends Mage_Payment_Model_Method_Cc
         }
 
         if($payment->getAmount()){
-            $request->setXAmount($payment->getAmount(),2);
+            if($payment->getMethod() == self::METHOD_CODE) {
+                $amount = 0;
+            } else {
+                $amount = $payment->getAmount();
+            }
+            $request->setXAmount($amount, 2);
             $request->setXCurrencyCode($order->getBaseCurrencyCode());
         }
 
