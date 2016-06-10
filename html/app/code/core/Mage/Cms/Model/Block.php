@@ -73,4 +73,24 @@ class Mage_Cms_Model_Block extends Mage_Core_Model_Abstract
             Mage::helper('cms')->__('The static block content cannot contain  directive with its self.')
         );
     }
+
+    /**
+     * Check if static block's promotion active or not.
+     * @return bool
+     */
+    public function promotionActive()
+    {
+        $promotionId = $this->getPromotionId();
+        if (!$promotionId) {
+            return true;
+        }
+
+        $promotion = Mage::getModel('salesrule/rule')->load($promotionId);
+        if (!$promotion->getId()) {
+            return true;
+        }
+
+        $currentDateTime = Mage::getModel('core/date')->date('Y-m-d H:i:s');
+        return ($promotion->getFromDate() < $currentDateTime) && ($currentDateTime < $promotion->getToDate());
+    }
 }
