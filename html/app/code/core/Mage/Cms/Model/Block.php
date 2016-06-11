@@ -91,6 +91,7 @@ class Mage_Cms_Model_Block extends Mage_Core_Model_Abstract
         }
 
         $currentDateTime = Mage::getModel('core/date')->date('Y-m-d H:i:s');
-        return ($promotion->getFromDate() < $currentDateTime) && ($currentDateTime < $promotion->getToDate());
+        $inSchedule = ($promotion->getFromDate() < $currentDateTime) && ($currentDateTime < $promotion->getToDate());
+        return $inSchedule && $promotion->getIsActive();
     }
 }
