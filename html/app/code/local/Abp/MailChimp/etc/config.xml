@@ -28,4 +28,15 @@
             </general>
         </mailchimp>
     </default>
+    <frontend>
+        <routers>
+            <customer>
+                <args>
+                    <modules>
+                        <mailchimp before="Mage_Customer">Abp_Mailchimp</mailchimp>
+                    </modules>
+                </args>
+            </customer>
+        </routers>
+    </frontend>
 </config>
