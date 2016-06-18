@@ -8,22 +8,26 @@
  */
 -->
 <config>
-	<modules>
-		<Abp_Init>
-			<active>true</active>
-			<codePool>local</codePool>
-		</Abp_Init>
-		<Abp_Cwserenade>
-			<active>true</active>
-			<codePool>local</codePool>
-		</Abp_Cwserenade>
-		<Abp_Oscommerce>
-			<active>false</active>
-			<codePool>local</codePool>
-		</Abp_Oscommerce>
-		<Abp_Coreoverrides>
-			<active>true</active>
-			<codePool>local</codePool>
-		</Abp_Coreoverrides>
-	</modules>
+    <modules>
+        <Abp_Init>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Abp_Init>
+        <Abp_Cwserenade>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Abp_Cwserenade>
+        <Abp_Oscommerce>
+            <active>false</active>
+            <codePool>local</codePool>
+        </Abp_Oscommerce>
+        <Abp_Coreoverrides>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Abp_Coreoverrides>
+        <Abp_Mailchimp>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Abp_Mailchimp>
+    </modules>
 </config>
