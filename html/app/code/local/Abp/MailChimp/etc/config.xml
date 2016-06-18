@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * MailChimp integration
+ *
+ * @category    Abp
+ * @package     Abp_Mailchimp
+ * @author      Edward Yang <yushine999@gmail.com>
+ */
+-->
+<config>
+    <modules>
+        <Abp_Mailchimp>
+            <version>1.0</version>
+        </Abp_Mailchimp>
+    </modules>
+    <global>
+        <helpers>
+            <mailchimp>
+                <class>Abp_Mailchimp_Helper</class>
+            </mailchimp>
+        </helpers>
+    </global>
+    <default>
+        <mailchimp>
+            <general>
+                <defaulmailchimp>1</defaulmailchimp>
+            </general>
+        </mailchimp>
+    </default>
+</config>

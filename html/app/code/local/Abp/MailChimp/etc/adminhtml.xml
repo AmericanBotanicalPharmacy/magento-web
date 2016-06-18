@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * System configuration acl for ABP_Mailchimp
+ *
+ * @category    Abp
+ * @package     Abp_Mailchimp
+ * @author      Edward Yang <yushine999@gmail.com>
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <mailchimp translate="title" module="mailchimp">
+                                        <title>Abp Mailchimp</title>
+                                    </mailchimp>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
