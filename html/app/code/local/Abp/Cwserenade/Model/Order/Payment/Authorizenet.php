@@ -68,7 +68,7 @@ class Abp_Cwserenade_Model_Order_Payment_Authorizenet extends Abp_Cwserenade_Mod
 					}
 				}
 			
-				$paymentsStr .= '<Payment auth_amount=0, payment_seq_number="'.$paymentSequenceNumber.'" payment_type="'.$paymentType.'" cc_number="'.$ccNumber.'" cc_exp_month="'.$ccExpMonth.'" cc_exp_year="'.$ccExpYear.'" '.$ordAuthString.' />';
+				$paymentsStr .= '<Payment payment_seq_number="'.$paymentSequenceNumber.'" payment_type="'.$paymentType.'" cc_number="'.$ccNumber.'" cc_exp_month="'.$ccExpMonth.'" cc_exp_year="'.$ccExpYear.'" />';
 				$paymentSequenceNumber++;
 			
 			}
