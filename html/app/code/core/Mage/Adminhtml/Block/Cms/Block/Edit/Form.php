@@ -89,6 +89,16 @@ class Mage_Adminhtml_Block_Cms_Block_Edit_Form extends Mage_Adminhtml_Block_Widg
             'class'     => 'validate-xml-identifier',
         ));
 
+        $promotions = Mage::getModel('salesrule/rule')->getCollection();
+        $proOption = $promotions->getPromotionsAsOptions();
+        $fieldset->addField('promotion_id', 'select', array(
+            'label'     => Mage::helper('cms')->__('Promotion'),
+            'title'     => Mage::helper('cms')->__('Promotion'),
+            'name'      => 'promotion_id',
+            'required'  => true,
+            'options'   => $proOption,
+        ));
+
         /**
          * Check is single store mode
          */

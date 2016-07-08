@@ -62,7 +62,7 @@ class Mage_Cms_Block_Widget_Block extends Mage_Core_Block_Template implements Ma
             $block = Mage::getModel('cms/block')
                 ->setStoreId(Mage::app()->getStore()->getId())
                 ->load($blockId);
-            if ($block->getIsActive()) {
+            if ($block->getIsActive() && $block->promotionActive()) {
                 /* @var $helper Mage_Cms_Helper_Data */
                 $helper = Mage::helper('cms');
                 $processor = $helper->getBlockTemplateProcessor();

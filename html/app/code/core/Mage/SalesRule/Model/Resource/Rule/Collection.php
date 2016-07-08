@@ -225,4 +225,17 @@ class Mage_SalesRule_Model_Resource_Rule_Collection extends Mage_Rule_Model_Reso
 
         return $this;
     }
+
+    /**
+     * Get promotion as options
+     */
+    public function getPromotionsAsOptions()
+    {
+        $proOption = array(0 => 'No Promotion');
+        foreach ($this->getItems() as $item) {
+            $data = $item->getData();
+            $proOption[$data['rule_id']] = $data['name'];
+        }
+        return $proOption;
+    }
 }
