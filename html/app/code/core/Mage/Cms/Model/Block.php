@@ -90,8 +90,10 @@ class Mage_Cms_Model_Block extends Mage_Core_Model_Abstract
             return true;
         }
 
-        $currentDateTime = Mage::getModel('core/date')->date('Y-m-d H:i:s');
-        $inSchedule = ($promotion->getFromDate() < $currentDateTime) && ($currentDateTime < $promotion->getToDate());
+        //$currentDateTime = Mage::getModel('core/date')->date('Y-m-d H:i:s');
+        $startDateTime = date('Y-m-d', time()+86400);
+        $endDateTime = date('Y-m-d', time()-86400);
+        $inSchedule = ($promotion->getFromDate() < $startDateTime) && ($endDateTime< $promotion->getToDate());
         return $inSchedule && $promotion->getIsActive();
     }
 }
