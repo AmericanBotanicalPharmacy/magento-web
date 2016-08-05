@@ -481,7 +481,7 @@ $mq-fixed-value: 1024;
     font-family: 'montserratregular';
     src: url('../fonts/montserrat-regular-webfont.eot');
     src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('//s3-us-west-2.amazonaws.com/herbdoc-prod-fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('//d34zu2js07vomo.cloudfront.net/montserrat-regular-webfont.woff2') format('woff2'),
          url('../fonts/montserrat-regular-webfont.woff') format('woff'),
          url('../fonts/montserrat-regular-webfont.ttf') format('truetype'),
          url('../fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
