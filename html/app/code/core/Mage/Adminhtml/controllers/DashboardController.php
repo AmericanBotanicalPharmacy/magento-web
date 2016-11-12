@@ -91,9 +91,8 @@ class Mage_Adminhtml_DashboardController extends Mage_Adminhtml_Controller_Actio
         $gaHash = $this->getRequest()->getParam('h');
         if ($gaData && $gaHash) {
             $newHash = Mage::helper('adminhtml/dashboard_data')->getChartDataHash($gaData);
-            if (hash_equals($newHash, $gaHash)) {
-                $params = json_decode(base64_decode(urldecode($gaData)), true);
-                if ($params) {
+            if ($newHash == $gaHash) {
+                if ($params = unserialize(base64_decode(urldecode($gaData)))) {
                     $response = $httpClient->setUri(Mage_Adminhtml_Block_Dashboard_Graph::API_URL)
                             ->setParameterGet($params)
                             ->setConfig(array('timeout' => 5))
