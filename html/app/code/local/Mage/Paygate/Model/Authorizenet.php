@@ -1341,7 +1341,7 @@ class Mage_Paygate_Model_Authorizenet extends Mage_Payment_Model_Method_Cc
         if($text == 'Gateway error: A duplicate transaction has been submitted.') {
 		$text = 'Please reconfirm your payment information and proceed with your checkout. Allow at least 30 seconds to resubmit to prevent a duplicate transaction error.';
 	}
-		return Mage::helper('paygate')->__('Gateway error: %s', $text);
+		return Mage::helper('paygate')->__('%s Please call our customer support 1-800-herbdoc for assistance.', $text);
     }
 
     /**
