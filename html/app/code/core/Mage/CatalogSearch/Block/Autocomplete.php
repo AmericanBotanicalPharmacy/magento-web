@@ -57,7 +57,7 @@ class Mage_CatalogSearch_Block_Autocomplete extends Mage_Core_Block_Abstract
             }
 
             $html .=  '<li title="'.$this->escapeHtml($item['title']).'" class="'.$item['row_class'].'">'
-                . '<span class="amount">'.$item['num_of_results'].'</span>'.$this->escapeHtml($item['title']).'</li>';
+                .$this->escapeHtml($item['title']).'</li>';
         }
 
         $html.= '</ul>';
@@ -86,7 +86,7 @@ class Mage_CatalogSearch_Block_Autocomplete extends Mage_Core_Block_Abstract
                     $data[] = $_data;
                 }
             }
-            $this->_suggestData = $data;
+            $this->_suggestData = array_slice($data, 0, 10);
         }
         return $this->_suggestData;
     }
