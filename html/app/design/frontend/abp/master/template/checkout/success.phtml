@@ -163,21 +163,9 @@ var google_remarketing_only = false;
 
 <!--Kenshoo pixel for "sale" conversion type-->
 
-<script type=text/javascript>
-   var hostProtocol = (("https:" == document.location.protocol) ? "https" : "http");
-   document.write('<scr'+'ipt src="', hostProtocol+
-   '://5212.xg4ken.com/media/getpx.php?cid=28310108-9d3c-458e-bd05-386504abc7d3','" type="text/JavaScript"><\/scr'+'ipt>');
-</script>
-<script type=text/javascript>
-   var params = new Array();
-   params[0]='id=28310108-9d3c-458e-bd05-386504abc7d3';
-   params[1]='type=sale';
-   params[2]='<?php echo $order_subtotal ?>';
-   params[3]='<?php echo $orderId ?>';
-   params[4]='promoCode=';
-   params[5]='valueCurrency=USD';
-   k_trackevent(params,'5212');
-</script>
+
+<img src="https://5212.xg4ken.com/media/redir.php?track=1&token=28310108-9d3c-458e-bd05-386504abc7d3&type=sale&val=<?php echo $order_subtotal ?>&orderId=<?php echo $orderId ?>&promoCode=&valueCurrency=USD&GCID=&kw=&product=" width="1" height="1">
+
 
 
 <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
