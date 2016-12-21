@@ -224,7 +224,7 @@ class Aydus_Productlinks_Model_Productlinks extends Mage_Core_Model_Abstract
 						"`join_table`.product_id = `product_table`.entity_id",
 						array("sku")
 				);
-				$collection->addAttributeToFilter('`main_table`.created_at',array("from"=>$sinceDate));
+				//$collection->addAttributeToFilter('`main_table`.created_at',array("from"=>$sinceDate));
 				$collection->addAttributeToFilter('`main_table`.product_id', $productId);
 												
 				break;
