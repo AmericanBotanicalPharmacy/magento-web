@@ -30,6 +30,7 @@
 class Mage_CatalogSearch_Block_Autocomplete extends Mage_Core_Block_Abstract
 {
     protected $_suggestData = null;
+    protected $_resultData = null;
 
     protected function _toHtml()
     {
@@ -39,15 +40,15 @@ class Mage_CatalogSearch_Block_Autocomplete extends Mage_Core_Block_Abstract
             return $html;
         }
 
-        $suggestData = $this->getSuggestData();
-        if (!($count = count($suggestData))) {
+        $resultData = $this->getSearchResultData();
+        if (!($count = count($resultData))) {
             return $html;
         }
 
         $count--;
 
         $html = '<ul><li style="display:none"></li>';
-        foreach ($suggestData as $index => $item) {
+        foreach ($resultData as $index => $item) {
             if ($index == 0) {
                 $item['row_class'] .= ' first';
             }
@@ -56,8 +57,9 @@ class Mage_CatalogSearch_Block_Autocomplete extends Mage_Core_Block_Abstract
                 $item['row_class'] .= ' last';
             }
 
-            $html .=  '<li title="'.$this->escapeHtml($item['title']).'" class="'.$item['row_class'].'">'
-                .$this->escapeHtml($item['title']).'</li>';
+            $html .= '<li title="'.$this->escapeHtml($item['name']).'" class="'.$item['row_class'].'">'
+                .'<a href="'.$this->escapeHtml($item['url']).'" style="display: block;">'.'<span>'.$this->escapeHtml($item['name']).'</span>'
+                .'<span style="'.'float: right;">'.$this->escapeHtml($item['price']).'</span>'.'</a>'.'</li>';
         }
 
         $html.= '</ul>';
@@ -89,6 +91,33 @@ class Mage_CatalogSearch_Block_Autocomplete extends Mage_Core_Block_Abstract
             $this->_suggestData = array_slice($data, 0, 10);
         }
         return $this->_suggestData;
+    }
+
+    public function getSearchResultData()
+    {
+        if (!$this->_resultData) {
+            $searchText = Mage::helper('catalogsearch')->getQueryText();
+            $searchEngine = Mage::getResourceModel( Mage::getStoreConfig('catalog/search/engine') );
+            $collection = $searchEngine->getResultCollection();
+            $collection->addSearchFilter($searchText);
+            $collection->addAttributeToSelect('*');
+            $collection->setPageSize(10);
+            $collection->load();
+            $counter = 0;
+            $data = array();
+            foreach ($collection as $item) {
+                $_data = array(
+                    'name' => $item->getName(),
+                    'price' => number_format($item->getPrice(), 2),
+                    'url' => $item->getProductUrl(),
+                    'row_class' => (++$counter)%2?'odd':'even'
+                );
+
+                $data[] = $_data;
+            }
+            $this->_resultData = $data;
+        }
+        return $this->_resultData;
     }
 /*
  *
