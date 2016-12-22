@@ -58,7 +58,7 @@ class Mage_CatalogSearch_Block_Autocomplete extends Mage_Core_Block_Abstract
             }
 
             $html .= '<li title="'.$this->escapeHtml($item['name']).'" class="'.$item['row_class'].'">'
-                .'<a href="'.$this->escapeHtml($item['url']).'" style="display: block;">'.'<span>'.$this->escapeHtml($item['name']).'</span>'
+                .'<a href="'.$this->escapeHtml($item['url']).'" style="display: block; padding: 4px 6px;">'.'<span>'.$this->escapeHtml($item['name']).'</span>'
                 .'<span style="'.'float: right;">'.$this->escapeHtml($item['price']).'</span>'.'</a>'.'</li>';
         }
 
