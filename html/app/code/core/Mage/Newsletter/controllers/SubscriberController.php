@@ -48,6 +48,10 @@ class Mage_Newsletter_SubscriberController extends Mage_Core_Controller_Front_Ac
                     Mage::throwException($this->__('Please enter a valid email address.'));
                 }
 
+                if (preg_match("/\d+\@/", $email)) {
+                    //do nothing for the spammers
+                    $this->_redirectUrl(Mage::getBaseUrl());                }
+
                 if (Mage::getStoreConfig(Mage_Newsletter_Model_Subscriber::XML_PATH_ALLOW_GUEST_SUBSCRIBE_FLAG) != 1 && 
                     !$customerSession->isLoggedIn()) {
                     Mage::throwException($this->__('Sorry, but administrator denied subscription for guests. Please <a href="%s">register</a>.', Mage::helper('customer')->getRegisterUrl()));
