@@ -160,22 +160,22 @@ $mq-support: false;
 $mq-fixed-value: 1024;
 
 // Renders at fixed value
-@include bp (min-width, 300px) {
+@include bp (min-width, 300px) { 
     div { color:#000; }
 }
 
 // Doesn't render without MQ support
-@include bp (min-width, 1200px) {
+@include bp (min-width, 1200px) { 
     div { color:#FFF; }
 }
 
 // Doesn't render without MQ support
-@include bp (max-width, 300px) {
+@include bp (max-width, 300px) { 
     div { color:#444; }
 }
 
 // Renders at fixed value
-@include bp (max-width, 1200px) {
+@include bp (max-width, 1200px) { 
     div { color:#888; }
 }
 
@@ -452,8 +452,8 @@ $mq-fixed-value: 1024;
 /*
  * Corrects `block` display not defined in IE 8/9.
  */
-
-
+ 
+ 
 @font-face {
     font-family: 'montserratlight';
     src: url('../fonts/montserrat-light-webfont.eot');
@@ -509,9 +509,9 @@ $mq-fixed-value: 1024;
     font-weight: normal;
     font-style: normal;
 
-}
-
-
+} 
+ 
+ 
 article,
 aside,
 details,
@@ -3662,7 +3662,7 @@ form .form-instructions {
   .linearize-table-large .linearize-show {
     display: block;
   }
-
+  
 }
 @media only screen and (min-width: 640px) {
   .linearize-table .linearize-collapse {
@@ -10589,6 +10589,7 @@ html {
   color: #3399CC;
   cursor: pointer;
   font-size: 12px;
+  padding: 4px 6px;
   text-align: left;
 }
 .search-autocomplete ul li:hover {
@@ -27004,4 +27005,40 @@ body.cms-learn .section2 .column.right .inner-tube .product-view .block-related 
 }
 .promo p {
   left: 35% !important ;
+}
+.blink-super-c {
+    display: inline-block;
+    width: auto;
+    height: 44px;
+    line-height: 42px;
+    font-size: 12px !important;
+    font-size: 0.875rem;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #302d26;
+    cursor: pointer;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background: #fed807;
+    transition: background-color .25s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+    padding: 0 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-decoration: none !important;
+    border-left: 1px solid white;
+}
+/* Super-c landing changes DA3 */
+
+.super-c-btn {
+    margin-bottom: 5px !important;
+    padding: 7px 16.5px !important;
+    border-left: 1px solid white;
+}
+.super-c-landing-footer {
+    padding-bottom: 25px;
 }
