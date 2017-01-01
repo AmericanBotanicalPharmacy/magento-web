@@ -31,6 +31,7 @@
 <?php else: ?>
     <dl class="sp-methods">
     <?php $shippingCodePrice = array(); ?>
+    <?php $hasFreeShipping = false; ?>
     <?php $_sole = count($_shippingRateGroups) == 1; foreach ($_shippingRateGroups as $code => $_rates): ?>
         <dt><?php echo $this->escapeHtml($this->getCarrierName($code)) ?></dt>
         <dd>
@@ -41,6 +42,9 @@
                    <?php if ($_rate->getErrorMessage()): ?>
                     <ul class="messages"><li class="error-msg"><ul><li><?php echo $this->escapeHtml($_rate->getErrorMessage()) ?></li></ul></li></ul>
                    <?php else: ?>
+                        <?php if ($_rate->getCode() === 'freeshipping_freeshipping') : ?>
+                            <?php $hasFreeShipping = true; ?>
+                        <?php endif; ?>
                         <?php if ($_sole) : ?>
                         <span class="no-display"><input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>" checked="checked" /></span>
                         <?php else: ?>
@@ -96,6 +100,11 @@
             }
        });
     });
+    <?php if ($hasFreeShipping): ?>
+        if($$('input#s_method_freeshipping_freeshipping').length) {
+            $$('input#s_method_freeshipping_freeshipping')[0].click();
+        }
+    <?php endif; ?>
 //]]>
 </script>
 <?php endif; ?>
