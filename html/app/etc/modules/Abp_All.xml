@@ -25,5 +25,9 @@
 			<active>true</active>
 			<codePool>local</codePool>
 		</Abp_Coreoverrides>
+	    <Abp_Guestnewsletter>
+			<active>true</active>
+			<codePool>local</codePool>
+	    </Abp_Guestnewsletter>
 	</modules>
 </config>
