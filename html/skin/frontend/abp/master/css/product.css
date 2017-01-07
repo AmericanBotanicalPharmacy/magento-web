@@ -245,17 +245,31 @@ div.page div.top-container div.promo p {
     float: left;
     width: 300px;
     top: 30%;
-    left: 25%;
+    left: 26%!important;
 	}
 }
 
-
-@media handheld, screen and (max-width: 500px) {
+@media handheld, screen and (max-width: 480px) {
 div.page div.top-container div.promo p {
-    
-    top: 30%!important;
-    left: 12%!important;
-    
+    left: 18%!important;
+        }
+}
+
+@media handheld, screen and (max-width: 420px) {
+div.page div.top-container div.promo p {
+    left: 15%!important;
+        }
+}
+
+@media handheld, screen and (max-width: 380px) {
+div.page div.top-container div.promo p {
+    left: 10%!important;
+        }
+}
+
+@media handheld, screen and (max-width: 320px) {
+div.page div.top-container div.promo p {
+    left: 5%!important;
 	}
 }
 
