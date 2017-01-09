@@ -17215,7 +17215,7 @@ body.cms-home .col-main {
   margin: 0;
   padding: 0 0 8px 0;
 }
-#megamenu-container.mobile .sub1 > ul > li h4:before {
+#megamenu-container.mobile .sub1 > ul > li h4.collapsed:before {
   content: '';
   background-image: url('../images/sprites-sb62a2101cc.png');
   background-position: -119px -23px;
