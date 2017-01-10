@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Abp_Guestnewsletter>
+      <version>1.0.0</version>
+    </Abp_Guestnewsletter>
+  </modules>
+  <global>
+    <models>
+      <abp>
+        <class>Abp_Guestnewsletter_Model</class>
+      </abp>
+    </models>
+    <events>      
+      <controller_action_predispatch_checkout_onepage_savebilling>
+          <observers>
+              <guest_newsletter>
+                  <class>abp/observer</class>
+                  <method>AddGuestToNewletter</method>
+              </guest_newsletter>
+          </observers>
+      </controller_action_predispatch_checkout_onepage_savebilling>
+    </events>
+  </global>
+</config> 

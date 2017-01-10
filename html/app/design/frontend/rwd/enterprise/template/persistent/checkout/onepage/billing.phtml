@@ -56,6 +56,10 @@
                             <input type="email" autocapitalize="off" autocorrect="off" spellcheck="false" name="billing[email]" id="billing:email" value="<?php echo $this->escapeHtml($this->getAddress()->getEmail()) ?>" title="<?php echo $this->__('Email Address') ?>" class="input-text validate-email required-entry" />
                         </div>
                     </div>
+                    <div class="control">
+                        <input type="checkbox" id="add_guest_newsletter" name="is_subscribed" title="<?php echo $this->__('Sign Up for Newsletter') ?>" value="1"  checked="checked" class="checkbox" />
+                        <label for="add_guest_newsletter"><?php echo $this->__('Sign Up for Newsletter') ?></label>
+                    </div>
         <?php endif; ?>
                 </li>
         <?php $_streetValidationClass = $this->helper('customer/address')->getAttributeValidationClass('street'); ?>
