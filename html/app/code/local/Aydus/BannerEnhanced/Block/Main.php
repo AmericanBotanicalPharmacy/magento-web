@@ -35,7 +35,7 @@ class Aydus_BannerEnhanced_Block_Main
         foreach ($banners as $banner) {
             $contents = $bannerResource->getStoreContents($banner);
             foreach ($contents as $content) {
-                $html .= '<li class="banner">' . $processor->filter($content) . "</li>";
+                $html .= $processor->filter($content);
             }
         }
         
