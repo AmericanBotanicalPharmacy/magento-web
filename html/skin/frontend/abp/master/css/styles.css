@@ -17214,8 +17214,10 @@ body.cms-home .col-main {
 #megamenu-container.mobile .sub1 > ul > li h4 {
   margin: 0;
   padding: 0 0 8px 0;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
-#megamenu-container.mobile .sub1 > ul > li h4:before {
+#megamenu-container.mobile .sub1 > ul > li h4.collapsed:before {
   content: '';
   background-image: url('../images/sprites-sb62a2101cc.png');
   background-position: -119px -23px;
@@ -17240,7 +17242,6 @@ body.cms-home .col-main {
   margin: 3px 24px 0 0;
 }
 #megamenu-container.mobile .sub1 > ul > li h4 a {
-  font-size: 16px;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -17325,10 +17326,10 @@ body.cms-home .col-main {
 /*----------------------------------------------------------------------------*/
 /* Banner Enhanced (Home)
 /*----------------------------------------------------------------------------*/
-.cms-home #banners-container {
-  /*----------------------------------------------------------------------------*/
-  /* Cycle Pager
-  /*----------------------------------------------------------------------------*/
+@media handheld, screen and (max-width: 640px) {
+  .cms-home #banners-container {
+    height: 422px;
+  }
 }
 .cms-home #banners-container .banners {
   width: 100%;
@@ -17336,6 +17337,9 @@ body.cms-home .col-main {
 @media handheld, screen and (max-width: 640px) {
   .cms-home #banners-container .banners {
     overflow: visible !important;
+  }
+  .cms-home #banners-container .banners > .banner.mobile-hide {
+    display: none !important;
   }
 }
 .cms-home #banners-container .banners > .banner {
@@ -17714,7 +17718,8 @@ body.cms-store .col-main .category-products ul .owl-controls .cms-home #banners-
 }
 @media handheld, screen and (max-width: 640px) {
   .cms-home #banners-container .cycle-pager {
-    bottom: 10%;
+    //bottom: 10%;
+    display: none;
   }
 }
 .cms-home #banners-container .cycle-pager span {
