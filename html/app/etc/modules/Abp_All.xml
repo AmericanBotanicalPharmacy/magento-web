@@ -25,5 +25,9 @@
 			<active>true</active>
 			<codePool>local</codePool>
 		</Abp_Coreoverrides>
+		<Abp_Onhold>
+			<active>true</active>
+			<codePool>local</codePool>	
+		</Abp_Onhold>
 	</modules>
 </config>
