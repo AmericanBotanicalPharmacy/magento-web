@@ -60,9 +60,8 @@ div#header-nav.skip-content div#megamenu-container.desktop ul li.sub.menu3 div.s
 	font-size:1.2rem!important;
 }
 
-div#megamenu-container.desktop ul li.sub.menu1.expanded div.sub1 ul li.expanded a#slideToggle h4.expanded.parent.active.expand_heading {
-	
-	color: #666666 !important;
+div#megamenu-container.desktop ul li.sub.menu1 a#slideToggle h4.parent.active.expand_heading {
+    color: #666666 !important;
     font-weight: normal !important;
     font-size:1rem!important;
 }
@@ -78,7 +77,7 @@ div#megamenu-container.desktop ul li.sub.menu1.expanded div.sub1 ul li.expanded 
 	
 }
 
-div#megamenu-container.desktop ul li.sub.menu1.expanded div.sub1 ul li.expanded h4.expanded.expand_heading.active:after {
+div#megamenu-container.desktop ul li.sub.menu1 div.sub1 ul li h4.expand_heading.active:after {
 	content: url(../images/specific_nav_left_down.jpg);
 	
 }
@@ -1371,7 +1370,7 @@ div.category-products div.product-info {
 	 }
 
 /* Main Dropdown Overrides*/
-div#megamenu-container.desktop ul li.sub.menu1.expanded div.sub1 ul li.expanded h4.expanded a{
+div#megamenu-container.desktop ul li.sub.menu1.expanded div.sub1 ul li h4 a{
 	color:#666666!important;
 	font-weight: normal !important;
 }
