@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Abp_Onhold>
+            <version>1.0</version>
+        </Abp_Onhold>
+    </modules>
+    <global>
+        <models>           
+            <onhold>
+                <class>Abp_Onhold_Model</class>
+            </onhold>
+        </models>
+        <helpers>
+            <onhold>
+                <class>Abp_Onhold_Helper</class>
+            </onhold>
+        </helpers>
+        <events>
+            <checkout_onepage_controller_success_action>
+                <observers>
+                    <onhold_order>
+                        <class>onhold/observer</class>
+                        <method>holdOrder</method>
+                    </onhold_order>
+                </observers>
+            </checkout_onepage_controller_success_action>
+        </events>
+    </global>
+</config>
