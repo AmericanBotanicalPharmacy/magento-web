@@ -27047,3 +27047,10 @@ body.cms-learn .section2 .column.right .inner-tube .product-view .block-related 
 .super-c-landing-footer {
     padding-bottom: 25px;
 }
+
+/* Hide Get Well CD From Production DA3 */
+
+#field_64 > div > ul > li:nth-child(3) {
+	display: none;
+}
+
