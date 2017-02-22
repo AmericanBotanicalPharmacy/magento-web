@@ -47,7 +47,7 @@ $catalogSearchHelper =  $this->helper('catalogsearch');
     </div>
     <script type="text/javascript">
     //<![CDATA[[
-    	var searchForm = new Varien.searchForm('search_mini_form', 'search', '');
+    	var searchForm = new Varien.searchFormWithoutUpdate('search_mini_form', 'search', '');
         searchForm.initAutocomplete('<?php echo $catalogSearchHelper->getSuggestUrl() ?>', 'search_autocomplete');
     	var searchForm2 = new Varien.searchForm('search_mini_form2', 'search2', '');
     //]]>

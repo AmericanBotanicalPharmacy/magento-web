@@ -188,7 +188,11 @@
          if ($('body.cms-index-index').length) {
 
             // Initialize banner widget.
-            $('#banners-container .banners').bannerenhanced();
+            if (Modernizr.mq(_responsive.mqMobile)) {
+               $('li.banner.mobile-hide').remove();
+            } else {
+              $('#banners-container .banners').bannerenhanced();
+            }
 
             // Email Signup Plugin
             /*

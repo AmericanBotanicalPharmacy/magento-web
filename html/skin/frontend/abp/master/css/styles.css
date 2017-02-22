@@ -1,160 +1,58 @@
-@charset "UTF-8";
-/**
- * Magento Enterprise Edition
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Magento Enterprise Edition License
- * that is bundled with this package in the file LICENSE_EE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://www.magentocommerce.com/license/enterprise-edition
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade Magento to newer
- * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magentocommerce.com for more information.
- *
- * @category    design
- * @package     rwd_default
- * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
- * @license     http://www.magentocommerce.com/license/enterprise-edition
- */
-/**
- * Magento Enterprise Edition
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Magento Enterprise Edition License
- * that is bundled with this package in the file LICENSE_EE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://www.magentocommerce.com/license/enterprise-edition
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade Magento to newer
- * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magentocommerce.com for more information.
- *
- * @category    design
- * @package     rwd_default
- * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
- * @license     http://www.magentocommerce.com/license/enterprise-edition
- */
-/*
- * Author: Aydus
- * Description:
- *  - Change all fonts to montserratregular.
- */
-/**
- * Magento Enterprise Edition
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Magento Enterprise Edition License
- * that is bundled with this package in the file LICENSE_EE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://www.magentocommerce.com/license/enterprise-edition
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade Magento to newer
- * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magentocommerce.com for more information.
- *
- * @category    design
- * @package     rwd_default
- * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
- * @license     http://www.magentocommerce.com/license/enterprise-edition
- */
-/**
- * Magento Enterprise Edition
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Magento Enterprise Edition License
- * that is bundled with this package in the file LICENSE_EE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://www.magentocommerce.com/license/enterprise-edition
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade Magento to newer
- * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magentocommerce.com for more information.
- *
- * @category    design
- * @package     rwd_default
- * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
- * @license     http://www.magentocommerce.com/license/enterprise-edition
- */
-/**
- * Magento Enterprise Edition
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Magento Enterprise Edition License
- * that is bundled with this package in the file LICENSE_EE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://www.magentocommerce.com/license/enterprise-edition
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade Magento to newer
- * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magentocommerce.com for more information.
- *
- * @category    design
- * @package     rwd_default
- * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
- * @license     http://www.magentocommerce.com/license/enterprise-edition
- */
-/**
- * Magento Enterprise Edition
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Magento Enterprise Edition License
- * that is bundled with this package in the file LICENSE_EE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://www.magentocommerce.com/license/enterprise-edition
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade Magento to newer
- * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magentocommerce.com for more information.
- *
- * @category    design
- * @package     rwd_default
- * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
- * @license     http://www.magentocommerce.com/license/enterprise-edition
- */
-/*
-// ----------------------------------------------
-// Usage example:
-// For IE set $mq-support to false.
-// Set the fixed value.
-// Then use mixins to test whether styles should be applied.
-// ----------------------------------------------
+@charset "UTF-8"; /**  * Magento Enterprise Edition  *  * NOTICE OF LICENSE  * * This source file is subject to the
+Magento Enterprise Edition License  * that is bundled with this package in the file LICENSE_EE.txt.  * It is also
+available through the world-wide-web at this URL:  * http://www.magentocommerce.com/license/enterprise-edition * If you
+did not receive a copy of the license and are unable to  * obtain it through the world-wide-web, please send an email  *
+to license@magentocommerce.com so we can send you a copy immediately.  * * DISCLAIMER  *  * Do not edit or add to this
+file if you wish to upgrade Magento to newer  * versions in the future. If you wish to customize Magento for your  *
+needs please refer to http://www.magentocommerce.com for more information.  *  * @category design * @package
+rwd_default  * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)  * @license
+http://www.magentocommerce.com/license/enterprise-edition  */ /**  * Magento Enterprise Edition  *  * NOTICE OF LICENSE
+*  * This source file is subject to the Magento Enterprise Edition License  * that is bundled with this package in the
+file LICENSE_EE.txt.  * It is also available through the world-wide-web at this URL:  *
+http://www.magentocommerce.com/license/enterprise-edition  * If you did not receive a copy of the license and are unable
+to  * obtain it through the world-wide-web, please send an email  * to license@magentocommerce.com so we can send you a
+copy immediately.  * * DISCLAIMER  *  * Do not edit or add to this file if you wish to upgrade Magento to newer  *
+versions in the future. If you wish to customize Magento for your  * needs please refer to
+http://www.magentocommerce.com for more information.  *  * @category design  * @package     rwd_default  * @copyright
+Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com) * @license http://www.magentocommerce.com/license
+/enterprise-edition  */ /*  * Author: Aydus  * Description:  *  - Change all fonts to montserratregular.  */ /**  *
+Magento Enterprise Edition  *  * NOTICE OF LICENSE  *  * This source file is subject to the Magento Enterprise Edition
+License  * that is bundled with this package in the file LICENSE_EE.txt.  * It is also available through the world-wide-
+web at this URL:  * http://www.magentocommerce.com/license/enterprise-edition * If you did not receive a copy of the
+license and are unable to  * obtain it through the world-wide-web, please send an email  * to
+license@magentocommerce.com so we can send you a copy immediately.  * * DISCLAIMER  *  * Do not edit or add to this file
+if you wish to upgrade Magento to newer  * versions in the future. If you wish to customize Magento for your  * needs
+please refer to http://www.magentocommerce.com for more information.  *  * @category design * @package     rwd_default
+* @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)  * @license
+http://www.magentocommerce.com/license/enterprise-edition  */ /**  * Magento Enterprise Edition  *  * NOTICE OF LICENSE
+*  * This source file is subject to the Magento Enterprise Edition License  * that is bundled with this package in the
+file LICENSE_EE.txt.  * It is also available through the world-wide-web at this URL:  *
+http://www.magentocommerce.com/license/enterprise-edition  * If you did not receive a copy of the license and are unable
+to  * obtain it through the world-wide-web, please send an email  * to license@magentocommerce.com so we can send you a
+copy immediately.  * * DISCLAIMER  *  * Do not edit or add to this file if you wish to upgrade Magento to newer  *
+versions in the future. If you wish to customize Magento for your  * needs please refer to
+http://www.magentocommerce.com for more information.  *  * @category design  * @package     rwd_default  * @copyright
+Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com) * @license http://www.magentocommerce.com/license
+/enterprise-edition  */ /**  * Magento Enterprise Edition  *  * NOTICE OF LICENSE  *  * This source file is subject to
+the Magento Enterprise Edition License  * that is bundled with this package in the file LICENSE_EE.txt.  * It is also
+available through the world-wide-web at this URL:  * http://www.magentocommerce.com/license /enterprise-edition  * If
+you did not receive a copy of the license and are unable to  * obtain it through the world-wide-web, please send an
+email  * to license@magentocommerce.com so we can send you a copy immediately.  * * DISCLAIMER  *  * Do not edit or add
+to this file if you wish to upgrade Magento to newer  * versions in the future. If you wish to customize Magento for
+your  * needs please refer to http://www.magentocommerce.com for more information.  *  * @category design  * @package
+rwd_default  * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com) * @license
+http://www.magentocommerce.com/license/enterprise-edition  */ /**  * Magento Enterprise Edition  *  * NOTICE OF LICENSE
+*  * This source file is subject to the Magento Enterprise Edition License  * that is bundled with this package in the
+file LICENSE_EE.txt.  * It is also available through the world-wide-web at this URL:  *
+http://www.magentocommerce.com/license /enterprise-edition  * If you did not receive a copy of the license and are
+unable to  * obtain it through the world-wide-web, please send an email  * to license@magentocommerce.com so we can send
+you a copy immediately.  * * DISCLAIMER  *  * Do not edit or add to this file if you wish to upgrade Magento to newer  *
+versions in the future. If you wish to customize Magento for your  * needs please refer to
+http://www.magentocommerce.com for more information.  *  * @category design  * @package     rwd_default  * @copyright
+Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com) * @license http://www.magentocommerce.com/license
+/enterprise-edition  */ /* // ---------------------------------------------- // Usage example: // For IE set $mq-support
+to false. // Set the fixed value. // Then use mixins to test whether styles should be applied. //
+----------------------------------------------
 
 $mq-support: false;
 $mq-fixed-value: 1024;
@@ -17124,9 +17022,9 @@ body.cms-home .col-main {
   display: none;
   position: absolute;
   z-index: 200;
-  top: 68px;
-  left: 2%;
-  width: 96%;
+  top: 115px;
+  //left: 2%;
+  width: 100%;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
@@ -17209,13 +17107,15 @@ body.cms-home .col-main {
 }
 #megamenu-container.mobile .sub1 > ul > li {
   margin: 0;
-  padding: 20px 0 0 34px;
+  padding: 5px 0 0 34px;
 }
 #megamenu-container.mobile .sub1 > ul > li h4 {
   margin: 0;
   padding: 0 0 8px 0;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
-#megamenu-container.mobile .sub1 > ul > li h4:before {
+#megamenu-container.mobile .sub1 > ul > li h4.collapsed:before {
   content: '';
   background-image: url('../images/sprites-sb62a2101cc.png');
   background-position: -119px -23px;
@@ -17240,7 +17140,6 @@ body.cms-home .col-main {
   margin: 3px 24px 0 0;
 }
 #megamenu-container.mobile .sub1 > ul > li h4 a {
-  font-size: 16px;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -17282,6 +17181,9 @@ body.cms-home .col-main {
   max-width: 100%;
   height: auto !important;
 }
+#megamenu-container.mobile .sub1 h2.shop-by {
+  display: none;
+}
 #megamenu-container.mobile .sub.expanded .sub1 {
   display: block;
 }
@@ -17322,10 +17224,10 @@ body.cms-home .col-main {
 /*----------------------------------------------------------------------------*/
 /* Banner Enhanced (Home)
 /*----------------------------------------------------------------------------*/
-.cms-home #banners-container {
-  /*----------------------------------------------------------------------------*/
-  /* Cycle Pager
-  /*----------------------------------------------------------------------------*/
+@media handheld, screen and (max-width: 640px) {
+  .cms-home #banners-container {
+    height: 422px;
+  }
 }
 .cms-home #banners-container .banners {
   width: 100%;
@@ -17333,6 +17235,9 @@ body.cms-home .col-main {
 @media handheld, screen and (max-width: 640px) {
   .cms-home #banners-container .banners {
     overflow: visible !important;
+  }
+  .cms-home #banners-container .banners > .banner.mobile-hide {
+    display: none !important;
   }
 }
 .cms-home #banners-container .banners > .banner {
@@ -17711,7 +17616,8 @@ body.cms-store .col-main .category-products ul .owl-controls .cms-home #banners-
 }
 @media handheld, screen and (max-width: 640px) {
   .cms-home #banners-container .cycle-pager {
-    bottom: 10%;
+    //bottom: 10%;
+    display: none;
   }
 }
 .cms-home #banners-container .cycle-pager span {
@@ -24714,7 +24620,7 @@ body.cms-home .col-main {
     float: left;
     margin-left: 10px;
     width: 50%;
-    min-width: 190px;
+    min-width: 200px;
     padding-top: 10px;
   }
 }
@@ -24996,7 +24902,7 @@ body.cms-home .col-main {
 /*----------------------------------------------------------------------------*/
 .breadcrumbs {
   display: block;
-  margin: 20px 7.72222% 0;
+  margin: 54px 7.72222% 0;
 }
 @media handheld, screen and (max-width: 1024px) {
   .breadcrumbs {
@@ -27003,9 +26909,6 @@ body.cms-learn .section2 .column.right .inner-tube .product-view .block-related 
   font-size: 1.25rem;
   font-weight: normal;
 }
-.promo p {
-  left: 35% !important ;
-}
 .blink-super-c {
     display: inline-block;
     width: auto;
@@ -27022,23 +26925,53 @@ body.cms-learn .section2 .column.right .inner-tube .product-view .block-related 
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
-    background: #fed807;
     transition: background-color .25s ease-in-out;
     -moz-transition: background-color .25s ease-in-out;
     -webkit-transition: background-color .25s ease-in-out;
     padding: 0 20px;
     font-weight: bold;
     white-space: nowrap;
-    text-decoration: none !important;
+    text-decoration: underline !important;
     border-left: 1px solid white;
 }
 /* Super-c landing changes DA3 */
-
 .super-c-btn {
     margin-bottom: 5px !important;
-    padding: 7px 16.5px !important;
+    padding:7px 14.5px 7px 18.1px !important;
     border-left: 1px solid white;
+	height: 40px;
 }
 .super-c-landing-footer {
     padding-bottom: 25px;
+}
+@media handheld, screen and (max-width: 640px) {
+  div.col-main > div.super-c-landing-page > ul > li:nth-child(1),div.col-main > div.super-c-landing-page > ul > li:nth-child(2), div.col-main > div.super-c-landing-page > ul > li:nth-child(3) {
+    display: block;
+    width: 100%;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+   .super-c-div {
+    display: block !important; 
+    width: 100% !important;
+	padding-bottom: 15px;
+	padding-left: 7px;
+	padding-right: 50px;
+  }
+}
+@media handheld, screen and (max-width: 640px) {
+   .super-c-div-1 {
+    display: block !important; 
+    width: 100% !important;
+	padding-right:50px ;
+  }
+}
+.super-c-landing-page > ul > li > h2 {
+ 	display: none;
+ }
+@-moz-document url-prefix() { 
+  .blink-super-c {
+     font-weight: normal;
+	 margin-left: 6px;
+  }
 }
