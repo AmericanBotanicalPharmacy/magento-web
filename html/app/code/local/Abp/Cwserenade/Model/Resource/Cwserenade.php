@@ -332,6 +332,24 @@ class Abp_Cwserenade_Model_Resource_Cwserenade extends Mage_Core_Model_Resource_
 		return $response;
 	}
 
+	// Generate source code...
+	protected function _generateSourceCode() {
+		// first source code with expiration date.
+		$firstSourceCode = Mage::getStoreConfig('abp_cwserenade/configuration/first_source_code');
+		$firstSourceCodeExpiration = Mage::getStoreConfig('abp_cwserenade/configuration/first_source_code_expiration');
+		// never expired...
+		$nextSourceCode = Mage::getStoreConfig('abp_cwserenade/configuration/next_source_code');
+
+		$timezone = new DateTimeZone('America/New_York');
+        $currentDate = new DateTime("now", $timezone);
+        // i.e. 2017-03-05
+        $expirationDate = DateTime::createFromFormat('Y-m-d', $firstSourceCodeExpiration, $timezone);
+        if ($currentDate > $expirationDate) {
+        	return $nextSourceCode;
+        }
+        return $firstSourceCode;
+	}
+
 	/**
 	 * Get variables for message
 	 *
@@ -348,6 +366,8 @@ class Abp_Cwserenade_Model_Resource_Cwserenade extends Mage_Core_Model_Resource_
 
 		$customerData = array('customerId' => $customerId);
 
+		$generatedSourceCode = $this->_generateSourceCode();
+
 		$items = $order->getAllItems();
 		foreach ($items as $item){
 			//Product based source code override
@@ -359,7 +379,8 @@ class Abp_Cwserenade_Model_Resource_Cwserenade extends Mage_Core_Model_Resource_
 			} else {
 							//Default source code for CW
 							//$sourceCode = "WOLK1";
-							$sourceCode = "WOMD1"; // for April 1st
+							// $sourceCode = "WOMD1"; // for April 1st
+							$sourceCode = $generatedSourceCode;
 
 							//Mage::log($sourceCode, null, 'tmp.log');
 					}

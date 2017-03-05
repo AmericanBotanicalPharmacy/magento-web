@@ -80,7 +80,34 @@
 							<show_in_website>0</show_in_website>
 							<show_in_store>0</show_in_store>
 							<comment><![CDATA[Maintenance end time (i.e. 5:41 AM) in EST.]]></comment>
-						</maintenance_window_to>                                                                                           
+						</maintenance_window_to>
+                        <first_source_code translate="label" module="abp_cwserenade">
+                            <label>First Source Code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[First source code.]]></comment>
+                        </first_source_code>
+                        <first_source_code_expiration translate="label" module="abp_cwserenade">
+                            <label>First Source Code Expiration Date</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Expiration date of first source code (i.e. 2017-03-05) in EST.]]></comment>
+                        </first_source_code_expiration>
+                        <next_source_code translate="label" module="abp_cwserenade">
+                            <label>Next Source Code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[It's used when first source code is expired.]]></comment>
+                        </next_source_code>                                    
                     </fields>
                 </configuration>
             </groups>
