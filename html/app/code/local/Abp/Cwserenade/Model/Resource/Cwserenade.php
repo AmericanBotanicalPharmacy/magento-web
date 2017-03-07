@@ -342,8 +342,8 @@ class Abp_Cwserenade_Model_Resource_Cwserenade extends Mage_Core_Model_Resource_
 
 		$timezone = new DateTimeZone('America/New_York');
         $currentDate = new DateTime("now", $timezone);
-        // i.e. 2017-03-05
-        $expirationDate = DateTime::createFromFormat('Y-m-d', $firstSourceCodeExpiration, $timezone);
+        // i.e. 2017-03-05 10:00:00
+        $expirationDate = DateTime::createFromFormat('Y-m-d H:i:s', $firstSourceCodeExpiration, $timezone);
         if ($currentDate > $expirationDate) {
         	return $nextSourceCode;
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- 
+<!--
 /**
  * Settings
  *
@@ -35,7 +35,7 @@
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
                             <comment><![CDATA[Url to CWOrderIn WSDL.]]></comment>
-                        </cworderin_url> 
+                        </cworderin_url>
                         <cwmessagein_url translate="label" module="abp_cwserenade">
                             <label>CWMessageIn URL</label>
                             <frontend_type>text</frontend_type>
@@ -44,7 +44,7 @@
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
                             <comment><![CDATA[Url to CWMessageIn WSDL.]]></comment>
-                        </cwmessagein_url>                                                                   
+                        </cwmessagein_url>
                         <retries translate="label" module="abp_cwserenade">
                             <label>Number of retries</label>
                             <frontend_type>text</frontend_type>
@@ -53,7 +53,7 @@
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
                             <comment><![CDATA[Number of retries before marking as failure.]]></comment>
-                        </retries>  
+                        </retries>
                         <reschedule_after translate="label" module="abp_cwserenade">
                             <label>Resend Orders After</label>
                             <frontend_type>text</frontend_type>
@@ -71,7 +71,7 @@
 							<show_in_website>0</show_in_website>
 							<show_in_store>0</show_in_store>
 							<comment><![CDATA[Start time of maintenance window (i.e. 4:09 AM) in EST.]]></comment>
-						</maintenance_window_from>    
+						</maintenance_window_from>
 						<maintenance_window_to translate="label" module="abp_cwserenade">
 							<label>Maintenance End Time</label>
 							<frontend_type>text</frontend_type>
@@ -97,7 +97,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
-                            <comment><![CDATA[Expiration date of first source code (i.e. 2017-03-05) in EST.]]></comment>
+                            <comment><![CDATA[Expiration date of first source code (i.e. 2017-03-05 10:00:00) in EST.]]></comment>
                         </first_source_code_expiration>
                         <next_source_code translate="label" module="abp_cwserenade">
                             <label>Next Source Code</label>
@@ -107,11 +107,10 @@
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
                             <comment><![CDATA[It's used when first source code is expired.]]></comment>
-                        </next_source_code>                                    
+                        </next_source_code>
                     </fields>
                 </configuration>
             </groups>
         </abp_cwserenade>
     </sections>
 </config>
-
