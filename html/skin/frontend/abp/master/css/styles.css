@@ -26934,6 +26934,9 @@ body.cms-learn .section2 .column.right .inner-tube .product-view .block-related 
     text-decoration: underline !important;
     border-left: 1px solid white;
 }
+/* DA3 03202017 */
+#field_64 > div > ul > li:nth-child(3){display:none;}
+
 /* Super-c landing changes DA3 */
 .super-c-btn {
     margin-bottom: 5px !important;
