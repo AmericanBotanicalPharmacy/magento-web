@@ -4917,7 +4917,7 @@ p.product-name a:hover {
 }
 
 .products-grid > li:nth-child(odd) {
-  clear: left;
+/*  clear: left; */
 }
 
 .products-grid > li:nth-child(even) {
