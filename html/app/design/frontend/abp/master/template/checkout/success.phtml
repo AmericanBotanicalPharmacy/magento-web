@@ -185,6 +185,26 @@ adroll_custom_data = {"ORDER_ID": <?php echo $orderId; ?>}
 <!-- Bing -->
 <script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.msn.com/mstag/site/90a74c24-550d-4ddf-b637-13d62d361ff0/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"1189478",type:"1",revenue:"<?php echo $saleAmount; ?>",actionid:"44501"})</script> <noscript> <iframe src="//flex.msn.com/mstag/tag/90a74c24-550d-4ddf-b637-13d62d361ff0/analytics.html?dedup=1&domainId=1189478&type=1&revenue=<?php echo $saleAmount; ?>&actionid=44501" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe> </noscript>
 
+<!-- Omniture Conversion Tracking -->
+<script type="text/javascript"> 
+<?php 
+	    if (isset($orderId,$omni_items)) {
+	    	
+	    	echo 's.pageName="Order Confirmation";';
+			echo 's.channel="E-Commerce";';
+			echo 's.prop1="";';
+			echo 's.prop2="";';
+			echo 's.prop3="E-Commerce";';
+			echo 's.linkTrackVars="products,events,eVar7";';
+			echo 's.linkTrackEvents="purchase";';
+			echo 's.events="purchase";';
+			echo 's.eVar7="'. $orderId. '";';
+			echo 's.products="'. $omni_items .'";'; 
+			echo 's.purchaseID="'. $orderId .'";';
+	    }
+?>
+</script>
+
 
 <!--SteelHouse Conversion Pixel-->
 <!-- Install ONLY on conversion page/event-->
