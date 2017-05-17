@@ -28,7 +28,7 @@ class Abp_Onhold_Model_Observer
             // then change order's status to ON HOLD.
             //if($enable == '1' && $s_zip != $b_zip && $country_id == 'US' && in_array($s_region_id, $states_arr) && $total > $amount) {
             //05/17 remove the $s_zip != $b_zip conditioin as of new cases shows this is no longer true.
-            if($enable == '1' && $country_id == 'US' && in_array($s_region_id, $states_arr) && $total > $amount) {
+            if($enable == '1' && $country_id == 'US' && $total > $amount) {
     
                 $this->_processOrderStatus($order);
             }
