@@ -12,6 +12,7 @@ class Abp_Onhold_Model_Observer
         foreach($orderIds as $value) {
             $order = Mage::getModel('sales/order')->load($value);
             $total = $order->getGrandTotal();
+            $email = $order->getCustomerEmail();
             $s_zip = $order->getShippingAddress()->getData('postcode');
             $country_id = $order->getShippingAddress()->getData('country_id');
             $b_zip = $order->getBillingAddress()->getData('postcode');
@@ -20,6 +21,14 @@ class Abp_Onhold_Model_Observer
             $amount = intval(Mage::getStoreConfig('onhold/settings/amount', Mage::app()->getStore()));
             $states = Mage::getStoreConfig('onhold/settings/specificstates', Mage::app()->getStore());
             $states_arr = explode(",", $states);
+            $single_item_with_large_quantity = false;
+            foreach ($order->getAllItems as $item) {
+              // Check if there are single items with large quantity, you can change it to any value.
+              if ($item->getQtyOrdered() > 4) {
+                $single_item_with_large_quantity = true;
+                break;
+              }
+            }
             // Abp_Onhold module is active.
             // shipping address zip is NOT same as billing address zip
             // shipping address country_id is US.
@@ -28,12 +37,23 @@ class Abp_Onhold_Model_Observer
             // then change order's status to ON HOLD.
             //if($enable == '1' && $s_zip != $b_zip && $country_id == 'US' && in_array($s_region_id, $states_arr) && $total > $amount) {
             //05/17 remove the $s_zip != $b_zip conditioin as of new cases shows this is no longer true.
-            if($enable == '1' && $country_id == 'US' && $total > $amount) {
-    
-                $this->_processOrderStatus($order);
+            //if($enable == '1' && $s_zip != $b_zip && $country_id == 'US' && in_array($s_region_id, $states_arr) && $total > $amount)
+            if ($enable == '1' && $country_id == 'US' && $total > $amount) {
+                if ($this->_endsWith($email, 'mail.com') || single_item_with_large_quantity) {
+                    $this->_processOrderStatus($order);
+                }
             }
         }
         return $this;
+    }
+
+     private function _endsWith($haystack, $needle)
+     {
+    	$length = strlen($needle);
+    	if ($length == 0) {
+            return true;
+    	}
+    	return (substr($haystack, -$length) === $needle);
     }
 
     private function _processOrderStatus($order)
