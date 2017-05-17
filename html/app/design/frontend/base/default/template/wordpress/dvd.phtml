@@ -1,0 +1,89 @@
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.0.2/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<link href="//cdn.rawgit.com/noelboss/featherlight/1.0.2/release/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles" />
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+?>
+<div class="blog-home">
+    <?php $posts = $this->getPosts() ?>
+    <?php if (count($posts) > 0): 
+?>
+        <div class="post-list">
+            <ul id="post-list">
+                <?php 
+                $i =1;
+                foreach ($posts as $post):
+					$post_vimcode = $post->getCustomField('mf_post_vimcode');          
+                //   $ogp_data = $post->getCustomField('mf_post_video');
+  ?>
+
+                <li class="item">
+                    <div class="post-list-item">
+                        <?php if ($post): ?>
+                            <?php $helper = $this->helper('wordpress') ?>
+                            <?php $author = $post->getAuthor() ?>
+                            <div class="blog-desc">
+                                <?php if ($featuredImage = $post->getFeaturedImage()): ?>
+                                    <div class="featured-image post-book">
+                                        <img src="<?php echo $featuredImage->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"/>
+                                    </div>
+                                <?php endif; ?>
+                                <h2><a><?php echo $this->escapeHtml($post->getPostTitle()) ?></a></h2>
+                                <?php echo $this->getBeforePostContentHtml() ?>
+                                <p class="post-meta details"><?php echo $post->getPostDate() . ", " . $post->getPostType(); ?><span class="by-author"> by <?php echo $post->getAuthor()->getDisplayName(); ?></span></p>
+                                <div class="post-entry entry">
+                                    <?php if ($post->isViewableForVisitor()): ?>
+                                        <?php if ( $post->hasMoreTag()): ?>
+                                            <?php echo $post->getPostExcerpt() ?>
+                                        <?php else: ?>
+                                            <?php echo $post->getPostContent(); ?>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <?php echo $this->getPasswordProtectHtml($post) ?>
+                                    <?php endif; ?>
+                                </div>
+                                <?php if($post_vimcode){ ?>        			 
+								<div style="display: none;">
+	                              	<div id="fl<?php echo $i;?>" class="video-js vjs-default-skin" controls="controls" preload="auto" style="width:100%;">
+	<iframe src="//player.vimeo.com/video/<?php echo $post_vimcode ?>" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>							  	
+								  	<!--<video   id="fl<?php echo $i;?>" class="video-js vjs-default-skin" controls="controls" preload="auto" style="width:100%;">
+									  	<source src="http://h.zeitbyte.com/o1/zb3.1/american_botanical/hosted-videos/html5-videos/<?php echo $ogp_data ?>.mp4" type="video/mp4" />
+									  	</video>-->
+			            			</div> 
+                              </div>
+                                <div class="post_readmore_btn cdvideoshow"><a class="btn btn-default" href="#" data-featherlight="#fl<?php echo $i;?>" title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>">Click to View</a></div>
+                                <?php } else { ?> 
+                                   <div class="post_readmore_btn"><a class="btn btn-default" href="#"  title="<?php echo $this->escapeHtml($post->getPostTitle()) ?>">Click to View</a></div>
+                                <?php }?></div>
+                        <?php endif; ?>
+                    </div>
+                    </li>
+                <?php $i++; endforeach; ?>
+            </ul>
+ 
+            <?php //echo $this->getPagerHtml() ?>
+        </div>
+    </div>
+
+<?php endif; ?>
+
+<script>
+	
+jQuery(function($) {
+	$(".cdvideoshow").on('click',function(){
+	    $('.vjs-default-skin').attr("autoplay","autoplay"); 
+	});
+	 
+	 $(".featherlight-close-icon").on('click',function(){ 
+	    $('.vjs-default-skin').removeAttr("autoplay");
+	});
+	    $('.featherlight-content').css('width',$('iframe').innerWidth());
+});
+	
+
+
+</script>
