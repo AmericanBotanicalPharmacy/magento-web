@@ -22,7 +22,7 @@ class Abp_Onhold_Model_Observer
             $states = Mage::getStoreConfig('onhold/settings/specificstates', Mage::app()->getStore());
             $states_arr = explode(",", $states);
             $single_item_with_large_quantity = false;
-            foreach ($order->getAllItems as $item) {
+            foreach ($order->getAllItems() as $item) {
               // Check if there are single items with large quantity, you can change it to any value.
               if ($item->getQtyOrdered() > 4) {
                 $single_item_with_large_quantity = true;
@@ -39,7 +39,7 @@ class Abp_Onhold_Model_Observer
             //05/17 remove the $s_zip != $b_zip conditioin as of new cases shows this is no longer true.
             //if($enable == '1' && $s_zip != $b_zip && $country_id == 'US' && in_array($s_region_id, $states_arr) && $total > $amount)
             if ($enable == '1' && $country_id == 'US' && $total > $amount) {
-                if ($this->_endsWith($email, '@mail.com') || single_item_with_large_quantity) {
+                if ($this->_endsWith($email, '@mail.com') || $single_item_with_large_quantity) {
                     $this->_processOrderStatus($order);
                 }
             }
