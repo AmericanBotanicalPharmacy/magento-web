@@ -39,7 +39,7 @@ class Abp_Onhold_Model_Observer
             //05/17 remove the $s_zip != $b_zip conditioin as of new cases shows this is no longer true.
             //if($enable == '1' && $s_zip != $b_zip && $country_id == 'US' && in_array($s_region_id, $states_arr) && $total > $amount)
             if ($enable == '1' && $country_id == 'US' && $total > $amount) {
-                if ($this->_endsWith($email, 'mail.com') || single_item_with_large_quantity) {
+                if ($this->_endsWith($email, '@mail.com') || single_item_with_large_quantity) {
                     $this->_processOrderStatus($order);
                 }
             }
